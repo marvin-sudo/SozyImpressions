@@ -1,0 +1,10 @@
+{
+  "name": "SozyImpressions Agency",
+  "description": "A premium, high-converting website for SozyImpressions, a branding and digital solutions agency specializing in Event Digital Solutions and Full Brand Launch packages.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

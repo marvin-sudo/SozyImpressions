@@ -1,0 +1,97 @@
+{
+  "entities": {
+    "ContactSubmission": {
+      "title": "ContactSubmission",
+      "description": "Form submissions from the contact page",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "company": { "type": "string" },
+        "service": { "type": "string" },
+        "budget": { "type": "string" },
+        "message": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "status": { "type": "string", "enum": ["new", "read", "replied"] }
+      },
+      "required": ["name", "email", "phone", "message", "createdAt", "status"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Branded merchandise and digital items",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "price": { "type": "number" },
+        "category": { "type": "string" },
+        "image": { "type": "string" },
+        "type": { "type": "string", "enum": ["merchandise", "digital"] },
+        "stock": { "type": "number" },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "price", "category", "image", "type", "createdAt"]
+    },
+    "PortfolioProject": {
+      "title": "PortfolioProject",
+      "description": "Showcase of agency work",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "featured": { "type": "boolean" },
+        "date": { "type": "string" }
+      },
+      "required": ["title", "category", "image"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "Client feedback",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "quote": { "type": "string" },
+        "photo": { "type": "string" },
+        "rating": { "type": "number" }
+      },
+      "required": ["name", "quote"]
+    },
+    "NewsletterSubscriber": {
+      "title": "NewsletterSubscriber",
+      "description": "Emails for news and updates",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "subscribedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email", "subscribedAt"]
+    }
+  },
+  "firestore": {
+    "contacts": {
+      "schema": "ContactSubmission",
+      "description": "Collection of contact form submissions"
+    },
+    "products": {
+      "schema": "Product",
+      "description": "Collection of shop items"
+    },
+    "portfolio": {
+      "schema": "PortfolioProject",
+      "description": "Collection of exhibition projects"
+    },
+    "testimonials": {
+      "schema": "Testimonial",
+      "description": "Collection of client feedback"
+    },
+    "newsletter": {
+      "schema": "NewsletterSubscriber",
+      "description": "Collection of newsletter subscriptions"
+    }
+  }
+}
