@@ -1,0 +1,473 @@
+import React, { useState, useEffect, useCallback } from 'react';
+import { 
+  MessageSquare, 
+  ArrowUp, 
+  CheckCircle2 
+} from 'lucide-react';
+
+import { 
+  View, 
+  Currency, 
+  CartItem, 
+  Product, 
+  QuoteRequest, 
+  Order, 
+  PortfolioProject, 
+  BlogPost 
+} from './types';
+
+import { 
+  PRODUCTS_DATA, 
+  COMPANY_INFO 
+} from './data/mockData';
+
+// Layout Components
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer';
+
+// Multi-Page Views
+import { HomePage } from './pages/HomePage';
+import { ServicesPage } from './pages/ServicesPage';
+import { AboutPage } from './pages/AboutPage';
+import { PortfolioPage } from './pages/PortfolioPage';
+import { ShopPage } from './pages/ShopPage';
+import { QuotePage } from './pages/QuotePage';
+import { BlogPage } from './pages/BlogPage';
+import { ContactPage } from './pages/ContactPage';
+import { AccountPage } from './pages/AccountPage';
+
+// Modals & Drawers
+import { CartDrawer } from './components/CartDrawer';
+import { ProductCustomizerModal } from './components/ProductCustomizerModal';
+import { CheckoutModal } from './components/CheckoutModal';
+import { ClientPortalModal } from './components/ClientPortalModal';
+import { AdminModal } from './components/AdminModal';
+import { SearchModal } from './components/SearchModal';
+import { CaseStudyModal } from './components/CaseStudyModal';
+import { BlogArticleModal } from './components/BlogArticleModal';
+
+// Helper to parse hash route
+const parseHashRoute = (): { view: View; param?: string } => {
+  const hash = window.location.hash.replace(/^#\/?/, '').trim();
+  if (!hash) return { view: 'home' };
+
+  const parts = hash.split('/');
+  const rawView = parts[0]?.toLowerCase();
+  const param = parts.slice(1).join('/') || undefined;
+
+  const validViews: View[] = [
+    'home',
+    'services',
+    'about',
+    'portfolio',
+    'shop',
+    'quote',
+    'blog',
+    'contact',
+    'account',
+    'admin'
+  ];
+
+  if (validViews.includes(rawView as View)) {
+    return { view: rawView as View, param };
+  }
+
+  return { view: 'home' };
+};
+
+export const App: React.FC = () => {
+  // Navigation & Multi-Page Routing State
+  const [currentView, setCurrentView] = useState<View>(() => parseHashRoute().view);
+  const [routeParam, setRouteParam] = useState<string | undefined>(() => parseHashRoute().param);
+
+  // Global Settings
+  const [currency, setCurrency] = useState<Currency>('UGX');
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  // E-Commerce & Interactive Modals State
+  const [cart, setCart] = useState<CartItem[]>(() => {
+    try {
+      const saved = localStorage.getItem('sozy_cart');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  const [products, setProducts] = useState<Product[]>(PRODUCTS_DATA);
+  const [quotes, setQuotes] = useState<QuoteRequest[]>([]);
+  const [orders, setOrders] = useState<Order[]>([]);
+
+  // Modal Open/Close Controls
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+  const [isClientPortalOpen, setIsClientPortalOpen] = useState(false);
+  const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
+  
+  // Active Deep-Dive Items
+  const [customizingProduct, setCustomizingProduct] = useState<Product | null>(null);
+  const [activeCaseStudy, setActiveCaseStudy] = useState<PortfolioProject | null>(null);
+  const [activeBlogArticle, setActiveBlogArticle] = useState<BlogPost | null>(null);
+
+  // Toast notification
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+  // Synchronize router on URL hash change (back/forward history & direct links)
+  const handleHashChange = useCallback(() => {
+    const { view, param } = parseHashRoute();
+    setCurrentView(view);
+    setRouteParam(param);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleHashChange);
+    };
+  }, [handleHashChange]);
+
+  // Update document title dynamically based on page
+  useEffect(() => {
+    const titles: Record<View, string> = {
+      home: 'Sozy Impressions Ltd | Premier Commercial Printing & Branding in Uganda',
+      services: '7 Core Services & Capabilities | Sozy Impressions Ltd',
+      about: 'About Our Company & Heritage | Sozy Impressions Ltd',
+      portfolio: 'Portfolio & Client Case Studies | Sozy Impressions Ltd',
+      shop: 'Corporate Product Store & Custom Gifts | Sozy Impressions Ltd',
+      quote: 'Smart Quote Calculator & RFQ | Sozy Impressions Ltd',
+      blog: 'Printing & Brand Insights Blog | Sozy Impressions Ltd',
+      contact: 'Contact & Kampala Studio | Sozy Impressions Ltd',
+      account: 'Client Order Tracking & Quotes | Sozy Impressions Ltd',
+      admin: 'Admin Management | Sozy Impressions Ltd'
+    };
+    document.title = titles[currentView] || 'Sozy Impressions Ltd';
+  }, [currentView]);
+
+  // Save cart to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('sozy_cart', JSON.stringify(cart));
+    } catch {
+      // ignore
+    }
+  }, [cart]);
+
+  // Scroll listener for Back-to-Top
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 400);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const showToast = (msg: string) => {
+    setToastMessage(msg);
+    setTimeout(() => {
+      setToastMessage(null);
+    }, 4000);
+  };
+
+  // Multi-page Router navigation helper
+  const navigate = (view: View, param?: string) => {
+    setCurrentView(view);
+    setRouteParam(param);
+    const newHash = param ? `#/${view}/${param}` : view === 'home' ? '#/' : `#/${view}`;
+    if (window.location.hash !== newHash) {
+      window.history.pushState(null, '', newHash);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Cart operations
+  const handleAddToCart = (item: CartItem) => {
+    setCart(prev => {
+      const existingIdx = prev.findIndex(i => 
+        i.product.id === item.product.id && 
+        i.customization?.color === item.customization?.color &&
+        i.customization?.text === item.customization?.text
+      );
+      if (existingIdx > -1) {
+        const updated = [...prev];
+        const newQty = updated[existingIdx].quantity + item.quantity;
+        updated[existingIdx] = {
+          ...updated[existingIdx],
+          quantity: newQty,
+          subtotalUGX: (updated[existingIdx].product.priceUGX * newQty),
+          subtotalUSD: Number(((updated[existingIdx].product.priceUGX * newQty) / 3800).toFixed(2))
+        };
+        return updated;
+      }
+      return [...prev, item];
+    });
+
+    setCustomizingProduct(null);
+    setIsCartOpen(true);
+    showToast(`Added ${item.product.name} to cart`);
+  };
+
+  const handleUpdateCartQuantity = (index: number, newQty: number) => {
+    if (newQty <= 0) {
+      handleRemoveCartItem(index);
+      return;
+    }
+    setCart(prev => {
+      const updated = [...prev];
+      if (updated[index]) {
+        updated[index] = {
+          ...updated[index],
+          quantity: newQty,
+          subtotalUGX: (updated[index].product.priceUGX * newQty),
+          subtotalUSD: Number(((updated[index].product.priceUGX * newQty) / 3800).toFixed(2))
+        };
+      }
+      return updated;
+    });
+  };
+
+  const handleRemoveCartItem = (index: number) => {
+    setCart(prev => prev.filter((_, i) => i !== index));
+    showToast('Item removed from cart');
+  };
+
+  const handleOrderCompleted = (order: Order) => {
+    setOrders(prev => [order, ...prev]);
+    setCart([]);
+    setIsCheckoutOpen(false);
+    showToast(`Order ${order.id} placed successfully!`);
+    navigate('account');
+  };
+
+  // Dedicated View / Multi-Page Renderer
+  const renderCurrentView = () => {
+    switch (currentView) {
+      case 'home':
+        return (
+          <HomePage
+            navigate={navigate}
+            currency={currency}
+            products={products}
+            onOpenCustomizer={(product) => setCustomizingProduct(product)}
+            onAddToCart={handleAddToCart}
+          />
+        );
+
+      case 'services':
+        return (
+          <ServicesPage
+            navigate={navigate}
+            currency={currency}
+            selectedServiceId={routeParam}
+          />
+        );
+
+      case 'about':
+        return <AboutPage navigate={navigate} />;
+
+      case 'portfolio':
+        return (
+          <PortfolioPage
+            navigate={navigate}
+            onOpenCaseStudy={(project) => setActiveCaseStudy(project)}
+          />
+        );
+
+      case 'shop':
+        return (
+          <ShopPage
+            navigate={navigate}
+            currency={currency}
+            onOpenCustomizer={(product) => setCustomizingProduct(product)}
+            selectedCategory={routeParam}
+          />
+        );
+
+      case 'quote':
+        return <QuotePage navigate={navigate} currency={currency} />;
+
+      case 'blog':
+        return <BlogPage navigate={navigate} />;
+
+      case 'contact':
+        return <ContactPage navigate={navigate} />;
+
+      case 'account':
+        return <AccountPage navigate={navigate} currency={currency} />;
+
+      case 'admin':
+        return (
+          <HomePage
+            navigate={navigate}
+            currency={currency}
+            products={products}
+            onOpenCustomizer={(product) => setCustomizingProduct(product)}
+            onAddToCart={handleAddToCart}
+          />
+        );
+
+      default:
+        return (
+          <HomePage
+            navigate={navigate}
+            currency={currency}
+            products={products}
+            onOpenCustomizer={(product) => setCustomizingProduct(product)}
+            onAddToCart={handleAddToCart}
+          />
+        );
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col bg-[#F7F8FA] text-[#121212] font-sans antialiased selection:bg-[#ED008C] selection:text-white">
+      
+      {/* Toast Notification Banner */}
+      {toastMessage && (
+        <div className="fixed bottom-6 left-6 z-50 bg-[#181B34] text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-white/20 flex items-center gap-3 animate-in slide-in-from-bottom-4 duration-300">
+          <CheckCircle2 size={18} className="text-emerald-400 shrink-0" />
+          <span className="text-xs font-bold">{toastMessage}</span>
+        </div>
+      )}
+
+      {/* Main Top Navigation (No WhatsApp, No Login, No Search, Mega Horizontal Menu) */}
+      <Navbar
+        currentView={currentView}
+        navigate={navigate}
+        currency={currency}
+        setCurrency={setCurrency}
+        cart={cart}
+        setIsCartOpen={setIsCartOpen}
+        setIsSearchOpen={setIsSearchOpen}
+        openAdminModal={() => setIsAdminModalOpen(true)}
+        openClientPortal={() => setIsClientPortalOpen(true)}
+      />
+
+      {/* Page Content Viewport */}
+      <main className="flex-1 w-full pt-[72px] sm:pt-[96px]">
+        {renderCurrentView()}
+      </main>
+
+      {/* Main Footer */}
+      <Footer
+        navigate={navigate}
+        openAdminModal={() => setIsAdminModalOpen(true)}
+      />
+
+      {/* Persistent Floating Quick WhatsApp Button */}
+      <a
+        href={COMPANY_INFO.whatsappDirectUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Direct WhatsApp Production Desk"
+        className="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20b858] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group"
+      >
+        <MessageSquare size={24} className="group-hover:rotate-12 transition-transform" />
+        <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap text-xs font-bold px-0 group-hover:px-2">
+          Chat With Production Team
+        </span>
+      </a>
+
+      {/* Back to Top Floating Button */}
+      {showBackToTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Scroll back to top"
+          className="fixed bottom-24 right-6 z-30 bg-white/90 hover:bg-white text-slate-700 hover:text-[#2D3094] p-3 rounded-full shadow-lg border border-slate-200 backdrop-blur-md transition-all hover:-translate-y-1"
+        >
+          <ArrowUp size={18} />
+        </button>
+      )}
+
+      {/* --- Global Modals & Drawers --- */}
+
+      {/* Cart Drawer */}
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cart={cart}
+        currency={currency}
+        onUpdateQuantity={handleUpdateCartQuantity}
+        onRemoveItem={handleRemoveCartItem}
+        onOpenCheckout={() => {
+          setIsCartOpen(false);
+          setIsCheckoutOpen(true);
+        }}
+      />
+
+      {/* Product Customizer Modal */}
+      {customizingProduct && (
+        <ProductCustomizerModal
+          product={customizingProduct}
+          isOpen={!!customizingProduct}
+          onClose={() => setCustomizingProduct(null)}
+          currency={currency}
+          onAddToCart={handleAddToCart}
+        />
+      )}
+
+      {/* Checkout Modal */}
+      <CheckoutModal
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+        cart={cart}
+        currency={currency}
+        onOrderCompleted={handleOrderCompleted}
+        onClearCart={() => setCart([])}
+      />
+
+      {/* Client Portal Modal */}
+      <ClientPortalModal
+        isOpen={isClientPortalOpen}
+        onClose={() => setIsClientPortalOpen(false)}
+        navigate={navigate}
+        currency={currency}
+        orders={orders}
+        quotes={quotes}
+      />
+
+      {/* Admin Operations Modal */}
+      <AdminModal
+        isOpen={isAdminModalOpen}
+        onClose={() => setIsAdminModalOpen(false)}
+        products={products}
+        quotes={quotes}
+        orders={orders}
+        onUpdateProducts={(prods) => setProducts(prods)}
+        onUpdateQuotes={(qts) => setQuotes(qts)}
+        onUpdateOrders={(ords) => setOrders(ords)}
+        currency={currency}
+      />
+
+      {/* Global Search Modal */}
+      <SearchModal
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+        navigate={navigate}
+        onOpenCustomizer={(prod) => setCustomizingProduct(prod)}
+      />
+
+      {/* Case Study Modal */}
+      {activeCaseStudy && (
+        <CaseStudyModal
+          project={activeCaseStudy}
+          onClose={() => setActiveCaseStudy(null)}
+          navigate={navigate}
+        />
+      )}
+
+      {/* Blog Article Modal */}
+      {activeBlogArticle && (
+        <BlogArticleModal
+          article={activeBlogArticle}
+          onClose={() => setActiveBlogArticle(null)}
+          navigate={navigate}
+        />
+      )}
+
+    </div>
+  );
+};
