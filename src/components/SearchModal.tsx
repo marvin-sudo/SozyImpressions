@@ -183,7 +183,11 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                       <button
                         key={prod.id}
                         onClick={() => {
-                          navigate('shop');
+                          if (onOpenCustomizer) {
+                            onOpenCustomizer(prod);
+                          } else {
+                            navigate('shop');
+                          }
                           onClose();
                         }}
                         className="p-3 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-left flex items-center gap-3 group transition-colors"

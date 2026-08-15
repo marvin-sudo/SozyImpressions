@@ -3,17 +3,13 @@ import {
   X, 
   CheckCircle2, 
   ShieldCheck, 
-  MapPin, 
   CreditCard, 
   Truck, 
   MessageSquare,
-  Building,
-  Phone,
-  Mail,
-  Printer
+  Building
 } from 'lucide-react';
-import { CartItem, Currency, DeliveryZone, Order } from '../types';
-import { DELIVERY_ZONES, COMPANY_INFO, PAYMENT_LOGOS } from '../data/mockData';
+import { CartItem, Currency, Order } from '../types';
+import { DELIVERY_ZONES, PAYMENT_LOGOS } from '../data/mockData';
 
 interface CheckoutModalProps {
   isOpen: boolean;
@@ -42,8 +38,6 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   const [deliveryAddress, setDeliveryAddress] = useState('');
   const [selectedZoneId, setSelectedZoneId] = useState<string>('zone-kla-central');
   const [paymentMethod, setPaymentMethod] = useState<'mtn_momo' | 'airtel_money' | 'card' | 'bank_transfer' | 'cash_on_delivery'>('mtn_momo');
-  const [momoNumber, setMomoNumber] = useState('');
-  const [notes, setNotes] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [completedOrder, setCompletedOrder] = useState<Order | null>(null);
 

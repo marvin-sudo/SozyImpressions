@@ -1,14 +1,5 @@
 import React from 'react';
-import { 
-  X, 
-  Calendar, 
-  Clock, 
-  User, 
-  Tag, 
-  ArrowLeft, 
-  Share2,
-  Bookmark
-} from 'lucide-react';
+import { X } from 'lucide-react';
 import { BlogPost } from '../types';
 
 interface BlogArticleModalProps {

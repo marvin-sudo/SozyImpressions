@@ -12,13 +12,12 @@ import { SERVICES_DATA } from '../data/mockData';
 
 interface ServicesPageProps {
   navigate: (view: View, param?: string) => void;
-  currency: Currency;
+  currency?: Currency;
   selectedServiceId?: string;
 }
 
 export const ServicesPage: React.FC<ServicesPageProps> = ({
   navigate,
-  currency,
   selectedServiceId
 }) => {
   const [selectedLocalId, setSelectedLocalId] = useState<string>(

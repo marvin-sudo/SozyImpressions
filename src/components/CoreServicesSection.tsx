@@ -73,7 +73,7 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
 
         {/* 7 Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {SERVICES_DATA.map((service, idx) => (
+          {SERVICES_DATA.map((service) => (
             <div
               key={service.id}
               className="bg-[#F7F8FA] rounded-3xl overflow-hidden border border-slate-200 hover:border-[#2D3094]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group text-left"

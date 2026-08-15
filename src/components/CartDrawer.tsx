@@ -6,7 +6,6 @@ import {
   Minus, 
   ShoppingCart, 
   ArrowRight, 
-  Sparkles,
   ShieldCheck
 } from 'lucide-react';
 import { CartItem, Currency } from '../types';

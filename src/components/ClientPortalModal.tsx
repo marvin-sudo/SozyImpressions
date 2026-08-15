@@ -3,12 +3,7 @@ import {
   X, 
   Search, 
   CheckCircle2, 
-  Clock, 
-  Truck, 
   FileText, 
-  Printer, 
-  ShieldCheck, 
-  Download, 
   MessageSquare,
   Sparkles,
   AlertCircle
@@ -29,8 +24,7 @@ export const ClientPortalModal: React.FC<ClientPortalModalProps> = ({
   onClose,
   orders = [],
   quotes = [],
-  currency,
-  navigate
+  currency
 }) => {
   const [searchId, setSearchId] = useState('');
   const [foundOrder, setFoundOrder] = useState<Order | null>(null);

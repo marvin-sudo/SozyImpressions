@@ -4,19 +4,11 @@ import {
   Package, 
   FileText, 
   ShoppingCart, 
-  Image, 
-  Settings, 
   Plus, 
   Trash2, 
-  Edit3, 
-  CheckCircle2, 
-  Clock, 
-  DollarSign,
-  TrendingUp,
-  Download,
-  AlertCircle
+  TrendingUp
 } from 'lucide-react';
-import { Product, QuoteRequest, Order, PortfolioProject, Currency } from '../types';
+import { Product, QuoteRequest, Order } from '../types';
 
 interface AdminModalProps {
   isOpen: boolean;
@@ -27,7 +19,6 @@ interface AdminModalProps {
   onUpdateProducts: (products: Product[]) => void;
   onUpdateQuotes: (quotes: QuoteRequest[]) => void;
   onUpdateOrders: (orders: Order[]) => void;
-  currency: Currency;
 }
 
 export const AdminModal: React.FC<AdminModalProps> = ({
@@ -38,11 +29,9 @@ export const AdminModal: React.FC<AdminModalProps> = ({
   orders,
   onUpdateProducts,
   onUpdateQuotes,
-  onUpdateOrders,
-  currency
+  onUpdateOrders
 }) => {
   const [activeTab, setActiveTab] = useState<'overview' | 'products' | 'quotes' | 'orders'>('overview');
-  const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [isAddingNew, setIsAddingNew] = useState(false);
 
   // New product state

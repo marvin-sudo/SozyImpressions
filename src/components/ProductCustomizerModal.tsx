@@ -2,20 +2,15 @@ import React, { useState, useRef } from 'react';
 import { 
   X, 
   Upload, 
-  Check, 
   MessageSquare, 
   ShoppingCart, 
-  Sparkles, 
-  ShieldCheck, 
   Plus, 
   Minus,
   Info,
   Palette,
-  Layers,
   FileCheck
 } from 'lucide-react';
 import { Product, Currency, CustomizationOptions, CartItem } from '../types';
-import { COMPANY_INFO, EXCHANGE_RATE_USD_TO_UGX } from '../data/mockData';
 
 interface ProductCustomizerModalProps {
   product: Product | null;

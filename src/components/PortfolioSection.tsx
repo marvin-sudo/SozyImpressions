@@ -3,7 +3,6 @@ import {
   ArrowRight, 
   Sparkles, 
   Building, 
-  ExternalLink,
   ChevronRight
 } from 'lucide-react';
 import { View, PortfolioProject } from '../types';

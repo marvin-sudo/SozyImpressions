@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageSquare, X, Send, Sparkles } from 'lucide-react';
+import { MessageSquare, X, Send } from 'lucide-react';
 import { COMPANY_INFO } from '../data/mockData';
 
 export const FloatingWhatsApp: React.FC = () => {
@@ -11,7 +11,7 @@ export const FloatingWhatsApp: React.FC = () => {
       ? customMsg 
       : 'Hello Sozy Impressions! I would like to inquire about corporate branding, printing, and customized gifts.';
     const encoded = encodeURIComponent(text);
-    window.open(`https://wa.me/256709390168?text=${encoded}`, '_blank');
+    window.open(`${COMPANY_INFO.whatsappDirectUrl}?text=${encoded}`, '_blank');
     setIsOpen(false);
   };
 

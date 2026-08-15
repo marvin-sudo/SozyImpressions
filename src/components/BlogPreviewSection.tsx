@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { 
   ArrowRight, 
-  Sparkles, 
   Calendar, 
   Clock, 
   ChevronRight,

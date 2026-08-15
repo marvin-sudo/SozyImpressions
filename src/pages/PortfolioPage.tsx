@@ -62,7 +62,13 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ navigate, onOpenCa
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              onClick={() => setActiveCaseStudy(project)}
+              onClick={() => {
+                if (onOpenCaseStudy) {
+                  onOpenCaseStudy(project);
+                } else {
+                  setActiveCaseStudy(project);
+                }
+              }}
               className="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-[#2D3094]/50 shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer group flex flex-col justify-between"
             >
               <div>

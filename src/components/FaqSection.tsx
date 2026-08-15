@@ -3,8 +3,7 @@ import {
   ChevronDown, 
   HelpCircle, 
   MessageSquare, 
-  Phone,
-  Sparkles
+  Phone
 } from 'lucide-react';
 import { FAQS_DATA, COMPANY_INFO } from '../data/mockData';
 
