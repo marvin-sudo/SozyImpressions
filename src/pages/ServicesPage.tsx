@@ -165,7 +165,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 </button>
 
                 <a
-                  href={`https://wa.me/256708000000?text=Hello%20Sozy%20Impressions!%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(activeService.title)}.`}
+                  href={`https://wa.me/256709390168?text=Hello%20Sozy%20Impressions!%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(activeService.title)}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 hover:text-emerald-800 bg-emerald-50 px-5 py-3.5 rounded-full border border-emerald-200"

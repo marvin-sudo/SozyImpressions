@@ -50,7 +50,7 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
     const priceText = currency === 'UGX' ? `UGX ${product.priceUGX.toLocaleString()}` : `${product.priceUSD}`;
     const message = `Hello Sozy Impressions! I am interested in inquiring/ordering "${product.name}" (Price: ${priceText}). Please guide me on customization and delivery.`;
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/256708000000?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/256709390168?text=${encoded}`, '_blank');
   };
 
   return (

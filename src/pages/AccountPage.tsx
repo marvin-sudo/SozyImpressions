@@ -31,7 +31,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({ currency }) => {
       estimatedDelivery: 'Aug 16, 2026',
       deliveryAddress: 'Stanbic Bank Towers, Crested Towers Branch, Kampala',
       assignedManager: 'Alex Mukasa (Senior Production Lead)',
-      managerPhone: '+256 708 000 000'
+      managerPhone: '+256 709 390 168'
     },
     {
       id: 'SOZY-ORD-73105',
@@ -44,7 +44,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({ currency }) => {
       estimatedDelivery: 'Aug 14, 2026',
       deliveryAddress: 'Xani Foods Distribution Hub, Jinja Industrial Area',
       assignedManager: 'Sarah Namatovu',
-      managerPhone: '+256 708 000 000'
+      managerPhone: '+256 709 390 168'
     }
   ];
 
@@ -147,7 +147,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({ currency }) => {
 
                 <div className="flex items-center gap-3">
                   <a
-                    href={`https://wa.me/256708000000?text=Hello%20Sozy%20Impressions!%20Inquiring%20about%20status%20for%20order%20${currentOrder.id}.`}
+                    href={`https://wa.me/256709390168?text=Hello%20Sozy%20Impressions!%20Inquiring%20about%20status%20for%20order%20${currentOrder.id}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 text-xs font-bold px-4 py-2.5 rounded-xl transition-colors flex items-center gap-2"

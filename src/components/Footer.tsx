@@ -8,8 +8,11 @@ import {
   CheckCircle2, 
   ShieldCheck, 
   Sparkles,
-  ArrowRight,
-  Lock
+  Lock,
+  Instagram,
+  Facebook,
+  Youtube,
+  Music2
 } from 'lucide-react';
 import { View } from '../types';
 import { COMPANY_INFO, SERVICES_DATA, PAYMENT_LOGOS } from '../data/mockData';
@@ -101,7 +104,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
             </p>
 
             {/* Credibility Badges */}
-            <div className="flex flex-wrap gap-2 text-[11px] font-semibold text-slate-300">
+            <div className="flex flex-wrap gap-2 text-[11px] font-semibold text-slate-300 mb-6">
               <span className="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full flex items-center gap-1.5">
                 <ShieldCheck size={14} className="text-[#ED008C]" />
                 10+ Years Experience
@@ -110,6 +113,58 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
                 <Sparkles size={14} className="text-emerald-400" />
                 Heidelberg Offset Press
               </span>
+            </div>
+
+            {/* Social Media Links */}
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-2.5">
+                Follow Our Work
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href={COMPANY_INFO.socials.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Sozy Impressions on Instagram"
+                  className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-[#E1306C] hover:bg-[#E1306C]/20 hover:text-[#E1306C] text-slate-300 flex items-center justify-center transition-all hover:scale-110"
+                  title="Instagram"
+                >
+                  <Instagram size={18} />
+                </a>
+
+                <a
+                  href={COMPANY_INFO.socials.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Sozy Impressions on TikTok"
+                  className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-[#00F2FE] hover:bg-[#00F2FE]/20 hover:text-[#00F2FE] text-slate-300 flex items-center justify-center transition-all hover:scale-110"
+                  title="TikTok (@sozyimpressions)"
+                >
+                  <Music2 size={18} />
+                </a>
+
+                <a
+                  href={COMPANY_INFO.socials.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Subscribe to Sozy Impressions on YouTube"
+                  className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF0000] hover:bg-[#FF0000]/20 hover:text-[#FF0000] text-slate-300 flex items-center justify-center transition-all hover:scale-110"
+                  title="YouTube"
+                >
+                  <Youtube size={18} />
+                </a>
+
+                <a
+                  href={COMPANY_INFO.socials.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Sozy Impressions on Facebook"
+                  className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-[#1877F2] hover:bg-[#1877F2]/20 hover:text-[#1877F2] text-slate-300 flex items-center justify-center transition-all hover:scale-110"
+                  title="Facebook"
+                >
+                  <Facebook size={18} />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -205,7 +260,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
                   rel="noopener noreferrer" 
                   className="hover:text-white text-xs text-emerald-400 font-bold transition-colors"
                 >
-                  WhatsApp: +256 708 000 000
+                  WhatsApp: {COMPANY_INFO.whatsapp}
                 </a>
               </div>
 

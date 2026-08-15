@@ -110,7 +110,7 @@ ${itemsList}
 Please send the digital proof and invoice!`;
 
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/256708000000?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/256709390168?text=${encoded}`, '_blank');
   };
 
   if (!isOpen) return null;
@@ -244,7 +244,7 @@ Please send the digital proof and invoice!`;
                       <input
                         type="tel"
                         required
-                        placeholder="+256 708..."
+                        placeholder="+256 709 390 168"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="w-full bg-white border border-slate-200 rounded-xl p-2.5 outline-none focus:border-[#2D3094]"

@@ -450,10 +450,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               )}
             </button>
 
-            {/* Primary High-Converting CTA: Get a Quote */}
+            {/* Primary High-Converting CTA: Get a Quote (Hidden on Mobile, Visible on Tablet & Desktop) */}
             <button 
               onClick={() => navigate('quote')}
-              className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-[11px] font-bold uppercase tracking-wider px-5 sm:px-6 py-2.5 rounded-full shadow-lg shadow-[#ED008C]/25 transition-all transform hover:scale-105 active:scale-95 flex items-center gap-1.5 cursor-pointer"
+              className="hidden sm:flex bg-[#ED008C] hover:bg-[#d4007d] text-white text-[11px] font-bold uppercase tracking-wider px-5 sm:px-6 py-2.5 rounded-full shadow-lg shadow-[#ED008C]/25 transition-all transform hover:scale-105 active:scale-95 items-center gap-1.5 cursor-pointer"
             >
               <span>Get a Quote</span>
             </button>

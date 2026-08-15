@@ -150,7 +150,7 @@ export const QuoteCalculatorSection: React.FC<QuoteCalculatorSectionProps> = ({
 Please review my artwork and reply with the official signed PDF invoice!`;
 
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/256708000000?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/256709390168?text=${encoded}`, '_blank');
   };
 
   return (
@@ -498,7 +498,7 @@ Please review my artwork and reply with the official signed PDF invoice!`;
                       <input
                         type="tel"
                         required
-                        placeholder="+256 708..."
+                        placeholder="+256 709 390 168"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 outline-none focus:border-[#2D3094] focus:bg-white"

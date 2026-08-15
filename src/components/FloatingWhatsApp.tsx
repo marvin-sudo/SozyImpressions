@@ -11,7 +11,7 @@ export const FloatingWhatsApp: React.FC = () => {
       ? customMsg 
       : 'Hello Sozy Impressions! I would like to inquire about corporate branding, printing, and customized gifts.';
     const encoded = encodeURIComponent(text);
-    window.open(`https://wa.me/256708000000?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/256709390168?text=${encoded}`, '_blank');
     setIsOpen(false);
   };
 
@@ -63,7 +63,7 @@ export const FloatingWhatsApp: React.FC = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/40 transition-transform duration-300 hover:scale-110 active:scale-95 group relative"
-        title="Chat on WhatsApp (+256 708 000 000)"
+        title={`Chat on WhatsApp (${COMPANY_INFO.whatsapp})`}
       >
         <MessageSquare size={26} className="group-hover:rotate-12 transition-transform" />
         <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-[#ED008C] rounded-full border-2 border-white animate-ping" />

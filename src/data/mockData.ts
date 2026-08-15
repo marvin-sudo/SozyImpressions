@@ -15,15 +15,21 @@ export const COMPANY_INFO = {
   logoUrl: 'https://www.image2url.com/r2/default/images/1786717468624-8d57a567-d5cb-4ce7-93eb-959e8e208022.png',
   website: 'https://sozyimpressions.com',
   email: 'sales@sozyimpressions.com',
-  phone: '+256 708 000 000',
-  whatsapp: '+256 708 000 000',
-  whatsappDirectUrl: 'https://wa.me/256708000000',
+  phone: '+256 709 390 168',
+  whatsapp: '+256 709 390 168',
+  whatsappDirectUrl: 'https://wa.me/256709390168',
   address: 'Plot 42, Nkrumah Road & Jinja Road Creative Studio, Kampala, Uganda',
   workingHours: 'Mon - Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 4:00 PM',
   establishedYear: '2015',
   yearsExperience: '10+',
   clientsCount: '250+',
   projectsCount: '1,000+',
+  socials: {
+    instagram: 'https://www.instagram.com/sozyimpressions',
+    tiktok: 'https://www.tiktok.com/@sozyimpressions',
+    youtube: 'https://www.youtube.com/@sozyimpressions',
+    facebook: 'https://www.facebook.com/sozyimpressions',
+  },
 };
 
 export const PAYMENT_LOGOS = {
