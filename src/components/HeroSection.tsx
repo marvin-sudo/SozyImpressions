@@ -167,6 +167,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                   <img 
                     src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600" 
                     alt="Sozy Impressions Corporate Branding" 
+                    loading="eager"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
@@ -181,6 +184,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                   <img 
                     src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=600" 
                     alt="Customised Gifts and Flasks" 
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
@@ -195,6 +201,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                   <img 
                     src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" 
                     alt="Event Branding and Signage" 
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
@@ -209,6 +218,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                   <img 
                     src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600" 
                     alt="Luxury Foil Business Cards" 
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">

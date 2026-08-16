@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, Suspense, lazy } from 'react';
 import { 
   MessageSquare, 
   ArrowUp, 
-  CheckCircle2 
+  CheckCircle2,
+  Loader2
 } from 'lucide-react';
 
 import { 
@@ -21,30 +22,40 @@ import {
   COMPANY_INFO 
 } from './data/mockData';
 
-// Layout Components
+// Layout Components (Eagerly loaded for instant top-level layout)
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 
-// Multi-Page Views
+// Multi-Page Views (HomePage eager, secondary pages dynamically lazy-loaded)
 import { HomePage } from './pages/HomePage';
-import { ServicesPage } from './pages/ServicesPage';
-import { AboutPage } from './pages/AboutPage';
-import { PortfolioPage } from './pages/PortfolioPage';
-import { ShopPage } from './pages/ShopPage';
-import { QuotePage } from './pages/QuotePage';
-import { BlogPage } from './pages/BlogPage';
-import { ContactPage } from './pages/ContactPage';
-import { AccountPage } from './pages/AccountPage';
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(m => ({ default: m.ServicesPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
+const PortfolioPage = lazy(() => import('./pages/PortfolioPage').then(m => ({ default: m.PortfolioPage })));
+const ShopPage = lazy(() => import('./pages/ShopPage').then(m => ({ default: m.ShopPage })));
+const QuotePage = lazy(() => import('./pages/QuotePage').then(m => ({ default: m.QuotePage })));
+const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
+const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })));
 
-// Modals & Drawers
-import { CartDrawer } from './components/CartDrawer';
-import { ProductCustomizerModal } from './components/ProductCustomizerModal';
-import { CheckoutModal } from './components/CheckoutModal';
-import { ClientPortalModal } from './components/ClientPortalModal';
-import { AdminModal } from './components/AdminModal';
-import { SearchModal } from './components/SearchModal';
-import { CaseStudyModal } from './components/CaseStudyModal';
-import { BlogArticleModal } from './components/BlogArticleModal';
+// Modals & Drawers (Dynamically lazy-loaded on demand)
+const CartDrawer = lazy(() => import('./components/CartDrawer').then(m => ({ default: m.CartDrawer })));
+const ProductCustomizerModal = lazy(() => import('./components/ProductCustomizerModal').then(m => ({ default: m.ProductCustomizerModal })));
+const CheckoutModal = lazy(() => import('./components/CheckoutModal').then(m => ({ default: m.CheckoutModal })));
+const ClientPortalModal = lazy(() => import('./components/ClientPortalModal').then(m => ({ default: m.ClientPortalModal })));
+const AdminModal = lazy(() => import('./components/AdminModal').then(m => ({ default: m.AdminModal })));
+const SearchModal = lazy(() => import('./components/SearchModal').then(m => ({ default: m.SearchModal })));
+const CaseStudyModal = lazy(() => import('./components/CaseStudyModal').then(m => ({ default: m.CaseStudyModal })));
+const BlogArticleModal = lazy(() => import('./components/BlogArticleModal').then(m => ({ default: m.BlogArticleModal })));
+
+// Page Loading Spinner Fallback
+const PageLoadingFallback = () => (
+  <div className="w-full min-h-[60vh] flex flex-col items-center justify-center gap-4 py-20">
+    <div className="w-12 h-12 rounded-full border-4 border-[#2D3094]/20 border-t-[#2D3094] animate-spin flex items-center justify-center">
+      <Loader2 className="w-5 h-5 text-[#2D3094] animate-pulse" />
+    </div>
+    <span className="text-xs font-semibold tracking-wider text-slate-400 uppercase">Loading Experience...</span>
+  </div>
+);
 
 // Helper to parse hash route
 const parseHashRoute = (): { view: View; param?: string } => {
@@ -348,7 +359,9 @@ export const App: React.FC = () => {
 
       {/* Page Content Viewport */}
       <main className="flex-1 w-full pt-[72px] sm:pt-[96px]">
-        {renderCurrentView()}
+        <Suspense fallback={<PageLoadingFallback />}>
+          {renderCurrentView()}
+        </Suspense>
       </main>
 
       {/* Main Footer */}
@@ -382,91 +395,102 @@ export const App: React.FC = () => {
         </button>
       )}
 
-      {/* --- Global Modals & Drawers --- */}
+      {/* --- Global Modals & Drawers with lazy Suspense --- */}
+      <Suspense fallback={null}>
+        {/* Cart Drawer */}
+        {isCartOpen && (
+          <CartDrawer
+            isOpen={isCartOpen}
+            onClose={() => setIsCartOpen(false)}
+            cart={cart}
+            currency={currency}
+            onUpdateQuantity={handleUpdateCartQuantity}
+            onRemoveItem={handleRemoveCartItem}
+            onOpenCheckout={() => {
+              setIsCartOpen(false);
+              setIsCheckoutOpen(true);
+            }}
+          />
+        )}
 
-      {/* Cart Drawer */}
-      <CartDrawer
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
-        cart={cart}
-        currency={currency}
-        onUpdateQuantity={handleUpdateCartQuantity}
-        onRemoveItem={handleRemoveCartItem}
-        onOpenCheckout={() => {
-          setIsCartOpen(false);
-          setIsCheckoutOpen(true);
-        }}
-      />
+        {/* Product Customizer Modal */}
+        {customizingProduct && (
+          <ProductCustomizerModal
+            product={customizingProduct}
+            isOpen={!!customizingProduct}
+            onClose={() => setCustomizingProduct(null)}
+            currency={currency}
+            onAddToCart={handleAddToCart}
+          />
+        )}
 
-      {/* Product Customizer Modal */}
-      {customizingProduct && (
-        <ProductCustomizerModal
-          product={customizingProduct}
-          isOpen={!!customizingProduct}
-          onClose={() => setCustomizingProduct(null)}
-          currency={currency}
-          onAddToCart={handleAddToCart}
-        />
-      )}
+        {/* Checkout Modal */}
+        {isCheckoutOpen && (
+          <CheckoutModal
+            isOpen={isCheckoutOpen}
+            onClose={() => setIsCheckoutOpen(false)}
+            cart={cart}
+            currency={currency}
+            onOrderCompleted={handleOrderCompleted}
+            onClearCart={() => setCart([])}
+          />
+        )}
 
-      {/* Checkout Modal */}
-      <CheckoutModal
-        isOpen={isCheckoutOpen}
-        onClose={() => setIsCheckoutOpen(false)}
-        cart={cart}
-        currency={currency}
-        onOrderCompleted={handleOrderCompleted}
-        onClearCart={() => setCart([])}
-      />
+        {/* Client Portal Modal */}
+        {isClientPortalOpen && (
+          <ClientPortalModal
+            isOpen={isClientPortalOpen}
+            onClose={() => setIsClientPortalOpen(false)}
+            navigate={navigate}
+            currency={currency}
+            orders={orders}
+            quotes={quotes}
+          />
+        )}
 
-      {/* Client Portal Modal */}
-      <ClientPortalModal
-        isOpen={isClientPortalOpen}
-        onClose={() => setIsClientPortalOpen(false)}
-        navigate={navigate}
-        currency={currency}
-        orders={orders}
-        quotes={quotes}
-      />
+        {/* Admin Operations Modal */}
+        {isAdminModalOpen && (
+          <AdminModal
+            isOpen={isAdminModalOpen}
+            onClose={() => setIsAdminModalOpen(false)}
+            products={products}
+            quotes={quotes}
+            orders={orders}
+            onUpdateProducts={(prods) => setProducts(prods)}
+            onUpdateQuotes={(qts) => setQuotes(qts)}
+            onUpdateOrders={(ords) => setOrders(ords)}
+            currency={currency}
+          />
+        )}
 
-      {/* Admin Operations Modal */}
-      <AdminModal
-        isOpen={isAdminModalOpen}
-        onClose={() => setIsAdminModalOpen(false)}
-        products={products}
-        quotes={quotes}
-        orders={orders}
-        onUpdateProducts={(prods) => setProducts(prods)}
-        onUpdateQuotes={(qts) => setQuotes(qts)}
-        onUpdateOrders={(ords) => setOrders(ords)}
-        currency={currency}
-      />
+        {/* Global Search Modal */}
+        {isSearchOpen && (
+          <SearchModal
+            isOpen={isSearchOpen}
+            onClose={() => setIsSearchOpen(false)}
+            navigate={navigate}
+            onOpenCustomizer={(prod) => setCustomizingProduct(prod)}
+          />
+        )}
 
-      {/* Global Search Modal */}
-      <SearchModal
-        isOpen={isSearchOpen}
-        onClose={() => setIsSearchOpen(false)}
-        navigate={navigate}
-        onOpenCustomizer={(prod) => setCustomizingProduct(prod)}
-      />
+        {/* Case Study Modal */}
+        {activeCaseStudy && (
+          <CaseStudyModal
+            project={activeCaseStudy}
+            onClose={() => setActiveCaseStudy(null)}
+            navigate={navigate}
+          />
+        )}
 
-      {/* Case Study Modal */}
-      {activeCaseStudy && (
-        <CaseStudyModal
-          project={activeCaseStudy}
-          onClose={() => setActiveCaseStudy(null)}
-          navigate={navigate}
-        />
-      )}
-
-      {/* Blog Article Modal */}
-      {activeBlogArticle && (
-        <BlogArticleModal
-          article={activeBlogArticle}
-          onClose={() => setActiveBlogArticle(null)}
-          navigate={navigate}
-        />
-      )}
+        {/* Blog Article Modal */}
+        {activeBlogArticle && (
+          <BlogArticleModal
+            article={activeBlogArticle}
+            onClose={() => setActiveBlogArticle(null)}
+            navigate={navigate}
+          />
+        )}
+      </Suspense>
 
     </div>
   );
