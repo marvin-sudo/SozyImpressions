@@ -147,7 +147,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({ currency }) => {
 
                 <div className="flex items-center gap-3">
                   <a
-                    href={`https://wa.me/256709390168?text=Hello%20Sozy%20Impressions!%20Inquiring%20about%20status%20for%20order%20${currentOrder.id}.`}
+                    href={`https://wa.me/256787662183?text=Hello%20Sozy%20Impressions!%20Inquiring%20about%20status%20for%20order%20${currentOrder.id}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 text-xs font-bold px-4 py-2.5 rounded-xl transition-colors flex items-center gap-2"

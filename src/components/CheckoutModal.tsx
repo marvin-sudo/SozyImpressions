@@ -104,7 +104,7 @@ ${itemsList}
 Please send the digital proof and invoice!`;
 
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/256709390168?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/256787662183?text=${encoded}`, '_blank');
   };
 
   if (!isOpen) return null;

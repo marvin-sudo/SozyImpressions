@@ -37,15 +37,17 @@ const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.B
 const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
 const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })));
 
+// Modals & Shared Views
+import { ProductCustomizerModal } from './components/ProductCustomizerModal';
+import { CaseStudyModal } from './components/CaseStudyModal';
+import { BlogArticleModal } from './components/BlogArticleModal';
+
 // Modals & Drawers (Dynamically lazy-loaded on demand)
 const CartDrawer = lazy(() => import('./components/CartDrawer').then(m => ({ default: m.CartDrawer })));
-const ProductCustomizerModal = lazy(() => import('./components/ProductCustomizerModal').then(m => ({ default: m.ProductCustomizerModal })));
 const CheckoutModal = lazy(() => import('./components/CheckoutModal').then(m => ({ default: m.CheckoutModal })));
 const ClientPortalModal = lazy(() => import('./components/ClientPortalModal').then(m => ({ default: m.ClientPortalModal })));
 const AdminModal = lazy(() => import('./components/AdminModal').then(m => ({ default: m.AdminModal })));
 const SearchModal = lazy(() => import('./components/SearchModal').then(m => ({ default: m.SearchModal })));
-const CaseStudyModal = lazy(() => import('./components/CaseStudyModal').then(m => ({ default: m.CaseStudyModal })));
-const BlogArticleModal = lazy(() => import('./components/BlogArticleModal').then(m => ({ default: m.BlogArticleModal })));
 
 // Page Loading Spinner Fallback
 const PageLoadingFallback = () => (

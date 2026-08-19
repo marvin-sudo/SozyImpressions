@@ -150,7 +150,7 @@ export const QuoteCalculatorSection: React.FC<QuoteCalculatorSectionProps> = ({
 Please review my artwork and reply with the official signed PDF invoice!`;
 
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/256709390168?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/256787662183?text=${encoded}`, '_blank');
   };
 
   return (

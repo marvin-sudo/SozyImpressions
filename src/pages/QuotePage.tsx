@@ -392,7 +392,7 @@ export const QuotePage: React.FC<QuotePageProps> = ({ currency }) => {
               {/* Action Buttons */}
               <div className="space-y-3">
                 <a
-                  href={`https://wa.me/256709390168?text=Hello%20Sozy%20Impressions!%20I%20generated%20a%20quote%20for%20${quantity}%20units%20of%20${encodeURIComponent(productType)}%20with%20${encodeURIComponent(finishing)}.%20Est.%20Price:%20UGX%20${calculation.totalUGX.toLocaleString()}.`}
+                  href={`https://wa.me/256787662183?text=Hello%20Sozy%20Impressions!%20I%20generated%20a%20quote%20for%20${quantity}%20units%20of%20${encodeURIComponent(productType)}%20with%20${encodeURIComponent(finishing)}.%20Est.%20Price:%20UGX%20${calculation.totalUGX.toLocaleString()}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-[#25D366] hover:bg-[#20b858] text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"

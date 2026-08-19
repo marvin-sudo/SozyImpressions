@@ -125,7 +125,7 @@ ${customText ? `- Custom Text: "${customText}"` : ''}
 Please assist me with finalizing this order!`;
 
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/256709390168?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/256787662183?text=${encoded}`, '_blank');
   };
 
   return (

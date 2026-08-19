@@ -187,7 +187,7 @@ export const ClientPortalModal: React.FC<ClientPortalModalProps> = ({
                   </button>
 
                   <a
-                    href="https://wa.me/256709390168"
+                    href="https://wa.me/256787662183"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="border border-slate-300 hover:bg-white text-slate-700 font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl flex items-center gap-2"
@@ -255,7 +255,7 @@ export const ClientPortalModal: React.FC<ClientPortalModalProps> = ({
               </div>
 
               <a
-                href={`https://wa.me/256709390168?text=Hello%20Sozy%20Impressions!%20I%20am%20ready%20to%20approve%20Quote%20${foundQuote.id}`}
+                href={`https://wa.me/256787662183?text=Hello%20Sozy%20Impressions!%20I%20am%20ready%20to%20approve%20Quote%20${foundQuote.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-[#ED008C] hover:bg-[#d4007d] text-white font-bold text-xs uppercase tracking-wider py-4 rounded-full shadow-lg flex items-center justify-center gap-2"
