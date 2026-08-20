@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { View, Currency, CartItem } from '../types';
 import { COMPANY_INFO } from '../data/mockData';
+import { BrandLogo } from './BrandLogo';
 
 interface NavbarProps {
   currentView: View;
@@ -213,15 +214,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Logo Brandmark */}
           <div 
             onClick={handleLogoClick}
-            className="flex items-center gap-3 cursor-pointer select-none group py-1"
+            className="flex items-center cursor-pointer select-none group py-1"
             title="Sozy Impressions Ltd - We Build Brands That Stand Out"
           >
-            <img 
-              src={COMPANY_INFO.logoUrl} 
-              alt="Sozy Impressions Ltd Logo" 
-              className="h-10 sm:h-12 w-auto max-w-[200px] sm:max-w-[240px] object-contain group-hover:scale-105 transition-transform duration-200"
-              referrerPolicy="no-referrer"
-            />
+            <BrandLogo variant="light" size="md" />
           </div>
 
           {/* Desktop Navigation Links with Mega Horizontal Dropdown */}

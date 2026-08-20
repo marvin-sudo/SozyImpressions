@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { View } from '../types';
 import { COMPANY_INFO, SERVICES_DATA, PAYMENT_LOGOS } from '../data/mockData';
+import { BrandLogo } from './BrandLogo';
 
 interface FooterProps {
   navigate: (view: View, param?: string) => void;
@@ -90,13 +91,8 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
           
           {/* Column 1: Company Profile (lg:col-span-2) */}
           <div className="lg:col-span-2 flex flex-col items-start pr-4">
-            <div className="flex items-center gap-3 mb-4 cursor-pointer group" onClick={() => navigate('home')}>
-              <img 
-                src={COMPANY_INFO.logoUrl} 
-                alt="Sozy Impressions Ltd Logo" 
-                className="h-10 sm:h-12 w-auto max-w-[220px] object-contain brightness-0 invert opacity-95 group-hover:opacity-100 transition-opacity"
-                referrerPolicy="no-referrer"
-              />
+            <div className="mb-4 cursor-pointer group" onClick={() => navigate('home')}>
+              <BrandLogo variant="footer" size="md" showTagline />
             </div>
 
             <p className="text-sm text-slate-400 leading-relaxed mb-6">
