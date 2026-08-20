@@ -165,8 +165,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                 {/* Visual 1: Corporate Packaging & Offset Printing */}
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden group/img">
                   <img 
-                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600" 
-                    alt="Sozy Impressions Corporate Branding" 
+                    src="https://www.image2url.com/r2/default/images/1787246238224-3e208503-a79e-4276-a8a4-f4fd705244a2.jpg" 
+                    alt="Offset & Packaging" 
                     loading="eager"
                     decoding="async"
                     referrerPolicy="no-referrer"
@@ -182,8 +182,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                 {/* Visual 2: Corporate Gifts & Vacuum Flasks */}
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden group/img">
                   <img 
-                    src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=600" 
-                    alt="Customised Gifts and Flasks" 
+                    src="https://www.image2url.com/r2/default/images/1787245904300-92b2510a-35e8-48fb-baa3-cf6cad715088.jpg" 
+                    alt="VIP Custom Gifts" 
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
@@ -199,8 +199,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                 {/* Visual 3: Event Pull-Up Banners & Stage Graphics */}
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden group/img">
                   <img 
-                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600" 
-                    alt="Event Branding and Signage" 
+                    src="https://www.image2url.com/r2/default/images/1787246892685-e45b897d-1612-4692-8cc4-e3290c8ade28.png" 
+                    alt="Event Banners" 
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
@@ -216,8 +216,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                 {/* Visual 4: Executive Business Cards & Stationery */}
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden group/img">
                   <img 
-                    src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=600" 
-                    alt="Luxury Foil Business Cards" 
+                    src="https://www.image2url.com/r2/default/images/1787246355569-bd7ea187-358d-4f41-88d0-574e2fe335c7.jpg" 
+                    alt="Foil Business Cards" 
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"

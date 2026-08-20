@@ -321,7 +321,7 @@ export const PRODUCTS_DATA: Product[] = [
     priceUSD: 12,
     originalPriceUGX: 55000,
     originalPriceUSD: 14.5,
-    image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800',
+    image: 'https://www.image2url.com/r2/default/images/1787245904300-92b2510a-35e8-48fb-baa3-cf6cad715088.jpg',
     description: 'Double-wall stainless steel thermal bottle featuring a smart touch LED temperature display lid. Keeps beverages hot for 12 hours or ice-cold for 24 hours. Custom laser-engraved with your logo.',
     specifications: {
       'Material': 'Food-Grade 304 Stainless Steel',
@@ -460,7 +460,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Banners',
     priceUGX: 185000,
     priceUSD: 48.5,
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800',
+    image: 'https://www.image2url.com/r2/default/images/1787246892685-e45b897d-1612-4692-8cc4-e3290c8ade28.png',
     description: 'Heavy-duty teardrop aluminum luxury broad base stand. High-resolution anti-curl blackout PET film banner print with glare-free matte finish. Includes luxury padded canvas carry bag with shoulder strap.',
     specifications: {
       'Size': '85 cm x 200 cm (Standard) or 120 x 200 cm (Wide)',
@@ -502,7 +502,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Business Cards',
     priceUGX: 95000,
     priceUSD: 25,
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800',
+    image: 'https://www.image2url.com/r2/default/images/1787246355569-bd7ea187-358d-4f41-88d0-574e2fe335c7.jpg',
     description: 'Ultra-thick 450gsm cardstock with double-sided velvet soft-touch lamination, raised metallic gold/silver foil highlights, and precision edge foiling or rounded corners. Box of 200 cards.',
     specifications: {
       'Stock': '450 GSM Premium Duplex Cardboard',
@@ -544,7 +544,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Packaging',
     priceUGX: 18000,
     priceUSD: 4.7,
-    image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&q=80&w=800',
+    image: 'https://www.image2url.com/r2/default/images/1787246238224-3e208503-a79e-4276-a8a4-f4fd705244a2.jpg',
     description: 'Sturdy 1200gsm greyboard wrapped with printed 157gsm coated art paper. Custom printed with foil accents, magnetic closure, and custom die-cut high-density foam inserts.',
     specifications: {
       'Structure': 'Book-Style Magnetic Flip Box or Lid & Base',
@@ -682,7 +682,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=1200',
     gallery: [
       'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=1200'
+      'https://www.image2url.com/r2/default/images/1787245904300-92b2510a-35e8-48fb-baa3-cf6cad715088.jpg'
     ],
     description: 'Custom VIP gift sets, embroidered cotton polos, vacuum flasks, and commemorative crystal awards for 500 healthcare leaders and donor partners.',
     challenge: 'Producing luxury, sustainable, medical-grade branded items with exact Pantone color matching for international donor presentation.',
@@ -742,16 +742,31 @@ export const TESTIMONIALS_DATA: Testimonial[] = [
 ];
 
 export const CLIENT_LOGOS = [
-  { name: 'Xani Foods', category: 'FMCG' },
-  { name: 'A3 Collections', category: 'Retail' },
-  { name: 'Speke Group', category: 'Hospitality' },
-  { name: 'Kairos Ministries', category: 'Institution' },
-  { name: 'Elayna Estates', category: 'Real Estate' },
-  { name: 'Nile Exports', category: 'Logistics' },
-  { name: 'Apex Law Advocates', category: 'Legal' },
-  { name: 'Victoria Health', category: 'Healthcare' },
-  { name: 'Kampala University', category: 'Education' },
-  { name: 'Eco-Solar Africa', category: 'Energy' }
+  { 
+    name: 'A3 Collections', 
+    category: 'Fashion & Retail',
+    logoUrl: 'https://www.image2url.com/r2/default/images/1787245004201-f0d59f9c-1ade-4da1-b5ec-cb4e94bff9a1.png'
+  },
+  { 
+    name: 'Speke Group', 
+    category: 'Hospitality & Resorts',
+    logoUrl: 'https://www.image2url.com/r2/default/images/1787245175550-6e3b10c5-9f02-4dad-8a3d-863e668aa6c4.png'
+  },
+  { 
+    name: 'Kairos Ministries', 
+    category: 'Institution & Faith',
+    logoUrl: 'https://www.image2url.com/r2/default/images/1787245228748-c8b8e54b-1754-4428-bd32-108d3ee4e880.png'
+  },
+  { 
+    name: 'Xani Foods', 
+    category: 'FMCG & Packaging',
+    logoUrl: 'https://www.image2url.com/r2/default/images/1787245323176-3450943d-005a-491c-906b-739950a8c544.jpg'
+  },
+  { 
+    name: 'Elayna Properties', 
+    category: 'Real Estate & Land',
+    logoUrl: 'https://www.image2url.com/r2/default/images/1787245445160-28b12b4a-7c2f-48c9-b5a1-18d4275a2915.jpg'
+  }
 ];
 
 export const DELIVERY_ZONES: DeliveryZone[] = [

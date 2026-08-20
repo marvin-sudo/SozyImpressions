@@ -1,5 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CLIENT_LOGOS } from '../data/mockData';
+
+interface ClientLogoItemProps {
+  brand: {
+    name: string;
+    category?: string;
+    logoUrl?: string;
+  };
+}
+
+const ClientLogoBadge: React.FC<ClientLogoItemProps> = ({ brand }) => {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div 
+      className="inline-flex items-center justify-center bg-white border border-slate-200/80 h-16 sm:h-20 w-36 sm:w-44 md:w-52 px-4 py-2.5 rounded-2xl shadow-xs hover:shadow-md hover:border-[#ED008C]/50 transition-all cursor-pointer group shrink-0"
+      title={brand.name}
+    >
+      {brand.logoUrl && !hasError ? (
+        <img 
+          src={brand.logoUrl} 
+          alt={`${brand.name} logo`}
+          className="max-h-12 sm:max-h-14 w-auto max-w-full object-contain group-hover:scale-105 transition-transform duration-200"
+          referrerPolicy="no-referrer"
+          onError={() => setHasError(true)}
+          loading="eager"
+        />
+      ) : (
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#2E3192] to-[#ED008C] text-white font-heading font-black text-sm flex items-center justify-center shadow-xs">
+          {brand.name.charAt(0)}
+        </div>
+      )}
+    </div>
+  );
+};
 
 export const TrustedByMarquee: React.FC = () => {
   return (
@@ -12,24 +46,9 @@ export const TrustedByMarquee: React.FC = () => {
 
       {/* Infinite Horizontal Logo Marquee */}
       <div className="relative w-full overflow-hidden select-none">
-        <div className="flex gap-8 md:gap-12 animate-marquee whitespace-nowrap py-2">
-          {[...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS].map((brand, idx) => (
-            <div 
-              key={idx}
-              className="inline-flex items-center gap-3 bg-white border border-slate-200 px-6 py-3 rounded-2xl shadow-sm hover:shadow-md hover:border-[#ED008C]/40 transition-all cursor-default group shrink-0"
-            >
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#2E3192] to-[#ED008C] text-white font-heading font-black text-sm flex items-center justify-center shadow-sm">
-                {brand.name.charAt(0)}
-              </div>
-              <div className="text-left">
-                <span className="font-heading font-black text-sm text-slate-800 group-hover:text-[#2D3094] transition-colors block leading-tight">
-                  {brand.name}
-                </span>
-                <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">
-                  {brand.category}
-                </span>
-              </div>
-            </div>
+        <div className="flex gap-4 sm:gap-6 md:gap-8 animate-marquee hover:[animation-play-state:paused] whitespace-nowrap py-2">
+          {[...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS].map((brand, idx) => (
+            <ClientLogoBadge key={idx} brand={brand} />
           ))}
         </div>
       </div>

@@ -61,7 +61,7 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
     stationery: {
       title: 'Executive Corporate Stationery & Identity Suites',
       subtitle: 'Impeccable tactile touchpoints for legal briefs, board presentations, and contracts.',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200',
+      image: 'https://www.image2url.com/r2/default/images/1787246355569-bd7ea187-358d-4f41-88d0-574e2fe335c7.jpg',
       bullets: [
         '450gsm Velvet Soft-Touch Business Cards with Raised Gold/Silver Foil',
         'Official Watermarked Letterheads & Continuation Sheets',
