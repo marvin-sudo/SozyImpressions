@@ -10,9 +10,7 @@ import { PortfolioSection } from '../components/PortfolioSection';
 import { WhySozySection } from '../components/WhySozySection';
 import { ProcessSection } from '../components/ProcessSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
-import { QuoteCalculatorSection } from '../components/QuoteCalculatorSection';
 import { BlogPreviewSection } from '../components/BlogPreviewSection';
-import { FaqSection } from '../components/FaqSection';
 import { FinalCtaSection } from '../components/FinalCtaSection';
 
 interface HomePageProps {
@@ -68,16 +66,10 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 11. Client Testimonials & Social Proof */}
       <TestimonialsSection />
 
-      {/* 12. Smart Interactive Quote Calculator & RFQ Form */}
-      <QuoteCalculatorSection currency={currency} />
-
-      {/* 13. Industry Insights & Blog */}
+      {/* 12. Industry Insights & Blog */}
       <BlogPreviewSection navigate={navigate} />
 
-      {/* 14. Frequently Asked Questions Accordion */}
-      <FaqSection />
-
-      {/* 15. Final High-Converting Conversion Banner */}
+      {/* 13. Final High-Converting Conversion Banner */}
       <FinalCtaSection navigate={navigate} />
     </div>
   );

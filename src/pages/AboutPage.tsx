@@ -6,6 +6,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { View } from '../types';
+import { FaqSection } from '../components/FaqSection';
 
 interface AboutPageProps {
   navigate: (view: View, param?: string) => void;
@@ -41,7 +42,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
             </div>
             <h3 className="font-heading font-black text-xl text-slate-900 mb-2">Our Mission</h3>
             <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              To empower African businesses, institutions, and entrepreneurs with world-class branding, offset precision printing, and bespoke corporate gifts that leave an enduring mark of excellence and authority.
+              To empower businesses and organizations with high-quality printing, innovative corporate merchandise, creative branding, and seamless digital procurement—delivered with speed, precision, reliability, and exceptional customer service.
             </p>
           </div>
 
@@ -51,7 +52,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
             </div>
             <h3 className="font-heading font-black text-xl text-slate-900 mb-2">Our Vision</h3>
             <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
-              To be Africa’s foremost benchmark for print craftsmanship, innovative corporate merchandise, and seamless digital procurement by combining modern technology with uncompromising quality control.
+              To be the foremost benchmark in print craftsmanship, innovative corporate merchandise, and seamless digital procurement—combining cutting-edge technology, uncompromising quality, and speed to deliver exceptional solutions on time
             </p>
           </div>
         </div>
@@ -88,6 +89,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
               <p className="text-slate-500">Multi-head Tajima embroidery for corporate polo shirts, formal staff uniforms, and branded caps.</p>
             </div>
           </div>
+        </div>
+
+        {/* Frequently Asked Questions */}
+        <div className="bg-white rounded-3xl p-6 md:p-12 border border-slate-200 shadow-xl">
+          <FaqSection className="py-4 px-0 bg-transparent border-0" />
         </div>
 
         {/* Visit Our Showroom CTA */}

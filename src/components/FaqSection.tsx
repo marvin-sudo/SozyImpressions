@@ -7,7 +7,11 @@ import {
 } from 'lucide-react';
 import { FAQS_DATA, COMPANY_INFO } from '../data/mockData';
 
-export const FaqSection: React.FC = () => {
+interface FaqSectionProps {
+  className?: string;
+}
+
+export const FaqSection: React.FC<FaqSectionProps> = ({ className = '' }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFaq = (index: number) => {
@@ -15,7 +19,7 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-[#F7F8FA] border-b border-slate-200/80 font-sans">
+    <section className={`py-16 md:py-20 px-4 md:px-8 font-sans ${className || 'bg-[#F7F8FA] border-b border-slate-200/80'}`}>
       <div className="max-w-4xl mx-auto">
         
         {/* Header */}

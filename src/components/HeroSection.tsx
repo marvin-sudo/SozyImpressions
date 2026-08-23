@@ -37,15 +37,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
       );
 
   return (
-    <section className="relative min-h-[92vh] flex flex-col justify-center pt-32 pb-16 px-4 md:px-8 bg-gradient-to-b from-[#0F1224] via-[#121212] to-[#181B2F] text-white overflow-hidden border-b border-white/10">
+    <section className="relative min-h-[92vh] flex flex-col justify-center pt-32 pb-16 px-4 md:px-8 bg-white text-slate-900 overflow-hidden border-b border-slate-200/80">
       
       {/* Background Subtle Geometric Grid Pattern */}
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none bg-[radial-gradient(#2E3192_1px,transparent_1px)] [background-size:24px_24px]" />
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none bg-[radial-gradient(#2E3192_1px,transparent_1px)] [background-size:24px_24px]" />
 
-      {/* Atmospheric Ambient Light Blooms */}
+      {/* Atmospheric Soft Light Blooms */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-20 left-1/4 w-[500px] h-[500px] bg-[#2E3192] rounded-full filter blur-[150px] opacity-35 animate-pulse" />
-        <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#ED008C] rounded-full filter blur-[160px] opacity-25 animate-pulse" />
+        <div className="absolute -top-24 left-1/4 w-[600px] h-[600px] bg-[#2E3192]/5 rounded-full filter blur-[140px]" />
+        <div className="absolute top-1/3 right-10 w-[550px] h-[550px] bg-[#ED008C]/5 rounded-full filter blur-[150px]" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10 my-auto py-6">
@@ -55,23 +55,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
           <div className="lg:col-span-7 text-left flex flex-col items-start">
             
             {/* Top Credibility Tagline Pill */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white mb-6 backdrop-blur-md shadow-sm transition-all hover:bg-white/15">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-800 mb-6 shadow-sm transition-all hover:bg-slate-200/70">
               <Sparkles size={14} className="text-[#ED008C] animate-spin" />
-              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-200">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-700">
                 Uganda's Leading Corporate Branding & Printing Authority
               </span>
             </div>
 
             {/* Master Headline */}
-            <h1 className="text-4xl sm:text-6xl xl:text-7xl font-heading font-black tracking-tight leading-[1.08] mb-6 text-white">
+            <h1 className="text-4xl sm:text-6xl xl:text-7xl font-heading font-black tracking-tight leading-[1.08] mb-6 text-slate-900">
               We Build Brands <br className="hidden sm:inline" />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#2E3192] via-[#6C63FF] to-[#ED008C]">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#2D3094] via-[#6C63FF] to-[#ED008C]">
                 That Stand Out.
               </span>
             </h1>
 
             {/* Supporting Copy */}
-            <p className="text-base sm:text-lg lg:text-xl font-light leading-relaxed text-slate-300 mb-8 max-w-2xl">
+            <p className="text-base sm:text-lg lg:text-xl font-normal leading-relaxed text-slate-600 mb-8 max-w-2xl">
               From professional printing and corporate branding to customised gifts and creative design, we help businesses and organisations look professional, communicate effectively, and make a lasting impression.
             </p>
 
@@ -89,7 +89,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
               {/* Secondary CTA: Explore Our Services */}
               <button 
                 onClick={() => navigate('services')}
-                className="bg-[#2D3094] hover:bg-[#2E3192] text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4.5 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 border border-white/20 shadow-lg shadow-[#2D3094]/30 w-full sm:w-auto cursor-pointer"
+                className="bg-[#2D3094] hover:bg-[#242775] text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4.5 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-[#2D3094]/25 w-full sm:w-auto cursor-pointer"
               >
                 <span>Explore Our Services</span>
               </button>
@@ -97,7 +97,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
               {/* Third CTA: Shop Products */}
               <button 
                 onClick={() => navigate('shop')}
-                className="border-2 border-white/30 hover:border-white text-white hover:bg-white/10 font-heading font-bold text-xs uppercase tracking-wider px-7 py-4.5 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 w-full sm:w-auto cursor-pointer"
+                className="border-2 border-slate-300 hover:border-slate-800 text-slate-800 hover:bg-slate-50 font-heading font-bold text-xs uppercase tracking-wider px-7 py-4.5 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 w-full sm:w-auto cursor-pointer"
               >
                 <Package size={16} className="text-[#ED008C]" />
                 <span>Shop Products</span>
@@ -106,7 +106,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
 
             {/* Quick Instant Search Bar */}
             <div className="w-full max-w-xl relative">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-2 flex items-center shadow-2xl">
+              <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-2 flex items-center shadow-md focus-within:border-[#2D3094] focus-within:ring-2 focus-within:ring-[#2D3094]/10 transition-all">
                 <div className="pl-3 text-slate-400">
                   <Search size={18} />
                 </div>
@@ -115,12 +115,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                   placeholder="Quick search products, printing services, corporate gifts..." 
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-transparent px-3 py-2 text-xs sm:text-sm text-white placeholder-slate-400 outline-none"
+                  className="w-full bg-transparent px-3 py-2 text-xs sm:text-sm text-slate-800 placeholder-slate-400 outline-none"
                 />
                 {searchQuery && (
                   <button 
                     onClick={() => setSearchQuery('')}
-                    className="p-1 text-slate-400 hover:text-white"
+                    className="p-1 text-slate-400 hover:text-slate-700"
                   >
                     <X size={16} />
                   </button>
@@ -129,8 +129,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
 
               {/* Search Suggestions Dropdown */}
               {filteredSearch.length > 0 && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-[#1B1E33] border border-white/15 rounded-2xl shadow-2xl p-2 z-30 max-h-60 overflow-y-auto">
-                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-2xl shadow-2xl p-2 z-30 max-h-60 overflow-y-auto">
+                  <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider px-3 py-1">
                     Matching Solutions
                   </div>
                   {filteredSearch.map((item, idx) => (
@@ -140,9 +140,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                         navigate(item.link as View, item.param);
                         setSearchQuery('');
                       }}
-                      className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-white/10 transition-colors text-left"
+                      className="w-full flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 transition-colors text-left"
                     >
-                      <span className="text-xs font-bold text-white">{item.title}</span>
+                      <span className="text-xs font-bold text-slate-800">{item.title}</span>
                       <span className="text-[10px] font-medium text-[#ED008C] bg-[#ED008C]/10 px-2 py-0.5 rounded-full">
                         {item.category}
                       </span>
@@ -157,7 +157,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
           {/* Right Column: Premium Visual Composition of Curated Assets (lg:col-span-5) */}
           <div className="lg:col-span-5 relative">
             {/* Visual Showcase Card Container */}
-            <div className="relative group rounded-[2.5rem] overflow-hidden border border-white/20 bg-gradient-to-b from-[#181B38] to-[#121422] p-4 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:border-[#ED008C]/40 hover:shadow-[#ED008C]/20">
+            <div className="relative group rounded-[2.5rem] overflow-hidden border border-slate-200/90 bg-slate-50/90 p-4 shadow-xl backdrop-blur-xl transition-all duration-500 hover:border-[#ED008C]/40 hover:shadow-2xl">
               
               {/* Curated Grid of Physical Media */}
               <div className="grid grid-cols-2 gap-3 mb-3">
@@ -235,7 +235,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
               {/* Showreel Interactive Trigger Bar */}
               <button 
                 onClick={() => setIsShowreelOpen(true)}
-                className="w-full bg-[#2D3094]/80 hover:bg-[#2D3094] border border-white/20 p-3.5 rounded-2xl flex items-center justify-between text-left transition-all group/btn shadow-lg cursor-pointer"
+                className="w-full bg-[#2D3094] hover:bg-[#202377] border border-[#2D3094]/20 p-3.5 rounded-2xl flex items-center justify-between text-left transition-all group/btn shadow-md cursor-pointer"
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#ED008C] text-white flex items-center justify-center shadow-md group-hover/btn:scale-110 transition-transform">
@@ -243,17 +243,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-white">Watch Agency Showreel (1:45)</div>
-                    <div className="text-[10px] text-slate-300">See our Kampala production facilities & live projects</div>
+                    <div className="text-[10px] text-white/80">See our Kampala production facilities & live projects</div>
                   </div>
                 </div>
-                <ChevronRight size={18} className="text-white/60 group-hover/btn:translate-x-1 transition-transform" />
+                <ChevronRight size={18} className="text-white/70 group-hover/btn:translate-x-1 transition-transform" />
               </button>
 
               {/* Bottom Floating Stats Pill */}
-              <div className="mt-3 bg-white/95 text-[#121212] p-3 rounded-2xl flex items-center justify-between shadow-xl">
+              <div className="mt-3 bg-white text-slate-800 border border-slate-200/90 p-3 rounded-2xl flex items-center justify-between shadow-sm">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-[11px] font-bold">Fast Heidelberg Turnaround</span>
+                  <span className="text-[11px] font-bold text-slate-800">Fast Heidelberg Turnaround</span>
                 </div>
                 <span className="text-[10px] font-extrabold uppercase text-[#2D3094] bg-[#2D3094]/10 px-2.5 py-1 rounded-full">
                   Kampala & Nationwide

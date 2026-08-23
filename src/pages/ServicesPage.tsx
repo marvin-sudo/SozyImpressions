@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { View, Currency, ServiceDetail } from '../types';
 import { SERVICES_DATA } from '../data/mockData';
+import { QuoteCalculatorSection } from '../components/QuoteCalculatorSection';
 
 interface ServicesPageProps {
   navigate: (view: View, param?: string) => void;
@@ -18,6 +19,7 @@ interface ServicesPageProps {
 
 export const ServicesPage: React.FC<ServicesPageProps> = ({
   navigate,
+  currency = 'UGX',
   selectedServiceId
 }) => {
   const [selectedLocalId, setSelectedLocalId] = useState<string>(
@@ -177,6 +179,11 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </div>
           </div>
 
+        </div>
+
+        {/* Instant Quote Calculator & RFQ */}
+        <div className="mt-16 bg-white rounded-3xl p-4 md:p-8 border border-slate-200 shadow-xl overflow-hidden">
+          <QuoteCalculatorSection currency={currency || 'UGX'} />
         </div>
 
       </div>
