@@ -8,7 +8,7 @@ export const TrustBar: React.FC = () => {
       icon: <Award className="w-5 h-5 text-[#ED008C]" />,
       value: `${COMPANY_INFO.yearsExperience} Years`,
       label: 'Corporate Experience',
-      sub: 'Since 2015 in Uganda'
+      sub: `Since ${COMPANY_INFO.establishedYear} in Uganda`
     },
     {
       icon: <Users className="w-5 h-5 text-[#2E3192]" />,

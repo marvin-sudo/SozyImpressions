@@ -205,10 +205,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ navigate }) => {
                       Send Another Message
                     </button>
                     <button
-                      onClick={() => navigate('shop')}
+                      onClick={() => navigate('services')}
                       className="border border-slate-300 text-slate-700 hover:bg-slate-50 font-heading font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full transition-all"
                     >
-                      Explore Gift Catalogue
+                      Explore Our Services
                     </button>
                   </div>
                 </div>

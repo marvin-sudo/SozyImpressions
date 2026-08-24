@@ -31,7 +31,6 @@ import { HomePage } from './pages/HomePage';
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(m => ({ default: m.ServicesPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
 const PortfolioPage = lazy(() => import('./pages/PortfolioPage').then(m => ({ default: m.PortfolioPage })));
-const ShopPage = lazy(() => import('./pages/ShopPage').then(m => ({ default: m.ShopPage })));
 const QuotePage = lazy(() => import('./pages/QuotePage').then(m => ({ default: m.QuotePage })));
 const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
@@ -73,7 +72,6 @@ const parseHashRoute = (): { view: View; param?: string } => {
     'services',
     'about',
     'portfolio',
-    'shop',
     'quote',
     'blog',
     'contact',
@@ -259,15 +257,7 @@ export const App: React.FC = () => {
   const renderCurrentView = () => {
     switch (currentView) {
       case 'home':
-        return (
-          <HomePage
-            navigate={navigate}
-            currency={currency}
-            products={products}
-            onOpenCustomizer={(product) => setCustomizingProduct(product)}
-            onAddToCart={handleAddToCart}
-          />
-        );
+        return <HomePage navigate={navigate} />;
 
       case 'services':
         return (
@@ -291,11 +281,10 @@ export const App: React.FC = () => {
 
       case 'shop':
         return (
-          <ShopPage
+          <ServicesPage
             navigate={navigate}
             currency={currency}
-            onOpenCustomizer={(product) => setCustomizingProduct(product)}
-            selectedCategory={routeParam}
+            selectedServiceId={routeParam}
           />
         );
 
@@ -312,26 +301,10 @@ export const App: React.FC = () => {
         return <AccountPage navigate={navigate} currency={currency} />;
 
       case 'admin':
-        return (
-          <HomePage
-            navigate={navigate}
-            currency={currency}
-            products={products}
-            onOpenCustomizer={(product) => setCustomizingProduct(product)}
-            onAddToCart={handleAddToCart}
-          />
-        );
+        return <HomePage navigate={navigate} />;
 
       default:
-        return (
-          <HomePage
-            navigate={navigate}
-            currency={currency}
-            products={products}
-            onOpenCustomizer={(product) => setCustomizingProduct(product)}
-            onAddToCart={handleAddToCart}
-          />
-        );
+        return <HomePage navigate={navigate} />;
     }
   };
 

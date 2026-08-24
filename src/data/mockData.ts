@@ -20,8 +20,8 @@ export const COMPANY_INFO = {
   whatsappDirectUrl: 'https://wa.me/256787662183',
   address: 'Plot 42, Nkrumah Road & Jinja Road Creative Studio, Kampala, Uganda',
   workingHours: 'Mon - Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 4:00 PM',
-  establishedYear: '2015',
-  yearsExperience: '10+',
+  establishedYear: '2023',
+  yearsExperience: '3+',
   clientsCount: '250+',
   projectsCount: '1,000+',
   socials: {

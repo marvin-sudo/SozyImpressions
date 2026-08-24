@@ -5,8 +5,7 @@ import {
   Play, 
   X, 
   Search, 
-  ChevronRight,
-  Package
+  ChevronRight
 } from 'lucide-react';
 import { View, Currency } from '../types';
 
@@ -21,11 +20,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
 
   const quickSearchItems = [
     { title: 'Executive Business Cards', category: 'Offset Printing', link: 'services', param: 'offset-printing' },
-    { title: 'Laser-Engraved Smart Flasks', category: 'Customised Gifts', link: 'shop' },
-    { title: 'Broad-Base Roll-Up Banners', category: 'Event Branding', link: 'shop' },
+    { title: 'Laser-Engraved Smart Flasks', category: 'Customised Gifts', link: 'services', param: 'customised-gifts' },
+    { title: 'Broad-Base Roll-Up Banners', category: 'Large Format & Events', link: 'services', param: 'large-format' },
     { title: 'Fleet Vehicle Wrapping', category: 'Corporate Branding', link: 'services', param: 'corporate-branding' },
     { title: 'Brochures & Annual Reports', category: 'Offset Printing', link: 'services', param: 'offset-printing' },
-    { title: 'Custom Branded Polos & Tees', category: 'Apparel', link: 'shop' },
+    { title: 'Custom Branded Polos & Tees', category: 'Customised Gifts', link: 'services', param: 'customised-gifts' },
     { title: '3D Reception Signage', category: 'Corporate Branding', link: 'services', param: 'corporate-branding' }
   ];
 
@@ -75,7 +74,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
               From professional printing and corporate branding to customised gifts and creative design, we help businesses and organisations look professional, communicate effectively, and make a lasting impression.
             </p>
 
-            {/* 3 Strategic CTAs */}
+            {/* Strategic CTAs */}
             <div className="flex flex-wrap items-center gap-3.5 mb-10 w-full sm:w-auto">
               {/* Primary CTA: Get a Quote */}
               <button 
@@ -92,15 +91,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                 className="bg-[#2D3094] hover:bg-[#242775] text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4.5 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-[#2D3094]/25 w-full sm:w-auto cursor-pointer"
               >
                 <span>Explore Our Services</span>
-              </button>
-
-              {/* Third CTA: Shop Products */}
-              <button 
-                onClick={() => navigate('shop')}
-                className="border-2 border-slate-300 hover:border-slate-800 text-slate-800 hover:bg-slate-50 font-heading font-bold text-xs uppercase tracking-wider px-7 py-4.5 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 w-full sm:w-auto cursor-pointer"
-              >
-                <Package size={16} className="text-[#ED008C]" />
-                <span>Shop Products</span>
               </button>
             </div>
 

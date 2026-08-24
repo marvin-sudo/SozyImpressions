@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   Menu, 
   X, 
-  ShoppingCart, 
   Phone, 
   Mail, 
   ChevronDown, 
@@ -22,8 +21,8 @@ interface NavbarProps {
   navigate: (view: View, param?: string) => void;
   currency: Currency;
   setCurrency: (c: Currency) => void;
-  cart: CartItem[];
-  setIsCartOpen: (open: boolean) => void;
+  cart?: CartItem[];
+  setIsCartOpen?: (open: boolean) => void;
   setIsSearchOpen?: (open: boolean) => void;
   openAdminModal: () => void;
   openClientPortal?: () => void;
@@ -34,8 +33,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   navigate,
   currency,
   setCurrency,
-  cart,
-  setIsCartOpen,
   openAdminModal
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,9 +40,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [logoClickCount, setLogoClickCount] = useState(0);
   const megaMenuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Cart total items
-  const totalCartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -131,11 +125,11 @@ export const Navbar: React.FC<NavbarProps> = ({
       accent: 'text-amber-500',
       serviceId: 'customised-gifts',
       items: [
-        { name: 'Smart Temperature LED Flasks', desc: 'Laser-engraved vacuum bottles', view: 'shop' as View, param: 'Drinkware' },
-        { name: 'Executive Notebooks & Metal Pens', desc: 'Embossed leather organizers', view: 'shop' as View, param: 'Stationery' },
-        { name: 'Embroidered Polos & Hoodies', desc: 'Premium cotton corporate wear', view: 'shop' as View, param: 'Apparel' },
-        { name: 'Custom VIP Gift Hampers', desc: 'Curated corporate executive boxes', view: 'shop' as View, param: 'Gift Sets' },
-        { name: 'Branded ID Lanyards & Badges', desc: 'Sublimated conference badge sets', view: 'shop' as View, param: 'Event Supplies' },
+        { name: 'Smart Temperature LED Flasks', desc: 'Laser-engraved vacuum bottles', view: 'services' as View, param: 'customised-gifts' },
+        { name: 'Executive Notebooks & Metal Pens', desc: 'Embossed leather organizers', view: 'services' as View, param: 'customised-gifts' },
+        { name: 'Embroidered Polos & Hoodies', desc: 'Premium cotton corporate wear', view: 'services' as View, param: 'customised-gifts' },
+        { name: 'Custom VIP Gift Hampers', desc: 'Curated corporate executive boxes', view: 'services' as View, param: 'customised-gifts' },
+        { name: 'Branded ID Lanyards & Badges', desc: 'Sublimated conference badge sets', view: 'services' as View, param: 'customised-gifts' },
       ]
     },
     {
@@ -144,8 +138,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       accent: 'text-emerald-500',
       serviceId: 'large-format',
       items: [
-        { name: 'Broad-Base Roll-Up Banners', desc: 'Heavy-duty tear-resistant pull-ups', view: 'shop' as View, param: 'Banners' },
-        { name: 'Tear-Drop & Flying Feather Flags', desc: 'Double-sided outdoor flags', view: 'shop' as View, param: 'Banners' },
+        { name: 'Broad-Base Roll-Up Banners', desc: 'Heavy-duty tear-resistant pull-ups', view: 'services' as View, param: 'large-format' },
+        { name: 'Tear-Drop & Flying Feather Flags', desc: 'Double-sided outdoor flags', view: 'services' as View, param: 'large-format' },
         { name: 'Step & Repeat Media Backdrops', desc: 'Press & photography wall displays', view: 'services' as View, param: 'large-format' },
         { name: 'Branded Gazebo Tents & Tables', desc: 'Full event exhibition setups', view: 'services' as View, param: 'large-format' },
         { name: 'Die-Cut Product Packaging Boxes', desc: 'Custom retail & shipping packaging', view: 'services' as View, param: 'offset-printing' },
@@ -359,12 +353,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                     <div className="flex items-center gap-3 shrink-0">
                       <button
                         onClick={() => {
-                          navigate('shop');
+                          navigate('services');
                           setIsMegaMenuOpen(false);
                         }}
                         className="text-xs font-bold text-slate-700 hover:text-[#2D3094] px-4 py-2 rounded-xl hover:bg-white transition-all"
                       >
-                        Browse Product Store
+                        Explore All Services
                       </button>
                       <button
                         onClick={() => {
@@ -394,20 +388,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
 
             <button 
-              onClick={() => navigate('shop')}
-              className={`text-xs uppercase tracking-wider font-bold transition-colors py-1.5 flex items-center gap-1 ${
-                currentView === 'shop' 
-                  ? 'text-[#ED008C] border-b-2 border-[#ED008C]' 
-                  : 'text-slate-700 hover:text-[#2D3094]'
-              }`}
-            >
-              <span>Shop</span>
-              <span className="bg-[#ED008C] text-white text-[9px] font-black px-1.5 py-0.2 rounded-full uppercase">
-                Store
-              </span>
-            </button>
-
-            <button 
               onClick={() => navigate('blog')}
               className={`text-xs uppercase tracking-wider font-bold transition-colors py-1.5 ${
                 currentView === 'blog' 
@@ -430,26 +410,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          {/* Action CTAs: Shopping Cart & Primary Get a Quote CTA (No WhatsApp, No Login, No Search) */}
+          {/* Action CTAs: Primary Get a Quote CTA */}
           <div className="flex items-center gap-3">
-            {/* Shopping Cart Drawer Trigger */}
-            <button 
-              onClick={() => setIsCartOpen(true)}
-              className="relative p-2.5 rounded-full text-slate-700 hover:text-[#ED008C] hover:bg-slate-100 transition-colors cursor-pointer"
-              title="View Cart & Custom Orders"
-            >
-              <ShoppingCart size={20} />
-              {totalCartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#ED008C] text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-scale">
-                  {totalCartCount}
-                </span>
-              )}
-            </button>
-
-            {/* Primary High-Converting CTA: Get a Quote (Hidden on Mobile, Visible on Tablet & Desktop) */}
+            {/* Primary High-Converting CTA: Get a Quote */}
             <button 
               onClick={() => navigate('quote')}
-              className="hidden sm:flex bg-[#ED008C] hover:bg-[#d4007d] text-white text-[11px] font-bold uppercase tracking-wider px-5 sm:px-6 py-2.5 rounded-full shadow-lg shadow-[#ED008C]/25 transition-all transform hover:scale-105 active:scale-95 items-center gap-1.5 cursor-pointer"
+              className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-[11px] font-bold uppercase tracking-wider px-5 sm:px-6 py-2.5 rounded-full shadow-lg shadow-[#ED008C]/25 transition-all transform hover:scale-105 active:scale-95 items-center gap-1.5 cursor-pointer"
             >
               <span>Get a Quote</span>
             </button>
@@ -494,7 +460,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 { name: 'About Company', view: 'about' },
                 { name: '7 Core Printing & Branding Services', view: 'services' },
                 { name: 'Portfolio & Case Studies', view: 'portfolio' },
-                { name: 'Product Store', view: 'shop' },
                 { name: 'Quote Calculator', view: 'quote' },
                 { name: 'Blog & Articles', view: 'blog' },
                 { name: 'Contact Us', view: 'contact' },

@@ -103,7 +103,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
             <div className="flex flex-wrap gap-2 text-[11px] font-semibold text-slate-300 mb-6">
               <span className="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full flex items-center gap-1.5">
                 <ShieldCheck size={14} className="text-[#ED008C]" />
-                10+ Years Experience
+                {COMPANY_INFO.yearsExperience} Years Experience
               </span>
               <span className="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full flex items-center gap-1.5">
                 <Sparkles size={14} className="text-emerald-400" />
@@ -195,14 +195,13 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
                 </button>
               </li>
               <li>
-                <button onClick={() => navigate('portfolio')} className="hover:text-white transition-colors">
-                  Portfolio & Case Studies
+                <button onClick={() => navigate('services')} className="hover:text-white transition-colors">
+                  Printing & Branding Services
                 </button>
               </li>
               <li>
-                <button onClick={() => navigate('shop')} className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span>Product Store</span>
-                  <span className="bg-[#ED008C] text-white text-[9px] px-1.5 py-0.2 rounded-full font-bold">17+ Categories</span>
+                <button onClick={() => navigate('portfolio')} className="hover:text-white transition-colors">
+                  Portfolio & Case Studies
                 </button>
               </li>
               <li>
