@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
 import { 
   Menu, 
   X, 
@@ -15,6 +16,7 @@ import {
 import { View, Currency, CartItem } from '../types';
 import { COMPANY_INFO } from '../data/mockData';
 import { BrandLogo } from './BrandLogo';
+import { EASE_PREMIUM } from '../utils/animations';
 
 interface NavbarProps {
   currentView: View;
@@ -40,6 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [logoClickCount, setLogoClickCount] = useState(0);
   const megaMenuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -260,120 +263,126 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
 
               {/* Mega Horizontal Dropdown Menu Container */}
-              {isMegaMenuOpen && (
-                <div 
-                  className="fixed left-1/2 -translate-x-1/2 top-[108px] sm:top-[112px] w-[95vw] max-w-6xl bg-white rounded-3xl shadow-2xl border border-slate-200/80 p-6 z-50 animate-in fade-in slide-in-from-top-3 duration-200"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {/* Top Header of Mega Menu */}
-                  <div className="flex items-center justify-between pb-4 mb-5 border-b border-slate-100">
-                    <div className="flex items-center gap-3">
-                      <span className="text-[11px] font-black uppercase tracking-widest bg-[#2D3094] text-white px-3 py-1 rounded-full">
-                        Comprehensive Corporate Capabilities
-                      </span>
-                      <span className="text-xs text-slate-500 font-medium hidden md:inline">
-                        High-precision offset printing, corporate branding, custom gifts & signage in Uganda
-                      </span>
-                    </div>
-                    <button
-                      onClick={() => {
-                        navigate('services');
-                        setIsMegaMenuOpen(false);
-                      }}
-                      className="text-xs font-bold text-[#2D3094] hover:text-[#ED008C] flex items-center gap-1 transition-colors"
-                    >
-                      <span>Explore All 7 Services</span>
-                      <ArrowRight size={14} />
-                    </button>
-                  </div>
-
-                  {/* Mega Horizontal 4-Column Grid + Spotlight Feature Card */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {megaMenuColumns.map((col, idx) => {
-                      const IconComp = col.icon;
-                      return (
-                        <div key={idx} className="flex flex-col">
-                          <button
-                            onClick={() => {
-                              navigate('services', col.serviceId);
-                              setIsMegaMenuOpen(false);
-                            }}
-                            className="flex items-center gap-2 pb-2.5 mb-2.5 border-b border-slate-100 text-left group/colTitle"
-                          >
-                            <div className={`p-1.5 rounded-lg bg-slate-100 group-hover/colTitle:bg-[#2D3094] group-hover/colTitle:text-white transition-colors ${col.accent}`}>
-                              <IconComp size={16} />
-                            </div>
-                            <span className="text-xs font-heading font-black text-slate-900 group-hover/colTitle:text-[#2D3094] transition-colors">
-                              {col.title}
-                            </span>
-                          </button>
-
-                          <ul className="space-y-1">
-                            {col.items.map((item, itemIdx) => (
-                              <li key={itemIdx}>
-                                <button
-                                  onClick={() => {
-                                    navigate(item.view, item.param);
-                                    setIsMegaMenuOpen(false);
-                                  }}
-                                  className="w-full text-left p-2 rounded-xl hover:bg-slate-50 transition-colors group/item"
-                                >
-                                  <div className="text-xs font-bold text-slate-700 group-hover/item:text-[#2D3094] transition-colors">
-                                    {item.name}
-                                  </div>
-                                  <div className="text-[10px] text-slate-400 font-normal leading-tight">
-                                    {item.desc}
-                                  </div>
-                                </button>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Mega Menu Footer Banner with High-Converting Shortcuts */}
-                  <div className="mt-6 pt-4 border-t border-slate-100 bg-gradient-to-r from-[#F4F6FF] via-slate-50 to-[#FFF0F8] rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-[#ED008C] text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md">
-                        <Sparkles size={16} />
+              <AnimatePresence>
+                {isMegaMenuOpen && (
+                  <motion.div 
+                    initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 10, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 8, scale: 0.98 }}
+                    transition={{ duration: 0.2, ease: EASE_PREMIUM }}
+                    className="fixed left-1/2 -translate-x-1/2 top-[108px] sm:top-[112px] w-[95vw] max-w-6xl bg-white rounded-3xl shadow-2xl border border-slate-200/80 p-6 z-50 origin-top"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {/* Top Header of Mega Menu */}
+                    <div className="flex items-center justify-between pb-4 mb-5 border-b border-slate-100">
+                      <div className="flex items-center gap-3">
+                        <span className="text-[11px] font-black uppercase tracking-widest bg-[#2D3094] text-white px-3 py-1 rounded-full">
+                          Comprehensive Corporate Capabilities
+                        </span>
+                        <span className="text-xs text-slate-500 font-medium hidden md:inline">
+                          High-precision offset printing, corporate branding, custom gifts & signage in Uganda
+                        </span>
                       </div>
-                      <div className="text-left">
-                        <div className="text-xs font-bold text-slate-900">
-                          Need Custom Corporate Branding or Urgent Press Turnaround?
-                        </div>
-                        <div className="text-[11px] text-slate-500">
-                          Heidelberg Speedmaster 5-Color Offset Quality with physical sample proofing in Kampala.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-3 shrink-0">
                       <button
                         onClick={() => {
                           navigate('services');
                           setIsMegaMenuOpen(false);
                         }}
-                        className="text-xs font-bold text-slate-700 hover:text-[#2D3094] px-4 py-2 rounded-xl hover:bg-white transition-all"
+                        className="text-xs font-bold text-[#2D3094] hover:text-[#ED008C] flex items-center gap-1 transition-colors"
                       >
-                        Explore All Services
-                      </button>
-                      <button
-                        onClick={() => {
-                          navigate('quote');
-                          setIsMegaMenuOpen(false);
-                        }}
-                        className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full shadow-md transition-all hover:scale-105"
-                      >
-                        Instant Smart Quote →
+                        <span>Explore All 7 Services</span>
+                        <ArrowRight size={14} />
                       </button>
                     </div>
-                  </div>
 
-                </div>
-              )}
+                    {/* Mega Horizontal 4-Column Grid + Spotlight Feature Card */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                      {megaMenuColumns.map((col, idx) => {
+                        const IconComp = col.icon;
+                        return (
+                          <div key={idx} className="flex flex-col">
+                            <button
+                              onClick={() => {
+                                navigate('services', col.serviceId);
+                                setIsMegaMenuOpen(false);
+                              }}
+                              className="flex items-center gap-2 pb-2.5 mb-2.5 border-b border-slate-100 text-left group/colTitle"
+                            >
+                              <div className={`p-1.5 rounded-lg bg-slate-100 group-hover/colTitle:bg-[#2D3094] group-hover/colTitle:text-white transition-colors ${col.accent}`}>
+                                <IconComp size={16} />
+                              </div>
+                              <span className="text-xs font-heading font-black text-slate-900 group-hover/colTitle:text-[#2D3094] transition-colors">
+                                {col.title}
+                              </span>
+                            </button>
+
+                            <ul className="space-y-1">
+                              {col.items.map((item, itemIdx) => (
+                                <li key={itemIdx}>
+                                  <button
+                                    onClick={() => {
+                                      navigate(item.view, item.param);
+                                      setIsMegaMenuOpen(false);
+                                    }}
+                                    className="w-full text-left p-2 rounded-xl hover:bg-slate-50 transition-colors group/item"
+                                  >
+                                    <div className="text-xs font-bold text-slate-700 group-hover/item:text-[#2D3094] transition-colors">
+                                      {item.name}
+                                    </div>
+                                    <div className="text-[10px] text-slate-400 font-normal leading-tight">
+                                      {item.desc}
+                                    </div>
+                                  </button>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Mega Menu Footer Banner with High-Converting Shortcuts */}
+                    <div className="mt-6 pt-4 border-t border-slate-100 bg-gradient-to-r from-[#F4F6FF] via-slate-50 to-[#FFF0F8] rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-[#ED008C] text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md">
+                          <Sparkles size={16} />
+                        </div>
+                        <div className="text-left">
+                          <div className="text-xs font-bold text-slate-900">
+                            Need Custom Corporate Branding or Urgent Press Turnaround?
+                          </div>
+                          <div className="text-[11px] text-slate-500">
+                            Heidelberg Speedmaster 5-Color Offset Quality with physical sample proofing in Kampala.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-3 shrink-0">
+                        <button
+                          onClick={() => {
+                            navigate('services');
+                            setIsMegaMenuOpen(false);
+                          }}
+                          className="text-xs font-bold text-slate-700 hover:text-[#2D3094] px-4 py-2 rounded-xl hover:bg-white transition-all"
+                        >
+                          Explore All Services
+                        </button>
+                        <button
+                          onClick={() => {
+                            navigate('quote');
+                            setIsMegaMenuOpen(false);
+                          }}
+                          className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full shadow-md transition-all hover:scale-105"
+                        >
+                          Instant Smart Quote →
+                        </button>
+                      </div>
+                    </div>
+
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             <button 
@@ -415,7 +424,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Primary High-Converting CTA: Get a Quote */}
             <button 
               onClick={() => navigate('quote')}
-              className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-[11px] font-bold uppercase tracking-wider px-5 sm:px-6 py-2.5 rounded-full shadow-lg shadow-[#ED008C]/25 transition-all transform hover:scale-105 active:scale-95 items-center gap-1.5 cursor-pointer"
+              className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-[11px] font-bold uppercase tracking-wider px-5 sm:px-6 py-2.5 rounded-full shadow-lg shadow-[#ED008C]/25 transition-all hover:-translate-y-0.5 active:scale-95 items-center gap-1.5 cursor-pointer"
             >
               <span>Get a Quote</span>
             </button>
@@ -432,70 +441,79 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         </div>
 
-        {/* Mobile Navigation Drawer (No WhatsApp, No Login, No Industries) */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-slate-100 px-6 py-6 animate-in slide-in-from-top-4 duration-300 shadow-xl max-h-[85vh] overflow-y-auto">
-            <div className="flex flex-col gap-3">
-              
-              <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                <span className="text-xs font-bold text-slate-500">Currency</span>
-                <div className="flex items-center gap-1 bg-slate-100 rounded-full p-1 text-xs font-bold">
-                  <button 
-                    onClick={() => setCurrency('UGX')}
-                    className={`px-3 py-1 rounded-full ${currency === 'UGX' ? 'bg-[#2D3094] text-white' : 'text-slate-600'}`}
+        {/* Mobile Navigation Drawer */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div 
+              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={shouldReduceMotion ? { opacity: 0 } : { opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: EASE_PREMIUM }}
+              className="lg:hidden bg-white border-t border-slate-100 px-6 py-6 shadow-xl max-h-[85vh] overflow-y-auto"
+            >
+              <div className="flex flex-col gap-3">
+                
+                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                  <span className="text-xs font-bold text-slate-500">Currency</span>
+                  <div className="flex items-center gap-1 bg-slate-100 rounded-full p-1 text-xs font-bold">
+                    <button 
+                      onClick={() => setCurrency('UGX')}
+                      className={`px-3 py-1 rounded-full ${currency === 'UGX' ? 'bg-[#2D3094] text-white' : 'text-slate-600'}`}
+                    >
+                      UGX
+                    </button>
+                    <button 
+                      onClick={() => setCurrency('USD')}
+                      className={`px-3 py-1 rounded-full ${currency === 'USD' ? 'bg-[#2D3094] text-white' : 'text-slate-600'}`}
+                    >
+                      USD
+                    </button>
+                  </div>
+                </div>
+
+                {[
+                  { name: 'Home', view: 'home' },
+                  { name: 'About Company', view: 'about' },
+                  { name: '7 Core Printing & Branding Services', view: 'services' },
+                  { name: 'Portfolio & Case Studies', view: 'portfolio' },
+                  { name: 'Quote Calculator', view: 'quote' },
+                  { name: 'Blog & Articles', view: 'blog' },
+                  { name: 'Contact Us', view: 'contact' },
+                ].map((item) => (
+                  <button
+                    key={item.view}
+                    onClick={() => {
+                      navigate(item.view as View);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`text-left font-bold text-sm py-2 px-3 rounded-xl transition-colors ${
+                      currentView === item.view 
+                        ? 'bg-[#2D3094]/10 text-[#2D3094]' 
+                        : 'text-slate-700 hover:bg-slate-50'
+                    }`}
                   >
-                    UGX
+                    {item.name}
                   </button>
+                ))}
+
+                <div className="pt-4 border-t border-slate-100 flex flex-col gap-3">
                   <button 
-                    onClick={() => setCurrency('USD')}
-                    className={`px-3 py-1 rounded-full ${currency === 'USD' ? 'bg-[#2D3094] text-white' : 'text-slate-600'}`}
+                    onClick={() => {
+                      navigate('quote');
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="w-full bg-[#ED008C] text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl text-center shadow-md shadow-[#ED008C]/20"
                   >
-                    USD
+                    Get an Instant Quote
                   </button>
                 </div>
+
               </div>
-
-              {[
-                { name: 'Home', view: 'home' },
-                { name: 'About Company', view: 'about' },
-                { name: '7 Core Printing & Branding Services', view: 'services' },
-                { name: 'Portfolio & Case Studies', view: 'portfolio' },
-                { name: 'Quote Calculator', view: 'quote' },
-                { name: 'Blog & Articles', view: 'blog' },
-                { name: 'Contact Us', view: 'contact' },
-              ].map((item) => (
-                <button
-                  key={item.view}
-                  onClick={() => {
-                    navigate(item.view as View);
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className={`text-left font-bold text-sm py-2 px-3 rounded-xl transition-colors ${
-                    currentView === item.view 
-                      ? 'bg-[#2D3094]/10 text-[#2D3094]' 
-                      : 'text-slate-700 hover:bg-slate-50'
-                  }`}
-                >
-                  {item.name}
-                </button>
-              ))}
-
-              <div className="pt-4 border-t border-slate-100 flex flex-col gap-3">
-                <button 
-                  onClick={() => {
-                    navigate('quote');
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="w-full bg-[#ED008C] text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl text-center shadow-md shadow-[#ED008C]/20"
-                >
-                  Get an Instant Quote
-                </button>
-              </div>
-
-            </div>
-          </div>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   );
 };
+

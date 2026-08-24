@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
 import { 
   Building, 
   Truck, 
@@ -10,6 +11,7 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import { View } from '../types';
+import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
 
 interface FeaturedCorporateBrandingProps {
   navigate: (view: View, param?: string) => void;
@@ -17,6 +19,7 @@ interface FeaturedCorporateBrandingProps {
 
 export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps> = ({ navigate }) => {
   const [activeTab, setActiveTab] = useState<'office' | 'fleet' | 'murals' | 'stationery'>('office');
+  const shouldReduceMotion = useReducedMotion();
 
   const brandingAreas = {
     office: {
@@ -85,7 +88,13 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <motion.div 
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.8, ease: EASE_PREMIUM }}
+          className="text-center max-w-3xl mx-auto mb-12"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#ED008C] text-xs font-black uppercase tracking-wider mb-3">
             <Sparkles size={14} />
             <span>Transform Physical Spaces</span>
@@ -99,16 +108,22 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
           <p className="text-sm md:text-base text-slate-300 mt-3 font-light leading-relaxed">
             First impressions are physical. When clients visit your headquarters or see your fleet in traffic, your branding should signal institutional permanence, prestige, and market leadership.
           </p>
-        </div>
+        </motion.div>
 
         {/* Interactive Tab Switcher */}
-        <div className="flex items-center justify-center gap-2 md:gap-3 flex-wrap mb-10">
+        <motion.div 
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.75, delay: 0.1, ease: EASE_PREMIUM }}
+          className="flex items-center justify-center gap-2 md:gap-3 flex-wrap mb-10"
+        >
           <button
             onClick={() => setActiveTab('office')}
             className={`flex items-center gap-2 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
               activeTab === 'office'
                 ? 'bg-[#ED008C] text-white shadow-lg shadow-[#ED008C]/30 scale-105'
-                : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10'
+                : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:border-white/20'
             }`}
           >
             <Building size={16} />
@@ -120,7 +135,7 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
             className={`flex items-center gap-2 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
               activeTab === 'fleet'
                 ? 'bg-[#ED008C] text-white shadow-lg shadow-[#ED008C]/30 scale-105'
-                : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10'
+                : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:border-white/20'
             }`}
           >
             <Truck size={16} />
@@ -132,7 +147,7 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
             className={`flex items-center gap-2 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
               activeTab === 'murals'
                 ? 'bg-[#ED008C] text-white shadow-lg shadow-[#ED008C]/30 scale-105'
-                : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10'
+                : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:border-white/20'
             }`}
           >
             <Layers size={16} />
@@ -144,80 +159,96 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
             className={`flex items-center gap-2 px-5 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
               activeTab === 'stationery'
                 ? 'bg-[#ED008C] text-white shadow-lg shadow-[#ED008C]/30 scale-105'
-                : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10'
+                : 'bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:border-white/20'
             }`}
           >
             <FileText size={16} />
             <span>Executive Stationery</span>
           </button>
-        </div>
+        </motion.div>
 
-        {/* Feature Display Box */}
-        <div className="bg-[#181B34] border border-white/15 rounded-3xl overflow-hidden shadow-2xl p-6 md:p-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            {/* Left Info Column (lg:col-span-6) */}
-            <div className="lg:col-span-6 text-left flex flex-col items-start">
-              <span className="text-[10px] font-black uppercase tracking-widest text-[#ED008C] bg-[#ED008C]/10 px-3 py-1 rounded-full mb-3">
-                Turnkey Engineering & Pre-Press
-              </span>
-              <h3 className="text-2xl md:text-3xl font-heading font-black text-white mb-3 leading-tight">
-                {current.title}
-              </h3>
-              <p className="text-sm text-slate-300 mb-6 font-light leading-relaxed">
-                {current.subtitle}
-              </p>
+        {/* Feature Display Box with Scroll Reveal */}
+        <motion.div 
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.85, delay: 0.2, ease: EASE_PREMIUM }}
+          className="bg-[#181B34] border border-white/15 rounded-3xl overflow-hidden shadow-2xl p-6 md:p-10"
+        >
+          <AnimatePresence mode="wait">
+            <motion.div 
+              key={activeTab}
+              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.45, ease: EASE_PREMIUM }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+            >
+              
+              {/* Left Info Column (lg:col-span-6) */}
+              <div className="lg:col-span-6 text-left flex flex-col items-start">
+                <span className="text-[10px] font-black uppercase tracking-widest text-[#ED008C] bg-[#ED008C]/10 px-3 py-1 rounded-full mb-3">
+                  Turnkey Engineering & Pre-Press
+                </span>
+                <h3 className="text-2xl md:text-3xl font-heading font-black text-white mb-3 leading-tight">
+                  {current.title}
+                </h3>
+                <p className="text-sm text-slate-300 mb-6 font-light leading-relaxed">
+                  {current.subtitle}
+                </p>
 
-              {/* Bullet Points */}
-              <div className="space-y-3 mb-8 w-full">
-                {current.bullets.map((bullet, idx) => (
-                  <div key={idx} className="flex items-start gap-3 text-xs md:text-sm text-slate-200">
-                    <CheckCircle2 size={16} className="text-[#ED008C] shrink-0 mt-0.5" />
-                    <span>{bullet}</span>
-                  </div>
-                ))}
+                {/* Bullet Points */}
+                <div className="space-y-3 mb-8 w-full">
+                  {current.bullets.map((bullet, idx) => (
+                    <div key={idx} className="flex items-start gap-3 text-xs md:text-sm text-slate-200">
+                      <CheckCircle2 size={16} className="text-[#ED008C] shrink-0 mt-0.5" />
+                      <span>{bullet}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+                  <button
+                    onClick={() => navigate('quote')}
+                    className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-xs font-bold uppercase tracking-wider px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-[#ED008C]/25 flex items-center gap-2 hover:-translate-y-0.5"
+                  >
+                    <span>{current.cta}</span>
+                    <ArrowRight size={14} />
+                  </button>
+                  <button
+                    onClick={() => navigate('portfolio')}
+                    className="border border-white/20 hover:border-white text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full transition-all hover:bg-white/10 hover:-translate-y-0.5"
+                  >
+                    View Case Studies
+                  </button>
+                </div>
+
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-                <button
-                  onClick={() => navigate('quote')}
-                  className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-xs font-bold uppercase tracking-wider px-7 py-3.5 rounded-full transition-all duration-300 shadow-lg shadow-[#ED008C]/25 flex items-center gap-2 hover:scale-105"
-                >
-                  <span>{current.cta}</span>
-                  <ArrowRight size={14} />
-                </button>
-                <button
-                  onClick={() => navigate('portfolio')}
-                  className="border border-white/20 hover:border-white text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full transition-all hover:bg-white/10"
-                >
-                  View Case Studies
-                </button>
-              </div>
-
-            </div>
-
-            {/* Right Visual Column (lg:col-span-6) */}
-            <div className="lg:col-span-6">
-              <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-white/20 shadow-2xl group">
-                <img 
-                  src={current.image} 
-                  alt={current.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-                  <div className="bg-black/60 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 flex items-center gap-2">
-                    <ShieldCheck size={16} className="text-emerald-400" />
-                    <span className="text-xs font-bold text-white">Full Onsite Installation by Certified Crew</span>
+              {/* Right Visual Column (lg:col-span-6) */}
+              <div className="lg:col-span-6">
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-white/20 shadow-2xl group bg-slate-900">
+                  <img 
+                    src={current.image} 
+                    alt={current.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                    <div className="bg-black/60 backdrop-blur-md px-4 py-2 rounded-xl border border-white/20 flex items-center gap-2">
+                      <ShieldCheck size={16} className="text-emerald-400" />
+                      <span className="text-xs font-bold text-white">Full Onsite Installation by Certified Crew</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-          </div>
-        </div>
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
 
       </div>
     </section>
   );
 };
+

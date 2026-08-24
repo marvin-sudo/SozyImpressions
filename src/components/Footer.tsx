@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import { 
   Mail, 
   Phone, 
@@ -17,6 +18,7 @@ import {
 import { View } from '../types';
 import { COMPANY_INFO, SERVICES_DATA, PAYMENT_LOGOS } from '../data/mockData';
 import { BrandLogo } from './BrandLogo';
+import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
 
 interface FooterProps {
   navigate: (view: View, param?: string) => void;
@@ -26,6 +28,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,7 +48,13 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         
         {/* Top Newsletter & Call to Action Banner */}
-        <div className="bg-gradient-to-r from-[#2E3192] via-[#2D3094] to-[#1a1b55] rounded-3xl p-8 md:p-12 mb-16 border border-white/15 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
+        <motion.div 
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.8, ease: EASE_PREMIUM }}
+          className="bg-gradient-to-r from-[#2E3192] via-[#2D3094] to-[#1a1b55] rounded-3xl p-8 md:p-12 mb-16 border border-white/15 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8"
+        >
           <div className="max-w-xl text-left">
             <span className="text-[11px] font-black uppercase tracking-widest text-[#ED008C] bg-white/10 px-3 py-1 rounded-full mb-3 inline-block">
               Stay Ahead of Brand Trends
@@ -84,13 +93,19 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
               </div>
             )}
           </form>
-        </div>
+        </motion.div>
 
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-white/10 text-left">
           
           {/* Column 1: Company Profile (lg:col-span-2) */}
-          <div className="lg:col-span-2 flex flex-col items-start pr-4">
+          <motion.div 
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT_CONFIG}
+            transition={{ duration: 0.75, delay: 0.05, ease: EASE_PREMIUM }}
+            className="lg:col-span-2 flex flex-col items-start pr-4"
+          >
             <div className="mb-4 cursor-pointer group" onClick={() => navigate('home')}>
               <BrandLogo variant="footer" size="md" showTagline />
             </div>
@@ -162,10 +177,15 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Column 2: 7 Core Services */}
-          <div>
+          <motion.div
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT_CONFIG}
+            transition={{ duration: 0.75, delay: 0.1, ease: EASE_PREMIUM }}
+          >
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#ED008C] mb-4">
               Core Services
             </h4>
@@ -181,10 +201,15 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Column 3: Quick Links */}
-          <div>
+          <motion.div
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT_CONFIG}
+            transition={{ duration: 0.75, delay: 0.15, ease: EASE_PREMIUM }}
+          >
             <h4 className="text-xs font-bold uppercase tracking-widest text-white mb-4">
               Quick Links
             </h4>
@@ -220,10 +245,15 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
                 </button>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Column 4: Contact & Studio Info */}
-          <div>
+          <motion.div
+            initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT_CONFIG}
+            transition={{ duration: 0.75, delay: 0.2, ease: EASE_PREMIUM }}
+          >
             <h4 className="text-xs font-bold uppercase tracking-widest text-white mb-4">
               Kampala Studio & Works
             </h4>
@@ -264,12 +294,18 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
                 <div className="text-[11px] text-slate-500">{COMPANY_INFO.workingHours}</div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
 
         {/* Bottom Bar: Payment Options & Copyright */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <motion.div 
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.7, delay: 0.1, ease: EASE_PREMIUM }}
+          className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500"
+        >
           
           <div className="flex items-center gap-3 flex-wrap justify-center md:justify-start">
             <span className="font-bold text-slate-400 text-[11px]">Accepted Payment Channels:</span>
@@ -316,9 +352,10 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
             </button>
           </div>
 
-        </div>
+        </motion.div>
 
       </div>
     </footer>
   );
 };
+

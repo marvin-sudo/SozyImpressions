@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import { 
   Award, 
   Zap, 
@@ -10,12 +11,15 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { View } from '../types';
+import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
 
 interface WhySozySectionProps {
   navigate: (view: View, param?: string) => void;
 }
 
 export const WhySozySection: React.FC<WhySozySectionProps> = ({ navigate }) => {
+  const shouldReduceMotion = useReducedMotion();
+
   const pillars = [
     {
       icon: <Award className="w-6 h-6 text-[#ED008C]" />,
@@ -62,11 +66,17 @@ export const WhySozySection: React.FC<WhySozySectionProps> = ({ navigate }) => {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-white border-b border-slate-100 font-sans">
+    <section className="py-20 px-4 md:px-8 bg-white border-b border-slate-100 font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div 
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.8, ease: EASE_PREMIUM }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-black uppercase tracking-wider mb-3">
             <ShieldCheck size={14} className="text-[#ED008C]" />
             <span>The Sozy Advantage</span>
@@ -78,13 +88,22 @@ export const WhySozySection: React.FC<WhySozySectionProps> = ({ navigate }) => {
           <p className="text-base text-slate-600 mt-3 font-normal leading-relaxed">
             In a market filled with unreliable print brokers, we combine state-of-the-art manufacturing infrastructure with strict corporate governance.
           </p>
-        </div>
+        </motion.div>
 
         {/* 7 Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pillars.map((pillar, idx) => (
-            <div 
+            <motion.div 
               key={idx}
+              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={VIEWPORT_CONFIG}
+              transition={{ 
+                duration: 0.75, 
+                delay: (idx % 3) * 0.12, 
+                ease: EASE_PREMIUM 
+              }}
+              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
               className={`bg-[#F7F8FA] p-8 rounded-3xl border border-slate-200 hover:border-[#2D3094]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between text-left group ${
                 idx === 6 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
@@ -108,21 +127,28 @@ export const WhySozySection: React.FC<WhySozySectionProps> = ({ navigate }) => {
                 <CheckCircle2 size={14} className="text-emerald-500" />
                 <span>Verified Standard</span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Bottom Trust Action */}
-        <div className="mt-14 text-center">
+        <motion.div 
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.75, delay: 0.1, ease: EASE_PREMIUM }}
+          className="mt-14 text-center"
+        >
           <button
             onClick={() => navigate('about')}
             className="text-xs font-bold uppercase tracking-wider text-[#2D3094] hover:text-[#ED008C] transition-colors py-2 border-b-2 border-[#2D3094] hover:border-[#ED008C]"
           >
             Learn More About Our Company & Quality Standards →
           </button>
-        </div>
+        </motion.div>
 
       </div>
     </section>
   );
 };
+

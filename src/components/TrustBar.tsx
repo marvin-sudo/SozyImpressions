@@ -1,8 +1,12 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import { Award, Users, CheckCircle, Zap, MapPin } from 'lucide-react';
 import { COMPANY_INFO } from '../data/mockData';
+import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
 
 export const TrustBar: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   const stats = [
     {
       icon: <Award className="w-5 h-5 text-[#ED008C]" />,
@@ -39,13 +43,40 @@ export const TrustBar: React.FC = () => {
   return (
     <div className="bg-white border-b border-slate-100 py-8 px-4 md:px-8 shadow-sm">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT_CONFIG}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.05
+              }
+            }
+          }}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8"
+        >
           {stats.map((stat, idx) => (
-            <div 
+            <motion.div 
               key={idx} 
-              className="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-slate-50 transition-colors"
+              variants={shouldReduceMotion ? undefined : {
+                hidden: { opacity: 0, y: 25 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.75,
+                    ease: EASE_PREMIUM
+                  }
+                }
+              }}
+              whileHover={shouldReduceMotion ? undefined : { y: -2 }}
+              className="flex items-start gap-3.5 p-3 rounded-2xl hover:bg-slate-50 transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 mt-0.5">
+              <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
                 {stat.icon}
               </div>
               <div className="text-left">
@@ -59,10 +90,11 @@ export const TrustBar: React.FC = () => {
                   {stat.sub}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 };
+

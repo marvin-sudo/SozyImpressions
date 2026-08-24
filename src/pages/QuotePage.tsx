@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { View, Currency } from '../types';
 import { SERVICES_DATA, EXCHANGE_RATE_USD_TO_UGX } from '../data/mockData';
+import { ScrollReveal } from '../components/ScrollReveal';
 
 interface QuotePageProps {
   navigate?: (view: View, param?: string) => void;
@@ -109,29 +110,31 @@ export const QuotePage: React.FC<QuotePageProps> = ({ currency }) => {
       <div className="max-w-7xl mx-auto space-y-10">
         
         {/* Page Hero */}
-        <div className="bg-[#181B34] text-white rounded-3xl p-8 md:p-14 relative overflow-hidden shadow-2xl border border-white/10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#ED008C]/15 rounded-full blur-[100px] pointer-events-none" />
-          
-          <div className="max-w-3xl relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-xs font-black uppercase tracking-wider mb-4 backdrop-blur-md">
-              <Sparkles size={14} className="text-[#ED008C]" />
-              <span>Transparent & Instant Estimation Engine</span>
+        <ScrollReveal yOffset={30} duration={0.8}>
+          <div className="bg-[#181B34] text-white rounded-3xl p-8 md:p-14 relative overflow-hidden shadow-2xl border border-white/10">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#ED008C]/15 rounded-full blur-[100px] pointer-events-none" />
+            
+            <div className="max-w-3xl relative z-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-xs font-black uppercase tracking-wider mb-4 backdrop-blur-md">
+                <Sparkles size={14} className="text-[#ED008C]" />
+                <span>Transparent & Instant Estimation Engine</span>
+              </div>
+              <h1 className="text-3xl md:text-5xl font-heading font-black tracking-tight leading-tight mb-4">
+                Instant Commercial Quote & <br />
+                <span className="text-[#ED008C]">Formal RFQ Generator.</span>
+              </h1>
+              <p className="text-sm md:text-base text-slate-300 font-light leading-relaxed">
+                Calculate instant estimates with bulk volume discount algorithms, configure pre-press finishing specifications, and submit your Local Purchase Order (LPO) or direct production request.
+              </p>
             </div>
-            <h1 className="text-3xl md:text-5xl font-heading font-black tracking-tight leading-tight mb-4">
-              Instant Commercial Quote & <br />
-              <span className="text-[#ED008C]">Formal RFQ Generator.</span>
-            </h1>
-            <p className="text-sm md:text-base text-slate-300 font-light leading-relaxed">
-              Calculate instant estimates with bulk volume discount algorithms, configure pre-press finishing specifications, and submit your Local Purchase Order (LPO) or direct production request.
-            </p>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Main 2-Column Calculator Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Spec Configuration Form (lg:col-span-7) */}
-          <div className="lg:col-span-7 space-y-6">
+          <ScrollReveal direction="left" duration={0.8} className="lg:col-span-7 space-y-6">
             <div className="bg-white rounded-3xl p-6 md:p-10 border border-slate-200 shadow-xl space-y-8">
               
               {/* Step 1: Select Service */}
@@ -317,10 +320,10 @@ export const QuotePage: React.FC<QuotePageProps> = ({ currency }) => {
               </div>
 
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Live Instant Quote Summary & RFQ Submission (lg:col-span-5) */}
-          <div className="lg:col-span-5 space-y-6 sticky top-24">
+          <ScrollReveal direction="right" duration={0.8} className="lg:col-span-5 space-y-6 sticky top-24">
             
             {/* Live Pricing Breakdown Card */}
             <div className="bg-gradient-to-br from-[#181B34] to-[#2D3094] text-white rounded-3xl p-6 md:p-8 border border-white/15 shadow-2xl space-y-6">
@@ -395,7 +398,7 @@ export const QuotePage: React.FC<QuotePageProps> = ({ currency }) => {
                   href={`https://wa.me/256787662183?text=Hello%20Sozy%20Impressions!%20I%20generated%20a%20quote%20for%20${quantity}%20units%20of%20${encodeURIComponent(productType)}%20with%20${encodeURIComponent(finishing)}.%20Est.%20Price:%20UGX%20${calculation.totalUGX.toLocaleString()}.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-[#25D366] hover:bg-[#20b858] text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
+                  className="w-full bg-[#25D366] hover:bg-[#20b858] text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 hover:scale-[1.02]"
                 >
                   <MessageSquare size={16} />
                   <span>Lock In Quote via WhatsApp</span>
@@ -463,7 +466,7 @@ export const QuotePage: React.FC<QuotePageProps> = ({ currency }) => {
                   />
                   <button
                     type="submit"
-                    className="w-full bg-[#2D3094] hover:bg-[#1f2168] text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
+                    className="w-full bg-[#2D3094] hover:bg-[#1f2168] text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <FileText size={15} />
                     <span>Submit & Request Formal Proforma</span>
@@ -473,7 +476,7 @@ export const QuotePage: React.FC<QuotePageProps> = ({ currency }) => {
 
             </div>
 
-          </div>
+          </ScrollReveal>
 
         </div>
 

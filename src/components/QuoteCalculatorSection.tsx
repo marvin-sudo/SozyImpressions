@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { Currency, QuoteRequest } from '../types';
 import { SERVICES_DATA, DELIVERY_ZONES } from '../data/mockData';
+import { ScrollReveal } from './ScrollReveal';
 
 interface QuoteCalculatorSectionProps {
   currency: Currency;
@@ -158,7 +159,7 @@ Please review my artwork and reply with the official signed PDF invoice!`;
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <ScrollReveal yOffset={30} className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-black uppercase tracking-wider mb-3">
             <Calculator size={14} className="text-[#ED008C]" />
             <span>Instant Cost Estimator & RFQ Engine</span>
@@ -170,229 +171,233 @@ Please review my artwork and reply with the official signed PDF invoice!`;
           <p className="text-base text-slate-600 mt-3 font-normal leading-relaxed">
             Estimate your commercial printing and branding costs in real time. Submit your specs for an itemized official PDF quote within 60 minutes during business hours.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Success Modal / Result View */}
         {submittedQuoteResult ? (
-          <div className="max-w-3xl mx-auto bg-gradient-to-br from-[#F7F8FA] to-white rounded-3xl p-8 md:p-12 border-2 border-emerald-500 shadow-2xl text-left animate-in zoom-in-95 duration-300">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-lg">
-                <CheckCircle2 size={32} />
+          <ScrollReveal yOffset={25}>
+            <div className="max-w-3xl mx-auto bg-gradient-to-br from-[#F7F8FA] to-white rounded-3xl p-8 md:p-12 border-2 border-emerald-500 shadow-2xl text-left animate-in zoom-in-95 duration-300">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-14 h-14 rounded-2xl bg-emerald-500 text-white flex items-center justify-center shadow-lg">
+                  <CheckCircle2 size={32} />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">
+                    Enquiry Successfully Dispatched!
+                  </span>
+                  <h3 className="text-2xl font-heading font-black text-slate-900 leading-tight">
+                    Quote ID: {submittedQuoteResult.id}
+                  </h3>
+                </div>
               </div>
-              <div>
-                <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">
-                  Enquiry Successfully Dispatched!
-                </span>
-                <h3 className="text-2xl font-heading font-black text-slate-900 leading-tight">
-                  Quote ID: {submittedQuoteResult.id}
-                </h3>
+
+              <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+                Thank you, <strong className="text-slate-900">{submittedQuoteResult.fullName}</strong>. Your project specifications have been assigned to a senior pre-press estimator at Sozy Impressions Ltd.
+              </p>
+
+              {/* Breakdown Summary Box */}
+              <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3 text-xs mb-8">
+                <div className="flex justify-between py-1 border-b border-slate-100">
+                  <span className="text-slate-500">Service & Deliverable:</span>
+                  <span className="font-bold text-slate-900">{activeService.title} — {selectedProduct}</span>
+                </div>
+                <div className="flex justify-between py-1 border-b border-slate-100">
+                  <span className="text-slate-500">Quantity:</span>
+                  <span className="font-bold text-slate-900">{quantity} units</span>
+                </div>
+                <div className="flex justify-between py-1 border-b border-slate-100">
+                  <span className="text-slate-500">Delivery Destination:</span>
+                  <span className="font-bold text-slate-900">{activeZone.name}</span>
+                </div>
+                <div className="flex justify-between py-1 border-b border-slate-100">
+                  <span className="text-slate-500">Finishing Specifications:</span>
+                  <span className="font-bold text-slate-900">{selectedFinishing.join(', ') || 'Standard'}</span>
+                </div>
+                <div className="flex justify-between pt-2 text-sm font-heading font-black text-[#2D3094]">
+                  <span>Estimated Valuation:</span>
+                  <span>
+                    {currency === 'UGX' ? `UGX ${grandTotalUGX.toLocaleString()}` : `$${grandTotalUSD}`}
+                  </span>
+                </div>
+              </div>
+
+              {/* Instant Actions */}
+              <div className="flex flex-col sm:flex-row items-center gap-3">
+                <button
+                  onClick={handleSendToWhatsApp}
+                  className="w-full sm:flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider py-4 rounded-full transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-105"
+                >
+                  <MessageSquare size={16} />
+                  <span>Send to WhatsApp for Instant Approval</span>
+                </button>
+
+                <button
+                  onClick={() => setSubmittedQuoteResult(null)}
+                  className="w-full sm:w-auto border border-slate-300 hover:bg-slate-50 text-slate-700 font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-full transition-all"
+                >
+                  Calculate Another Quote
+                </button>
               </div>
             </div>
-
-            <p className="text-sm text-slate-600 mb-6 leading-relaxed">
-              Thank you, <strong className="text-slate-900">{submittedQuoteResult.fullName}</strong>. Your project specifications have been assigned to a senior pre-press estimator at Sozy Impressions Ltd.
-            </p>
-
-            {/* Breakdown Summary Box */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3 text-xs mb-8">
-              <div className="flex justify-between py-1 border-b border-slate-100">
-                <span className="text-slate-500">Service & Deliverable:</span>
-                <span className="font-bold text-slate-900">{activeService.title} — {selectedProduct}</span>
-              </div>
-              <div className="flex justify-between py-1 border-b border-slate-100">
-                <span className="text-slate-500">Quantity:</span>
-                <span className="font-bold text-slate-900">{quantity} units</span>
-              </div>
-              <div className="flex justify-between py-1 border-b border-slate-100">
-                <span className="text-slate-500">Delivery Destination:</span>
-                <span className="font-bold text-slate-900">{activeZone.name}</span>
-              </div>
-              <div className="flex justify-between py-1 border-b border-slate-100">
-                <span className="text-slate-500">Finishing Specifications:</span>
-                <span className="font-bold text-slate-900">{selectedFinishing.join(', ') || 'Standard'}</span>
-              </div>
-              <div className="flex justify-between pt-2 text-sm font-heading font-black text-[#2D3094]">
-                <span>Estimated Valuation:</span>
-                <span>
-                  {currency === 'UGX' ? `UGX ${grandTotalUGX.toLocaleString()}` : `$${grandTotalUSD}`}
-                </span>
-              </div>
-            </div>
-
-            {/* Instant Actions */}
-            <div className="flex flex-col sm:flex-row items-center gap-3">
-              <button
-                onClick={handleSendToWhatsApp}
-                className="w-full sm:flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider py-4 rounded-full transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-105"
-              >
-                <MessageSquare size={16} />
-                <span>Send to WhatsApp for Instant Approval</span>
-              </button>
-
-              <button
-                onClick={() => setSubmittedQuoteResult(null)}
-                className="w-full sm:w-auto border border-slate-300 hover:bg-slate-50 text-slate-700 font-bold text-xs uppercase tracking-wider px-6 py-4 rounded-full transition-all"
-              >
-                Calculate Another Quote
-              </button>
-            </div>
-          </div>
+          </ScrollReveal>
         ) : (
           /* Main Interactive 2-Column Calculator */
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start text-left">
             
             {/* Column 1: Step-by-Step Configuration (lg:col-span-7) */}
-            <div className="lg:col-span-7 bg-[#F7F8FA] rounded-3xl p-6 md:p-8 border border-slate-200 shadow-sm">
-              <div className="text-[10px] font-black uppercase tracking-widest text-[#2D3094] mb-2">
-                Step 1: Choose Your Project Parameters
-              </div>
-              <h3 className="font-heading font-black text-xl text-[#121212] mb-6">
-                Configure Deliverables & Quantity
-              </h3>
-
-              {/* 1. Select Service Category */}
-              <div className="mb-6">
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  1. Select Core Service:
-                </label>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                  {SERVICES_DATA.map((srv) => (
-                    <button
-                      key={srv.id}
-                      type="button"
-                      onClick={() => {
-                        setSelectedServiceId(srv.id);
-                        setSelectedProduct(srv.popularProducts[0]);
-                      }}
-                      className={`p-3 rounded-2xl border text-left transition-all ${
-                        selectedServiceId === srv.id
-                          ? 'bg-[#2D3094] border-[#2D3094] text-white shadow-md'
-                          : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
-                      }`}
-                    >
-                      <div className="text-[10px] font-black text-[#ED008C]">{srv.number}</div>
-                      <div className="text-xs font-bold leading-tight">{srv.title}</div>
-                    </button>
-                  ))}
+            <ScrollReveal yOffset={25} duration={0.7} className="lg:col-span-7">
+              <div className="bg-[#F7F8FA] rounded-3xl p-6 md:p-8 border border-slate-200 shadow-sm">
+                <div className="text-[10px] font-black uppercase tracking-widest text-[#2D3094] mb-2">
+                  Step 1: Choose Your Project Parameters
                 </div>
-              </div>
+                <h3 className="font-heading font-black text-xl text-[#121212] mb-6">
+                  Configure Deliverables & Quantity
+                </h3>
 
-              {/* 2. Select Specific Product */}
-              <div className="mb-6">
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  2. Select Item / Deliverable:
-                </label>
-                <select
-                  value={selectedProduct}
-                  onChange={(e) => setSelectedProduct(e.target.value)}
-                  className="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-xs font-bold text-slate-800 outline-none focus:border-[#2D3094]"
-                >
-                  {activeService.popularProducts.map((p, idx) => (
-                    <option key={idx} value={p}>
-                      {p}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* 3. Quantity Slider */}
-              <div className="mb-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
-                <div className="flex items-center justify-between mb-2">
-                  <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
-                    3. Production Quantity:
+                {/* 1. Select Service Category */}
+                <div className="mb-6">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    1. Select Core Service:
                   </label>
-                  <span className="font-heading font-black text-lg text-[#2D3094]">
-                    {quantity.toLocaleString()} units
-                  </span>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    {SERVICES_DATA.map((srv) => (
+                      <button
+                        key={srv.id}
+                        type="button"
+                        onClick={() => {
+                          setSelectedServiceId(srv.id);
+                          setSelectedProduct(srv.popularProducts[0]);
+                        }}
+                        className={`p-3 rounded-2xl border text-left transition-all ${
+                          selectedServiceId === srv.id
+                            ? 'bg-[#2D3094] border-[#2D3094] text-white shadow-md'
+                            : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
+                        }`}
+                      >
+                        <div className="text-[10px] font-black text-[#ED008C]">{srv.number}</div>
+                        <div className="text-xs font-bold leading-tight">{srv.title}</div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <input
-                  type="range"
-                  min={10}
-                  max={5000}
-                  step={10}
-                  value={quantity}
-                  onChange={(e) => setQuantity(parseInt(e.target.value))}
-                  className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#ED008C]"
-                />
-                <div className="flex justify-between text-[10px] text-slate-400 font-bold mt-2">
-                  <span>10 pcs (Min)</span>
-                  <span>500 pcs (Bulk -15%)</span>
-                  <span>1,000 pcs (Bulk -25%)</span>
-                  <span>5,000 pcs</span>
+
+                {/* 2. Select Specific Product */}
+                <div className="mb-6">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    2. Select Item / Deliverable:
+                  </label>
+                  <select
+                    value={selectedProduct}
+                    onChange={(e) => setSelectedProduct(e.target.value)}
+                    className="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-xs font-bold text-slate-800 outline-none focus:border-[#2D3094]"
+                  >
+                    {activeService.popularProducts.map((p, idx) => (
+                      <option key={idx} value={p}>
+                        {p}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-              </div>
 
-              {/* 4. Finishing Options */}
-              <div className="mb-6">
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  4. Specialty Finishing & Upgrades:
-                </label>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {[
-                    'Soft-Touch Matte Lamination',
-                    'Spot UV Gloss Varnish',
-                    'Metallic Gold / Silver Foil',
-                    'Precision Die-Cut Shape',
-                    'Laser Engraving / Sublimation',
-                    'Hardcover Wire-O Binding'
-                  ].map((finishing) => (
-                    <button
-                      key={finishing}
-                      type="button"
-                      onClick={() => toggleFinishing(finishing)}
-                      className={`p-3 rounded-xl border text-xs font-bold text-left transition-all flex items-center justify-between ${
-                        selectedFinishing.includes(finishing)
-                          ? 'border-[#ED008C] bg-[#ED008C]/10 text-[#ED008C]'
-                          : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'
-                      }`}
-                    >
-                      <span>{finishing}</span>
-                      {selectedFinishing.includes(finishing) && <CheckCircle2 size={16} />}
-                    </button>
-                  ))}
+                {/* 3. Quantity Slider */}
+                <div className="mb-6 bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                  <div className="flex items-center justify-between mb-2">
+                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">
+                      3. Production Quantity:
+                    </label>
+                    <span className="font-heading font-black text-lg text-[#2D3094]">
+                      {quantity.toLocaleString()} units
+                    </span>
+                  </div>
+                  <input
+                    type="range"
+                    min={10}
+                    max={5000}
+                    step={10}
+                    value={quantity}
+                    onChange={(e) => setQuantity(parseInt(e.target.value))}
+                    className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#ED008C]"
+                  />
+                  <div className="flex justify-between text-[10px] text-slate-400 font-bold mt-2">
+                    <span>10 pcs (Min)</span>
+                    <span>500 pcs (Bulk -15%)</span>
+                    <span>1,000 pcs (Bulk -25%)</span>
+                    <span>5,000 pcs</span>
+                  </div>
                 </div>
-              </div>
 
-              {/* 5. Delivery Destination */}
-              <div className="mb-6">
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                  5. Delivery Destination in Uganda:
-                </label>
-                <select
-                  value={selectedZoneId}
-                  onChange={(e) => setSelectedZoneId(e.target.value)}
-                  className="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-xs font-bold text-slate-800 outline-none focus:border-[#2D3094]"
-                >
-                  {DELIVERY_ZONES.map((zone) => (
-                    <option key={zone.id} value={zone.id}>
-                      {zone.name} ({currency === 'UGX' ? `UGX ${zone.feeUGX.toLocaleString()}` : `$${zone.feeUSD}`}) — {zone.estimatedDays}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Express Rush Option */}
-              <div className="bg-amber-50 border border-amber-200 p-4 rounded-2xl flex items-center justify-between">
-                <div>
-                  <span className="text-xs font-bold text-amber-900 block">
-                    ⚡ Need 24h Express Rush Production?
-                  </span>
-                  <span className="text-[10px] text-amber-700">
-                    Prioritizes your job ahead of standard offset queues (+20%).
-                  </span>
+                {/* 4. Finishing Options */}
+                <div className="mb-6">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    4. Specialty Finishing & Upgrades:
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {[
+                      'Soft-Touch Matte Lamination',
+                      'Spot UV Gloss Varnish',
+                      'Metallic Gold / Silver Foil',
+                      'Precision Die-Cut Shape',
+                      'Laser Engraving / Sublimation',
+                      'Hardcover Wire-O Binding'
+                    ].map((finishing) => (
+                      <button
+                        key={finishing}
+                        type="button"
+                        onClick={() => toggleFinishing(finishing)}
+                        className={`p-3 rounded-xl border text-xs font-bold text-left transition-all flex items-center justify-between ${
+                          selectedFinishing.includes(finishing)
+                            ? 'border-[#ED008C] bg-[#ED008C]/10 text-[#ED008C]'
+                            : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'
+                        }`}
+                      >
+                        <span>{finishing}</span>
+                        {selectedFinishing.includes(finishing) && <CheckCircle2 size={16} />}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <input
-                  type="checkbox"
-                  checked={isExpress}
-                  onChange={(e) => setIsExpress(e.target.checked)}
-                  className="w-5 h-5 accent-[#ED008C] rounded cursor-pointer"
-                />
-              </div>
 
-            </div>
+                {/* 5. Delivery Destination */}
+                <div className="mb-6">
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    5. Delivery Destination in Uganda:
+                  </label>
+                  <select
+                    value={selectedZoneId}
+                    onChange={(e) => setSelectedZoneId(e.target.value)}
+                    className="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-xs font-bold text-slate-800 outline-none focus:border-[#2D3094]"
+                  >
+                    {DELIVERY_ZONES.map((zone) => (
+                      <option key={zone.id} value={zone.id}>
+                        {zone.name} ({currency === 'UGX' ? `UGX ${zone.feeUGX.toLocaleString()}` : `$${zone.feeUSD}`}) — {zone.estimatedDays}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Express Rush Option */}
+                <div className="bg-amber-50 border border-amber-200 p-4 rounded-2xl flex items-center justify-between">
+                  <div>
+                    <span className="text-xs font-bold text-amber-900 block">
+                      ⚡ Need 24h Express Rush Production?
+                    </span>
+                    <span className="text-[10px] text-amber-700">
+                      Prioritizes your job ahead of standard offset queues (+20%).
+                    </span>
+                  </div>
+                  <input
+                    type="checkbox"
+                    checked={isExpress}
+                    onChange={(e) => setIsExpress(e.target.checked)}
+                    className="w-5 h-5 accent-[#ED008C] rounded cursor-pointer"
+                  />
+                </div>
+
+              </div>
+            </ScrollReveal>
 
             {/* Column 2: Live Valuation & RFQ Lead Submission Form (lg:col-span-5) */}
-            <div className="lg:col-span-5 flex flex-col gap-6">
+            <ScrollReveal yOffset={25} duration={0.7} delay={0.15} className="lg:col-span-5 flex flex-col gap-6">
               
               {/* Live Estimated Valuation Card */}
               <div className="bg-[#181B34] text-white rounded-3xl p-6 md:p-8 border border-white/15 shadow-xl">
@@ -564,7 +569,7 @@ Please review my artwork and reply with the official signed PDF invoice!`;
                 </div>
               </form>
 
-            </div>
+            </ScrollReveal>
 
           </div>
         )}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { 
   ArrowRight, 
   CheckCircle2, 
@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { View, Currency, ServiceItem } from '../types';
 import { SERVICES_DATA } from '../data/mockData';
+import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
 
 interface CoreServicesSectionProps {
   navigate: (view: View, param?: string) => void;
@@ -27,6 +28,7 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
   currency = 'UGX',
   onSelectService 
 }) => {
+  const shouldReduceMotion = useReducedMotion();
 
   const getServiceIcon = (iconName: string) => {
     switch (iconName) {
@@ -47,10 +49,10 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
         
         {/* Section Header with Fade-in and Upward Movement */}
         <motion.div 
-          initial={{ opacity: 0, y: 25 }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.8, ease: EASE_PREMIUM }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 text-left"
         >
           <div className="max-w-3xl">
@@ -81,19 +83,20 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
         {/* Horizontal Services List with Alternating Layout & Fade-in + Upward Animation */}
         <div className="flex flex-col gap-8">
           {SERVICES_DATA.map((service, index) => {
-            const isReversed = index % 2 === 1; // 1st (index 0) is left, 2nd (index 1) is right, 3rd is left, etc.
+            const isReversed = index % 2 === 1; // 1st is left, 2nd is right, 3rd is left, etc.
 
             return (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 35 }}
+                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 35 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-50px' }}
+                viewport={VIEWPORT_CONFIG}
                 transition={{ 
-                  duration: 0.6, 
-                  delay: (index % 2) * 0.1, 
-                  ease: [0.22, 1, 0.36, 1] 
+                  duration: 0.8, 
+                  delay: (index % 2) * 0.12, 
+                  ease: EASE_PREMIUM 
                 }}
+                whileHover={shouldReduceMotion ? undefined : { y: -4 }}
                 className={`bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-[#2D3094]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col ${
                   isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
                 } group text-left`}
@@ -189,7 +192,7 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
                             navigate('services', service.id);
                           }
                         }}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-[#2D3094] px-4 py-2.5 rounded-full border border-slate-200 hover:border-[#2D3094] transition-all bg-white shadow-sm"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-[#2D3094] px-4 py-2.5 rounded-full border border-slate-200 hover:border-[#2D3094] transition-all bg-white shadow-sm hover:-translate-y-0.5"
                         title="Explore Full Service Details"
                       >
                         <span>Explore Details</span>
@@ -197,7 +200,7 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
                       </button>
                       <button 
                         onClick={() => navigate('quote')}
-                        className="bg-[#2D3094] hover:bg-[#202377] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-all shadow-md shadow-[#2D3094]/20 hover:scale-105 active:scale-95"
+                        className="bg-[#2D3094] hover:bg-[#202377] text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition-all shadow-md shadow-[#2D3094]/20 hover:-translate-y-0.5 active:scale-95"
                       >
                         Get Quote
                       </button>
@@ -212,10 +215,10 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
 
         {/* Bottom Comprehensive CTA */}
         <motion.div 
-          initial={{ opacity: 0, y: 25 }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.75, ease: EASE_PREMIUM }}
           className="mt-14 p-8 rounded-3xl bg-gradient-to-r from-[#F0F2FA] to-[#FAF0F6] border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6 text-left"
         >
           <div>
@@ -228,7 +231,7 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
           </div>
           <button 
             onClick={() => navigate('contact')}
-            className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full transition-all shadow-lg shrink-0 hover:scale-105 active:scale-95"
+            className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full transition-all shadow-lg shrink-0 hover:-translate-y-0.5 active:scale-95"
           >
             Talk to Corporate Sales
           </button>
@@ -238,3 +241,4 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
     </section>
   );
 };
+

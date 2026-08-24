@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import { CLIENT_LOGOS } from '../data/mockData';
+import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
 
 interface ClientLogoItemProps {
   brand: {
@@ -36,22 +38,37 @@ const ClientLogoBadge: React.FC<ClientLogoItemProps> = ({ brand }) => {
 };
 
 export const TrustedByMarquee: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="py-10 bg-[#F7F8FA] border-b border-slate-200/80 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 text-center mb-6">
+      <motion.div 
+        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={VIEWPORT_CONFIG}
+        transition={{ duration: 0.75, ease: EASE_PREMIUM }}
+        className="max-w-7xl mx-auto px-4 text-center mb-6"
+      >
         <span className="text-[11px] font-black uppercase tracking-widest text-[#2D3094] bg-[#2D3094]/10 px-4 py-1.5 rounded-full inline-block">
           Trusted by businesses, institutions and organisations across Uganda & East Africa
         </span>
-      </div>
+      </motion.div>
 
       {/* Infinite Horizontal Logo Marquee */}
-      <div className="relative w-full overflow-hidden select-none">
+      <motion.div 
+        initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={VIEWPORT_CONFIG}
+        transition={{ duration: 0.85, delay: 0.15, ease: EASE_PREMIUM }}
+        className="relative w-full overflow-hidden select-none"
+      >
         <div className="flex gap-4 sm:gap-6 md:gap-8 animate-marquee hover:[animation-play-state:paused] whitespace-nowrap py-2">
           {[...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS, ...CLIENT_LOGOS].map((brand, idx) => (
             <ClientLogoBadge key={idx} brand={brand} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
+

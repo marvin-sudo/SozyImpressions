@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, useReducedMotion } from 'motion/react';
 import { 
   ArrowRight, 
   Calendar, 
@@ -9,6 +10,7 @@ import {
 import { View, BlogPost } from '../types';
 import { BLOG_POSTS } from '../data/mockData';
 import { BlogArticleModal } from './BlogArticleModal';
+import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
 
 interface BlogPreviewSectionProps {
   navigate: (view: View, param?: string) => void;
@@ -16,13 +18,20 @@ interface BlogPreviewSectionProps {
 
 export const BlogPreviewSection: React.FC<BlogPreviewSectionProps> = ({ navigate }) => {
   const [activeArticle, setActiveArticle] = useState<BlogPost | null>(null);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-white border-b border-slate-100 font-sans">
+    <section className="py-20 px-4 md:px-8 bg-white border-b border-slate-100 font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 text-left">
+        <motion.div 
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT_CONFIG}
+          transition={{ duration: 0.8, ease: EASE_PREMIUM }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 text-left"
+        >
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-black uppercase tracking-wider mb-3">
               <BookOpen size={14} className="text-[#ED008C]" />
@@ -46,13 +55,22 @@ export const BlogPreviewSection: React.FC<BlogPreviewSectionProps> = ({ navigate
               <ArrowRight size={16} />
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Blog Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {BLOG_POSTS.map((post) => (
-            <div
+          {BLOG_POSTS.map((post, idx) => (
+            <motion.div
               key={post.id}
+              initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={VIEWPORT_CONFIG}
+              transition={{ 
+                duration: 0.75, 
+                delay: idx * 0.12, 
+                ease: EASE_PREMIUM 
+              }}
+              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
               onClick={() => setActiveArticle(post)}
               className="bg-[#F7F8FA] rounded-3xl overflow-hidden border border-slate-200 hover:border-[#2D3094]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer group text-left"
             >
@@ -110,7 +128,7 @@ export const BlogPreviewSection: React.FC<BlogPreviewSectionProps> = ({ navigate
                 </span>
               </div>
 
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -128,3 +146,4 @@ export const BlogPreviewSection: React.FC<BlogPreviewSectionProps> = ({ navigate
     </section>
   );
 };
+
