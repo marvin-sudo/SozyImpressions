@@ -191,7 +191,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
                     initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 1.03 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.25, ease: EASE_PREMIUM }}
-                    src="https://www.image2url.com/r2/default/images/1787246238224-3e208503-a79e-4276-a8a4-f4fd705244a2.jpg" 
+                    src="https://www.image2url.com/r2/default/images/1787601463920-8b43d53e-0c4f-4c24-9a7b-f4d311fef382.png" 
                     alt="Offset & Packaging" 
                     loading="eager"
                     decoding="async"

@@ -49,7 +49,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tagline: 'Flawless color accuracy, sharp details, and unrivaled cost-efficiency at high volumes.',
     description: 'Professional high-volume printing for businesses, educational institutions, government bodies, and corporations. We utilize advanced German Heidelberg offset presses to achieve unmatched color fidelity, crisp registration, and premium finishes.',
     iconName: 'Printer',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://www.image2url.com/r2/default/images/1787601463920-8b43d53e-0c4f-4c24-9a7b-f4d311fef382.png',
     popularProducts: [
       'Business Cards (Embossed & Foil Stamped)',
       'Corporate Brochures & Annual Reports',
@@ -111,7 +111,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tagline: 'Transform every customer touchpoint into an authoritative, memorable brand experience.',
     description: 'Turn your physical workplaces, company fleets, and executive stationery into cohesive brand ambassadors. From conceptual architectural signage to full fleet wrapping, we engineer authority for leading East African corporations.',
     iconName: 'Building2',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://www.image2url.com/r2/default/images/1787602576366-b2c6de93-70bd-4614-b866-d971b97cfa34.jpg',
     popularProducts: [
       '3D Acrylic & Brushed Metal Reception Signage',
       'Architectural Glass Frosted Vinyl Branding',
@@ -141,7 +141,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tagline: 'Command the room and captivate attendees with unforgettable experiential event graphics.',
     description: 'Professional visual branding for corporate conferences, AGMs, exhibitions, product launches, galas, and sporting events. We supply durable, high-impact hardware and vibrant fabrics that make sponsors shine.',
     iconName: 'Sparkles',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://www.image2url.com/r2/default/images/1787603004866-eb9a323c-894f-4d7d-887a-3907dda8cb1c.png',
     popularProducts: [
       'Seamless Stage Backdrops & Media Photo Walls',
       'Heavy-Duty Aluminum Pull-Up Banners (Roll-Ups)',
@@ -171,7 +171,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     tagline: 'High-utility, executive promotional gifts that keep your brand on top of clients’ minds.',
     description: 'Delight valued clients, reward top performers, and build community with curated corporate merchandise. From laser-engraved vacuum flasks and luxury executive gift sets to custom apparel, we personalize with perfection.',
     iconName: 'Gift',
-    image: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=1200',
+    image: 'https://www.image2url.com/r2/default/images/1787603237030-2c152050-7643-4328-95ee-ee949ad1243e.jpg',
     popularProducts: [
       'Laser-Engraved Smart Temperature LED Vacuum Flasks',
       'Ceramic Two-Tone & Magic Color-Changing Mugs',

@@ -25,7 +25,7 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
     office: {
       title: '3D Reception Signage & Architectural Frosted Glass',
       subtitle: 'Make your physical workplace radiate corporate authority the moment visitors enter.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200',
+      image: 'https://www.image2url.com/r2/default/images/1787602576366-b2c6de93-70bd-4614-b866-d971b97cfa34.jpg',
       bullets: [
         'Precision Laser-Cut 3D Acrylic & Brushed Brass Lettering',
         'Energy-Efficient Warm & Cool Backlit LED Halo Signs',
