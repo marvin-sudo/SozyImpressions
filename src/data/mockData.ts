@@ -8,6 +8,30 @@ import {
   DeliveryZone 
 } from '../types';
 
+import tumblerMugImg from '../assets/images/tumbler_mug_1788634322323.jpg';
+import cushionImg from '../assets/images/personalised_cushion_1788634222492.jpg';
+import calendarFrameImg from '../assets/images/calendar_photo_frame_1788634271713.jpg';
+import neonLightImg from '../assets/images/neon_lights_gift_1788634255448.jpg';
+import rosesBouquetImg from '../assets/images/roses_bouquet_1788634336414.jpg';
+import combosImg from '../assets/images/combos_gift_set_1788634366784.jpg';
+import stationeryImg from '../assets/images/stationery_caddy_1788634352075.jpg';
+import fridgeMagnetsImg from '../assets/images/fridge_photo_magnets_1788634286788.jpg';
+import accessoriesImg from '../assets/images/g_lamp_accessories_1788634381991.jpg';
+import caricatureImg from '../assets/images/caricature_standee_1788634238550.jpg';
+import tabletopFrameImg from '../assets/images/tabletop_frame_1788635214871.jpg';
+import photoSpeakerImg from '../assets/images/photo_speaker_1788635229629.jpg';
+import moonLampImg from '../assets/images/moon_lamp_1788635244442.jpg';
+import deskClockImg from '../assets/images/desk_clock_1788635262427.jpg';
+import coupleKeychainsImg from '../assets/images/couple_keychains_1788635276974.jpg';
+import barFlaskImg from '../assets/images/bar_flask_1788635290861.jpg';
+import customEarbudsImg from '../assets/images/custom_earbuds_1788635304232.jpg';
+import celebrationFlowersImg from '../assets/images/celebration_flowers_1788635644325.jpg';
+import celebrationCakeImg from '../assets/images/celebration_cake_1788635656003.jpg';
+import celebrationExplosionBoxImg from '../assets/images/celebration_explosion_box_1788635668598.jpg';
+import celebrationChocolatesImg from '../assets/images/celebration_chocolates_1788635680950.jpg';
+import celebrationGreetingCardImg from '../assets/images/celebration_greeting_card_1788635694483.jpg';
+import celebrationJewelleryImg from '../assets/images/celebration_jewellery_1788635705456.jpg';
+
 export const COMPANY_INFO = {
   name: 'Sozy Impressions Ltd',
   tagline: 'We Build Brands That Stand Out',
@@ -596,6 +620,821 @@ export const PRODUCTS_DATA: Product[] = [
     rating: 4.9,
     reviewCount: 25,
     inStock: true
+  },
+  // Bamboo Gifts
+  {
+    id: 'prod-bamboo-flask',
+    name: 'Natural Bamboo Stainless Vacuum Thermos Flask (500ml)',
+    category: 'Bamboo Gifts',
+    priceUGX: 48000,
+    priceUSD: 12.8,
+    image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800',
+    description: 'Eco-friendly natural organic bamboo casing over 304 food-grade double-wall stainless steel with removable tea strainer basket. Precision laser-engraved with your recipient name or corporate brand.',
+    specifications: {
+      'Casing': '100% Genuine Renewable Bamboo',
+      'Interior': '304 Food-Grade Stainless Steel Vacuum Sealed',
+      'Capacity': '500 ml',
+      'Customization': 'Deep Laser Etching or UV Full-Color Print'
+    },
+    isCustomizable: true,
+    minOrderQty: 5,
+    rating: 4.9,
+    reviewCount: 39,
+    inStock: true,
+    badge: 'Eco Friendly'
+  },
+  {
+    id: 'prod-bamboo-notebook-set',
+    name: 'Organic Bamboo Hardcover Journal & Ballpoint Pen Set',
+    category: 'Bamboo Gifts',
+    priceUGX: 42000,
+    priceUSD: 11,
+    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800',
+    description: 'Sustainable real bamboo wood notebook cover with 140 pages of 100% recycled unbleached paper, paired with a matching bamboo twist-action ballpoint pen. Custom laser-engraved cover artwork.',
+    specifications: {
+      'Cover': 'Natural Bamboo Timber',
+      'Paper': '140 Pages Recycled Kraft Paper',
+      'Pen': 'Refillable Bamboo Barrel with Black German Ink',
+      'Packaging': 'Recycled Kraft Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 10,
+    rating: 4.8,
+    reviewCount: 28,
+    inStock: true
+  },
+  // Glasses & Drinkware
+  {
+    id: 'prod-whiskey-glasses',
+    name: 'Laser-Etched Heavy-Base Crystal Whiskey Glasses (Set of 2)',
+    category: 'Glasses',
+    priceUGX: 65000,
+    priceUSD: 17.5,
+    image: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&q=80&w=800',
+    description: 'Lead-free European ultra-clear crystal old-fashioned whiskey tumblers with heavy weighted bases. Laser-etched with monograms, crests, or corporate insignia. Packaged in a cushioned presentation box.',
+    specifications: {
+      'Material': 'Lead-Free Ultra-Clarified Crystal Glass',
+      'Capacity': '310 ml / 10.5 oz each',
+      'Etching': 'Frost Laser Sandblast Micro-Etch (Dishwasher Safe)',
+      'Packaging': 'Satin-Lined Rigid Gift Box (Pair)'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 44,
+    inStock: true,
+    badge: 'Executive Pick'
+  },
+  {
+    id: 'prod-wine-glasses',
+    name: 'Personalised Stemless Crystal Wine Glasses (Set of 2)',
+    category: 'Glasses',
+    priceUGX: 58000,
+    priceUSD: 15.5,
+    image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=800',
+    description: 'Elegant ergonomic stemless wine glasses for red or white wine. Permanently etched with custom commemorative dates, wedding monograms, or corporate partner logos.',
+    specifications: {
+      'Capacity': '450 ml each',
+      'Set': '2 Glasses in Premium White Gift Case',
+      'Finish': 'Frosted Laser Engraving'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 31,
+    inStock: true
+  },
+  // Keyholders
+  {
+    id: 'prod-leather-keyholder',
+    name: 'Solid Zinc-Alloy & Top-Grain Leather Executive Keyholder',
+    category: 'Keyholders',
+    priceUGX: 18000,
+    priceUSD: 4.8,
+    image: 'https://images.unsplash.com/photo-1614036417651-efe5912149d8?auto=format&fit=crop&q=80&w=800',
+    description: 'High-polish gunmetal zinc alloy with hand-stitched genuine leather strap and heavy spring-lock carabiner ring. Laser engraved with logo or initials.',
+    specifications: {
+      'Material': 'Zinc Alloy + Genuine Top-Grain Leather',
+      'Ring': '30mm Heavy-Duty Split Keyring',
+      'Customization': 'Laser Engraving on Metal Plate'
+    },
+    isCustomizable: true,
+    minOrderQty: 10,
+    colors: ['Midnight Navy', 'Chestnut Brown', 'Jet Black'],
+    rating: 4.8,
+    reviewCount: 52,
+    inStock: true
+  },
+  {
+    id: 'prod-acrylic-keyholder',
+    name: 'Custom Shape 3D Laser-Cut Double-Sided Acrylic Keyring',
+    category: 'Keyholders',
+    priceUGX: 7500,
+    priceUSD: 2,
+    image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=800',
+    description: 'Crystal-clear 3mm acrylic cut into any custom silhouette, badge, or logo outline with scratch-proof embedded double-sided high-definition digital print.',
+    specifications: {
+      'Material': '3mm Optical Grade Acrylic',
+      'Print': 'Double-Sided Embedded UV Gloss Print',
+      'Attachment': 'Stainless Steel Swivel Ring'
+    },
+    isCustomizable: true,
+    minOrderQty: 25,
+    rating: 4.7,
+    reviewCount: 65,
+    inStock: true
+  },
+  // Wall Clocks
+  {
+    id: 'prod-wall-clock-alum',
+    name: 'Branded 30cm Silent-Sweep Brushed Aluminum Wall Clock',
+    category: 'Wall Clocks',
+    priceUGX: 75000,
+    priceUSD: 20,
+    image: 'https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&q=80&w=800',
+    description: 'Contemporary 30cm circular wall clock with brushed metallic bezel, shatterproof mineral glass lens, and non-ticking silent sweep quartz movement. Full-face custom branded dial.',
+    specifications: {
+      'Diameter': '30 cm (12 Inches)',
+      'Movement': 'High-Torque Silent Sweep Quartz (No Ticking)',
+      'Dial': 'Full-Color Photographic CMYK Face Print',
+      'Battery': '1 x AA Battery Included'
+    },
+    isCustomizable: true,
+    minOrderQty: 2,
+    rating: 4.9,
+    reviewCount: 37,
+    inStock: true,
+    badge: 'Office Classic'
+  },
+  {
+    id: 'prod-wall-clock-acrylic',
+    name: 'Floating 3D Laser-Cut Acrylic Corporate Wall Clock',
+    category: 'Wall Clocks',
+    priceUGX: 85000,
+    priceUSD: 22.5,
+    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800',
+    description: 'Modern frameless minimalist clock fabricated from gloss acrylic layers with raised 3D hour markers and custom company logo emblem in center.',
+    specifications: {
+      'Diameter': '35 cm',
+      'Material': '5mm Cast Acrylic with 3D Raised Elements',
+      'Warranty': '2-Year Mechanism Guarantee'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 19,
+    inStock: true
+  },
+  // Watches
+  {
+    id: 'prod-executive-watch',
+    name: 'Executive Laser-Engraved Minimalist Stainless Watch',
+    category: 'Watches',
+    priceUGX: 145000,
+    priceUSD: 38,
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800',
+    description: 'Understated ultra-slim Japanese quartz timepiece with 316L stainless steel case, scratch-resistant sapphire crystal lens, and genuine leather or mesh band. Laser engraved back-case message.',
+    specifications: {
+      'Case': '40mm Stainless Steel 316L',
+      'Glass': 'Hardened Mineral Crystal Lens',
+      'Movement': 'Citizen Miyota Quartz Movement',
+      'Water Resistance': '3 ATM (Splashproof)',
+      'Engraving': 'Custom Inscription or Brandmark on Case Back'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Silver Case / Black Leather', 'Rose Gold / Navy Leather', 'All-Black Stealth'],
+    rating: 5.0,
+    reviewCount: 24,
+    inStock: true,
+    badge: 'Prestige Award'
+  },
+  // Technology
+  {
+    id: 'prod-powerbank-slim',
+    name: 'Ultra-Slim 10,000mAh Power Bank with Backlit LED Logo',
+    category: 'Technology',
+    priceUGX: 68000,
+    priceUSD: 18,
+    image: 'https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&q=80&w=800',
+    description: 'Matte rubberized finish power bank that illuminates your engraved company logo in bright white LED when moved or charging. Dual 2.4A USB outputs plus Type-C fast charge input/output.',
+    specifications: {
+      'Capacity': '10,000 mAh Li-Polymer Battery',
+      'Outputs': 'Dual USB-A + Type-C Power Delivery',
+      'Branding': 'Laser-Etched Illuminated LED Light-Up Logo',
+      'Included': 'Braided 3-in-1 Fast Charging Cable'
+    },
+    isCustomizable: true,
+    minOrderQty: 5,
+    colors: ['Matte Black (White Glow)', 'Executive Navy (White Glow)'],
+    rating: 4.9,
+    reviewCount: 47,
+    inStock: true,
+    badge: 'Tech Bestseller'
+  },
+  {
+    id: 'prod-metal-usb',
+    name: 'Heavy-Duty 32GB Metal Swivel OTG Flash Drive',
+    category: 'Technology',
+    priceUGX: 25000,
+    priceUSD: 6.8,
+    image: 'https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&q=80&w=800',
+    description: 'Solid zinc-alloy housing with 360-degree swivel clip. Features dual USB 3.0 and Type-C connectors for instant file transfer between smartphones, laptops, and conference presentations.',
+    specifications: {
+      'Capacity': '32 GB Grade-A High-Speed Flash Memory',
+      'Interface': 'Dual USB 3.0 + Type-C OTG',
+      'Customization': 'Permanent High-Contrast Laser Engraving'
+    },
+    isCustomizable: true,
+    minOrderQty: 10,
+    colors: ['Brushed Gunmetal', 'Polished Silver', 'Matte Gold'],
+    rating: 4.8,
+    reviewCount: 62,
+    inStock: true
+  },
+  // Special Holiday Gifts
+  {
+    id: 'prod-holiday-hamper',
+    name: 'Corporate Year-End Deluxe Celebration Hamper Crate',
+    category: 'Special Holiday Gifts',
+    priceUGX: 280000,
+    priceUSD: 74,
+    image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=800',
+    description: 'Handmade pine wood keepsake crate with sliding branded lid and festive satin bow. Packed with custom insulated thermal tumbler, premium chocolates, roasted Ugandan coffee, bespoke notebook, and festive greeting card.',
+    specifications: {
+      'Crate': 'Solid Reusable Natural Pine Wood with Sliding Lid',
+      'Contents': 'Smart LED Flask + Coffee + Chocolate + Notebook + Card',
+      'Branding': 'Laser Engraved Crate Lid + Customized Card and Gifts'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 38,
+    inStock: true,
+    badge: 'Holiday Exclusive'
+  },
+  {
+    id: 'prod-magic-photo-mug',
+    name: 'Color-Changing Magic Heat-Sensitive Ceramic Photo Mug',
+    category: 'Mugs',
+    priceUGX: 22000,
+    priceUSD: 5.8,
+    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800',
+    description: 'Appears as an all-black matte mug at room temperature; pour hot coffee or tea to reveal your custom photo, heartfelt message, or vibrant brand graphic in full photographic color!',
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Mechanism': 'Thermodynamic Sublimation Pigment',
+      'Care': 'Gentle Hand Wash Recommended',
+      'Packaging': 'Gift Box with Bubble Protection'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 89,
+    inStock: true,
+    badge: 'Viral Favourite'
+  },
+  {
+    id: 'prod-wooden-award-plaque',
+    name: 'Handcrafted Mahogany Plaque with Laser-Cut Metal Inlay',
+    category: 'Trophies & Medals',
+    priceUGX: 95000,
+    priceUSD: 25,
+    image: 'https://images.unsplash.com/photo-1569517282132-25d22f4573e6?auto=format&fit=crop&q=80&w=800',
+    description: 'Polished solid African mahogany timber wall or desk plaque featuring a precision etched brushed brass plate and beveled piano-finish edges. Ideal for long service, retirement, and partner awards.',
+    specifications: {
+      'Wood': 'Solid Sustainably Sourced African Mahogany',
+      'Plate': 'Brushed Brass or Silver Aluminum with Black Inscription',
+      'Size': '8 x 10 Inches (20 x 25 cm)',
+      'Mounting': 'Keyhole Wall Mount + Fold-Out Brass Desk Stand'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 33,
+    inStock: true
+  },
+  // Personalised Gifts Showcase Products (Reference: i5j.png)
+  {
+    id: 'prod-pers-cushion',
+    name: 'Personalised Satin Couple Floral Keepsake Cushion',
+    category: 'Cushions',
+    priceUGX: 35000,
+    priceUSD: 9.2,
+    originalPriceUGX: 42000,
+    originalPriceUSD: 11,
+    image: cushionImg,
+    description: 'Ultra-soft micro-satin personalised cushion featuring a custom romantic couple photograph framed by a blushing floral garland and elegant script. Includes plush hypoallergenic virgin fiber insert.',
+    specifications: {
+      'Dimensions': '40 x 40 cm (16 x 16 inches)',
+      'Fabric': 'Premium Micro-Satin with Concealed Zipper',
+      'Print': 'Permanent Edge-to-Edge Dye Sublimation',
+      'Fill': 'Hypoallergenic Virgin Microfiber Insert Included'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 41,
+    inStock: true,
+    badge: 'Romantic Pick'
+  },
+  {
+    id: 'prod-pers-tumbler-mug',
+    name: 'Personalised 40oz Insulated Travel Tumbler Mug with Handle',
+    category: 'Mugs',
+    priceUGX: 48000,
+    priceUSD: 12.5,
+    originalPriceUGX: 58000,
+    originalPriceUSD: 15,
+    image: tumblerMugImg,
+    description: 'Double-wall stainless steel travel mug tumbler with ergonomic comfort grip handle, reusable straw, and spill-proof 3-way lid. Precision laser-engraved with your custom name or initials.',
+    specifications: {
+      'Capacity': '40 oz / 1.18 Litres',
+      'Material': '18/8 Kitchen-Grade Stainless Steel',
+      'Insulation': 'Triple-Layer Vacuum (Cold for 24h, Hot for 12h)',
+      'Customization': 'Permanent High-Precision Laser Engraving'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 67,
+    inStock: true,
+    badge: 'Trending Gift'
+  },
+  {
+    id: 'prod-pers-calendar-frame',
+    name: 'Custom Wooden Block Calendar Photo Collage Standee',
+    category: 'Photo Frames',
+    priceUGX: 45000,
+    priceUSD: 11.8,
+    image: calendarFrameImg,
+    description: 'Hand-finished solid natural pine wood block base holding a high-gloss 6-photo commemorative grid and anniversary date calendar with engraved names. Perfect for milestone moments.',
+    specifications: {
+      'Base': 'Solid Natural Pine Wood Block',
+      'Display': 'Scratch-Resistant Acrylic Grid Plaque (6 Photos)',
+      'Size': '18 x 22 cm Desk Display',
+      'Personalisation': '6 High-Res Photos + Custom Engraved Names & Date'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 52,
+    inStock: true,
+    badge: 'Anniversary Classic'
+  },
+  {
+    id: 'prod-pers-neon-light',
+    name: 'Custom LED Neon Acrylic Sign & Polaroid Keepsake ("LOVE")',
+    category: 'Neon Lights',
+    priceUGX: 85000,
+    priceUSD: 22.5,
+    originalPriceUGX: 110000,
+    originalPriceUSD: 29,
+    image: neonLightImg,
+    description: 'Warm ambient silicon LED flex neon sign ("LOVE") set inside a modern geometric wooden tabletop frame with hanging mini photo cards. Powered by USB with dimmer switch.',
+    specifications: {
+      'Lighting': 'Warm White Silicon LED Flex Neon (Low Voltage USB)',
+      'Frame': 'Natural Birch Plywood Geometric Stand',
+      'Included': 'Dimmer Controller + 4 Mini Photo Polaroid Prints',
+      'Size': '25 x 25 cm Tabletop Display'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 38,
+    inStock: true,
+    badge: 'Ambient Glow'
+  },
+  {
+    id: 'prod-pers-rose-bouquet',
+    name: 'Luxury Rose Bouquet with Personalised Printed Ribbon & Card',
+    category: 'Flowers',
+    priceUGX: 65000,
+    priceUSD: 17,
+    image: rosesBouquetImg,
+    description: 'Hand-tied arrangement of fresh premium red and blush pink roses wrapped in luxurious frosted waterproof paper with customized satin printed ribbon and recipient keepsake photo card.',
+    specifications: {
+      'Stem Count': '12 Premium Fresh Long-Stem Roses',
+      'Wrapping': 'Frosted Korean Water-Resistant Tissue & Silk Wrap',
+      'Ribbon': 'Personalised Satin Ribbon with Custom Message',
+      'Keepsake': 'Laminated Photo Message Card'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 29,
+    inStock: true,
+    badge: 'Fresh Blooms'
+  },
+  {
+    id: 'prod-pers-3in1-combo',
+    name: 'Personalised 3-in-1 Executive Combo: Bottle, Mug & Desk Caddy',
+    category: 'Combos',
+    priceUGX: 82000,
+    priceUSD: 21.5,
+    originalPriceUGX: 98000,
+    originalPriceUSD: 26,
+    image: combosImg,
+    description: 'Coordinated 3-piece daily essentials combo set. Includes personalised sports drinkware bottle, ceramic coffee mug, and solid pine wood desk stationery organizer with custom name imprint.',
+    specifications: {
+      'Set Items': 'Sports Sipper + Ceramic Mug + Pine Desk Caddy',
+      'Notepad': 'Includes 50-Sheet To-Do Notepad & Stylus Pen',
+      'Personalisation': 'Matching Name & Monogram Across All 3 Items',
+      'Packaging': 'Deluxe Presentation Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'Best Value Set'
+  },
+  {
+    id: 'prod-pers-stationery-caddy',
+    name: 'Personalised Pine Wood Desk Caddy with Photo Frame',
+    category: 'Stationery',
+    priceUGX: 38000,
+    priceUSD: 10,
+    image: stationeryImg,
+    description: 'Multi-compartment solid pine wood desk caddy featuring pencil slots, stationery compartments, notepad holder, and an integrated high-definition photo frame insert with personalized message.',
+    specifications: {
+      'Material': 'Solid Natural Pine Wood',
+      'Compartments': 'Dual Pen Well + Memo Slot + Business Card Holder',
+      'Photo Window': 'Custom Full-Color Printed Photo Insert',
+      'Accessories': 'Includes Yellow Highlighter & Memo Notepad'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.8,
+    reviewCount: 36,
+    inStock: true,
+    badge: 'Desk Essential'
+  },
+  {
+    id: 'prod-pers-fridge-magnets',
+    name: 'Personalised Polaroid Acrylic Photo Fridge Magnets (Set of 4)',
+    category: 'Fridge Magnets',
+    priceUGX: 28000,
+    priceUSD: 7.5,
+    image: fridgeMagnetsImg,
+    description: 'Set of 4 premium gloss acrylic magnetic photo tiles styled like retro polaroids with your custom heartfelt promise messages and pictures. Heavy-duty magnetic backing sticks firmly to refrigerators and magnetic boards.',
+    specifications: {
+      'Set Count': '4 Custom Photo Magnets',
+      'Material': '3mm High-Gloss Cast Acrylic with Strong Magnetic Backing',
+      'Size': '7 x 9 cm Each',
+      'Finish': 'Waterproof Scratch-Resistant UV Printing'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 57,
+    inStock: true,
+    badge: 'Cute Memories'
+  },
+  {
+    id: 'prod-pers-g-lamp-set',
+    name: 'G-Shape Fast Wireless Charger Bluetooth Speaker Lamp & Smart Flask',
+    category: 'Accessories',
+    priceUGX: 125000,
+    priceUSD: 33,
+    originalPriceUGX: 145000,
+    originalPriceUSD: 38,
+    image: accessoriesImg,
+    description: 'Futuristic G-shaped ambient RGB night lamp with 15W Qi fast wireless charging pad, built-in Bluetooth speaker, and digital clock, bundled with a matching personalised matte black smart LED temperature flask.',
+    specifications: {
+      'Lamp': '15W Fast Wireless Charging + 3W Bluetooth 5.2 Speaker',
+      'Lighting': '6 Dynamic Ambient RGB Color Modes',
+      'Flask': '500ml Smart LED Temperature Vacuum Flask with Laser Engraving',
+      'Power': 'Type-C Fast Charge Cable Included'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 63,
+    inStock: true,
+    badge: 'Tech Executive'
+  },
+  {
+    id: 'prod-pers-caricature-standee',
+    name: 'Custom Laser-Cut Acrylic Couple Caricature Standee',
+    category: 'Caricatures',
+    priceUGX: 55000,
+    priceUSD: 14.5,
+    image: caricatureImg,
+    description: 'Hand-illustrated cartoon couple caricature laser-cut from 4mm high-gloss optical acrylic with celebratory quote ("Two Souls One Epic Journey") mounted on a sleek weighted black acrylic desk base.',
+    specifications: {
+      'Material': '4mm Optical Grade Laser-Cut Cast Acrylic',
+      'Base': 'Weighted High-Gloss Jet Black Acrylic Base',
+      'Height': '18 cm / 7 Inches',
+      'Artwork': 'Custom Digital Caricature Illustration from Your Photo'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 78,
+    inStock: true,
+    badge: 'Top Customer Pick'
+  },
+  // Tailor-Made Treasures Showcase Products
+  {
+    id: 'prod-tailor-tabletop-frame',
+    name: 'Rustic Swing Tabletop Photo Frame Desk Plaque',
+    category: 'Table Tops',
+    priceUGX: 36000,
+    priceUSD: 9.5,
+    originalPriceUGX: 45000,
+    originalPriceUSD: 12,
+    image: tabletopFrameImg,
+    description: 'Artisanal natural solid pine wood desktop photo frame with brass swing hinge hooks holding a suspended dual-sided high-definition photo plaque with engraved quote.',
+    specifications: {
+      'Frame': 'Solid Natural Pine Wood Swivel Stand',
+      'Plaque': 'High-Gloss Scratch-Proof UV Printed Panel',
+      'Dimensions': '18 x 20 cm',
+      'Display': 'Double-Sided Swing Photo Tile'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 42,
+    inStock: true,
+    badge: 'Artisan Pick'
+  },
+  {
+    id: 'prod-tailor-speaker',
+    name: 'Smart Touch LED Warm Ambient Bluetooth Photo Speaker',
+    category: 'Speakers',
+    priceUGX: 58000,
+    priceUSD: 15.5,
+    originalPriceUGX: 70000,
+    originalPriceUSD: 18.5,
+    image: photoSpeakerImg,
+    description: 'Portable cylindrical Bluetooth speaker with 3-level touch-sensitive warm LED ambient light, crisp 360-degree audio, and your custom photograph printed with personalized text.',
+    specifications: {
+      'Audio': '5W Hi-Fi 360-Degree Surround Sound Bluetooth 5.0',
+      'Lighting': '3-Level Touch Sensitive Warm Nightlight',
+      'Battery': '1200mAh Rechargeable (6h Playtime)',
+      'Customization': 'Full-Wrap High-Definition Photo Sublimation'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 54,
+    inStock: true,
+    badge: 'Bestselling Tech'
+  },
+  {
+    id: 'prod-tailor-moon-lamp',
+    name: 'Custom 3D Crescent Moon & Cloud LED Couple Photo Lamp',
+    category: 'Lamps',
+    priceUGX: 68000,
+    priceUSD: 18,
+    originalPriceUGX: 80000,
+    originalPriceUSD: 21,
+    image: moonLampImg,
+    description: 'Delicate glowing optical acrylic crescent moon and cloud shaped 3D bedside lamp set in a dark solid wood base. Features illuminated couple photo with "Love you to the moon & back" script.',
+    specifications: {
+      'Material': 'Laser-Cut Optical Cast Acrylic + Natural Wood Base',
+      'Light Source': 'Warm Golden Ambient LED (USB Powered with Switch)',
+      'Size': '20 x 16 cm',
+      'Print': 'Vibrant Embedded Photo Print with Glow Backlight'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 68,
+    inStock: true,
+    badge: 'Night Glow'
+  },
+  {
+    id: 'prod-tailor-desk-clock',
+    name: 'Personalised Geometric Heart Photo Collage Desk Easel Clock',
+    category: 'Clocks',
+    priceUGX: 42000,
+    priceUSD: 11,
+    originalPriceUGX: 50000,
+    originalPriceUSD: 13,
+    image: deskClockImg,
+    description: 'Contemporary square desk clock with a sturdy black easel stand, featuring a geometric love collage face, clear silent sweep quartz movement, and custom couple portrait.',
+    specifications: {
+      'Movement': 'Silent Sweep Quartz (Non-Ticking)',
+      'Size': '16 x 16 cm Tabletop Display',
+      'Face': 'High-Gloss Scratch-Resistant Photographic Panel',
+      'Battery': '1 x AA Included'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.8,
+    reviewCount: 39,
+    inStock: true,
+    badge: 'Desk Classic'
+  },
+  {
+    id: 'prod-tailor-keychains',
+    name: 'Set of 2 Luxury Metallic Name Engraved Couple Keyrings',
+    category: 'Key Chains',
+    priceUGX: 25000,
+    priceUSD: 6.5,
+    originalPriceUGX: 32000,
+    originalPriceUSD: 8.5,
+    image: coupleKeychainsImg,
+    description: 'Pair of premium mirror-polished square chrome zinc-alloy keychains with pastel pink and turquoise marbled resin inserts, laser-engraved with each partner’s name.',
+    specifications: {
+      'Set Count': '2 Matching Keychains (His & Hers)',
+      'Material': 'Polished Zinc Alloy + Marbled Resin',
+      'Ring': 'Heavy-Duty 32mm Swivel Split Ring',
+      'Customization': 'Laser-Engraved Typography'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 83,
+    inStock: true,
+    badge: 'Couple Set'
+  },
+  {
+    id: 'prod-tailor-bar-flask',
+    name: 'Brushed Stainless Steel Laser-Etched Executive Hip Flask',
+    category: 'Bar Accessories',
+    priceUGX: 38000,
+    priceUSD: 10,
+    originalPriceUGX: 48000,
+    originalPriceUSD: 12.5,
+    image: barFlaskImg,
+    description: 'Food-grade brushed 304 stainless steel 8oz curved pocket hip flask with attached leak-proof screw cap. Deeply laser-etched with personalized initials, name, and milestone anniversary date.',
+    specifications: {
+      'Capacity': '8 oz / 240 ml',
+      'Material': '18/8 (304) Food-Grade Stainless Steel',
+      'Cap': 'Hinged Leak-Proof Secure Screw Cap',
+      'Finishing': 'High-Contrast Permanent Laser Etching'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 46,
+    inStock: true,
+    badge: 'Barware Pick'
+  },
+  {
+    id: 'prod-tailor-earbuds',
+    name: 'Personalised True Wireless ANC Earbuds with Laser-Engraved Case',
+    category: 'Personalised Electronics',
+    priceUGX: 110000,
+    priceUSD: 29,
+    originalPriceUGX: 135000,
+    originalPriceUSD: 36,
+    image: customEarbudsImg,
+    description: 'Matte black premium true wireless stereo earbuds featuring active environmental noise cancellation, rich bass drivers, and a smooth charging case laser-engraved with your custom name or monogram.',
+    specifications: {
+      'Audio': 'Bluetooth 5.3 + ENC Quad Mic Clear Call Technology',
+      'Battery': 'Up to 28 Hours Total Playtime with Fast USB-C Case',
+      'Water Resistance': 'IPX5 Sweat and Splash Proof',
+      'Customization': 'Permanent High-Definition Laser Engraving'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 58,
+    inStock: true,
+    badge: 'High-Tech Treasure'
+  },
+  // Make Celebrations Special With Collection Products
+  {
+    id: 'prod-cel-flowers',
+    name: 'Personalised Wooden Cube Flower Box with Fresh Roses',
+    category: 'Personalised Flowers',
+    priceUGX: 75000,
+    priceUSD: 19.5,
+    originalPriceUGX: 90000,
+    originalPriceUSD: 24,
+    image: celebrationFlowersImg,
+    description: 'Rustic handcrafted wooden cube planter box custom UV-printed with your couple photograph and heartfelt quote, arranged with fresh premium red roses, pink carnations and white baby breath.',
+    specifications: {
+      'Box': 'Natural Solid Pine Wood with UV Photo Print',
+      'Florals': 'Fresh Red Roses, Soft Pink Carnations, Gypsophila',
+      'Hydration': 'Oasis Floral Foam Base Keeps Flowers Fresh 5-7 Days',
+      'Dimensions': '16 x 16 x 22 cm Total Height'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 64,
+    inStock: true,
+    badge: 'Fresh Florals'
+  },
+  {
+    id: 'prod-cel-cake',
+    name: 'Custom Edible Photo Birthday & Anniversary Celebration Cake',
+    category: 'Photo Cakes',
+    priceUGX: 85000,
+    priceUSD: 22.5,
+    originalPriceUGX: 100000,
+    originalPriceUSD: 26.5,
+    image: celebrationCakeImg,
+    description: 'Freshly baked artisanal 1.5kg celebration sponge cake layered with Madagascar vanilla buttercream frosting, delicate chocolate edging, and a high-definition edible wafer sugar print of your photo and custom message.',
+    specifications: {
+      'Flavor Options': 'Rich Red Velvet, Belgian Chocolate, or Madagascan Vanilla',
+      'Weight': '1.5 kg (Serves 10-14 Guests)',
+      'Photo Topper': '100% Edible Wafer Sheet with Food-Grade Colors',
+      'Freshness': 'Baked to Order Same-Day Delivery'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 92,
+    inStock: true,
+    badge: 'Party Favorite'
+  },
+  {
+    id: 'prod-cel-explosion-box',
+    name: 'Handcrafted Multi-Layer 3D Photo Explosion Surprise Box',
+    category: 'Explosion Box',
+    priceUGX: 52000,
+    priceUSD: 13.8,
+    originalPriceUGX: 65000,
+    originalPriceUSD: 17,
+    image: celebrationExplosionBoxImg,
+    description: 'Intricate 4-tiered hexagonal explosion gift box with fold-out heart flaps, pull-out photo photo sleeves, custom quotes, cascading accordion mini-albums, and a secret center gift vault for jewellery or treats.',
+    specifications: {
+      'Layers': '4 Interactive Concentric Tiers with 24 Photo Slots',
+      'Material': '350gsm Heavyweight Metallic Cardstock',
+      'Finishing': 'Satin Ribbon Bow with Foil-Stamped Accents',
+      'Center Vault': 'Fits Perfume, Watch, Ring or Luxury Chocolates'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 78,
+    inStock: true,
+    badge: 'Viral Surprise'
+  },
+  {
+    id: 'prod-cel-chocolates',
+    name: 'Gourmet Belgian Chocolate Gift Hamper with Easel Portrait Frame',
+    category: 'Chocolates',
+    priceUGX: 48000,
+    priceUSD: 12.8,
+    originalPriceUGX: 60000,
+    originalPriceUSD: 16,
+    image: celebrationChocolatesImg,
+    description: 'Luxury celebration chocolate curation featuring 3 premium handcrafted artisan bars (Dark 70%, Milk, and White Vanilla), golden hazelnut truffles, presented with an easel mini portrait photo print.',
+    specifications: {
+      'Confections': '3 x 100g Artisan Bars + 6 Gold Foil Truffles',
+      'Presentation': 'Wooden Gift Caddy with Gold Foil Ribbon',
+      'Photo Display': 'Mini Natural Wood Easel Photo Tile Included',
+      'Origin': 'Belgian Cocoa Beans, Pure Cocoa Butter'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.8,
+    reviewCount: 51,
+    inStock: true,
+    badge: 'Sweet Moments'
+  },
+  {
+    id: 'prod-cel-greeting-card',
+    name: 'Bespoke Standing Greeting Card with Natural Wood Slice Easel',
+    category: 'Greeting Cards',
+    priceUGX: 20000,
+    priceUSD: 5.5,
+    originalPriceUGX: 26000,
+    originalPriceUSD: 7,
+    image: celebrationGreetingCardImg,
+    description: 'Premium heavyweight textured linen fold card customized with high-gloss photo print, personalized calligraphy greeting message, resting on a rustic natural wood tree slice display base.',
+    specifications: {
+      'Paper': '350gsm Italian Textured Linen Cardstock',
+      'Base': 'Natural Kiln-Dried Wood Trunk Slice with Slit',
+      'Print': 'High-Definition UltraChrome UV Ink',
+      'Envelope': 'Luxury Pearl White Envelope with Wax Seal Stamp'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 43,
+    inStock: true,
+    badge: 'Heartfelt Keepsake'
+  },
+  {
+    id: 'prod-cel-jewellery',
+    name: 'Custom Engraved Crystal Zirconia Silver Couple Bangle Bracelet',
+    category: 'Jewellery',
+    priceUGX: 68000,
+    priceUSD: 18,
+    originalPriceUGX: 82000,
+    originalPriceUSD: 22,
+    image: celebrationJewelleryImg,
+    description: 'Exquisite 925 sterling silver plated hinged cuff bracelet adorned with sparkling pave zirconia stones and precision micro-laser engraving of your name, coordinates, or anniversary date inside.',
+    specifications: {
+      'Material': '925 Sterling Silver Plated Brass with Anti-Tarnish Finish',
+      'Stones': 'AAA Brilliant Cut Cubic Zirconia Pave',
+      'Closure': 'Secure Hidden Push-Clasp Hinge',
+      'Packaging': 'Velvet Lined Keepsake Presentation Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 71,
+    inStock: true,
+    badge: 'Luxury Accent'
   }
 ];
 

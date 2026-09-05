@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { 
-  Star, 
   CheckCircle2, 
   Sparkles
 } from 'lucide-react';
@@ -55,10 +54,8 @@ export const TestimonialsSection: React.FC = () => {
               <div>
                 {/* Top Rating & Project Type */}
                 <div className="flex items-center justify-between gap-2 mb-4">
-                  <div className="flex items-center gap-1">
-                    {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} size={16} className="fill-amber-400 text-amber-400" />
-                    ))}
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-full">
+                    <span>{item.rating}.0 / 5.0 Rating</span>
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#2D3094] bg-[#2D3094]/10 px-2.5 py-1 rounded-full">
                     {item.projectType}

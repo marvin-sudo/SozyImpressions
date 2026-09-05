@@ -35,6 +35,7 @@ const QuotePage = lazy(() => import('./pages/QuotePage').then(m => ({ default: m
 const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
 const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })));
+const ShopPage = lazy(() => import('./pages/ShopPage').then(m => ({ default: m.ShopPage })));
 
 // Modals & Shared Views
 import { ProductCustomizerModal } from './components/ProductCustomizerModal';
@@ -72,6 +73,7 @@ const parseHashRoute = (): { view: View; param?: string } => {
     'services',
     'about',
     'portfolio',
+    'shop',
     'quote',
     'blog',
     'contact',
@@ -281,10 +283,13 @@ export const App: React.FC = () => {
 
       case 'shop':
         return (
-          <ServicesPage
+          <ShopPage
             navigate={navigate}
             currency={currency}
-            selectedServiceId={routeParam}
+            products={products}
+            onOpenCustomizer={(product) => setCustomizingProduct(product || products[0])}
+            onAddToCart={handleAddToCart}
+            selectedCategory={routeParam}
           />
         );
 

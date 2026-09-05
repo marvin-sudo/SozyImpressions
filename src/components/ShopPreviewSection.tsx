@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { 
   ShoppingCart, 
   Sparkles, 
-  Star, 
   ArrowRight, 
   MessageSquare, 
   Eye
@@ -151,8 +150,7 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
                       {product.category}
                     </span>
                     {product.rating && (
-                      <div className="flex items-center gap-1 text-[11px] font-bold text-amber-500">
-                        <Star size={12} className="fill-amber-400 text-amber-400" />
+                      <div className="flex items-center gap-1 text-[11px] font-bold text-slate-700">
                         <span>{product.rating}</span>
                         <span className="text-slate-400 text-[10px]">({product.reviewCount})</span>
                       </div>

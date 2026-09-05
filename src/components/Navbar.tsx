@@ -11,7 +11,8 @@ import {
   Layers, 
   Gift, 
   Flag, 
-  ArrowRight 
+  ArrowRight,
+  ShoppingBag
 } from 'lucide-react';
 import { View, Currency, CartItem } from '../types';
 import { COMPANY_INFO } from '../data/mockData';
@@ -35,6 +36,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   navigate,
   currency,
   setCurrency,
+  cart = [],
+  setIsCartOpen,
   openAdminModal
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -386,6 +389,20 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
 
             <button 
+              onClick={() => navigate('shop')}
+              className={`text-xs uppercase tracking-wider font-bold transition-colors py-1.5 flex items-center gap-1.5 ${
+                currentView === 'shop' 
+                  ? 'text-[#ED008C] border-b-2 border-[#ED008C]' 
+                  : 'text-slate-700 hover:text-[#2D3094]'
+              }`}
+            >
+              <span>Shop</span>
+              <span className="text-[9px] font-black text-white bg-[#ED008C] px-1.5 py-0.5 rounded-full uppercase leading-none">
+                New
+              </span>
+            </button>
+
+            <button 
               onClick={() => navigate('portfolio')}
               className={`text-xs uppercase tracking-wider font-bold transition-colors py-1.5 ${
                 currentView === 'portfolio' 
@@ -419,8 +436,24 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          {/* Action CTAs: Primary Get a Quote CTA */}
-          <div className="flex items-center gap-3">
+          {/* Action CTAs: Primary Get a Quote CTA & Cart */}
+          <div className="flex items-center gap-2.5">
+            {/* Cart Drawer Trigger */}
+            {setIsCartOpen && (
+              <button 
+                onClick={() => setIsCartOpen(true)}
+                className="relative p-2.5 rounded-full text-slate-700 hover:text-[#2D3094] hover:bg-slate-100 transition-colors"
+                aria-label="Open Shopping Cart"
+              >
+                <ShoppingBag size={20} />
+                {cart && cart.length > 0 && (
+                  <span className="absolute -top-0.5 -right-0.5 bg-[#ED008C] text-white text-[10px] font-black w-4.5 h-4.5 rounded-full flex items-center justify-center shadow-xs">
+                    {cart.reduce((t, i) => t + (i.quantity || 1), 0)}
+                  </span>
+                )}
+              </button>
+            )}
+
             {/* Primary High-Converting CTA: Get a Quote */}
             <button 
               onClick={() => navigate('quote')}
@@ -475,6 +508,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   { name: 'Home', view: 'home' },
                   { name: 'About Company', view: 'about' },
                   { name: '7 Core Printing & Branding Services', view: 'services' },
+                  { name: 'Online Shop & Personalised Gifts', view: 'shop' },
                   { name: 'Portfolio & Case Studies', view: 'portfolio' },
                   { name: 'Quote Calculator', view: 'quote' },
                   { name: 'Blog & Articles', view: 'blog' },

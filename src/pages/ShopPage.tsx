@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { 
-  Sparkles, 
-  Search, 
-  ShoppingBag, 
-  Wand2 
+  CheckCircle2
 } from 'lucide-react';
 import { View, Currency, Product, CartItem } from '../types';
 import { PRODUCTS_DATA } from '../data/mockData';
-import { ScrollReveal, StaggerContainer, StaggerItem } from '../components/ScrollReveal';
+import { ShopCategoryNav } from '../components/ShopCategoryNav';
+import { ShopHeroSection } from '../components/ShopHeroSection';
+import { PersonalisedGiftsCategoryShowcase } from '../components/PersonalisedGiftsCategoryShowcase';
+import { ShopOccasionsSection } from '../components/ShopOccasionsSection';
+import { TailorMadeTreasuresSection } from '../components/TailorMadeTreasuresSection';
+import { MakeCelebrationsSpecialSection } from '../components/MakeCelebrationsSpecialSection';
+import { GiftsByRecipientSection } from '../components/GiftsByRecipientSection';
+import { CustomerReviewsSection } from '../components/CustomerReviewsSection';
+import { CategoryProductsModal } from '../components/CategoryProductsModal';
 
 interface ShopPageProps {
   navigate?: (view: View, param?: string) => void;
   currency: Currency;
   products?: Product[];
-  onOpenCustomizer: (product: Product) => void;
+  onOpenCustomizer: (product?: Product) => void;
   onAddToCart?: (item: CartItem) => void;
   selectedCategory?: string;
 }
@@ -26,181 +31,498 @@ export const ShopPage: React.FC<ShopPageProps> = ({
   selectedCategory: initialCategory
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory || 'All');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+  const [selectedOccasion, setSelectedOccasion] = useState<string | null>(null);
+  const [selectedRecipient, setSelectedRecipient] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
-
-  const categories = [
-    'All',
-    'Customised Gifts',
-    'Drinkware & Flasks',
-    'Apparel & Uniforms',
-    'Stationery & Notebooks',
-    'Corporate Gift Sets',
-    'Offset & Promo Print'
-  ];
-
-  const filteredProducts = products.filter(p => {
-    const matchesCat = selectedCategory === 'All' || p.category.toLowerCase().includes(selectedCategory.toLowerCase());
-    const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCat && matchesSearch;
+  const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating'>('featured');
+  const [isProductsModalOpen, setIsProductsModalOpen] = useState<boolean>(false);
+  
+  // Wishlist persisted in localStorage
+  const [wishlist, setWishlist] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem('sozy_wishlist');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
   });
 
+  const [toastNotification, setToastNotification] = useState<string | null>(null);
+
+  // Sync wishlist to localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem('sozy_wishlist', JSON.stringify(wishlist));
+    } catch {
+      // ignore
+    }
+  }, [wishlist]);
+
+  const toggleWishlist = (productId: string, productName: string) => {
+    setWishlist((prev) => {
+      const exists = prev.includes(productId);
+      const next = exists ? prev.filter(id => id !== productId) : [...prev, productId];
+      showToast(exists ? `Removed "${productName}" from Wishlist` : `Saved "${productName}" to Wishlist! ❤️`);
+      return next;
+    });
+  };
+
+  const showToast = (msg: string) => {
+    setToastNotification(msg);
+    setTimeout(() => {
+      setToastNotification(null);
+    }, 3000);
+  };
+
+  // Handler for category navigation selection
+  const handleCategorySelect = (categoryName: string, subcatName?: string) => {
+    setSelectedCategory(categoryName);
+    setSelectedSubcategory(subcatName || null);
+    setSelectedOccasion(null);
+    setSelectedRecipient(null);
+    setIsProductsModalOpen(true);
+  };
+
+  // Handler for Occasion Card Selection (Anniversary, Birthday, Wedding, Love & Romance)
+  const handleOccasionSelect = (occasionKey: string, occasionTitle: string) => {
+    setSelectedOccasion(occasionTitle);
+    setSelectedCategory('All');
+    setSelectedSubcategory(null);
+    setSelectedRecipient(null);
+    setSearchQuery('');
+    setIsProductsModalOpen(true);
+  };
+
+  // Handler for Recipient Selection (Him, Her, Kids)
+  const handleRecipientSelect = (recipientKey: string) => {
+    setSelectedRecipient(recipientKey);
+    setSelectedOccasion(null);
+    setSelectedCategory('All');
+    setSelectedSubcategory(null);
+    setSearchQuery('');
+    setIsProductsModalOpen(true);
+  };
+
+  // Handler for 2x2 Hero Collections
+  const handleCollectionSelect = (collectionKey: string) => {
+    setSelectedOccasion(null);
+    setSelectedRecipient(null);
+    switch (collectionKey) {
+      case 'bestsellers':
+        setSelectedCategory('All');
+        setSortBy('rating');
+        break;
+      case 'new-arrivals':
+        setSelectedCategory('Bamboo Gifts');
+        setSortBy('featured');
+        break;
+      case 'corporate-gifts':
+        setSelectedCategory('Corporate Gifts');
+        setSortBy('featured');
+        break;
+      case 'all-gifts':
+      default:
+        setSelectedCategory('All');
+        setSortBy('featured');
+        break;
+    }
+    setIsProductsModalOpen(true);
+  };
+
+  const handleShopNowScroll = () => {
+    const el = document.getElementById('personalised-gifts-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      setIsProductsModalOpen(true);
+    }
+  };
+
+  // Titles for Curated Selection Modal
+  const modalTitle = useMemo(() => {
+    if (selectedRecipient) return `Personalised Gifts for ${selectedRecipient}`;
+    if (selectedOccasion) return `${selectedOccasion} Gifts & Keepsakes`;
+    if (selectedCategory !== 'All' && selectedCategory !== 'All Products') return `${selectedCategory} Collection`;
+    return 'All Personalised Products';
+  }, [selectedRecipient, selectedOccasion, selectedCategory]);
+
+  const modalSubtitle = useMemo(() => {
+    if (selectedRecipient) return `Handcrafted gifts and surprises specially selected for ${selectedRecipient.toLowerCase()}.`;
+    if (selectedOccasion) return `Memorable personalized gifts curated for ${selectedOccasion.toLowerCase()}.`;
+    if (selectedCategory !== 'All' && selectedCategory !== 'All Products') return `High-definition custom ${selectedCategory.toLowerCase()} with precision laser engraving & UV printing.`;
+    return 'Browse our catalog of custom printable gifts, apparel, and awards in Uganda.';
+  }, [selectedRecipient, selectedOccasion, selectedCategory]);
+
+  // Filtered & Sorted Products
+  const filteredProducts = useMemo(() => {
+    return products.filter((p) => {
+      // Category matching
+      let matchesCat = true;
+      if (selectedCategory && selectedCategory !== 'All' && selectedCategory !== 'All Products') {
+        const catClean = selectedCategory.toLowerCase().trim();
+        const pCatClean = p.category.toLowerCase().trim();
+        
+        if (catClean === 'bottles & flasks' || catClean === 'flasks' || catClean === 'sippers') {
+          matchesCat = pCatClean.includes('flask') || pCatClean.includes('bottle') || pCatClean.includes('drinkware') || pCatClean.includes('sipper') || p.name.toLowerCase().includes('sipper') || p.name.toLowerCase().includes('flask');
+        } else if (catClean === 'gift sets' || catClean === 'combos') {
+          matchesCat = pCatClean.includes('set') || pCatClean.includes('gift') || pCatClean.includes('combo') || p.name.toLowerCase().includes('combo') || p.name.toLowerCase().includes('set');
+        } else if (catClean === 'corporate gifts') {
+          matchesCat = pCatClean.includes('corporate') || pCatClean.includes('gift') || pCatClean.includes('vip');
+        } else if (catClean === 'trophies & medals') {
+          matchesCat = pCatClean.includes('troph') || pCatClean.includes('medal') || pCatClean.includes('award') || pCatClean.includes('plaque');
+        } else if (catClean === 'bamboo gifts') {
+          matchesCat = pCatClean.includes('bamboo') || p.name.toLowerCase().includes('bamboo');
+        } else if (catClean === 'wall clocks') {
+          matchesCat = pCatClean.includes('clock') || p.name.toLowerCase().includes('clock');
+        } else if (catClean === 'mugs') {
+          matchesCat = pCatClean.includes('mug') || p.name.toLowerCase().includes('mug') || p.name.toLowerCase().includes('tumbler');
+        } else if (catClean === 'cushions') {
+          matchesCat = pCatClean.includes('cushion') || p.name.toLowerCase().includes('cushion') || p.name.toLowerCase().includes('pillow');
+        } else if (catClean === 'photo frames') {
+          matchesCat = pCatClean.includes('frame') || p.name.toLowerCase().includes('frame') || p.name.toLowerCase().includes('standee') || p.name.toLowerCase().includes('photo');
+        } else if (catClean === 'neon lights') {
+          matchesCat = pCatClean.includes('neon') || p.name.toLowerCase().includes('neon') || p.name.toLowerCase().includes('light');
+        } else if (catClean === 'flowers') {
+          matchesCat = pCatClean.includes('flower') || p.name.toLowerCase().includes('flower') || p.name.toLowerCase().includes('rose') || p.name.toLowerCase().includes('bouquet');
+        } else if (catClean === 'hampers') {
+          matchesCat = pCatClean.includes('hamper') || pCatClean.includes('holiday') || p.name.toLowerCase().includes('hamper') || p.name.toLowerCase().includes('crate');
+        } else if (catClean === 'stationery') {
+          matchesCat = pCatClean.includes('stationery') || pCatClean.includes('notebook') || p.name.toLowerCase().includes('caddy') || p.name.toLowerCase().includes('organizer') || p.name.toLowerCase().includes('journal') || p.name.toLowerCase().includes('pen');
+        } else if (catClean === 'fridge magnets') {
+          matchesCat = pCatClean.includes('magnet') || p.name.toLowerCase().includes('magnet');
+        } else if (catClean === 'accessories') {
+          matchesCat = pCatClean.includes('accessori') || pCatClean.includes('technology') || pCatClean.includes('keyholder') || p.name.toLowerCase().includes('lamp') || p.name.toLowerCase().includes('wireless') || p.name.toLowerCase().includes('speaker');
+        } else if (catClean === 'caricatures') {
+          matchesCat = pCatClean.includes('caricature') || p.name.toLowerCase().includes('caricature') || p.name.toLowerCase().includes('standee');
+        } else if (catClean === 'table tops') {
+          matchesCat = pCatClean.includes('table') || pCatClean.includes('frame') || p.name.toLowerCase().includes('table') || p.name.toLowerCase().includes('frame') || p.name.toLowerCase().includes('plaque') || p.name.toLowerCase().includes('standee');
+        } else if (catClean === 'speakers') {
+          matchesCat = pCatClean.includes('speaker') || pCatClean.includes('technology') || p.name.toLowerCase().includes('speaker') || p.name.toLowerCase().includes('sound');
+        } else if (catClean === 'lamps') {
+          matchesCat = pCatClean.includes('lamp') || pCatClean.includes('neon') || p.name.toLowerCase().includes('lamp') || p.name.toLowerCase().includes('light');
+        } else if (catClean === 'clocks') {
+          matchesCat = pCatClean.includes('clock') || p.name.toLowerCase().includes('clock');
+        } else if (catClean === 'key chains' || catClean === 'keychains') {
+          matchesCat = pCatClean.includes('key') || p.name.toLowerCase().includes('keyring') || p.name.toLowerCase().includes('keyholder') || p.name.toLowerCase().includes('keychain');
+        } else if (catClean === 'bar accessories') {
+          matchesCat = pCatClean.includes('bar') || pCatClean.includes('flask') || pCatClean.includes('glass') || p.name.toLowerCase().includes('flask') || p.name.toLowerCase().includes('whiskey') || p.name.toLowerCase().includes('wine');
+        } else if (catClean === 'personalised electronics') {
+          matchesCat = pCatClean.includes('electronic') || pCatClean.includes('technology') || p.name.toLowerCase().includes('earbud') || p.name.toLowerCase().includes('speaker') || p.name.toLowerCase().includes('power') || p.name.toLowerCase().includes('usb');
+        } else if (catClean === 'personalised flowers' || catClean === 'flowers') {
+          matchesCat = pCatClean.includes('flower') || pCatClean.includes('rose') || p.name.toLowerCase().includes('flower') || p.name.toLowerCase().includes('rose') || p.name.toLowerCase().includes('bouquet');
+        } else if (catClean === 'photo cakes' || catClean === 'cakes') {
+          matchesCat = pCatClean.includes('cake') || p.name.toLowerCase().includes('cake');
+        } else if (catClean === 'explosion box') {
+          matchesCat = pCatClean.includes('explosion') || p.name.toLowerCase().includes('explosion') || p.name.toLowerCase().includes('surprise box');
+        } else if (catClean === 'chocolates') {
+          matchesCat = pCatClean.includes('chocolate') || p.name.toLowerCase().includes('chocolate') || p.name.toLowerCase().includes('hamper');
+        } else if (catClean === 'greeting cards' || catClean === 'cards') {
+          matchesCat = pCatClean.includes('card') || p.name.toLowerCase().includes('card');
+        } else if (catClean === 'jewellery' || catClean === 'jewelry') {
+          matchesCat = pCatClean.includes('jewel') || pCatClean.includes('bangle') || p.name.toLowerCase().includes('bangle') || p.name.toLowerCase().includes('bracelet') || p.name.toLowerCase().includes('pendant');
+        } else {
+          matchesCat = pCatClean.includes(catClean) || catClean.includes(pCatClean);
+        }
+      }
+
+      // Subcategory matching if selected
+      let matchesSubcat = true;
+      if (selectedSubcategory) {
+        const subClean = selectedSubcategory.toLowerCase();
+        matchesSubcat = 
+          p.name.toLowerCase().includes(subClean) || 
+          p.description.toLowerCase().includes(subClean) ||
+          (p.specifications && Object.values(p.specifications).some(val => val.toLowerCase().includes(subClean)));
+      }
+
+      // Search query matching
+      let matchesSearch = true;
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase().trim();
+        matchesSearch = 
+          p.name.toLowerCase().includes(q) || 
+          p.description.toLowerCase().includes(q) ||
+          p.category.toLowerCase().includes(q);
+      }
+
+      // Occasion matching
+      let matchesOccasion = true;
+      if (selectedOccasion) {
+        const occ = selectedOccasion.toLowerCase();
+        const pName = p.name.toLowerCase();
+        const pDesc = p.description.toLowerCase();
+        const pCat = p.category.toLowerCase();
+
+        if (occ.includes('anniversary')) {
+          matchesOccasion = 
+            pCat.includes('cushion') ||
+            pCat.includes('frame') ||
+            pCat.includes('glass') ||
+            pName.includes('cushion') ||
+            pName.includes('wine') ||
+            pName.includes('glass') ||
+            pName.includes('frame') ||
+            pName.includes('calendar') ||
+            pName.includes('caricature') ||
+            pName.includes('roses') ||
+            pName.includes('bouquet') ||
+            pName.includes('plaque') ||
+            pName.includes('mug') ||
+            pDesc.includes('anniversary') ||
+            pDesc.includes('couple') ||
+            pDesc.includes('keepsake');
+        } else if (occ.includes('birthday')) {
+          matchesOccasion = 
+            pCat.includes('mug') ||
+            pCat.includes('hamper') ||
+            pCat.includes('neon') ||
+            pCat.includes('stationery') ||
+            pName.includes('mug') ||
+            pName.includes('tumbler') ||
+            pName.includes('hamper') ||
+            pName.includes('neon') ||
+            pName.includes('lamp') ||
+            pName.includes('accessories') ||
+            pName.includes('set') ||
+            pName.includes('caddy') ||
+            pName.includes('flask') ||
+            pDesc.includes('birthday') ||
+            pDesc.includes('celebration') ||
+            pDesc.includes('party');
+        } else if (occ.includes('wedding')) {
+          matchesOccasion = 
+            pCat.includes('glass') ||
+            pCat.includes('frame') ||
+            pCat.includes('caricature') ||
+            pName.includes('wine') ||
+            pName.includes('glass') ||
+            pName.includes('caricature') ||
+            pName.includes('frame') ||
+            pName.includes('calendar') ||
+            pName.includes('hamper') ||
+            pName.includes('plaque') ||
+            pName.includes('neon') ||
+            pName.includes('cushion') ||
+            pDesc.includes('wedding') ||
+            pDesc.includes('monogram') ||
+            pDesc.includes('newlywed') ||
+            pDesc.includes('couple');
+        } else if (occ.includes('romance') || occ.includes('love')) {
+          matchesOccasion = 
+            pCat.includes('cushion') ||
+            pCat.includes('flower') ||
+            pCat.includes('neon') ||
+            pName.includes('cushion') ||
+            pName.includes('neon') ||
+            pName.includes('rose') ||
+            pName.includes('bouquet') ||
+            pName.includes('magnet') ||
+            pName.includes('wine') ||
+            pName.includes('glass') ||
+            pName.includes('caricature') ||
+            pName.includes('mug') ||
+            pDesc.includes('romantic') ||
+            pDesc.includes('love') ||
+            pDesc.includes('couple');
+        }
+      }
+
+      // Recipient matching (Him, Her, Kids)
+      let matchesRecipient = true;
+      if (selectedRecipient) {
+        const recip = selectedRecipient.toLowerCase();
+        const pCat = p.category.toLowerCase();
+        const pName = p.name.toLowerCase();
+        const pDesc = p.description.toLowerCase();
+
+        if (recip === 'him') {
+          matchesRecipient = 
+            pCat.includes('bar') ||
+            pCat.includes('electronic') ||
+            pCat.includes('speaker') ||
+            pCat.includes('key') ||
+            pCat.includes('clock') ||
+            pCat.includes('corporate') ||
+            pName.includes('flask') ||
+            pName.includes('earbud') ||
+            pName.includes('speaker') ||
+            pName.includes('keychain') ||
+            pName.includes('tumbler') ||
+            pName.includes('caddy') ||
+            pName.includes('pen') ||
+            pName.includes('clock') ||
+            pDesc.includes('men') ||
+            pDesc.includes('gentleman') ||
+            pDesc.includes('him') ||
+            pDesc.includes('groom') ||
+            pDesc.includes('husband') ||
+            pDesc.includes('executive');
+        } else if (recip === 'her') {
+          matchesRecipient = 
+            pCat.includes('jewel') ||
+            pCat.includes('flower') ||
+            pCat.includes('cake') ||
+            pCat.includes('lamp') ||
+            pCat.includes('explosion') ||
+            pCat.includes('chocolate') ||
+            pCat.includes('card') ||
+            pName.includes('bangle') ||
+            pName.includes('bracelet') ||
+            pName.includes('rose') ||
+            pName.includes('flower') ||
+            pName.includes('cake') ||
+            pName.includes('moon') ||
+            pName.includes('lamp') ||
+            pName.includes('cushion') ||
+            pName.includes('chocolate') ||
+            pName.includes('greeting') ||
+            pDesc.includes('her') ||
+            pDesc.includes('lady') ||
+            pDesc.includes('bride') ||
+            pDesc.includes('wife') ||
+            pDesc.includes('girlfriend') ||
+            pDesc.includes('love');
+        } else if (recip === 'kids') {
+          matchesRecipient = 
+            pCat.includes('caricature') ||
+            pCat.includes('lamp') ||
+            pCat.includes('cake') ||
+            pCat.includes('explosion') ||
+            pCat.includes('magnet') ||
+            pName.includes('caricature') ||
+            pName.includes('lamp') ||
+            pName.includes('night') ||
+            pName.includes('cake') ||
+            pName.includes('explosion') ||
+            pName.includes('mug') ||
+            pName.includes('magnet') ||
+            pDesc.includes('kid') ||
+            pDesc.includes('child') ||
+            pDesc.includes('children') ||
+            pDesc.includes('fun') ||
+            pDesc.includes('playful') ||
+            pDesc.includes('birthday');
+        }
+      }
+
+      return matchesCat && matchesSubcat && matchesSearch && matchesOccasion && matchesRecipient;
+    }).sort((a, b) => {
+      if (sortBy === 'price-asc') {
+        return (currency === 'UGX' ? a.priceUGX - b.priceUGX : a.priceUSD - b.priceUSD);
+      }
+      if (sortBy === 'price-desc') {
+        return (currency === 'UGX' ? b.priceUGX - a.priceUGX : b.priceUSD - a.priceUSD);
+      }
+      if (sortBy === 'rating') {
+        return b.rating - a.rating;
+      }
+      return (b.isFeatured ? 1 : 0) - (a.isFeatured ? 1 : 0);
+    });
+  }, [products, selectedCategory, selectedSubcategory, selectedOccasion, selectedRecipient, searchQuery, sortBy, currency]);
+
+  // Quick Add handler
   const handleQuickAdd = (product: Product) => {
+    const qty = product.minOrderQty || 1;
     const item: CartItem = {
       product,
-      quantity: product.minOrderQty || 10,
+      quantity: qty,
+      selectedColor: product.colors?.[0] || 'Standard',
+      selectedSize: product.sizes?.[0] || undefined,
       customization: {
-        color: product.customizationOptions?.colors?.[0] || 'Standard'
+        color: product.colors?.[0] || 'Standard'
       },
       unitPriceUGX: product.priceUGX,
       unitPriceUSD: product.priceUSD,
-      subtotalUGX: product.priceUGX * (product.minOrderQty || 10),
-      subtotalUSD: product.priceUSD * (product.minOrderQty || 10)
+      subtotalUGX: product.priceUGX * qty,
+      subtotalUSD: product.priceUSD * qty,
+      itemTotalPriceUGX: product.priceUGX * qty,
+      itemTotalPriceUSD: product.priceUSD * qty
     };
+
     if (onAddToCart) {
       onAddToCart(item);
+      showToast(`Added ${qty}x "${product.name}" to cart!`);
     } else {
       onOpenCustomizer(product);
     }
   };
 
   return (
-    <div className="w-full bg-[#F7F8FA] min-h-screen py-12 px-4 md:px-8 font-sans text-left">
-      <div className="max-w-7xl mx-auto space-y-10">
-        
-        {/* Shop Hero Banner */}
-        <ScrollReveal yOffset={30} duration={0.8}>
-          <div className="bg-[#181B34] text-white rounded-3xl p-8 md:p-14 relative overflow-hidden shadow-2xl border border-white/10">
-            <div className="max-w-3xl relative z-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-xs font-black uppercase tracking-wider mb-4 backdrop-blur-md">
-                <Sparkles size={14} className="text-[#ED008C]" />
-                <span>Direct Factory Catalogue & Customizer</span>
-              </div>
-              <h1 className="text-3xl md:text-5xl font-heading font-black tracking-tight leading-tight mb-4">
-                Custom Corporate Merchandise & <br />
-                <span className="text-[#ED008C]">Executive Gift Collections.</span>
-              </h1>
-              <p className="text-sm md:text-base text-slate-300 font-light leading-relaxed">
-                Order customized smart drinkware, leather notebooks, premium tech accessories, and branded apparel with free 3D digital artwork proofs.
-              </p>
-            </div>
-          </div>
-        </ScrollReveal>
+    <div className="w-full bg-[#FCFDFE] min-h-screen text-slate-900 font-sans">
+      
+      {/* Toast Notification */}
+      {toastNotification && (
+        <div className="fixed bottom-6 left-6 z-50 bg-[#181B34] text-white px-5 py-3 rounded-2xl shadow-2xl border border-white/20 flex items-center gap-3 animate-in slide-in-from-bottom-3 duration-300">
+          <CheckCircle2 size={18} className="text-emerald-400 shrink-0" />
+          <span className="text-xs font-bold">{toastNotification}</span>
+        </div>
+      )}
 
-        {/* Filter & Search Bar */}
-        <ScrollReveal yOffset={20} duration={0.6}>
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
-            
-            {/* Category Pills */}
-            <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 select-none">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
-                    selectedCategory === cat
-                      ? 'bg-[#2D3094] text-white shadow-md'
-                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
+      {/* 1. SHOP PAGE HEADER / HORIZONTAL CATEGORY NAVIGATION DIRECTLY BELOW WEBSITE HEADER */}
+      <ShopCategoryNav
+        selectedCategory={selectedCategory}
+        onSelectCategory={handleCategorySelect}
+      />
 
-            {/* Search Box */}
-            <div className="relative w-full md:w-72">
-              <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search merchandise..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-9 pr-4 py-2.5 text-xs text-slate-800 outline-none focus:border-[#2D3094] focus:bg-white"
-              />
-            </div>
+      {/* 2. & 3. HERO SECTION — FOLLOW THE REFERENCE STRUCTURE (LEFT 2x2 COLLECTIONS + RIGHT PROMO BANNER) */}
+      <ShopHeroSection
+        onSelectCollection={handleCollectionSelect}
+        onShopNow={handleShopNowScroll}
+        onOpenCustomizer={(p) => onOpenCustomizer(p || products[0])}
+        currency={currency}
+      />
 
-          </div>
-        </ScrollReveal>
+      {/* DEDICATED "PERSONALISED GIFTS" CATEGORY SHOWCASE SECTION DIRECTLY BELOW HERO (REFERENCE: i5j.png) */}
+      <PersonalisedGiftsCategoryShowcase
+        selectedCategory={selectedCategory}
+        onSelectCategory={handleCategorySelect}
+      />
 
-        {/* Products Grid */}
-        <StaggerContainer staggerDelay={0.08} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredProducts.map((product) => (
-            <StaggerItem key={product.id}>
-              <div 
-                className="bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-[#2D3094]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full"
-              >
-                <div>
-                  {/* Photo & Badge */}
-                  <div className="relative aspect-square bg-slate-100 overflow-hidden">
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    {product.badge && (
-                      <div className="absolute top-3 left-3 bg-[#ED008C] text-white text-[10px] font-heading font-black px-2.5 py-1 rounded-full uppercase tracking-wider shadow-md">
-                        {product.badge}
-                      </div>
-                    )}
-                    {product.minOrderQty && (
-                      <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[9px] font-bold px-2 py-0.5 rounded-md">
-                        Min {product.minOrderQty} pcs
-                      </div>
-                    )}
-                  </div>
+      {/* "FOR EVERY OCCASION" SECTION IMMEDIATELY AFTER PERSONALISED GIFTS CATEGORY SECTION */}
+      <ShopOccasionsSection
+        onSelectOccasion={handleOccasionSelect}
+        selectedOccasion={selectedOccasion}
+      />
 
-                  {/* Info */}
-                  <div className="p-5">
-                    <div className="text-[10px] font-bold text-[#2D3094] uppercase tracking-wider mb-1">
-                      {product.category}
-                    </div>
-                    <h3 className="font-heading font-bold text-sm text-slate-900 leading-snug line-clamp-1 mb-1">
-                      {product.name}
-                    </h3>
-                    <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed mb-4">
-                      {product.description}
-                    </p>
+      {/* "TAILOR-MADE TREASURES" SECTION IMMEDIATELY AFTER FOR EVERY OCCASION SECTION */}
+      <TailorMadeTreasuresSection
+        onSelectItem={handleCategorySelect}
+        selectedCategory={selectedCategory}
+      />
 
-                    <div className="flex items-baseline justify-between pt-3 border-t border-slate-100">
-                      <div>
-                        <span className="text-[10px] text-slate-400 font-bold block">Base Rate / Unit:</span>
-                        <span className="font-heading font-black text-base text-[#2D3094]">
-                          {currency === 'UGX' ? `UGX ${product.priceUGX.toLocaleString()}` : `$${product.priceUSD}`}
-                        </span>
-                      </div>
-                      {product.bulkTiers && (
-                        <span className="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded-full">
-                          Up to -{product.bulkTiers[product.bulkTiers.length - 1].discountPercent}% Bulk
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
+      {/* "MAKE CELEBRATIONS SPECIAL WITH" SECTION IMMEDIATELY AFTER TAILOR-MADE TREASURES */}
+      <MakeCelebrationsSpecialSection
+        onSelectCelebration={handleCategorySelect}
+        selectedCategory={selectedCategory}
+      />
 
-                {/* Action Buttons */}
-                <div className="p-5 pt-0 grid grid-cols-2 gap-2">
-                  <button
-                    onClick={() => onOpenCustomizer(product)}
-                    className="bg-[#2D3094] hover:bg-[#1f2168] text-white text-[11px] font-heading font-bold uppercase tracking-wider py-3 rounded-xl transition-colors flex items-center justify-center gap-1.5 shadow-sm hover:scale-[1.02] active:scale-[0.98]"
-                  >
-                    <Wand2 size={13} className="text-[#ED008C]" />
-                    <span>Customize</span>
-                  </button>
-                  <button
-                    onClick={() => handleQuickAdd(product)}
-                    className="border border-slate-300 hover:border-slate-400 hover:bg-slate-50 text-slate-700 text-[11px] font-heading font-bold uppercase tracking-wider py-3 rounded-xl transition-colors flex items-center justify-center gap-1 hover:scale-[1.02] active:scale-[0.98]"
-                  >
-                    <ShoppingBag size={13} />
-                    <span>Add ({product.minOrderQty || 10})</span>
-                  </button>
-                </div>
+      {/* "GIFTS BY RECIPIENT (HIM, HER, KIDS)" SECTION IMMEDIATELY AFTER MAKE CELEBRATIONS SPECIAL WITH */}
+      <GiftsByRecipientSection
+        onSelectRecipient={handleRecipientSelect}
+        selectedRecipient={selectedRecipient}
+      />
 
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+      {/* CUSTOMER REVIEWS SECTION - REPLACED EXPLORE PERSONALISED PRODUCTS */}
+      <CustomerReviewsSection />
 
-      </div>
+      {/* CURATED PRODUCTS MODAL */}
+      <CategoryProductsModal
+        isOpen={isProductsModalOpen}
+        onClose={() => setIsProductsModalOpen(false)}
+        title={modalTitle}
+        subtitle={modalSubtitle}
+        products={filteredProducts}
+        currency={currency}
+        onOpenCustomizer={onOpenCustomizer}
+        onAddToCart={handleQuickAdd}
+        wishlist={wishlist}
+        onToggleWishlist={(productId) => {
+          const prod = products.find(p => p.id === productId);
+          toggleWishlist(productId, prod?.name || "Product");
+        }}
+      />
+
     </div>
   );
 };
