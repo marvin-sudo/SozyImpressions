@@ -36,6 +36,7 @@ const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.B
 const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
 const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })));
 const ShopPage = lazy(() => import('./pages/ShopPage').then(m => ({ default: m.ShopPage })));
+const BestSellersPage = lazy(() => import('./pages/BestSellersPage').then(m => ({ default: m.BestSellersPage })));
 
 // Modals & Shared Views
 import { ProductCustomizerModal } from './components/ProductCustomizerModal';
@@ -290,6 +291,16 @@ export const App: React.FC = () => {
             onOpenCustomizer={(product) => setCustomizingProduct(product || products[0])}
             onAddToCart={handleAddToCart}
             selectedCategory={routeParam}
+          />
+        );
+
+      case 'bestsellers':
+        return (
+          <BestSellersPage
+            navigate={navigate}
+            currency={currency}
+            onOpenCustomizer={(product) => setCustomizingProduct(product)}
+            onAddToCart={handleAddToCart}
           />
         );
 

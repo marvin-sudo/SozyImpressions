@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { 
-  CheckCircle2
+  CheckCircle2,
+  Sparkles,
+  LayoutGrid
 } from 'lucide-react';
 import { View, Currency, Product, CartItem } from '../types';
 import { PRODUCTS_DATA } from '../data/mockData';
@@ -13,6 +15,7 @@ import { MakeCelebrationsSpecialSection } from '../components/MakeCelebrationsSp
 import { GiftsByRecipientSection } from '../components/GiftsByRecipientSection';
 import { CustomerReviewsSection } from '../components/CustomerReviewsSection';
 import { CategoryProductsModal } from '../components/CategoryProductsModal';
+import { DedicatedCategoryView } from '../components/DedicatedCategoryView';
 
 interface ShopPageProps {
   navigate?: (view: View, param?: string) => void;
@@ -37,6 +40,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating'>('featured');
   const [isProductsModalOpen, setIsProductsModalOpen] = useState<boolean>(false);
+  const [showAllCatalog, setShowAllCatalog] = useState<boolean>(false);
   
   // Wishlist persisted in localStorage
   const [wishlist, setWishlist] = useState<string[]>(() => {
@@ -77,31 +81,43 @@ export const ShopPage: React.FC<ShopPageProps> = ({
 
   // Handler for category navigation selection
   const handleCategorySelect = (categoryName: string, subcatName?: string) => {
-    setSelectedCategory(categoryName);
-    setSelectedSubcategory(subcatName || null);
+    if (categoryName.toLowerCase() === 'all') {
+      setSelectedCategory('All');
+      setShowAllCatalog(false);
+      setSelectedSubcategory(null);
+    } else if (categoryName.toLowerCase() === 'all products') {
+      setSelectedCategory('All Products');
+      setShowAllCatalog(true);
+      setSelectedSubcategory(null);
+    } else {
+      setSelectedCategory(categoryName);
+      setSelectedSubcategory(subcatName || null);
+      setShowAllCatalog(false);
+    }
     setSelectedOccasion(null);
     setSelectedRecipient(null);
-    setIsProductsModalOpen(true);
+    setIsProductsModalOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Handler for Occasion Card Selection (Anniversary, Birthday, Wedding, Love & Romance)
   const handleOccasionSelect = (occasionKey: string, occasionTitle: string) => {
+    setSelectedCategory('Best Sellers');
     setSelectedOccasion(occasionTitle);
-    setSelectedCategory('All');
     setSelectedSubcategory(null);
     setSelectedRecipient(null);
     setSearchQuery('');
-    setIsProductsModalOpen(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Handler for Recipient Selection (Him, Her, Kids)
   const handleRecipientSelect = (recipientKey: string) => {
+    setSelectedCategory('Best Sellers');
     setSelectedRecipient(recipientKey);
     setSelectedOccasion(null);
-    setSelectedCategory('All');
     setSelectedSubcategory(null);
     setSearchQuery('');
-    setIsProductsModalOpen(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Handler for 2x2 Hero Collections
@@ -110,8 +126,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({
     setSelectedRecipient(null);
     switch (collectionKey) {
       case 'bestsellers':
-        setSelectedCategory('All');
-        setSortBy('rating');
+        setSelectedCategory('Best Sellers');
         break;
       case 'new-arrivals':
         setSelectedCategory('Bamboo Gifts');
@@ -123,20 +138,17 @@ export const ShopPage: React.FC<ShopPageProps> = ({
         break;
       case 'all-gifts':
       default:
-        setSelectedCategory('All');
-        setSortBy('featured');
+        setSelectedCategory('All Products');
+        setShowAllCatalog(true);
         break;
     }
-    setIsProductsModalOpen(true);
+    setIsProductsModalOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleShopNowScroll = () => {
-    const el = document.getElementById('personalised-gifts-section');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      setIsProductsModalOpen(true);
-    }
+    setSelectedCategory('Best Sellers');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Titles for Curated Selection Modal
@@ -465,46 +477,105 @@ export const ShopPage: React.FC<ShopPageProps> = ({
         onSelectCategory={handleCategorySelect}
       />
 
-      {/* 2. & 3. HERO SECTION — FOLLOW THE REFERENCE STRUCTURE (LEFT 2x2 COLLECTIONS + RIGHT PROMO BANNER) */}
-      <ShopHeroSection
-        onSelectCollection={handleCollectionSelect}
-        onShopNow={handleShopNowScroll}
-        onOpenCustomizer={(p) => onOpenCustomizer(p || products[0])}
-        currency={currency}
-      />
+      {/* DEDICATED CATEGORY VIEW (If specific category is selected or showAllCatalog is active) */}
+      {(selectedCategory.toLowerCase() !== 'all' || showAllCatalog) ? (
+        <DedicatedCategoryView
+          categoryName={showAllCatalog ? 'All Products' : selectedCategory}
+          subcategoryName={selectedSubcategory}
+          currency={currency}
+          onOpenCustomizer={(p) => onOpenCustomizer(p || products[0])}
+          onAddToCart={onAddToCart}
+          onBackToOverview={() => {
+            setSelectedCategory('All');
+            setShowAllCatalog(false);
+            setSelectedSubcategory(null);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          onSelectCategory={handleCategorySelect}
+        />
+      ) : (
+        <>
+          {/* Quick Direct Catalog Switcher Banner */}
+          <div className="bg-gradient-to-r from-[#2D3094]/5 via-white to-[#ED008C]/5 border-b border-slate-200/80 py-3">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#2D3094] text-white text-xs font-bold">
+                  ★
+                </span>
+                <p className="text-xs sm:text-sm font-semibold text-slate-800">
+                  Prefer a dedicated grid view? Browse all categories with interactive price & subcategory filters.
+                </p>
+              </div>
 
-      {/* DEDICATED "PERSONALISED GIFTS" CATEGORY SHOWCASE SECTION DIRECTLY BELOW HERO (REFERENCE: i5j.png) */}
-      <PersonalisedGiftsCategoryShowcase
-        selectedCategory={selectedCategory}
-        onSelectCategory={handleCategorySelect}
-      />
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => {
+                    setSelectedCategory('Best Sellers');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#2D3094] bg-white border border-[#2D3094]/30 hover:bg-[#2D3094] hover:text-white shadow-xs transition-all"
+                >
+                  <Sparkles size={13} className="text-[#ED008C]" />
+                  <span>Bestselling Gifts</span>
+                </button>
 
-      {/* "FOR EVERY OCCASION" SECTION IMMEDIATELY AFTER PERSONALISED GIFTS CATEGORY SECTION */}
-      <ShopOccasionsSection
-        onSelectOccasion={handleOccasionSelect}
-        selectedOccasion={selectedOccasion}
-      />
+                <button
+                  onClick={() => {
+                    setShowAllCatalog(true);
+                    setSelectedCategory('All Products');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold text-white bg-[#2D3094] hover:bg-[#20236e] shadow-xs transition-all"
+                >
+                  <LayoutGrid size={13} />
+                  <span>View All 280+ Gifts Catalog</span>
+                </button>
+              </div>
+            </div>
+          </div>
 
-      {/* "TAILOR-MADE TREASURES" SECTION IMMEDIATELY AFTER FOR EVERY OCCASION SECTION */}
-      <TailorMadeTreasuresSection
-        onSelectItem={handleCategorySelect}
-        selectedCategory={selectedCategory}
-      />
+          {/* 2. & 3. HERO SECTION — FOLLOW THE REFERENCE STRUCTURE (LEFT 2x2 COLLECTIONS + RIGHT PROMO BANNER) */}
+          <ShopHeroSection
+            onSelectCollection={handleCollectionSelect}
+            onShopNow={handleShopNowScroll}
+            onOpenCustomizer={(p) => onOpenCustomizer(p || products[0])}
+            currency={currency}
+          />
 
-      {/* "MAKE CELEBRATIONS SPECIAL WITH" SECTION IMMEDIATELY AFTER TAILOR-MADE TREASURES */}
-      <MakeCelebrationsSpecialSection
-        onSelectCelebration={handleCategorySelect}
-        selectedCategory={selectedCategory}
-      />
+          {/* DEDICATED "PERSONALISED GIFTS" CATEGORY SHOWCASE SECTION DIRECTLY BELOW HERO (REFERENCE: i5j.png) */}
+          <PersonalisedGiftsCategoryShowcase
+            selectedCategory={selectedCategory}
+            onSelectCategory={handleCategorySelect}
+          />
 
-      {/* "GIFTS BY RECIPIENT (HIM, HER, KIDS)" SECTION IMMEDIATELY AFTER MAKE CELEBRATIONS SPECIAL WITH */}
-      <GiftsByRecipientSection
-        onSelectRecipient={handleRecipientSelect}
-        selectedRecipient={selectedRecipient}
-      />
+          {/* "FOR EVERY OCCASION" SECTION IMMEDIATELY AFTER PERSONALISED GIFTS CATEGORY SECTION */}
+          <ShopOccasionsSection
+            onSelectOccasion={handleOccasionSelect}
+            selectedOccasion={selectedOccasion}
+          />
 
-      {/* CUSTOMER REVIEWS SECTION - REPLACED EXPLORE PERSONALISED PRODUCTS */}
-      <CustomerReviewsSection />
+          {/* "TAILOR-MADE TREASURES" SECTION IMMEDIATELY AFTER FOR EVERY OCCASION SECTION */}
+          <TailorMadeTreasuresSection
+            onSelectItem={handleCategorySelect}
+            selectedCategory={selectedCategory}
+          />
+
+          {/* "MAKE CELEBRATIONS SPECIAL WITH" SECTION IMMEDIATELY AFTER TAILOR-MADE TREASURES */}
+          <MakeCelebrationsSpecialSection
+            onSelectCelebration={handleCategorySelect}
+            selectedCategory={selectedCategory}
+          />
+
+          {/* "GIFTS BY RECIPIENT (HIM, HER, KIDS)" SECTION IMMEDIATELY AFTER MAKE CELEBRATIONS SPECIAL WITH */}
+          <GiftsByRecipientSection
+            onSelectRecipient={handleRecipientSelect}
+            selectedRecipient={selectedRecipient}
+          />
+
+          {/* CUSTOMER REVIEWS SECTION - REPLACED EXPLORE PERSONALISED PRODUCTS */}
+          <CustomerReviewsSection />
+        </>
+      )}
 
       {/* CURATED PRODUCTS MODAL */}
       <CategoryProductsModal

@@ -6,6 +6,7 @@ export type View =
   | 'about'
   | 'portfolio'
   | 'shop'
+  | 'bestsellers'
   | 'quote'
   | 'blog'
   | 'contact'

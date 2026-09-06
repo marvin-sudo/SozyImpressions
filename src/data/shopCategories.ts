@@ -8,6 +8,18 @@ export interface CategoryItem {
 export const SHOP_CATEGORIES: CategoryItem[] = [
   { id: 'all', name: 'All Products', hasDropdown: false },
   { 
+    id: 'bestsellers', 
+    name: 'Best Sellers', 
+    hasDropdown: true,
+    subcategories: ['Cufflinks & Accessories', 'Photo Frames', 'LED Lamps', 'Mugs & Drinkware', 'Personalised Cushions', 'Gift Sets & Hampers']
+  },
+  { 
+    id: 'photo-frames-lamps', 
+    name: 'Photo Frames & Lamps', 
+    hasDropdown: true,
+    subcategories: ['LED Acrylic Photo Lamps', 'Wooden Polaroid Frames', 'Rotating 3D Photo Frames', 'Spotify Song Frames']
+  },
+  { 
     id: 'apparel', 
     name: 'Apparel', 
     hasDropdown: true,
