@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { 
   CheckCircle2,
-  Sparkles,
   LayoutGrid
 } from 'lucide-react';
 import { View, Currency, Product, CartItem } from '../types';
@@ -499,9 +498,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({
           <div className="bg-gradient-to-r from-[#2D3094]/5 via-white to-[#ED008C]/5 border-b border-slate-200/80 py-3">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2">
-                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#2D3094] text-white text-xs font-bold">
-                  ★
-                </span>
+                <span className="w-2 h-2 rounded-full bg-[#ED008C] shrink-0" />
                 <p className="text-xs sm:text-sm font-semibold text-slate-800">
                   Prefer a dedicated grid view? Browse all categories with interactive price & subcategory filters.
                 </p>
@@ -515,7 +512,6 @@ export const ShopPage: React.FC<ShopPageProps> = ({
                   }}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#2D3094] bg-white border border-[#2D3094]/30 hover:bg-[#2D3094] hover:text-white shadow-xs transition-all"
                 >
-                  <Sparkles size={13} className="text-[#ED008C]" />
                   <span>Bestselling Gifts</span>
                 </button>
 

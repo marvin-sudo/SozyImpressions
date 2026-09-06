@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown, Sparkles } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { SHOP_CATEGORIES } from '../data/shopCategories';
 
 interface ShopCategoryNavProps {
@@ -90,7 +90,6 @@ export const ShopCategoryNav: React.FC<ShopCategoryNavProps> = ({
                       <span className="text-[10px] font-black uppercase tracking-wider text-[#2D3094]">
                         {cat.name} Sub-types
                       </span>
-                      <Sparkles size={11} className="text-[#ED008C]" />
                     </div>
                     <div className="space-y-0.5">
                       {cat.subcategories.map((subcat) => (

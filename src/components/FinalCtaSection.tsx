@@ -4,7 +4,6 @@ import {
   ArrowRight, 
   MessageSquare, 
   Phone, 
-  Sparkles, 
   ShieldCheck, 
   Truck,
   CheckCircle2
@@ -37,7 +36,6 @@ export const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({ navigate }) =>
           transition={{ duration: 0.7, ease: EASE_PREMIUM }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-xs font-black uppercase tracking-wider mb-6 backdrop-blur-md"
         >
-          <Sparkles size={14} className="text-[#ED008C]" />
           <span>Start Your Transformation Today</span>
         </motion.div>
 

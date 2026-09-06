@@ -5,7 +5,6 @@ import {
   X, 
   Heart, 
   ShoppingCart, 
-  Sparkles, 
   Check, 
   Search, 
   MessageCircle, 
@@ -1189,7 +1188,6 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                               }}
                               className="flex-1 bg-[#2D3094] hover:bg-[#20236e] text-white text-[11px] font-bold uppercase tracking-wider py-2 px-2.5 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1"
                             >
-                              <Sparkles size={11} className="text-[#ED008C]" />
                               <span>Personalise</span>
                             </button>
 
@@ -1294,7 +1292,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
 
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-2xl bg-[#ED008C]/10 text-[#ED008C] flex items-center justify-center shrink-0">
-                  <Sparkles size={22} />
+                  <Gift size={22} />
                 </div>
                 <div>
                   <h4 className="font-heading font-black text-slate-900 text-sm">

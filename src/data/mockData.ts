@@ -164,7 +164,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     subtitle: 'Immersive Experiential Visuals for Conferences & Galas',
     tagline: 'Command the room and captivate attendees with unforgettable experiential event graphics.',
     description: 'Professional visual branding for corporate conferences, AGMs, exhibitions, product launches, galas, and sporting events. We supply durable, high-impact hardware and vibrant fabrics that make sponsors shine.',
-    iconName: 'Sparkles',
+    iconName: 'Flag',
     image: 'https://www.image2url.com/r2/default/images/1787603004866-eb9a323c-894f-4d7d-887a-3907dda8cb1c.png',
     popularProducts: [
       'Seamless Stage Backdrops & Media Photo Walls',

@@ -5,7 +5,7 @@ import {
   Megaphone, 
   Video, 
   Shirt,
-  Sparkles
+  Layers
 } from 'lucide-react';
 
 export const COLORS = {
@@ -20,7 +20,7 @@ export const SERVICES = [
     id: 'branding',
     title: 'Branding & Identity',
     description: 'We craft unique visual identities that tell your story and resonate with your audience.',
-    icon: <Sparkles className="w-8 h-8" />,
+    icon: <Layers className="w-8 h-8" />,
     fullDescription: 'Your brand is more than just a logo; it\'s the pulse of your business. We dive deep into your mission, values, and vision to create a cohesive brand identity that stands out in a crowded market. From color palettes to typography system, we ensure every touchpoint reflects your essence.',
     benefits: ['Increased brand recognition', 'Professional aesthetic', 'Emotional connection with customers']
   },

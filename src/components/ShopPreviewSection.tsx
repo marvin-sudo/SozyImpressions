@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { 
   ShoppingCart, 
-  Sparkles, 
   ArrowRight, 
   MessageSquare, 
   Eye
@@ -60,7 +59,6 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 text-left">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ED008C]/10 text-[#ED008C] text-xs font-black uppercase tracking-wider mb-3">
-              <Sparkles size={14} />
               <span>Direct E-Commerce & Corporate Swag Store</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-heading font-black text-[#121212] tracking-tight leading-tight">
@@ -125,7 +123,6 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
                 {/* Customisable Indicator */}
                 {product.isCustomizable && (
                   <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-[#2D3094] text-[9px] font-bold px-2 py-0.5 rounded-full border border-slate-200 flex items-center gap-1 shadow-sm">
-                    <Sparkles size={10} className="text-[#ED008C]" />
                     <span>Customisable</span>
                   </div>
                 )}

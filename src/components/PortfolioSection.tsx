@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react';
 import { 
   ArrowRight, 
-  Sparkles, 
   Building, 
   ChevronRight
 } from 'lucide-react';
@@ -40,7 +39,6 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ navigate }) 
         >
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-black uppercase tracking-wider mb-3">
-              <Sparkles size={14} className="text-[#ED008C]" />
               <span>Proven Enterprise Track Record</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-heading font-black text-[#121212] tracking-tight leading-tight">

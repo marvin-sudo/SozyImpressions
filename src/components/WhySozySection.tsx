@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import { 
   Award, 
   Zap, 
-  Sparkles, 
+  Palette, 
   ShieldCheck, 
   DollarSign, 
   Layers, 
@@ -34,7 +34,7 @@ export const WhySozySection: React.FC<WhySozySectionProps> = ({ navigate }) => {
       description: 'Tight event or conference deadline? Our agile digital printing and in-house merchandise workshops deliver express orders on time, every single time.'
     },
     {
-      icon: <Sparkles className="w-6 h-6 text-[#2D3094]" />,
+      icon: <Palette className="w-6 h-6 text-[#2D3094]" />,
       title: '3. Senior Creative Expertise',
       subtitle: 'Pre-Press Engineers & Strategists',
       description: 'More than a printer—our senior designers refine your typography, prep vector separations, and generate 3D digital proofs before ink touches paper.'

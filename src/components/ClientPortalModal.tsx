@@ -5,7 +5,6 @@ import {
   CheckCircle2, 
   FileText, 
   MessageSquare,
-  Sparkles,
   AlertCircle
 } from 'lucide-react';
 import { Order, QuoteRequest, Currency } from '../types';
@@ -164,7 +163,6 @@ export const ClientPortalModal: React.FC<ClientPortalModalProps> = ({
               <div className="bg-gradient-to-br from-indigo-50/50 to-purple-50/50 p-6 rounded-2xl border border-indigo-100">
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <Sparkles size={16} className="text-[#ED008C]" />
                     <h4 className="font-heading font-black text-sm text-slate-900">Pre-Press 3D Artwork Proof</h4>
                   </div>
                   <span className="text-[10px] font-bold text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full uppercase">

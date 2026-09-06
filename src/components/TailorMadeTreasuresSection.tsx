@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import tabletopFrameImg from '../assets/images/tabletop_frame_1788635214871.jpg';
 import photoSpeakerImg from '../assets/images/photo_speaker_1788635229629.jpg';
 import moonLampImg from '../assets/images/moon_lamp_1788635244442.jpg';
@@ -112,7 +112,6 @@ export const TailorMadeTreasuresSection: React.FC<TailorMadeTreasuresSectionProp
       <div className="flex items-end justify-between mb-8 sm:mb-12">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-bold uppercase tracking-wider mb-2.5">
-            <Sparkles size={13} className="text-[#ED008C]" />
             <span>Artisanal Collections</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-black text-slate-950 tracking-tight leading-none">

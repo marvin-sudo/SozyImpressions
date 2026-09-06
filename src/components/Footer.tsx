@@ -8,7 +8,6 @@ import {
   Send, 
   CheckCircle2, 
   ShieldCheck, 
-  Sparkles,
   Lock,
   Instagram,
   Facebook,
@@ -121,7 +120,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
                 {COMPANY_INFO.yearsExperience} Years Experience
               </span>
               <span className="bg-white/5 border border-white/10 px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                <Sparkles size={14} className="text-emerald-400" />
+                <CheckCircle2 size={14} className="text-emerald-400" />
                 Heidelberg Offset Press
               </span>
             </div>

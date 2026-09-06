@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import { 
   FileText, 
   Calculator, 
-  Sparkles, 
+  CheckCircle2, 
   Printer, 
   Truck, 
   ArrowRight 
@@ -38,7 +38,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ navigate }) => {
       title: 'Approve 3D Digital Proof',
       subtitle: 'Free pre-press verification',
       description: 'Our senior pre-press team produces a digital 3D mockup or physical sample proof to ensure zero color, sizing, or spelling errors.',
-      icon: <Sparkles className="w-5 h-5 text-white" />
+      icon: <CheckCircle2 className="w-5 h-5 text-white" />
     },
     {
       number: '04',

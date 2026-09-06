@@ -7,7 +7,6 @@ import {
   Calendar, 
   ChevronLeft, 
   ChevronRight,
-  Sparkles,
   Quote
 } from 'lucide-react';
 import { PortfolioProject } from '../types';
@@ -155,7 +154,6 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           {project.results && project.results.length > 0 && (
             <div className="mb-8 bg-[#2D3094]/5 border border-[#2D3094]/20 p-6 rounded-2xl">
               <h4 className="font-heading font-black text-sm text-[#2D3094] mb-3 uppercase tracking-wider flex items-center gap-2">
-                <Sparkles size={16} className="text-[#ED008C]" />
                 <span>Measurable Outcomes & Business Impact</span>
               </h4>
               <div className="space-y-2">

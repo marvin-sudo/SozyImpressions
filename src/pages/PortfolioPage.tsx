@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { View, PortfolioProject } from '../types';
 import { PORTFOLIO_PROJECTS } from '../data/mockData';
 import { CaseStudyModal } from '../components/CaseStudyModal';
@@ -29,7 +29,6 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({ navigate, onOpenCa
           <div className="bg-[#181B34] text-white rounded-3xl p-8 md:p-14 relative overflow-hidden shadow-2xl border border-white/10">
             <div className="max-w-3xl relative z-10">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-xs font-black uppercase tracking-wider mb-4 backdrop-blur-md">
-                <Sparkles size={14} className="text-[#ED008C]" />
                 <span>Execution Archive & Case Studies</span>
               </div>
               <h1 className="text-3xl md:text-5xl font-heading font-black tracking-tight leading-tight mb-4">

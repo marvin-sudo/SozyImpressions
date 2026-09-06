@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Heart, Gift, Cake, Crown } from 'lucide-react';
+import { ArrowRight, Heart, Gift, Cake, Crown } from 'lucide-react';
 import anniversaryImg from '../assets/images/anniversary_gifts_1788634691472.jpg';
 import birthdayImg from '../assets/images/birthday_gifts_1788634707174.jpg';
 import weddingImg from '../assets/images/wedding_gifts_1788634722972.jpg';
@@ -82,7 +82,6 @@ export const ShopOccasionsSection: React.FC<ShopOccasionsSectionProps> = ({
       {/* SECTION HEADER */}
       <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-bold uppercase tracking-wider mb-3">
-          <Sparkles size={14} className="text-[#ED008C]" />
           <span>Celebration Moments</span>
         </div>
         

@@ -2,8 +2,7 @@ import React from 'react';
 import { 
   Target, 
   Eye, 
-  MapPin, 
-  Sparkles
+  MapPin
 } from 'lucide-react';
 import { View } from '../types';
 import { FaqSection } from '../components/FaqSection';
@@ -23,7 +22,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ navigate }) => {
           <div className="bg-[#181B34] text-white rounded-3xl p-8 md:p-14 relative overflow-hidden shadow-2xl border border-white/10">
             <div className="max-w-3xl relative z-10">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-xs font-black uppercase tracking-wider mb-4 backdrop-blur-md">
-                <Sparkles size={14} className="text-[#ED008C]" />
                 <span>The Sozy Impressions Story</span>
               </div>
               <h1 className="text-3xl md:text-5xl font-heading font-black tracking-tight leading-tight mb-4">

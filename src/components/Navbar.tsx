@@ -6,7 +6,6 @@ import {
   Phone, 
   Mail, 
   ChevronDown, 
-  Sparkles, 
   Printer, 
   Layers, 
   Gift, 
@@ -160,7 +159,6 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-4 text-[11px] font-medium">
             <span className="inline-flex items-center gap-1.5 font-bold text-[#ED008C] bg-white/10 px-2 py-0.5 rounded-full">
-              <Sparkles size={12} className="animate-pulse" />
               NATIONWIDE UGANDA DELIVERY
             </span>
             <span className="text-white/80 hidden md:inline">
@@ -349,7 +347,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     <div className="mt-6 pt-4 border-t border-slate-100 bg-gradient-to-r from-[#F4F6FF] via-slate-50 to-[#FFF0F8] rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-[#ED008C] text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md">
-                          <Sparkles size={16} />
+                          <Printer size={16} />
                         </div>
                         <div className="text-left">
                           <div className="text-xs font-bold text-slate-900">

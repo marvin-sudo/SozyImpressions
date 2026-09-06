@@ -7,7 +7,6 @@ import {
   FileText, 
   CheckCircle2, 
   ArrowRight, 
-  Sparkles,
   ShieldCheck
 } from 'lucide-react';
 import { View } from '../types';
@@ -96,7 +95,6 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#ED008C] text-xs font-black uppercase tracking-wider mb-3">
-            <Sparkles size={14} />
             <span>Transform Physical Spaces</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-heading font-black text-white tracking-tight leading-tight">

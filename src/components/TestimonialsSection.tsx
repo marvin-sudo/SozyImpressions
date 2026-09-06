@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { 
-  CheckCircle2, 
-  Sparkles
+  CheckCircle2
 } from 'lucide-react';
 import { TESTIMONIALS_DATA } from '../data/mockData';
 import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
@@ -23,7 +22,6 @@ export const TestimonialsSection: React.FC = () => {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-black uppercase tracking-wider mb-3">
-            <Sparkles size={14} className="text-[#ED008C]" />
             <span>Verified Corporate Endorsements</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-heading font-black text-[#121212] tracking-tight leading-tight">

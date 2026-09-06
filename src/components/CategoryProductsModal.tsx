@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Sparkles, ShoppingBag, ArrowRight, Heart } from 'lucide-react';
+import { X, ShoppingBag, ArrowRight, Heart } from 'lucide-react';
 import { Product, Currency, CartItem } from '../types';
 
 interface CategoryProductsModalProps {
@@ -37,7 +37,6 @@ export const CategoryProductsModal: React.FC<CategoryProductsModalProps> = ({
         <div className="p-5 sm:p-7 border-b border-slate-100 flex items-center justify-between gap-4 bg-slate-50/70">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-bold uppercase tracking-wider mb-1.5">
-              <Sparkles size={13} className="text-[#ED008C]" />
               <span>Curated Selection</span>
             </div>
             <h3 className="font-heading font-black text-xl sm:text-2xl text-slate-900 tracking-tight">

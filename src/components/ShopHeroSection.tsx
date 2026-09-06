@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import { ArrowRight, Sparkles, Wand2, SlidersHorizontal } from 'lucide-react';
+import { ArrowRight, Wand2, SlidersHorizontal } from 'lucide-react';
 import { Product, Currency } from '../types';
 
 interface ShopHeroSectionProps {
@@ -144,7 +144,6 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
               {/* Top Bar with Micro Brand Indicator */}
               <div className="relative z-20 flex items-center justify-between gap-2 mb-2">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-slate-200/80 text-[10px] sm:text-xs font-black uppercase tracking-wider text-[#2D3094] shadow-xs">
-                  <Sparkles size={13} className="text-[#ED008C]" />
                   <span>Interactive Customization Visualizer</span>
                 </div>
                 

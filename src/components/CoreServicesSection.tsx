@@ -4,7 +4,7 @@ import {
   ArrowRight, 
   CheckCircle2, 
   Clock, 
-  Sparkles,
+  Flag,
   Printer,
   Zap,
   Building2,
@@ -35,11 +35,11 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
       case 'Printer': return <Printer className="w-5 h-5 text-[#2D3094]" />;
       case 'Zap': return <Zap className="w-5 h-5 text-[#2D3094]" />;
       case 'Building2': return <Building2 className="w-5 h-5 text-[#2D3094]" />;
-      case 'Sparkles': return <Sparkles className="w-5 h-5 text-[#2D3094]" />;
+      case 'Flag': return <Flag className="w-5 h-5 text-[#2D3094]" />;
       case 'Gift': return <Gift className="w-5 h-5 text-[#2D3094]" />;
       case 'PackageCheck': return <PackageCheck className="w-5 h-5 text-[#2D3094]" />;
       case 'PenTool': return <PenTool className="w-5 h-5 text-[#2D3094]" />;
-      default: return <Sparkles className="w-5 h-5 text-[#2D3094]" />;
+      default: return <Printer className="w-5 h-5 text-[#2D3094]" />;
     }
   };
 
@@ -57,7 +57,6 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
         >
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-black uppercase tracking-wider mb-3">
-              <Sparkles size={14} className="text-[#ED008C]" />
               <span>Full-Spectrum Solutions</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-[#121212] tracking-tight leading-tight">

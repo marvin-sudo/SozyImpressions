@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { 
   CheckCircle2, 
-  Sparkles, 
   ThumbsUp, 
   MessageSquarePlus, 
   X, 
@@ -199,7 +198,6 @@ export const CustomerReviewsSection: React.FC = () => {
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
         <div>
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles size={14} className="text-[#ED008C]" />
             <span>Verified Buyer Reviews</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-950 tracking-tight leading-tight">
@@ -248,35 +246,35 @@ export const CustomerReviewsSection: React.FC = () => {
           {/* Breakdown Bars */}
           <div className="md:col-span-4 space-y-2 text-xs">
             <div className="flex items-center gap-3">
-              <span className="w-12 text-slate-300 font-bold">5 Stars</span>
+              <span className="w-12 text-slate-300 font-bold">5 / 5</span>
               <div className="flex-1 h-2.5 bg-slate-800 rounded-full overflow-hidden">
                 <div className="h-full bg-amber-400 rounded-full w-[94%]" />
               </div>
               <span className="w-9 text-right text-slate-400 font-semibold">94%</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="w-12 text-slate-300 font-bold">4 Stars</span>
+              <span className="w-12 text-slate-300 font-bold">4 / 5</span>
               <div className="flex-1 h-2.5 bg-slate-800 rounded-full overflow-hidden">
                 <div className="h-full bg-amber-400 rounded-full w-[5%]" />
               </div>
               <span className="w-9 text-right text-slate-400 font-semibold">5%</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="w-12 text-slate-300 font-bold">3 Stars</span>
+              <span className="w-12 text-slate-300 font-bold">3 / 5</span>
               <div className="flex-1 h-2.5 bg-slate-800 rounded-full overflow-hidden">
                 <div className="h-full bg-amber-400 rounded-full w-[1%]" />
               </div>
               <span className="w-9 text-right text-slate-400 font-semibold">1%</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="w-12 text-slate-300 font-bold">2 Stars</span>
+              <span className="w-12 text-slate-300 font-bold">2 / 5</span>
               <div className="flex-1 h-2.5 bg-slate-800 rounded-full overflow-hidden">
                 <div className="h-full bg-amber-400 rounded-full w-[0%]" />
               </div>
               <span className="w-9 text-right text-slate-400 font-semibold">0%</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="w-12 text-slate-300 font-bold">1 Star</span>
+              <span className="w-12 text-slate-300 font-bold">1 / 5</span>
               <div className="flex-1 h-2.5 bg-slate-800 rounded-full overflow-hidden">
                 <div className="h-full bg-amber-400 rounded-full w-[0%]" />
               </div>
@@ -460,7 +458,6 @@ export const CustomerReviewsSection: React.FC = () => {
               <form onSubmit={handleAddReview}>
                 <div className="mb-6">
                   <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-bold uppercase tracking-wider mb-2">
-                    <Sparkles size={13} className="text-[#ED008C]" />
                     <span>Share Your Experience</span>
                   </div>
                   <h3 className="font-heading font-black text-2xl text-slate-900">

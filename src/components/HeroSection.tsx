@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { 
   ArrowRight, 
-  Sparkles, 
   Play, 
   X, 
   Search, 
@@ -63,7 +62,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
               transition={{ duration: 0.65, ease: EASE_PREMIUM }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-800 mb-6 shadow-sm transition-all hover:bg-slate-200/70"
             >
-              <Sparkles size={14} className="text-[#ED008C] animate-spin" />
               <span className="text-[11px] font-bold uppercase tracking-wider text-slate-700">
                 Uganda's Leading Corporate Branding & Printing Authority
               </span>
