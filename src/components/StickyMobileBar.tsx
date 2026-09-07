@@ -1,7 +1,8 @@
 import React from 'react';
-import { MessageSquare, Phone, Calculator } from 'lucide-react';
+import { Phone, Calculator } from 'lucide-react';
 import { View } from '../types';
 import { COMPANY_INFO } from '../data/mockData';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface StickyMobileBarProps {
   navigate: (view: View, param?: string) => void;
@@ -29,7 +30,7 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({
         rel="noopener noreferrer"
         className="flex-1 bg-emerald-600 active:bg-emerald-700 text-white text-[11px] font-heading font-black uppercase tracking-wider py-2.5 px-2 rounded-xl flex items-center justify-center gap-1.5 shadow-md"
       >
-        <MessageSquare size={14} />
+        <WhatsAppIcon size={16} />
         <span>WhatsApp</span>
       </a>
 

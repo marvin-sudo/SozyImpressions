@@ -4,10 +4,10 @@ import {
   UploadCloud, 
   CheckCircle2, 
   FileText, 
-  MessageSquare, 
   ShieldCheck,
   Percent
 } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import { View, Currency } from '../types';
 import { SERVICES_DATA, EXCHANGE_RATE_USD_TO_UGX } from '../data/mockData';
 import { ScrollReveal } from '../components/ScrollReveal';
@@ -398,7 +398,7 @@ export const QuotePage: React.FC<QuotePageProps> = ({ currency }) => {
                   rel="noopener noreferrer"
                   className="w-full bg-[#25D366] hover:bg-[#20b858] text-white font-heading font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 hover:scale-[1.02]"
                 >
-                  <MessageSquare size={16} />
+                  <WhatsAppIcon size={18} />
                   <span>Lock In Quote via WhatsApp</span>
                 </a>
               </div>

@@ -7,12 +7,12 @@ import {
   ShoppingCart, 
   Check, 
   Search, 
-  MessageCircle, 
   Truck, 
   ShieldCheck, 
   Gift,
   ArrowLeft
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { Currency, Product, CartItem } from '../types';
 import { BESTSELLERS_DATA } from '../data/bestsellersData';
 import { PRODUCTS_DATA } from '../data/mockData';
@@ -1204,7 +1204,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                               className="p-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-xl transition-colors shrink-0"
                               title="Order on WhatsApp"
                             >
-                              <MessageCircle size={15} />
+                              <WhatsAppIcon size={15} />
                             </button>
                           </div>
 

@@ -6,10 +6,10 @@ import {
   Clock, 
   Send, 
   CheckCircle2, 
-  MessageSquare, 
   ShieldCheck,
   ExternalLink
 } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import { View } from '../types';
 import { COMPANY_INFO } from '../data/mockData';
 import { ScrollReveal, StaggerContainer, StaggerItem } from '../components/ScrollReveal';
@@ -88,8 +88,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ navigate }) => {
                     rel="noopener noreferrer"
                     className="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-200/80 hover:bg-emerald-100/70 transition-colors group"
                   >
-                    <div className="w-11 h-11 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-sm">
-                      <MessageSquare size={22} />
+                    <div className="w-11 h-11 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0 shadow-sm p-2">
+                      <WhatsAppIcon size={24} />
                     </div>
                     <div>
                       <div className="font-heading font-bold text-xs text-emerald-950 uppercase tracking-wider mb-0.5">

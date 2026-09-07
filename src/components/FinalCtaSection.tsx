@@ -2,12 +2,12 @@ import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { 
   ArrowRight, 
-  MessageSquare, 
   Phone, 
   ShieldCheck, 
   Truck,
   CheckCircle2
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { View } from '../types';
 import { COMPANY_INFO } from '../data/mockData';
 import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
@@ -88,7 +88,7 @@ export const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({ navigate }) =>
             rel="noopener noreferrer"
             className="bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-5 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-0.5 active:scale-95 flex items-center gap-2"
           >
-            <MessageSquare size={16} />
+            <WhatsAppIcon size={18} />
             <span>Chat on WhatsApp</span>
           </a>
 

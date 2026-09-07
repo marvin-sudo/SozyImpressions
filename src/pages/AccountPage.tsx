@@ -3,9 +3,9 @@ import {
   Search, 
   CheckCircle2, 
   FileText, 
-  Download, 
-  MessageSquare
+  Download
 } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import { View, Currency } from '../types';
 import { ScrollReveal } from '../components/ScrollReveal';
 
@@ -156,7 +156,7 @@ export const AccountPage: React.FC<AccountPageProps> = ({ currency }) => {
                       rel="noopener noreferrer"
                       className="bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 text-xs font-bold px-4 py-2.5 rounded-xl transition-colors flex items-center gap-2"
                     >
-                      <MessageSquare size={14} />
+                      <WhatsAppIcon size={16} />
                       <span>Inquire with Job Manager</span>
                     </a>
                   </div>

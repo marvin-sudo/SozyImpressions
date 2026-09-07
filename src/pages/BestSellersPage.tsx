@@ -10,11 +10,11 @@ import {
   ArrowUpDown,
   Check,
   Search,
-  MessageCircle,
   Truck,
   ShieldCheck,
   Gift
 } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import { View, Currency, Product, CartItem } from '../types';
 import { 
   BESTSELLERS_DATA, 
@@ -978,7 +978,7 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                               className="p-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-xl transition-colors shrink-0"
                               title="Order on WhatsApp with photo"
                             >
-                              <MessageCircle size={15} />
+                              <WhatsAppIcon size={15} />
                             </button>
                           </div>
 

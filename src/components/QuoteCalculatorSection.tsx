@@ -4,9 +4,9 @@ import {
   Send, 
   CheckCircle2, 
   Upload, 
-  MessageSquare, 
   ShieldCheck
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { Currency, QuoteRequest } from '../types';
 import { SERVICES_DATA, DELIVERY_ZONES } from '../data/mockData';
 import { ScrollReveal } from './ScrollReveal';
@@ -227,7 +227,7 @@ Please review my artwork and reply with the official signed PDF invoice!`;
                   onClick={handleSendToWhatsApp}
                   className="w-full sm:flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider py-4 rounded-full transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-105"
                 >
-                  <MessageSquare size={16} />
+                  <WhatsAppIcon size={18} />
                   <span>Send to WhatsApp for Instant Approval</span>
                 </button>
 

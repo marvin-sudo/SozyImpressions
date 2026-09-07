@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { 
   ChevronDown, 
   HelpCircle, 
-  MessageSquare, 
   Phone
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { FAQS_DATA, COMPANY_INFO } from '../data/mockData';
 import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollReveal';
 
@@ -93,7 +93,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ className = '' }) => {
                 rel="noopener noreferrer"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider px-5 py-3 rounded-full flex items-center gap-2 shadow-md hover:scale-105 active:scale-95 transition-transform"
               >
-                <MessageSquare size={14} />
+                <WhatsAppIcon size={16} />
                 <span>Ask on WhatsApp</span>
               </a>
               <a

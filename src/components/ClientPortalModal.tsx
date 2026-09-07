@@ -4,9 +4,9 @@ import {
   Search, 
   CheckCircle2, 
   FileText, 
-  MessageSquare,
   AlertCircle
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { Order, QuoteRequest, Currency } from '../types';
 
 interface ClientPortalModalProps {
@@ -190,7 +190,7 @@ export const ClientPortalModal: React.FC<ClientPortalModalProps> = ({
                     rel="noopener noreferrer"
                     className="border border-slate-300 hover:bg-white text-slate-700 font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-xl flex items-center gap-2"
                   >
-                    <MessageSquare size={14} />
+                    <WhatsAppIcon size={16} />
                     <span>Request Changes via WhatsApp</span>
                   </a>
                 </div>

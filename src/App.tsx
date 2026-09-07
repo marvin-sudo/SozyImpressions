@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback, Suspense, lazy } from 'react';
 import { 
-  MessageSquare, 
   ArrowUp, 
   CheckCircle2,
   Loader2
 } from 'lucide-react';
+import { WhatsAppIcon } from './components/WhatsAppIcon';
 
 import { 
   View, 
@@ -394,9 +394,9 @@ export const App: React.FC = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Direct WhatsApp Production Desk"
-        className="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20b858] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group"
+        className="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20b858] text-white p-3.5 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group"
       >
-        <MessageSquare size={24} className="group-hover:rotate-12 transition-transform" />
+        <WhatsAppIcon size={26} className="group-hover:rotate-12 transition-transform" />
         <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap text-xs font-bold px-0 group-hover:px-2">
           Chat With Production Team
         </span>

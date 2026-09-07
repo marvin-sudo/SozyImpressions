@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { MessageSquare, X, Send } from 'lucide-react';
+import { X, Send } from 'lucide-react';
 import { COMPANY_INFO } from '../data/mockData';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const FloatingWhatsApp: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,8 @@ export const FloatingWhatsApp: React.FC = () => {
         <div className="bg-white rounded-3xl p-5 shadow-2xl border border-slate-200 w-80 mb-3 text-left animate-in zoom-in-90 slide-in-from-bottom-5 duration-200">
           <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center">
-                <MessageSquare size={16} />
+              <div className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center p-1">
+                <WhatsAppIcon size={18} />
               </div>
               <div>
                 <div className="text-xs font-bold text-slate-900">Sozy Impressions</div>
@@ -53,6 +54,7 @@ export const FloatingWhatsApp: React.FC = () => {
             onClick={handleSend}
             className="w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider py-3 rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
           >
+            <WhatsAppIcon size={16} />
             <span>Start WhatsApp Chat</span>
             <Send size={14} />
           </button>
@@ -65,7 +67,7 @@ export const FloatingWhatsApp: React.FC = () => {
         className="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/40 transition-transform duration-300 hover:scale-110 active:scale-95 group relative"
         title={`Chat on WhatsApp (${COMPANY_INFO.whatsapp})`}
       >
-        <MessageSquare size={26} className="group-hover:rotate-12 transition-transform" />
+        <WhatsAppIcon size={28} className="group-hover:rotate-12 transition-transform" />
         <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-[#ED008C] rounded-full border-2 border-white animate-ping" />
       </button>
     </div>

@@ -4,7 +4,6 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  MessageSquare, 
   Send, 
   CheckCircle2, 
   ShieldCheck, 
@@ -14,6 +13,7 @@ import {
   Youtube,
   Music2
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { View } from '../types';
 import { COMPANY_INFO, SERVICES_DATA, PAYMENT_LOGOS } from '../data/mockData';
 import { BrandLogo } from './BrandLogo';
@@ -174,6 +174,17 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
                 >
                   <Facebook size={18} />
                 </a>
+
+                <a
+                  href={COMPANY_INFO.whatsappDirectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat with Sozy Impressions on WhatsApp"
+                  className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 hover:border-[#25D366] hover:bg-[#25D366]/20 text-slate-300 flex items-center justify-center transition-all hover:scale-110 p-2"
+                  title="WhatsApp"
+                >
+                  <WhatsAppIcon size={18} />
+                </a>
               </div>
             </div>
           </motion.div>
@@ -277,7 +288,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
               </div>
 
               <div className="flex items-center gap-2.5">
-                <MessageSquare size={16} className="text-emerald-400 shrink-0" />
+                <WhatsAppIcon size={18} className="shrink-0" />
                 <a 
                   href={COMPANY_INFO.whatsappDirectUrl} 
                   target="_blank" 

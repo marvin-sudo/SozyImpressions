@@ -3,7 +3,6 @@ import {
   ArrowLeft, 
   CheckCircle2, 
   ShieldCheck, 
-  MessageSquare, 
   ShoppingBag, 
   ChevronRight, 
   Building, 
@@ -14,6 +13,7 @@ import {
   Store, 
   ArrowRight
 } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import { View, Currency, CartItem, Order } from '../types';
 import { DELIVERY_ZONES, PAYMENT_LOGOS } from '../data/mockData';
 
@@ -262,7 +262,7 @@ Please share the digital proof for my confirmation!`;
                 onClick={handleSendOrderToWhatsApp}
                 className="bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 px-6 rounded-2xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-md cursor-pointer"
               >
-                <MessageSquare size={16} />
+                <WhatsAppIcon size={18} />
                 <span>Send to WhatsApp Desk</span>
               </button>
 

@@ -6,7 +6,6 @@ import {
   ShieldCheck, 
   Truck, 
   UploadCloud, 
-  MessageSquare, 
   ChevronRight, 
   Share2, 
   Heart, 
@@ -14,6 +13,7 @@ import {
   Minus, 
   ArrowRight
 } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import { View, Currency, CartItem, CustomizationOptions } from '../types';
 import { getProductById, getRelatedProducts } from '../utils/productUtils';
 import { PAYMENT_LOGOS } from '../data/mockData';
@@ -787,7 +787,7 @@ Please confirm turnaround time and share digital proof!`;
                     onClick={handleWhatsAppOrder}
                     className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-xs cursor-pointer"
                   >
-                    <MessageSquare size={16} />
+                    <WhatsAppIcon size={18} />
                     <span>Order / Consult via WhatsApp Desk (+256 787 662 183)</span>
                   </button>
 

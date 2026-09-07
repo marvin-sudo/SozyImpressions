@@ -3,9 +3,9 @@ import {
   CheckCircle2, 
   ArrowRight, 
   ShieldCheck,
-  ChevronRight,
-  MessageSquare
+  ChevronRight
 } from 'lucide-react';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import { View, Currency, ServiceDetail } from '../types';
 import { SERVICES_DATA } from '../data/mockData';
 import { QuoteCalculatorSection } from '../components/QuoteCalculatorSection';
@@ -179,7 +179,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs font-bold text-emerald-700 hover:text-emerald-800 bg-emerald-50 px-5 py-3.5 rounded-full border border-emerald-200"
                 >
-                  <MessageSquare size={16} />
+                  <WhatsAppIcon size={18} />
                   <span>Discuss Specs on WhatsApp</span>
                 </a>
               </div>

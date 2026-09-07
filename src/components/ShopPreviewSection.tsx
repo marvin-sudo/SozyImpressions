@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { 
   ShoppingCart, 
   ArrowRight, 
-  MessageSquare, 
   Eye
 } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { View, Currency, Product, CartItem } from '../types';
 import { PRODUCTS_DATA } from '../data/mockData';
 
@@ -204,7 +204,7 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
                       className="p-2 rounded-full bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all shadow-sm cursor-pointer"
                       title="Direct WhatsApp Order"
                     >
-                      <MessageSquare size={16} />
+                      <WhatsAppIcon size={16} />
                     </button>
                     
                     <button
