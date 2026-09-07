@@ -7,7 +7,6 @@ import {
 } from 'lucide-react';
 import { View, Currency, Product, CartItem } from '../types';
 import { PRODUCTS_DATA } from '../data/mockData';
-import { ProductCustomizerModal } from './ProductCustomizerModal';
 
 interface ShopPreviewSectionProps {
   navigate: (view: View, param?: string) => void;
@@ -17,11 +16,9 @@ interface ShopPreviewSectionProps {
 
 export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
   navigate,
-  currency,
-  onAddToCart
+  currency
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [activeCustomizerProduct, setActiveCustomizerProduct] = useState<Product | null>(null);
 
   const categories = [
     'All',
@@ -130,17 +127,23 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
                 {/* Hover Quick Action Overlay */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2 p-4">
                   <button
-                    onClick={() => setActiveCustomizerProduct(product)}
-                    className="bg-white text-slate-900 text-xs font-bold px-4 py-2.5 rounded-full shadow-lg hover:bg-[#ED008C] hover:text-white transition-all transform hover:scale-105 flex items-center gap-1.5"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigate('product', product.id);
+                    }}
+                    className="bg-white text-slate-900 text-xs font-bold px-4 py-2.5 rounded-full shadow-lg hover:bg-[#2D3094] hover:text-white transition-all transform hover:scale-105 flex items-center gap-1.5 cursor-pointer"
                   >
                     <Eye size={14} />
-                    <span>Customise & Proof</span>
+                    <span>View Details & Customise</span>
                   </button>
                 </div>
               </div>
 
               {/* Product Meta */}
-              <div className="p-5 flex-1 flex flex-col justify-between">
+              <div 
+                onClick={() => navigate('product', product.id)}
+                className="p-5 flex-1 flex flex-col justify-between cursor-pointer"
+              >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-1.5">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
@@ -194,17 +197,23 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
 
                   <div className="flex items-center gap-1.5">
                     <button
-                      onClick={() => handleDirectWhatsApp(product)}
-                      className="p-2 rounded-full bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all shadow-sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDirectWhatsApp(product);
+                      }}
+                      className="p-2 rounded-full bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all shadow-sm cursor-pointer"
                       title="Direct WhatsApp Order"
                     >
                       <MessageSquare size={16} />
                     </button>
                     
                     <button
-                      onClick={() => setActiveCustomizerProduct(product)}
-                      className="bg-[#ED008C] hover:bg-[#d4007d] text-white p-2.5 rounded-full shadow-md shadow-[#ED008C]/20 transition-all hover:scale-105"
-                      title="Customise with Logo"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigate('product', product.id);
+                      }}
+                      className="bg-[#2D3094] hover:bg-[#20236e] text-white p-2.5 rounded-full shadow-md transition-all hover:scale-105 cursor-pointer"
+                      title="Customise on Product Page"
                     >
                       <ShoppingCart size={16} />
                     </button>
@@ -221,7 +230,7 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
         <div className="mt-14 text-center">
           <button
             onClick={() => navigate('shop')}
-            className="bg-[#2D3094] hover:bg-[#2E3192] text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all shadow-lg hover:scale-105 inline-flex items-center gap-2"
+            className="bg-[#2D3094] hover:bg-[#2E3192] text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4 rounded-full transition-all shadow-lg hover:scale-105 inline-flex items-center gap-2 cursor-pointer"
           >
             <span>Explore All 17+ Store Categories & Custom Merch</span>
             <ArrowRight size={16} />
@@ -229,17 +238,6 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
         </div>
 
       </div>
-
-      {/* Live Customizer Modal */}
-      {activeCustomizerProduct && (
-        <ProductCustomizerModal
-          product={activeCustomizerProduct}
-          isOpen={!!activeCustomizerProduct}
-          onClose={() => setActiveCustomizerProduct(null)}
-          currency={currency}
-          onAddToCart={onAddToCart}
-        />
-      )}
     </section>
   );
 };

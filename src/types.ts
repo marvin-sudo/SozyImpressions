@@ -11,7 +11,9 @@ export type View =
   | 'blog'
   | 'contact'
   | 'account'
-  | 'admin';
+  | 'admin'
+  | 'product'
+  | 'checkout';
 
 export interface ServiceItem {
   id: string;

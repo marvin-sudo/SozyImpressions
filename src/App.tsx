@@ -37,15 +37,15 @@ const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ defaul
 const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })));
 const ShopPage = lazy(() => import('./pages/ShopPage').then(m => ({ default: m.ShopPage })));
 const BestSellersPage = lazy(() => import('./pages/BestSellersPage').then(m => ({ default: m.BestSellersPage })));
+const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage').then(m => ({ default: m.ProductDetailPage })));
+const CheckoutPage = lazy(() => import('./pages/CheckoutPage').then(m => ({ default: m.CheckoutPage })));
 
 // Modals & Shared Views
-import { ProductCustomizerModal } from './components/ProductCustomizerModal';
 import { CaseStudyModal } from './components/CaseStudyModal';
 import { BlogArticleModal } from './components/BlogArticleModal';
 
 // Modals & Drawers (Dynamically lazy-loaded on demand)
 const CartDrawer = lazy(() => import('./components/CartDrawer').then(m => ({ default: m.CartDrawer })));
-const CheckoutModal = lazy(() => import('./components/CheckoutModal').then(m => ({ default: m.CheckoutModal })));
 const ClientPortalModal = lazy(() => import('./components/ClientPortalModal').then(m => ({ default: m.ClientPortalModal })));
 const AdminModal = lazy(() => import('./components/AdminModal').then(m => ({ default: m.AdminModal })));
 const SearchModal = lazy(() => import('./components/SearchModal').then(m => ({ default: m.SearchModal })));
@@ -75,6 +75,9 @@ const parseHashRoute = (): { view: View; param?: string } => {
     'about',
     'portfolio',
     'shop',
+    'bestsellers',
+    'product',
+    'checkout',
     'quote',
     'blog',
     'contact',
@@ -115,12 +118,10 @@ export const App: React.FC = () => {
   // Modal Open/Close Controls
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const [isClientPortalOpen, setIsClientPortalOpen] = useState(false);
   const [isAdminModalOpen, setIsAdminModalOpen] = useState(false);
   
   // Active Deep-Dive Items
-  const [customizingProduct, setCustomizingProduct] = useState<Product | null>(null);
   const [activeCaseStudy, setActiveCaseStudy] = useState<PortfolioProject | null>(null);
   const [activeBlogArticle, setActiveBlogArticle] = useState<BlogPost | null>(null);
 
@@ -152,6 +153,9 @@ export const App: React.FC = () => {
       about: 'About Our Company & Heritage | Sozy Impressions Ltd',
       portfolio: 'Portfolio & Client Case Studies | Sozy Impressions Ltd',
       shop: 'Corporate Product Store & Custom Gifts | Sozy Impressions Ltd',
+      bestsellers: 'Top Best Sellers & Popular Keepsakes | Sozy Impressions Ltd',
+      product: 'Personalised Product Details & Live Customiser | Sozy Impressions Ltd',
+      checkout: 'Secure Checkout & Delivery | Sozy Impressions Ltd',
       quote: 'Smart Quote Calculator & RFQ | Sozy Impressions Ltd',
       blog: 'Printing & Brand Insights Blog | Sozy Impressions Ltd',
       contact: 'Contact & Kampala Studio | Sozy Impressions Ltd',
@@ -251,7 +255,6 @@ export const App: React.FC = () => {
   const handleOrderCompleted = (order: Order) => {
     setOrders(prev => [order, ...prev]);
     setCart([]);
-    setIsCheckoutOpen(false);
     showToast(`Order ${order.id} placed successfully!`);
     navigate('account');
   };
@@ -288,7 +291,7 @@ export const App: React.FC = () => {
             navigate={navigate}
             currency={currency}
             products={products}
-            onOpenCustomizer={(product) => setCustomizingProduct(product || products[0])}
+            onOpenCustomizer={(product) => navigate('product', product?.id || products[0].id)}
             onAddToCart={handleAddToCart}
             selectedCategory={routeParam}
           />
@@ -299,8 +302,33 @@ export const App: React.FC = () => {
           <BestSellersPage
             navigate={navigate}
             currency={currency}
-            onOpenCustomizer={(product) => setCustomizingProduct(product)}
+            onOpenCustomizer={(product) => navigate('product', product.id)}
             onAddToCart={handleAddToCart}
+          />
+        );
+
+      case 'product':
+        return (
+          <ProductDetailPage
+            productId={routeParam}
+            navigate={navigate}
+            currency={currency}
+            onAddToCart={handleAddToCart}
+            showToast={showToast}
+          />
+        );
+
+      case 'checkout':
+        return (
+          <CheckoutPage
+            cart={cart}
+            currency={currency}
+            navigate={navigate}
+            onUpdateCartQuantity={handleUpdateCartQuantity}
+            onRemoveCartItem={handleRemoveCartItem}
+            onClearCart={() => setCart([])}
+            onOrderCompleted={handleOrderCompleted}
+            showToast={showToast}
           />
         );
 
@@ -399,31 +427,8 @@ export const App: React.FC = () => {
             onRemoveItem={handleRemoveCartItem}
             onOpenCheckout={() => {
               setIsCartOpen(false);
-              setIsCheckoutOpen(true);
+              navigate('checkout');
             }}
-          />
-        )}
-
-        {/* Product Customizer Modal */}
-        {customizingProduct && (
-          <ProductCustomizerModal
-            product={customizingProduct}
-            isOpen={!!customizingProduct}
-            onClose={() => setCustomizingProduct(null)}
-            currency={currency}
-            onAddToCart={handleAddToCart}
-          />
-        )}
-
-        {/* Checkout Modal */}
-        {isCheckoutOpen && (
-          <CheckoutModal
-            isOpen={isCheckoutOpen}
-            onClose={() => setIsCheckoutOpen(false)}
-            cart={cart}
-            currency={currency}
-            onOrderCompleted={handleOrderCompleted}
-            onClearCart={() => setCart([])}
           />
         )}
 
@@ -460,7 +465,10 @@ export const App: React.FC = () => {
             isOpen={isSearchOpen}
             onClose={() => setIsSearchOpen(false)}
             navigate={navigate}
-            onOpenCustomizer={(prod) => setCustomizingProduct(prod)}
+            onOpenCustomizer={(prod) => {
+              setIsSearchOpen(false);
+              navigate('product', prod.id);
+            }}
           />
         )}
 
