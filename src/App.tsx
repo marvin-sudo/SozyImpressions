@@ -223,7 +223,6 @@ export const App: React.FC = () => {
       return [...prev, item];
     });
 
-    setCustomizingProduct(null);
     setIsCartOpen(true);
     showToast(`Added ${item.product.name} to cart`);
   };
