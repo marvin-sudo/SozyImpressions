@@ -34,6 +34,68 @@
       },
       "required": ["name", "price", "category", "image", "type", "createdAt"]
     },
+    "Order": {
+      "title": "Order",
+      "description": "Customer e-commerce orders for branded print and merchandise",
+      "type": "object",
+      "properties": {
+        "orderNumber": { "type": "string" },
+        "customerName": { "type": "string" },
+        "customerEmail": { "type": "string", "format": "email" },
+        "customerPhone": { "type": "string" },
+        "deliveryAddress": { "type": "string" },
+        "district": { "type": "string" },
+        "totalUGX": { "type": "number" },
+        "totalUSD": { "type": "number" },
+        "paymentMethod": { "type": "string" },
+        "paymentStatus": { "type": "string", "enum": ["pending", "paid", "failed", "refunded"] },
+        "orderStatus": { "type": "string", "enum": ["pending", "confirmed", "processing", "ready_delivery", "out_for_delivery", "completed", "cancelled", "refunded"] },
+        "deliveryStatus": { "type": "string", "enum": ["pending", "preparing", "ready", "out_for_delivery", "delivered"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["orderNumber", "customerName", "customerEmail", "customerPhone", "totalUGX", "paymentStatus", "orderStatus", "createdAt"]
+    },
+    "Category": {
+      "title": "Category",
+      "description": "Product catalog categories",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "isActive": { "type": "boolean" },
+        "order": { "type": "number" }
+      },
+      "required": ["name", "slug", "isActive"]
+    },
+    "ActivityLog": {
+      "title": "ActivityLog",
+      "description": "Audit trail of admin operations and notifications",
+      "type": "object",
+      "properties": {
+        "action": { "type": "string" },
+        "targetType": { "type": "string" },
+        "targetId": { "type": "string" },
+        "description": { "type": "string" },
+        "user": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["action", "description", "timestamp"]
+    },
+    "EmailTemplate": {
+      "title": "EmailTemplate",
+      "description": "Configurable transactional email templates for order notifications",
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "title": { "type": "string" },
+        "subject": { "type": "string" },
+        "bodyTemplate": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["key", "subject", "bodyTemplate"]
+    },
     "PortfolioProject": {
       "title": "PortfolioProject",
       "description": "Showcase of agency work",
@@ -92,6 +154,22 @@
     "newsletter": {
       "schema": "NewsletterSubscriber",
       "description": "Collection of newsletter subscriptions"
+    },
+    "orders": {
+      "schema": "Order",
+      "description": "Collection of customer orders"
+    },
+    "categories": {
+      "schema": "Category",
+      "description": "Collection of shop categories"
+    },
+    "activity_logs": {
+      "schema": "ActivityLog",
+      "description": "Collection of staff and system activity logs"
+    },
+    "email_templates": {
+      "schema": "EmailTemplate",
+      "description": "Collection of configurable notification email templates"
     }
   }
 }

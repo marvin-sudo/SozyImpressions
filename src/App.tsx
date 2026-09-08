@@ -49,6 +49,8 @@ const CartDrawer = lazy(() => import('./components/CartDrawer').then(m => ({ def
 const ClientPortalModal = lazy(() => import('./components/ClientPortalModal').then(m => ({ default: m.ClientPortalModal })));
 const AdminModal = lazy(() => import('./components/AdminModal').then(m => ({ default: m.AdminModal })));
 const SearchModal = lazy(() => import('./components/SearchModal').then(m => ({ default: m.SearchModal })));
+const ShopAdminDashboard = lazy(() => import('./pages/admin/ShopAdminDashboard').then(m => ({ default: m.ShopAdminDashboard })));
+import { useShopStore } from './context/ShopStoreContext';
 
 // Page Loading Spinner Fallback
 const PageLoadingFallback = () => (
@@ -62,12 +64,21 @@ const PageLoadingFallback = () => (
 
 // Helper to parse hash route
 const parseHashRoute = (): { view: View; param?: string } => {
+  const pathname = window.location.pathname.replace(/^\//, '').toLowerCase();
+  if (pathname === 'admin/shop' || pathname === 'admin') {
+    return { view: 'admin', param: 'shop' };
+  }
+
   const hash = window.location.hash.replace(/^#\/?/, '').trim();
   if (!hash) return { view: 'home' };
 
   const parts = hash.split('/');
   const rawView = parts[0]?.toLowerCase();
   const param = parts.slice(1).join('/') || undefined;
+
+  if (rawView === 'admin') {
+    return { view: 'admin', param: param || 'shop' };
+  }
 
   const validViews: View[] = [
     'home',
@@ -251,10 +262,37 @@ export const App: React.FC = () => {
     showToast('Item removed from cart');
   };
 
+  const { createOrder } = useShopStore();
+
   const handleOrderCompleted = (order: Order) => {
     setOrders(prev => [order, ...prev]);
     setCart([]);
     showToast(`Order ${order.id} placed successfully!`);
+    
+    // Synchronize to Shop Admin Dashboard in real time
+    createOrder({
+      id: order.id,
+      orderNumber: order.id,
+      customerName: order.customerName,
+      customerEmail: order.email,
+      customerPhone: order.phone,
+      companyName: order.companyName,
+      deliveryAddress: order.deliveryAddress,
+      district: 'Kampala Central',
+      items: order.items,
+      subtotalUGX: order.subtotalUGX,
+      deliveryFeeUGX: order.deliveryFeeUGX,
+      totalUGX: order.totalUGX,
+      subtotalUSD: order.subtotalUSD,
+      deliveryFeeUSD: order.deliveryFeeUSD,
+      totalUSD: order.totalUSD,
+      paymentMethod: order.paymentMethod,
+      paymentStatus: order.paymentStatus,
+      orderStatus: 'pending',
+      notes: order.notes,
+      createdAt: order.createdAt
+    });
+
     navigate('account');
   };
 
@@ -344,12 +382,27 @@ export const App: React.FC = () => {
         return <AccountPage navigate={navigate} currency={currency} />;
 
       case 'admin':
-        return <HomePage navigate={navigate} />;
+        return (
+          <ShopAdminDashboard
+            onNavigateToShop={() => navigate('shop')}
+          />
+        );
 
       default:
         return <HomePage navigate={navigate} />;
     }
   };
+
+  // Dedicated SaaS Layout for Shop Admin Dashboard
+  if (currentView === 'admin') {
+    return (
+      <Suspense fallback={<PageLoadingFallback />}>
+        <ShopAdminDashboard
+          onNavigateToShop={() => navigate('shop')}
+        />
+      </Suspense>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F7F8FA] text-[#121212] font-sans antialiased selection:bg-[#ED008C] selection:text-white">

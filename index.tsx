@@ -2,6 +2,7 @@ import React, { Component, ReactNode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import { App } from './src/App';
+import { ShopStoreProvider } from './src/context/ShopStoreContext';
 
 // Error Boundary for UI resilience
 interface ErrorBoundaryProps {
@@ -62,7 +63,9 @@ if (container) {
   root.render(
     <React.StrictMode>
       <ErrorBoundary>
-        <App />
+        <ShopStoreProvider>
+          <App />
+        </ShopStoreProvider>
       </ErrorBoundary>
     </React.StrictMode>
   );

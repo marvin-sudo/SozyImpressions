@@ -353,11 +353,18 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
           <div className="flex items-center gap-4 text-center md:text-right">
             <span>© {new Date().getFullYear()} Sozy Impressions Ltd. All rights reserved.</span>
             <button 
-              onClick={openAdminModal} 
-              className="text-slate-600 hover:text-slate-400 transition-colors flex items-center gap-1"
-              title="Admin Portal (Ctrl+Shift+A)"
+              onClick={() => navigate('admin')} 
+              className="text-slate-400 hover:text-[#ED008C] transition-colors flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-md bg-white/5 border border-white/10"
+              title="Shop Admin Dashboard (/admin/shop)"
             >
               <Lock size={12} />
+              <span>Shop Admin</span>
+            </button>
+            <button 
+              onClick={openAdminModal} 
+              className="text-slate-600 hover:text-slate-400 transition-colors flex items-center gap-1"
+              title="CMS Settings"
+            >
               <span>CMS</span>
             </button>
           </div>
