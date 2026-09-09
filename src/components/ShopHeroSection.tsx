@@ -104,7 +104,7 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
       badge: 'VIP Quality',
       bgColor: 'bg-[#EDF2F7]', // soft corporate blue/gray
       blobShape: 'rounded-[40%_60%_50%_50%/55%_35%_65%_45%]',
-      image: 'https://www.image2url.com/r2/default/images/1787603237030-2c152050-7643-4328-95ee-ee949ad1243e.jpg',
+      image: 'https://www.image2url.com/r2/default/images/1788969007990-c83257b8-1421-427c-9fbd-717e5df9c776.png',
       description: 'Luxury executive kits & partner awards'
     },
     {
@@ -150,7 +150,7 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
                           ? 'w-full h-full max-w-[170px] max-h-[170px] scale-[1.35] sm:scale-[1.4] drop-shadow-xl'
                           : col.id === 'new-arrivals'
                           ? 'w-full h-full max-w-[155px] max-h-[155px] scale-[1.25] drop-shadow-lg'
-                          : col.id === 'all-gifts'
+                          : col.id === 'all-gifts' || col.id === 'corporate-gifts'
                           ? 'w-full h-full max-w-[165px] max-h-[165px] scale-[1.3] drop-shadow-xl'
                           : 'w-28 h-28 sm:w-32 sm:h-32'
                       }`}
