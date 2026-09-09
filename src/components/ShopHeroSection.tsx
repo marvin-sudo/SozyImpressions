@@ -1,5 +1,6 @@
-import React, { useState, useRef, useCallback } from 'react';
-import { ArrowRight, Wand2, SlidersHorizontal } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { ArrowRight, Wand2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Product, Currency } from '../types';
 
 interface ShopHeroSectionProps {
@@ -9,39 +10,79 @@ interface ShopHeroSectionProps {
   currency: Currency;
 }
 
+const heroSlides = [
+  {
+    id: 'personal',
+    badge: 'Crafted in Kampala',
+    titleLine1: 'MAKE IT PERSONAL.',
+    titleLine2: 'Make it Sozy.',
+    description: 'Bespoke personalised gifts, corporate branded merchandise, and custom creations crafted with precision laser engraving, vibrant full-colour UV printing, and premium embroidery.',
+    image: 'https://www.image2url.com/r2/default/images/1788960062454-65f7424d-a425-45a6-9c91-c8dc0cf0dd9e.png',
+    alt: 'Make it Personal. Make it Sozy.',
+    accentColor: '#ED008C',
+    tagline: 'Ready to craft a memorable keepsake or branded corporate order?'
+  },
+  {
+    id: 'celebrations',
+    badge: 'Luxury Custom Keepsakes',
+    titleLine1: 'MOMENTS THAT LAST.',
+    titleLine2: 'Crafted with Love.',
+    description: 'Thoughtfully customized gift boxes, engraved drinkware, photo keepsakes, and celebration treasures tailored to make every birthday, anniversary, and milestone unforgettable.',
+    image: 'https://www.image2url.com/r2/default/images/1788961670133-fd354901-222d-441d-9815-a4b9b20ea9dd.png',
+    alt: 'Moments That Last. Crafted with Love.',
+    accentColor: '#2D3094',
+    tagline: 'Celebrate birthdays, anniversaries, and milestones with personal gifts.'
+  },
+  {
+    id: 'cakes-celebrations',
+    badge: 'Fresh Celebration Cakes',
+    titleLine1: 'SWEET SURPRISES.',
+    titleLine2: 'Baked for Celebrations.',
+    description: 'Freshly baked gourmet celebration cakes, custom milestone cake toppers, and delightful sweet treat bundles made to complement your personalised gifts across Kampala.',
+    image: 'https://www.image2url.com/r2/default/images/1788962855779-7aa562c8-5437-4b13-bab8-227e2866ddfc.png',
+    alt: 'Celebration Cakes and Sweet Surprises',
+    accentColor: '#ED008C',
+    tagline: 'Pair your custom gift with fresh celebration cakes delivered right on time.'
+  },
+  {
+    id: 'fresh-flowers',
+    badge: 'Fresh Floral Bouquets',
+    titleLine1: 'BLOOMS OF LOVE.',
+    titleLine2: 'Freshly Handcrafted.',
+    description: 'Handcrafted fresh flower bouquets, radiant roses, and vibrant floral arrangements paired seamlessly with personalised gift boxes for birthdays, romance, and special celebrations.',
+    image: 'https://www.image2url.com/r2/default/images/1788963284870-0c5d0abc-b705-4b10-93ab-f41a77f117da.png',
+    alt: 'Fresh Flower Bouquets and Floral Gifts',
+    accentColor: '#ED008C',
+    tagline: 'Pair your custom gift with stunning fresh floral arrangements delivered in Kampala.'
+  }
+];
+
 export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
   onSelectCollection,
   onShopNow,
   onOpenCustomizer
 }) => {
-  // Before-and-After Slider Position (percentage from 0 to 100, default 48% like reference)
-  const [sliderPosition, setSliderPosition] = useState<number>(48);
-  const [isDragging, setIsDragging] = useState<boolean>(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
-  const handlePointerMove = useCallback((clientX: number) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const offsetX = clientX - rect.left;
-    const percentage = Math.max(15, Math.min(85, (offsetX / rect.width) * 100));
-    setSliderPosition(percentage);
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   }, []);
 
-  const handleMouseDown = () => setIsDragging(true);
-  const handleMouseUp = () => setIsDragging(false);
+  const prevSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  }, []);
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (isDragging) {
-      handlePointerMove(e.clientX);
-    }
-  };
+  // Auto-advance slide every 6 seconds when not hovered
+  useEffect(() => {
+    if (isHovered) return;
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [isHovered, nextSlide]);
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (e.touches[0]) {
-      handlePointerMove(e.touches[0].clientX);
-    }
-  };
-
+  const activeSlide = heroSlides[currentSlide];
   const collections = [
     {
       id: 'bestsellers',
@@ -134,158 +175,96 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
           {/* RIGHT SIDE — LARGE PROMOTIONAL HERO BANNER (Occupying ~65% width) */}
           <div className="lg:col-span-8 xl:col-span-8">
             <div 
-              ref={containerRef}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-              onTouchMove={handleTouchMove}
-              className="relative w-full h-full min-h-[440px] sm:min-h-[480px] rounded-[28px] border border-amber-100/80 bg-gradient-to-br from-[#FFFDF9] via-[#FAF8F5] to-[#FFF5F7] shadow-sm overflow-hidden flex flex-col justify-between p-6 sm:p-8 lg:p-10 select-none group"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              className="relative w-full h-full min-h-[480px] sm:min-h-[520px] rounded-[28px] border border-amber-100/80 bg-gradient-to-br from-[#FFFDF9] via-[#FAF8F5] to-[#FFF5F7] shadow-sm flex flex-col justify-between p-6 sm:p-8 lg:p-10 overflow-hidden group"
             >
               
-              {/* Top Bar with Micro Brand Indicator */}
-              <div className="relative z-20 flex items-center justify-between gap-2 mb-2">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 border border-slate-200/80 text-[10px] sm:text-xs font-black uppercase tracking-wider text-[#2D3094] shadow-xs">
-                  <span>Interactive Customization Visualizer</span>
+              {/* Top Bar with Micro Brand Indicator & Slider Navigation */}
+              <div className="relative z-20 flex items-center justify-between gap-3 mb-2">
+                <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-slate-200/80 text-[10px] sm:text-xs font-heading font-black uppercase tracking-wider text-[#2D3094] shadow-xs">
+                  <span>{activeSlide.badge}</span>
                 </div>
-                
-                <div className="hidden sm:inline-flex items-center gap-1 text-[11px] text-slate-500 font-medium bg-white/70 px-2.5 py-0.5 rounded-full border border-slate-200/50">
-                  <SlidersHorizontal size={12} className="text-[#ED008C]" />
-                  <span>Drag slider to see personalisation</span>
+
+                <div className="flex items-center gap-2">
+                  {/* Slide Indicators */}
+                  <div className="flex items-center gap-1.5 bg-white/90 backdrop-blur-xs px-3 py-1.5 rounded-full border border-slate-200/70 shadow-xs">
+                    {heroSlides.map((slide, idx) => (
+                      <button
+                        key={slide.id}
+                        onClick={() => setCurrentSlide(idx)}
+                        className={`h-2 transition-all duration-300 rounded-full cursor-pointer ${
+                          currentSlide === idx ? 'w-6 bg-[#ED008C]' : 'w-2 bg-slate-300 hover:bg-slate-400'
+                        }`}
+                        aria-label={`Go to slide ${idx + 1}`}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Prev & Next Arrow Controls */}
+                  <div className="flex items-center gap-1">
+                    <button
+                      onClick={prevSlide}
+                      className="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-slate-200/80 shadow-xs flex items-center justify-center text-slate-600 hover:text-[#2D3094] transition-all cursor-pointer hover:scale-105 active:scale-95"
+                      aria-label="Previous slide"
+                    >
+                      <ChevronLeft size={16} />
+                    </button>
+                    <button
+                      onClick={nextSlide}
+                      className="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-slate-200/80 shadow-xs flex items-center justify-center text-slate-600 hover:text-[#2D3094] transition-all cursor-pointer hover:scale-105 active:scale-95"
+                      aria-label="Next slide"
+                    >
+                      <ChevronRight size={16} />
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              {/* Central Split Before & After Visual Area */}
-              <div className="relative z-10 flex-1 my-2 flex items-center justify-between w-full overflow-hidden">
-                
-                {/* BEFORE SIDE (Left: Plain / Customisable) */}
-                <div 
-                  className="w-1/2 flex items-center justify-center gap-4 sm:gap-6 pr-4 transition-opacity duration-300"
-                  style={{ opacity: sliderPosition < 30 ? 0.35 : 1 }}
+              {/* Central Typographic & Brand Image Content Area with Smooth Slide Animation */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeSlide.id}
+                  initial={{ opacity: 0, x: 24 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -24 }}
+                  transition={{ duration: 0.35, ease: 'easeInOut' }}
+                  className="my-auto py-4 sm:py-6 flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-10 w-full"
                 >
-                  {/* Plain Mug with "Your Design Comes Here!" */}
-                  <div className="relative flex flex-col items-center text-center">
-                    <div className="relative w-28 h-28 sm:w-36 sm:h-36 bg-white rounded-2xl p-2 shadow-sm border border-slate-200/70 flex items-center justify-center">
-                      {/* Blank Mug SVG representation / mockup */}
-                      <img 
-                        src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=400" 
-                        alt="Plain Blank Mug"
-                        className="w-full h-full object-contain grayscale opacity-65"
-                      />
-                      {/* Visual Badge overlay */}
-                      <div className="absolute inset-x-2 inset-y-6 flex items-center justify-center">
-                        <div className="border border-dashed border-[#2D3094] bg-white/95 backdrop-blur-xs px-2 py-1.5 rounded-lg shadow-sm text-center">
-                          <p className="text-[10px] sm:text-[11px] font-black text-[#2D3094] leading-tight uppercase tracking-tight">
-                            Your Design <br /> Comes Here!
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <span className="text-[10px] font-bold text-slate-400 mt-2 uppercase tracking-wider">
-                      Plain Product
-                    </span>
+                  <div className="flex-1 max-w-xl text-left">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black tracking-tight text-slate-950 leading-[1.12]">
+                      {activeSlide.titleLine1} <br />
+                      <span className="italic font-serif font-bold" style={{ color: activeSlide.accentColor }}>
+                        {activeSlide.titleLine2}
+                      </span>
+                    </h2>
+                    
+                    <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed mt-4 max-w-md">
+                      {activeSlide.description}
+                    </p>
                   </div>
 
-                  {/* Plain Pillow / Shirt Mockup with "Your Photo Comes Here!" */}
-                  <div className="relative hidden md:flex flex-col items-center text-center">
-                    <div className="relative w-28 h-28 sm:w-36 sm:h-36 bg-white rounded-2xl p-2 shadow-sm border border-slate-200/70 flex items-center justify-center">
-                      <img 
-                        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=400" 
-                        alt="Plain T-Shirt / Pillow"
-                        className="w-full h-full object-contain grayscale opacity-65"
-                      />
-                      <div className="absolute inset-x-2 inset-y-6 flex items-center justify-center">
-                        <div className="border border-dashed border-[#ED008C] bg-white/95 backdrop-blur-xs px-2 py-1.5 rounded-lg shadow-sm text-center">
-                          <p className="text-[10px] sm:text-[11px] font-black text-[#ED008C] leading-tight uppercase tracking-tight">
-                            Your Photo <br /> Comes Here!
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <span className="text-[10px] font-bold text-slate-400 mt-2 uppercase tracking-wider">
-                      Custom Canvas
-                    </span>
+                  <div className="w-full md:w-auto md:flex-1 flex items-center justify-center">
+                    <img 
+                      src={activeSlide.image} 
+                      alt={activeSlide.alt}
+                      referrerPolicy="no-referrer"
+                      className="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[540px] h-auto max-h-[340px] sm:max-h-[400px] lg:max-h-[440px] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                </div>
+                </motion.div>
+              </AnimatePresence>
 
-                {/* SLIDER DIVIDER LINE & CIRCULAR HANDLE (Inspired by the Reference Image < | >) */}
-                <div 
-                  className="absolute top-0 bottom-0 z-30 flex flex-col items-center cursor-ew-resize select-none"
-                  style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
-                  onMouseDown={handleMouseDown}
-                  onTouchStart={handleMouseDown}
-                >
-                  {/* Subtle vertical dividing line */}
-                  <div className="w-[2px] h-full bg-[#2D3094]/30 shadow-xs" />
-                  
-                  {/* Circular handle badge in the center with < > arrows */}
-                  <div 
-                    className="absolute top-1/2 -translate-y-1/2 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border-2 border-[#2D3094] shadow-xl flex items-center justify-center text-[#2D3094] hover:scale-110 active:scale-95 transition-transform duration-150"
-                    title="Drag to compare plain vs personalised"
-                  >
-                    <div className="flex items-center gap-0.5 text-xs font-black">
-                      <span className="text-[#2D3094]">◀</span>
-                      <span className="text-[#ED008C]">▶</span>
-                    </div>
-                  </div>
-                </div>
+              {/* Bottom Section: CTA Action Buttons */}
+              <div className="pt-5 border-t border-slate-200/60 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                <span className="text-xs text-slate-500 font-medium">
+                  {activeSlide.tagline}
+                </span>
 
-                {/* AFTER SIDE (Right: Finished Personalised Sozy Product) */}
-                <div 
-                  className="w-1/2 flex items-center justify-center sm:justify-start gap-4 sm:gap-6 pl-4 transition-opacity duration-300"
-                  style={{ opacity: sliderPosition > 70 ? 0.35 : 1 }}
-                >
-                  {/* Personalised Mug with Photo & Text */}
-                  <div className="relative flex flex-col items-center text-center">
-                    <div className="relative w-28 h-28 sm:w-36 sm:h-36 bg-gradient-to-tr from-rose-50 to-pink-100/50 rounded-2xl p-2 shadow-md border border-pink-200/80 flex items-center justify-center overflow-hidden">
-                      <img 
-                        src="https://www.image2url.com/r2/default/images/1787603237030-2c152050-7643-4328-95ee-ee949ad1243e.jpg" 
-                        alt="Personalised Sozy Gift"
-                        className="w-full h-full object-cover rounded-xl drop-shadow-sm"
-                      />
-                      <div className="absolute bottom-1 right-1 bg-[#2D3094] text-white text-[8px] font-black px-1.5 py-0.5 rounded-md shadow-xs">
-                        SOZY PRINT
-                      </div>
-                    </div>
-                    <span className="text-[10px] font-bold text-[#ED008C] mt-2 uppercase tracking-wider">
-                      Finished Gift
-                    </span>
-                  </div>
-
-                  {/* Personalised Frame / Award */}
-                  <div className="relative hidden md:flex flex-col items-center text-center">
-                    <div className="relative w-28 h-28 sm:w-36 sm:h-36 bg-gradient-to-tr from-blue-50 to-indigo-100/40 rounded-2xl p-2 shadow-md border border-blue-200/80 flex items-center justify-center overflow-hidden">
-                      <img 
-                        src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=400" 
-                        alt="VIP Gift Box Set"
-                        className="w-full h-full object-cover rounded-xl drop-shadow-sm"
-                      />
-                      <div className="absolute bottom-1 right-1 bg-[#ED008C] text-white text-[8px] font-black px-1.5 py-0.5 rounded-md shadow-xs">
-                        VIP BOX
-                      </div>
-                    </div>
-                    <span className="text-[10px] font-bold text-[#2D3094] mt-2 uppercase tracking-wider">
-                      Laser Engraved
-                    </span>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Bottom Section: Typography & CTA Buttons */}
-              <div className="relative z-20 pt-4 border-t border-slate-200/60 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
-                <div className="max-w-md">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-black tracking-tight text-slate-950 leading-tight">
-                    MAKE IT PERSONAL. <br />
-                    <span className="text-[#ED008C] italic font-serif font-bold">Make it Sozy.</span>
-                  </h2>
-                  <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed mt-1">
-                    Premium personalised gifts, branded merchandise & custom products made for every occasion.
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-2.5 w-full sm:w-auto shrink-0">
+                <div className="flex items-center gap-2.5 shrink-0">
                   <button
                     onClick={onShopNow}
-                    className="flex-1 sm:flex-none bg-[#ED008C] hover:bg-[#d4007d] text-white text-xs font-heading font-black uppercase tracking-wider px-6 py-3 rounded-xl shadow-md shadow-[#ED008C]/20 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
+                    className="flex-1 sm:flex-none bg-[#ED008C] hover:bg-[#d4007d] active:bg-[#b8006e] text-white text-xs font-heading font-black uppercase tracking-wider px-6 py-3 rounded-xl shadow-md shadow-[#ED008C]/20 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <span>Shop Now</span>
                     <ArrowRight size={14} />
@@ -293,7 +272,7 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
 
                   <button
                     onClick={() => onOpenCustomizer()}
-                    className="flex-1 sm:flex-none bg-white hover:bg-slate-50 border border-slate-300 text-[#2D3094] hover:text-[#181B34] text-xs font-heading font-bold uppercase tracking-wider px-5 py-3 rounded-xl shadow-xs transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
+                    className="flex-1 sm:flex-none bg-white hover:bg-slate-50 border border-slate-300 text-[#2D3094] hover:text-[#181B34] text-xs font-heading font-bold uppercase tracking-wider px-5 py-3 rounded-xl shadow-xs transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer"
                   >
                     <Wand2 size={13} className="text-[#ED008C]" />
                     <span>Customise Order</span>
