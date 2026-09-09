@@ -440,8 +440,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             {setIsCartOpen && (
               <button 
                 onClick={() => setIsCartOpen(true)}
-                className="relative p-2 sm:p-2.5 rounded-full text-slate-700 hover:text-[#2D3094] hover:bg-slate-100 transition-colors shrink-0"
+                className="relative p-2 sm:p-2.5 rounded-full text-slate-700 hover:text-[#2D3094] hover:bg-slate-100 transition-colors shrink-0 cursor-pointer"
                 aria-label="Open Shopping Cart"
+                title="View Shopping Cart"
               >
                 <ShoppingBag size={20} />
                 {cart && cart.length > 0 && (
@@ -528,7 +529,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                   </button>
                 ))}
 
-                <div className="pt-4 border-t border-slate-100 flex flex-col gap-3">
+                <div className="pt-4 border-t border-slate-100 flex flex-col gap-2.5">
+                  {setIsCartOpen && (
+                    <button 
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsCartOpen(true);
+                      }}
+                      className="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-heading font-bold text-xs uppercase tracking-wider py-3 rounded-xl flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                    >
+                      <ShoppingBag size={16} className="text-[#2D3094]" />
+                      <span>View Shopping Cart ({cart ? cart.reduce((t, i) => t + (i.quantity || 1), 0) : 0})</span>
+                    </button>
+                  )}
                   <button 
                     onClick={() => {
                       navigate('quote');

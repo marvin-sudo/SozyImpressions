@@ -43,9 +43,10 @@ const CheckoutPage = lazy(() => import('./pages/CheckoutPage').then(m => ({ defa
 // Modals & Shared Views
 import { CaseStudyModal } from './components/CaseStudyModal';
 import { BlogArticleModal } from './components/BlogArticleModal';
+import { CartDrawer } from './components/CartDrawer';
+import { AnimatePresence } from 'motion/react';
 
 // Modals & Drawers (Dynamically lazy-loaded on demand)
-const CartDrawer = lazy(() => import('./components/CartDrawer').then(m => ({ default: m.CartDrawer })));
 const ClientPortalModal = lazy(() => import('./components/ClientPortalModal').then(m => ({ default: m.ClientPortalModal })));
 const AdminModal = lazy(() => import('./components/AdminModal').then(m => ({ default: m.AdminModal })));
 const SearchModal = lazy(() => import('./components/SearchModal').then(m => ({ default: m.SearchModal })));
@@ -117,7 +118,28 @@ export const App: React.FC = () => {
   const [cart, setCart] = useState<CartItem[]>(() => {
     try {
       const saved = localStorage.getItem('sozy_cart');
-      return saved ? JSON.parse(saved) : [];
+      if (!saved) return [];
+      const parsed = JSON.parse(saved);
+      if (!Array.isArray(parsed)) return [];
+      return parsed.map((item: CartItem) => {
+        const qty = item.quantity && item.quantity > 0 ? item.quantity : 1;
+        const unitUGX = typeof item.unitPriceUGX === 'number' && !isNaN(item.unitPriceUGX)
+          ? item.unitPriceUGX
+          : (typeof item.product?.priceUGX === 'number' ? item.product.priceUGX : 0);
+        const unitUSD = typeof item.unitPriceUSD === 'number' && !isNaN(item.unitPriceUSD)
+          ? item.unitPriceUSD
+          : (typeof item.product?.priceUSD === 'number' ? item.product.priceUSD : (unitUGX ? Number((unitUGX / 3800).toFixed(2)) : 0));
+        return {
+          ...item,
+          quantity: qty,
+          unitPriceUGX: unitUGX,
+          unitPriceUSD: unitUSD,
+          subtotalUGX: typeof item.subtotalUGX === 'number' && !isNaN(item.subtotalUGX) ? item.subtotalUGX : (unitUGX * qty),
+          subtotalUSD: typeof item.subtotalUSD === 'number' && !isNaN(item.subtotalUSD) ? item.subtotalUSD : (unitUSD * qty),
+          itemTotalPriceUGX: unitUGX * qty,
+          itemTotalPriceUSD: unitUSD * qty
+        };
+      });
     } catch {
       return [];
     }
@@ -221,22 +243,46 @@ export const App: React.FC = () => {
         i.customization?.color === item.customization?.color &&
         i.customization?.text === item.customization?.text
       );
+
+      const qty = item.quantity && item.quantity > 0 ? item.quantity : 1;
+      const unitUGX = typeof item.unitPriceUGX === 'number' && !isNaN(item.unitPriceUGX)
+        ? item.unitPriceUGX
+        : (typeof item.product?.priceUGX === 'number' ? item.product.priceUGX : 0);
+      const unitUSD = typeof item.unitPriceUSD === 'number' && !isNaN(item.unitPriceUSD)
+        ? item.unitPriceUSD
+        : (typeof item.product?.priceUSD === 'number' ? item.product.priceUSD : (unitUGX ? Number((unitUGX / 3800).toFixed(2)) : 0));
+
       if (existingIdx > -1) {
         const updated = [...prev];
-        const newQty = updated[existingIdx].quantity + item.quantity;
+        const newQty = (updated[existingIdx].quantity || 1) + qty;
         updated[existingIdx] = {
           ...updated[existingIdx],
           quantity: newQty,
-          subtotalUGX: (updated[existingIdx].product.priceUGX * newQty),
-          subtotalUSD: Number(((updated[existingIdx].product.priceUGX * newQty) / 3800).toFixed(2))
+          unitPriceUGX: unitUGX,
+          unitPriceUSD: unitUSD,
+          subtotalUGX: unitUGX * newQty,
+          subtotalUSD: Number(((unitUGX * newQty) / 3800).toFixed(2)),
+          itemTotalPriceUGX: unitUGX * newQty,
+          itemTotalPriceUSD: Number(((unitUGX * newQty) / 3800).toFixed(2))
         };
         return updated;
       }
-      return [...prev, item];
+
+      const normalizedItem: CartItem = {
+        ...item,
+        quantity: qty,
+        unitPriceUGX: unitUGX,
+        unitPriceUSD: unitUSD,
+        subtotalUGX: typeof item.subtotalUGX === 'number' && !isNaN(item.subtotalUGX) ? item.subtotalUGX : (unitUGX * qty),
+        subtotalUSD: typeof item.subtotalUSD === 'number' && !isNaN(item.subtotalUSD) ? item.subtotalUSD : (unitUSD * qty),
+        itemTotalPriceUGX: unitUGX * qty,
+        itemTotalPriceUSD: unitUSD * qty
+      };
+      return [...prev, normalizedItem];
     });
 
     setIsCartOpen(true);
-    showToast(`Added ${item.product.name} to cart`);
+    showToast(`Added ${item.product?.name || 'item'} to cart`);
   };
 
   const handleUpdateCartQuantity = (index: number, newQty: number) => {
@@ -247,11 +293,23 @@ export const App: React.FC = () => {
     setCart(prev => {
       const updated = [...prev];
       if (updated[index]) {
+        const item = updated[index];
+        const unitUGX = typeof item.unitPriceUGX === 'number' && !isNaN(item.unitPriceUGX)
+          ? item.unitPriceUGX
+          : (typeof item.product?.priceUGX === 'number' ? item.product.priceUGX : 0);
+        const unitUSD = typeof item.unitPriceUSD === 'number' && !isNaN(item.unitPriceUSD)
+          ? item.unitPriceUSD
+          : (typeof item.product?.priceUSD === 'number' ? item.product.priceUSD : (unitUGX ? Number((unitUGX / 3800).toFixed(2)) : 0));
+
         updated[index] = {
-          ...updated[index],
+          ...item,
           quantity: newQty,
-          subtotalUGX: (updated[index].product.priceUGX * newQty),
-          subtotalUSD: Number(((updated[index].product.priceUGX * newQty) / 3800).toFixed(2))
+          unitPriceUGX: unitUGX,
+          unitPriceUSD: unitUSD,
+          subtotalUGX: unitUGX * newQty,
+          subtotalUSD: Number(((unitUGX * newQty) / 3800).toFixed(2)),
+          itemTotalPriceUGX: unitUGX * newQty,
+          itemTotalPriceUSD: Number(((unitUGX * newQty) / 3800).toFixed(2))
         };
       }
       return updated;
@@ -471,9 +529,8 @@ export const App: React.FC = () => {
         </button>
       )}
 
-      {/* --- Global Modals & Drawers with lazy Suspense --- */}
-      <Suspense fallback={null}>
-        {/* Cart Drawer */}
+      {/* Cart Drawer - Direct AnimatePresence for instant, smooth slide-in */}
+      <AnimatePresence>
         {isCartOpen && (
           <CartDrawer
             isOpen={isCartOpen}
@@ -486,8 +543,16 @@ export const App: React.FC = () => {
               setIsCartOpen(false);
               navigate('checkout');
             }}
+            onBrowseShop={() => {
+              setIsCartOpen(false);
+              navigate('shop');
+            }}
           />
         )}
+      </AnimatePresence>
+
+      {/* --- Global Modals & Drawers with lazy Suspense --- */}
+      <Suspense fallback={null}>
 
         {/* Client Portal Modal */}
         {isClientPortalOpen && (
