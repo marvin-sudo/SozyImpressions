@@ -17,10 +17,10 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({
       {/* 1. Quick Quote */}
       <button
         onClick={() => navigate('quote')}
-        className="flex-1 bg-[#2D3094] active:bg-[#1f2168] text-white text-[11px] font-heading font-black uppercase tracking-wider py-2.5 px-2 rounded-xl flex items-center justify-center gap-1.5 shadow-md"
+        className="flex-1 bg-[#2D3094] active:bg-[#1f2168] text-white text-[11px] font-heading font-black uppercase tracking-wider py-2.5 px-2 rounded-xl flex items-center justify-center gap-1.5 shadow-md whitespace-nowrap"
       >
-        <Calculator size={14} className="text-[#ED008C]" />
-        <span>Get Quote</span>
+        <Calculator size={14} className="text-[#ED008C] shrink-0" />
+        <span className="whitespace-nowrap">Get Quote</span>
       </button>
 
       {/* 2. WhatsApp Direct */}

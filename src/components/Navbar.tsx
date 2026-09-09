@@ -435,12 +435,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Action CTAs: Primary Get a Quote CTA & Cart */}
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-1.5 sm:gap-2.5">
             {/* Cart Drawer Trigger */}
             {setIsCartOpen && (
               <button 
                 onClick={() => setIsCartOpen(true)}
-                className="relative p-2.5 rounded-full text-slate-700 hover:text-[#2D3094] hover:bg-slate-100 transition-colors"
+                className="relative p-2 sm:p-2.5 rounded-full text-slate-700 hover:text-[#2D3094] hover:bg-slate-100 transition-colors shrink-0"
                 aria-label="Open Shopping Cart"
               >
                 <ShoppingBag size={20} />
@@ -455,15 +455,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Primary High-Converting CTA: Get a Quote */}
             <button 
               onClick={() => navigate('quote')}
-              className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-[11px] font-bold uppercase tracking-wider px-5 sm:px-6 py-2.5 rounded-full shadow-lg shadow-[#ED008C]/25 transition-all hover:-translate-y-0.5 active:scale-95 items-center gap-1.5 cursor-pointer"
+              className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wide sm:tracking-wider px-3 sm:px-6 py-2 sm:py-2.5 rounded-full shadow-lg shadow-[#ED008C]/25 transition-all hover:-translate-y-0.5 active:scale-95 inline-flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap shrink-0"
             >
-              <span>Get a Quote</span>
+              <span className="whitespace-nowrap">Get a Quote</span>
             </button>
 
             {/* Mobile Menu Toggle Button */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2.5 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors"
+              className="lg:hidden p-2 sm:p-2.5 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors shrink-0"
               aria-label="Toggle navigation menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

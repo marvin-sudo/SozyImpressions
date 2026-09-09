@@ -40,7 +40,7 @@ export const COMPANY_INFO = {
   website: 'https://sozyimpressions.com',
   email: 'sales@sozyimpressions.com',
   phone: '+256 709 390 168',
-  whatsapp: '+256 787 662 183',
+  whatsapp: '0787662183',
   whatsappDirectUrl: 'https://wa.me/256787662183',
   address: 'Plot 42, Nkrumah Road & Jinja Road Creative Studio, Kampala, Uganda',
   workingHours: 'Mon - Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 4:00 PM',

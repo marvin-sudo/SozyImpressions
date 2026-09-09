@@ -224,6 +224,16 @@ Please confirm turnaround time and share digital proof!`;
 
           <div className="flex items-center gap-2">
             <button
+              type="button"
+              onClick={handleWhatsAppOrder}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] shadow-xs transition-colors cursor-pointer"
+              title="Order on WhatsApp: 0787662183"
+            >
+              <WhatsAppIcon size={14} />
+              <span>WhatsApp 0787662183</span>
+            </button>
+
+            <button
               onClick={() => navigate('shop')}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
             >
@@ -343,7 +353,7 @@ Please confirm turnaround time and share digital proof!`;
                   </div>
                   <div>
                     <span className="font-bold block">Free Digital 3D Proof</span>
-                    <span className="text-slate-500 text-[11px]">Approved via WhatsApp/Email before engraving begins</span>
+                    <span className="text-slate-500 text-[11px]">Approved via WhatsApp (0787662183) before engraving begins</span>
                   </div>
                 </div>
 
@@ -781,14 +791,14 @@ Please confirm turnaround time and share digital proof!`;
 
                   </div>
 
-                  {/* 1-Tap WhatsApp Consultation */}
+                  {/* 1-Tap WhatsApp Consultation & Instant Order */}
                   <button
                     type="button"
                     onClick={handleWhatsAppOrder}
-                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+                    className="w-full bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] text-white py-3.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-md shadow-[#25D366]/25 cursor-pointer"
                   >
                     <WhatsAppIcon size={18} />
-                    <span>Order / Consult via WhatsApp Desk (+256 787 662 183)</span>
+                    <span>Order / Consult via WhatsApp (0787662183)</span>
                   </button>
 
                   {/* Payment Icons Acceptance */}
@@ -892,7 +902,7 @@ Please confirm turnaround time and share digital proof!`;
                       Step 1: Digital Proof
                     </span>
                     <p className="text-xs text-slate-600">
-                      Within 2–4 hours of ordering, our design desk sends you a 3D digital simulation for sign-off via WhatsApp or email.
+                      Within 2–4 hours of ordering, our design desk sends you a 3D digital simulation for sign-off via WhatsApp (0787662183) or email.
                     </p>
                   </div>
                   <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200">
@@ -928,6 +938,27 @@ Please confirm turnaround time and share digital proof!`;
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200">
                   <h4 className="text-xs font-bold text-slate-900 mb-1">Do you offer discounts for corporate orders?</h4>
                   <p className="text-xs text-slate-600">Yes, our volume pricing discounts start at 10 units (5% off) and scale up to 20% off for 100+ units. For orders exceeding 500 units, please request a custom quote.</p>
+                </div>
+
+                {/* Instant WhatsApp Support Card */}
+                <div className="mt-3 p-4 rounded-2xl bg-emerald-50/80 border border-emerald-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-xl bg-[#25D366] text-white flex items-center justify-center shrink-0 shadow-xs">
+                      <WhatsAppIcon size={18} />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold text-slate-900">Have custom questions about this gift?</h4>
+                      <p className="text-[11px] text-slate-600">Chat directly with our Kampala workshop team on WhatsApp 0787662183.</p>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleWhatsAppOrder}
+                    className="bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] text-white text-xs font-bold px-4 py-2 rounded-xl shadow-xs flex items-center gap-1.5 transition-all shrink-0 cursor-pointer"
+                  >
+                    <WhatsAppIcon size={14} />
+                    <span>Chat on WhatsApp: 0787662183</span>
+                  </button>
                 </div>
               </div>
             )}
@@ -1004,6 +1035,26 @@ Please confirm turnaround time and share digital proof!`;
           </div>
         </div>
       )}
+
+      {/* 5. Mobile Sticky Bottom Action Bar with Green WhatsApp Button */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2.5 px-4 shadow-2xl flex items-center gap-2.5">
+        <button
+          type="button"
+          onClick={handleWhatsAppOrder}
+          className="flex-1 bg-[#25D366] active:bg-[#1da851] text-white py-3 px-3 rounded-xl font-heading font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-[#25D366]/25 cursor-pointer"
+        >
+          <WhatsAppIcon size={16} />
+          <span>WhatsApp 0787662183</span>
+        </button>
+        <button
+          type="button"
+          onClick={handleBuyNow}
+          className="flex-1 bg-[#2D3094] active:bg-[#20236e] text-white py-3 px-3 rounded-xl font-heading font-bold text-xs uppercase tracking-wider shadow-md shadow-[#2D3094]/20 flex items-center justify-center gap-1.5 cursor-pointer"
+        >
+          <span>Buy Now</span>
+          <ArrowRight size={14} />
+        </button>
+      </div>
 
     </div>
   );

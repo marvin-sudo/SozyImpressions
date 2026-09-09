@@ -116,7 +116,7 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
     const text = encodeURIComponent(
       `Hello Sozy Impressions! I would like to order the "${bp.name}" (${currency === 'UGX' ? `UGX ${bp.priceUGX.toLocaleString()}` : `$${bp.priceUSD}`}). Please advise how I can send my photo and custom text for personalization.`
     );
-    window.open(`https://wa.me/256700000000?text=${text}`, '_blank');
+    window.open(`https://wa.me/256787662183?text=${text}`, '_blank');
   };
 
   // Price bounds in dataset
@@ -995,8 +995,8 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
 
                             <button
                               onClick={(e) => handleWhatsAppOrder(product, e)}
-                              className="p-1.5 sm:p-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-lg sm:rounded-xl transition-colors shrink-0"
-                              title="Order on WhatsApp with photo"
+                              className="p-1.5 sm:p-2 bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] text-white rounded-lg sm:rounded-xl shadow-xs transition-colors shrink-0 flex items-center justify-center cursor-pointer"
+                              title="Order on WhatsApp: 0787662183"
                             >
                               <WhatsAppIcon size={14} className="sm:w-[15px] sm:h-[15px]" />
                             </button>

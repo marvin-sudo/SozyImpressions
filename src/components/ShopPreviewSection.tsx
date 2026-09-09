@@ -201,8 +201,8 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
                         e.stopPropagation();
                         handleDirectWhatsApp(product);
                       }}
-                      className="p-2 rounded-full bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all shadow-sm cursor-pointer"
-                      title="Direct WhatsApp Order"
+                      className="p-2 rounded-full bg-[#25D366] text-white hover:bg-[#20ba5a] active:bg-[#1da851] transition-all shadow-sm cursor-pointer flex items-center justify-center"
+                      title="Direct WhatsApp Order: 0787662183"
                     >
                       <WhatsAppIcon size={16} />
                     </button>

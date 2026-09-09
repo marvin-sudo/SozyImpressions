@@ -100,10 +100,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
               {/* Primary CTA: Get a Quote */}
               <button 
                 onClick={() => navigate('quote')}
-                className="bg-[#ED008C] hover:bg-[#d4007d] text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-4.5 rounded-full transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 shadow-xl shadow-[#ED008C]/30 flex items-center justify-center gap-2 group w-full sm:w-auto cursor-pointer"
+                className="bg-[#ED008C] hover:bg-[#d4007d] text-white font-heading font-bold text-xs uppercase tracking-wider px-6 sm:px-8 py-4 sm:py-4.5 rounded-full transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 shadow-xl shadow-[#ED008C]/30 flex items-center justify-center gap-2 group w-full sm:w-auto cursor-pointer whitespace-nowrap"
               >
-                <span>Get a Quote</span>
-                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                <span className="whitespace-nowrap">Get a Quote</span>
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1 shrink-0" />
               </button>
 
               {/* Secondary CTA: Explore Our Services */}

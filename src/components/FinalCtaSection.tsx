@@ -75,10 +75,10 @@ export const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({ navigate }) =>
           {/* Primary CTA: Get a Quote */}
           <button
             onClick={() => navigate('quote')}
-            className="bg-[#ED008C] hover:bg-[#d4007d] text-white font-heading font-bold text-xs uppercase tracking-wider px-9 py-5 rounded-full shadow-2xl shadow-[#ED008C]/40 transition-all duration-300 hover:-translate-y-0.5 active:scale-95 flex items-center gap-2 group"
+            className="bg-[#ED008C] hover:bg-[#d4007d] text-white font-heading font-bold text-xs uppercase tracking-wider px-7 sm:px-9 py-4 sm:py-5 rounded-full shadow-2xl shadow-[#ED008C]/40 transition-all duration-300 hover:-translate-y-0.5 active:scale-95 flex items-center gap-2 group whitespace-nowrap"
           >
-            <span>Get a Project Quote</span>
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            <span className="whitespace-nowrap">Get a Project Quote</span>
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform shrink-0" />
           </button>
 
           {/* WhatsApp CTA */}

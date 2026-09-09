@@ -452,7 +452,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
     const text = encodeURIComponent(
       `Hello Sozy Impressions! I would like to order "${item.name}" in UGX (${formatPrice(item.priceUGX, item.priceUSD)}). Please advise how to submit photo/text customization.`
     );
-    window.open(`https://wa.me/256700000000?text=${text}`, '_blank');
+    window.open(`https://wa.me/256787662183?text=${text}`, '_blank');
   };
 
   const displayCategoryTitle = categoryName.toLowerCase() === 'bestsellers' 
@@ -1206,8 +1206,8 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
 
                             <button
                               onClick={(e) => handleWhatsAppOrder(product, e)}
-                              className="p-1.5 sm:p-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-lg sm:rounded-xl transition-colors shrink-0"
-                              title="Order on WhatsApp"
+                              className="p-1.5 sm:p-2 bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] text-white rounded-lg sm:rounded-xl shadow-xs transition-colors shrink-0 flex items-center justify-center cursor-pointer"
+                              title="Order on WhatsApp: 0787662183"
                             >
                               <WhatsAppIcon size={14} className="sm:w-[15px] sm:h-[15px]" />
                             </button>
