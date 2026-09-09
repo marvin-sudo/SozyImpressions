@@ -175,7 +175,12 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
     const fromBestsellers = BESTSELLERS_DATA.filter(bp => {
       const bCat = bp.category.toLowerCase();
       const bName = bp.name.toLowerCase();
-      if (catLower === 'all' || catLower === 'all products') return true;
+      if (catLower === 'all' || catLower === 'all products' || catLower === 'all gifts') return true;
+      if (catLower.includes('cushion')) return bCat.includes('cushion') || bName.includes('cushion');
+      if (catLower.includes('sipper')) return bCat.includes('sipper') || bCat.includes('bottle') || bName.includes('sipper') || bName.includes('tumbler') || bName.includes('flask');
+      if (catLower.includes('jewel')) return bCat.includes('jewel') || bName.includes('necklace') || bName.includes('bracelet') || bName.includes('ring') || bName.includes('pendant');
+      if (catLower.includes('flower')) return bCat.includes('flower') || bName.includes('rose') || bName.includes('orchid') || bName.includes('bouquet');
+      if (catLower.includes('cake')) return bCat.includes('cake') || bName.includes('cake') || bName.includes('bento');
       if (catLower.includes('mug')) return bCat.includes('mug') || bName.includes('mug');
       if (catLower.includes('flask') || catLower.includes('bottle')) return bCat.includes('bottle') || bCat.includes('tumbler') || bName.includes('flask') || bName.includes('bottle') || bName.includes('tumbler');
       if (catLower.includes('bamboo')) return bName.includes('bamboo') || bCat.includes('bamboo');
@@ -501,7 +506,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
             </h1>
             
             <span className="text-xs font-bold text-slate-500">
-              {filteredProducts.length} of {Math.max(filteredProducts.length, 658)} Gifts
+              {filteredProducts.length} of {categoryRawProducts.length} Gifts
             </span>
 
             <span className="text-slate-300 hidden sm:inline">|</span>
@@ -1083,7 +1088,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
               </div>
             ) : (
               /* Product Grid Exact match to Screenshot 2026-09-05 225344.png */
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-5">
                 {paginatedProducts.map((product) => {
                   const isFav = !!wishlist[product.id];
                   const currentImgIdx = activeImageIndex[product.id] || 0;
@@ -1093,7 +1098,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                     <div
                       key={product.id}
                       onClick={() => onOpenCustomizer(toStandardProduct(product))}
-                      className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative"
+                      className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative min-w-0"
                     >
                       {/* Image Frame with Pagination Dots inside bottom as seen in screenshot */}
                       <div className="relative w-full pt-[100%] bg-slate-100 overflow-hidden rounded-t-2xl">
@@ -1108,17 +1113,17 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                         {/* Top Right Wishlist Heart Button */}
                         <button
                           onClick={(e) => toggleWishlist(product.id, e)}
-                          className="absolute top-2.5 right-2.5 z-10 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-600 hover:text-red-500 shadow-xs transition-transform active:scale-90"
+                          className="absolute top-2 right-2 sm:top-2.5 sm:right-2.5 z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-600 hover:text-red-500 shadow-xs transition-transform active:scale-90"
                           title={isFav ? 'Remove from wishlist' : 'Save to wishlist'}
                         >
                           <Heart 
-                            size={16} 
-                            className={isFav ? 'fill-red-500 text-red-500' : ''} 
+                            size={14} 
+                            className={`sm:w-4 sm:h-4 ${isFav ? 'fill-red-500 text-red-500' : ''}`} 
                           />
                         </button>
 
                         {/* Carousel 3 to 6 dots inside bottom of image matching screenshot */}
-                        <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-black/25 backdrop-blur-2xs px-2.5 py-1 rounded-full">
+                        <div className="absolute bottom-2 sm:bottom-2.5 left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-1.5 z-10 bg-black/25 backdrop-blur-2xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
                           {[0, 1, 2].map((dotIdx) => (
                             <button
                               key={dotIdx}
@@ -1137,74 +1142,74 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                       </div>
 
                       {/* Card Content Layout: Title, PERSONALISE IT! badge, Price in UGX */}
-                      <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between gap-2.5">
+                      <div className="p-2.5 sm:p-4 flex flex-col flex-1 justify-between gap-2 sm:gap-2.5 min-w-0">
                         
-                        <div>
+                        <div className="min-w-0">
                           {/* Product Title matching screenshot (e.g. "Silver Personalised Initial...") */}
                           <h3 
-                            className="font-bold text-slate-900 text-sm leading-snug line-clamp-1 group-hover:text-[#2D3094] transition-colors"
+                            className="font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-1 group-hover:text-[#2D3094] transition-colors truncate"
                             title={product.name}
                           >
                             {product.name}
                           </h3>
 
                           {/* PERSONALISE IT! Blue Pill Badge matching screenshot */}
-                          <div className="mt-1.5">
-                            <span className="inline-block bg-[#1877F2] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                          <div className="mt-1 sm:mt-1.5">
+                            <span className="inline-block bg-[#1877F2] text-white text-[9px] sm:text-[10px] font-bold px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-wider truncate max-w-full">
                               {product.badge || 'PERSONALISE IT!'}
                             </span>
                           </div>
                         </div>
 
                         {/* Pricing Row in UGX matching screenshot */}
-                        <div className="pt-1">
-                          <div className="flex items-baseline flex-wrap gap-2">
+                        <div className="pt-0.5 sm:pt-1 min-w-0">
+                          <div className="flex items-baseline flex-wrap gap-1 sm:gap-2">
                             {/* Current Price */}
-                            <span className="text-sm sm:text-base font-black text-slate-900 tracking-tight">
+                            <span className="text-xs sm:text-base font-black text-slate-900 tracking-tight">
                               {formatPrice(product.priceUGX, product.priceUSD)}
                             </span>
 
                             {/* Original Price Strikethrough */}
                             {product.originalPriceUGX > product.priceUGX && (
-                              <span className="text-xs text-slate-400 line-through">
+                              <span className="text-[10px] sm:text-xs text-slate-400 line-through">
                                 {formatPrice(product.originalPriceUGX, product.originalPriceUSD)}
                               </span>
                             )}
 
                             {/* Discount Percent in green */}
                             {product.discountPercent && (
-                              <span className="text-xs font-bold text-emerald-600">
+                              <span className="text-[10px] sm:text-xs font-bold text-emerald-600">
                                 {product.discountPercent}
                               </span>
                             )}
                           </div>
 
                           {/* Action Bar */}
-                          <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center gap-2">
+                          <div className="mt-2.5 sm:mt-3 pt-2 sm:pt-2.5 border-t border-slate-100 flex items-center gap-1 sm:gap-2">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
                                 onOpenCustomizer(toStandardProduct(product));
                               }}
-                              className="flex-1 bg-[#2D3094] hover:bg-[#20236e] text-white text-[11px] font-bold uppercase tracking-wider py-2 px-2.5 rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1"
+                              className="flex-1 min-w-0 bg-[#2D3094] hover:bg-[#20236e] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider py-1.5 sm:py-2 px-1 sm:px-2.5 rounded-lg sm:rounded-xl shadow-2xs transition-all flex items-center justify-center gap-1"
                             >
-                              <span>Personalise</span>
+                              <span className="truncate">Personalise</span>
                             </button>
 
                             <button
                               onClick={(e) => handleQuickAdd(product, e)}
-                              className="p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-[#2D3094] rounded-xl transition-colors shrink-0"
+                              className="p-1.5 sm:p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-[#2D3094] rounded-lg sm:rounded-xl transition-colors shrink-0"
                               title="Quick add to cart"
                             >
-                              <ShoppingCart size={15} />
+                              <ShoppingCart size={14} className="sm:w-[15px] sm:h-[15px]" />
                             </button>
 
                             <button
                               onClick={(e) => handleWhatsAppOrder(product, e)}
-                              className="p-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-xl transition-colors shrink-0"
+                              className="p-1.5 sm:p-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-lg sm:rounded-xl transition-colors shrink-0"
                               title="Order on WhatsApp"
                             >
-                              <WhatsAppIcon size={15} />
+                              <WhatsAppIcon size={14} className="sm:w-[15px] sm:h-[15px]" />
                             </button>
                           </div>
 

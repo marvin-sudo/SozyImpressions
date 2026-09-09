@@ -13,6 +13,11 @@ import {
 } from '../types/admin';
 import { PRODUCTS_DATA } from '../data/mockData';
 import { DEFAULT_EMAIL_TEMPLATES, renderTemplateText } from '../utils/emailTemplates';
+import { 
+  getActiveAdminSession, 
+  createAdminSession, 
+  clearAdminSession 
+} from '../utils/adminAuth';
 import { db } from '../../firebase';
 import { 
   setDoc, 
@@ -436,7 +441,7 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
 
   // Auth State
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState<boolean>(() => {
-    return localStorage.getItem('sozy_admin_auth') === 'true';
+    return Boolean(getActiveAdminSession());
   });
 
   const [isDashboardLocked, setIsDashboardLocked] = useState<boolean>(false);
@@ -958,7 +963,7 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     ) {
       setIsAdminAuthenticated(true);
       setIsDashboardLocked(false);
-      localStorage.setItem('sozy_admin_auth', 'true');
+      createAdminSession(cleanEmail || 'ssozimarvin5@gmail.com', 'Marvin Ssozi', 'Shop Director & Admin', true);
       logAction('Admin Authenticated', 'system', 'auth', `Admin session granted to ${cleanEmail || 'Administrator'}`);
       return true;
     }
@@ -967,7 +972,7 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
 
   const logoutAdmin = useCallback(() => {
     setIsAdminAuthenticated(false);
-    localStorage.removeItem('sozy_admin_auth');
+    clearAdminSession();
     logAction('Admin Logged Out', 'system', 'auth', 'Admin session ended');
   }, [logAction]);
 
@@ -985,6 +990,10 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
       cleanPin === 'admin'
     ) {
       setIsDashboardLocked(false);
+      if (!getActiveAdminSession()) {
+        createAdminSession('ssozimarvin5@gmail.com', 'Marvin Ssozi', 'Shop Director & Admin', true);
+      }
+      setIsAdminAuthenticated(true);
       return true;
     }
     return false;

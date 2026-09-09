@@ -88,6 +88,10 @@ export const AdminTopNav: React.FC<AdminTopNavProps> = ({
             <span>Admin</span>
             <span>/</span>
             <span className="text-[#2D3094] font-semibold">Shop Back-Office</span>
+            <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60 ml-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              Auth Token Active
+            </span>
           </div>
           <h1 className="text-base sm:text-lg font-bold text-slate-900 leading-tight">
             {tabTitles[activeTab]}

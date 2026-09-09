@@ -50,6 +50,7 @@ const ClientPortalModal = lazy(() => import('./components/ClientPortalModal').th
 const AdminModal = lazy(() => import('./components/AdminModal').then(m => ({ default: m.AdminModal })));
 const SearchModal = lazy(() => import('./components/SearchModal').then(m => ({ default: m.SearchModal })));
 const ShopAdminDashboard = lazy(() => import('./pages/admin/ShopAdminDashboard').then(m => ({ default: m.ShopAdminDashboard })));
+import { AdminProtectedRoute } from './components/admin/AdminProtectedRoute';
 import { useShopStore } from './context/ShopStoreContext';
 
 // Page Loading Spinner Fallback
@@ -383,9 +384,11 @@ export const App: React.FC = () => {
 
       case 'admin':
         return (
-          <ShopAdminDashboard
-            onNavigateToShop={() => navigate('shop')}
-          />
+          <AdminProtectedRoute onNavigateToShop={() => navigate('shop')}>
+            <ShopAdminDashboard
+              onNavigateToShop={() => navigate('shop')}
+            />
+          </AdminProtectedRoute>
         );
 
       default:
@@ -397,9 +400,11 @@ export const App: React.FC = () => {
   if (currentView === 'admin') {
     return (
       <Suspense fallback={<PageLoadingFallback />}>
-        <ShopAdminDashboard
-          onNavigateToShop={() => navigate('shop')}
-        />
+        <AdminProtectedRoute onNavigateToShop={() => navigate('shop')}>
+          <ShopAdminDashboard
+            onNavigateToShop={() => navigate('shop')}
+          />
+        </AdminProtectedRoute>
       </Suspense>
     );
   }

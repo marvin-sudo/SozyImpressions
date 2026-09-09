@@ -185,8 +185,22 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
       }
 
       // Category
-      if (selectedCategory !== 'All Gifts' && item.category !== selectedCategory) {
-        return false;
+      if (selectedCategory !== 'All Gifts') {
+        if (selectedCategory === 'Bestsellers') {
+          const isBs = item.category === 'Bestsellers' || item.badge.toLowerCase().includes('bestseller') || item.rating >= 4.9;
+          if (!isBs) return false;
+        } else if (selectedCategory === 'New Arrivals') {
+          const isNew = item.category === 'New Arrivals' || item.badge.toLowerCase().includes('just launched') || item.badge.toLowerCase().includes('tiny');
+          if (!isNew) return false;
+        } else if (selectedCategory === 'Get Same Day') {
+          const isSameDay = item.category === 'Get Same Day' || ['Mugs', 'Cushions', 'Photo Frames'].includes(item.category);
+          if (!isSameDay) return false;
+        } else if (selectedCategory === 'Congratulations') {
+          const isCongrat = item.category === 'Congratulations' || item.occasion === 'Anniversary' || item.name.toLowerCase().includes('congrat');
+          if (!isCongrat) return false;
+        } else if (item.category !== selectedCategory) {
+          return false;
+        }
       }
 
       // Recipient
@@ -314,7 +328,7 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
             </h1>
             
             <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">
-              {filteredProducts.length} of 658 Gifts
+              {filteredProducts.length} of {BESTSELLERS_DATA.length} Gifts
             </span>
 
             <span className="text-slate-300 hidden sm:inline">|</span>
@@ -634,7 +648,13 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                     {BESTSELLER_CATEGORIES.map((cat) => {
                       const count = cat === 'All Gifts' 
                         ? BESTSELLERS_DATA.length 
-                        : BESTSELLERS_DATA.filter(i => i.category === cat).length;
+                        : BESTSELLERS_DATA.filter(i => {
+                            if (cat === 'Bestsellers') return i.category === 'Bestsellers' || i.badge.toLowerCase().includes('bestseller') || i.rating >= 4.9;
+                            if (cat === 'New Arrivals') return i.category === 'New Arrivals' || i.badge.toLowerCase().includes('just launched') || i.badge.toLowerCase().includes('tiny');
+                            if (cat === 'Get Same Day') return i.category === 'Get Same Day' || ['Mugs', 'Cushions', 'Photo Frames'].includes(i.category);
+                            if (cat === 'Congratulations') return i.category === 'Congratulations' || i.occasion === 'Anniversary' || i.name.toLowerCase().includes('congrat');
+                            return i.category === cat;
+                          }).length;
                       
                       const isSelected = selectedCategory === cat;
 
@@ -857,7 +877,7 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
               </div>
             ) : (
               /* Product Grid Matching Exact User Prompt & Screenshot */
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-5">
                 {paginatedProducts.map((product) => {
                   const isFav = !!wishlist[product.id];
                   const currentImgIdx = activeImageIndex[product.id] || 0;
@@ -867,7 +887,7 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                     <div
                       key={product.id}
                       onClick={() => handleOpenCustomizer(product)}
-                      className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative"
+                      className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative min-w-0"
                     >
                       {/* Image Frame with Overlay Controls */}
                       <div className="relative w-full pt-[100%] bg-slate-100 overflow-hidden">
@@ -882,17 +902,17 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                         {/* Top Right Wishlist Heart Button */}
                         <button
                           onClick={(e) => toggleWishlist(product.id, e)}
-                          className="absolute top-2.5 right-2.5 z-10 w-8 h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-600 hover:text-red-500 shadow-sm transition-transform active:scale-90"
+                          className="absolute top-2 right-2 sm:top-2.5 sm:right-2.5 z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-600 hover:text-red-500 shadow-sm transition-transform active:scale-90"
                           title={isFav ? 'Remove from wishlist' : 'Save to wishlist'}
                         >
                           <Heart 
-                            size={16} 
-                            className={isFav ? 'fill-red-500 text-red-500' : ''} 
+                            size={14} 
+                            className={`sm:w-4 sm:h-4 ${isFav ? 'fill-red-500 text-red-500' : ''}`} 
                           />
                         </button>
 
                         {/* Carousel dots indicator at bottom of image as seen in screenshot */}
-                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-10 bg-black/20 backdrop-blur-xs px-2.5 py-1 rounded-full">
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-1.5 z-10 bg-black/20 backdrop-blur-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
                           {[0, 1, 2].map((dotIdx) => (
                             <button
                               key={dotIdx}
@@ -911,74 +931,74 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                       </div>
 
                       {/* Card Body Matching Exact Screenshot Layout */}
-                      <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between gap-2.5">
+                      <div className="p-2.5 sm:p-4 flex flex-col flex-1 justify-between gap-2 sm:gap-2.5 min-w-0">
                         
-                        <div>
+                        <div className="min-w-0">
                           {/* Product Title (e.g. "Silver Personalised Initial...") */}
                           <h3 
-                            className="font-bold text-slate-900 text-sm leading-snug line-clamp-1 group-hover:text-[#2D3094] transition-colors"
+                            className="font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-1 group-hover:text-[#2D3094] transition-colors truncate"
                             title={product.name}
                           >
                             {product.name}
                           </h3>
 
                           {/* PERSONALISE IT! Blue Pill Badge underneath title */}
-                          <div className="mt-1.5">
-                            <span className="inline-block bg-[#1877F2] text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                          <div className="mt-1 sm:mt-1.5">
+                            <span className="inline-block bg-[#1877F2] text-white text-[9px] sm:text-[10px] font-bold px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-wider truncate max-w-full">
                               {product.badge || 'PERSONALISE IT!'}
                             </span>
                           </div>
                         </div>
 
                         {/* Pricing Row matching screenshot & UGX currency */}
-                        <div className="pt-1">
-                          <div className="flex items-baseline flex-wrap gap-2">
+                        <div className="pt-0.5 sm:pt-1 min-w-0">
+                          <div className="flex items-baseline flex-wrap gap-1 sm:gap-2">
                             {/* Current Price */}
-                            <span className="text-sm sm:text-base font-black text-slate-900 tracking-tight">
+                            <span className="text-xs sm:text-base font-black text-slate-900 tracking-tight">
                               {formatPrice(product.priceUGX, product.priceUSD)}
                             </span>
 
                             {/* Original Price Strikethrough */}
                             {product.originalPriceUGX > product.priceUGX && (
-                              <span className="text-xs text-slate-400 line-through">
+                              <span className="text-[10px] sm:text-xs text-slate-400 line-through">
                                 {formatPrice(product.originalPriceUGX, product.originalPriceUSD)}
                               </span>
                             )}
 
                             {/* Discount Percent */}
                             {product.discountPercent && (
-                              <span className="text-xs font-bold text-emerald-600">
+                              <span className="text-[10px] sm:text-xs font-bold text-emerald-600">
                                 {product.discountPercent}
                               </span>
                             )}
                           </div>
 
                           {/* Quick Actions Row */}
-                          <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center gap-2">
+                          <div className="mt-2.5 sm:mt-3 pt-2 sm:pt-2.5 border-t border-slate-100 flex items-center gap-1 sm:gap-2">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
                                 handleOpenCustomizer(product);
                               }}
-                              className="flex-1 bg-[#2D3094] hover:bg-[#20236e] text-white text-[11px] font-bold uppercase tracking-wider py-2 px-2.5 rounded-xl shadow-xs transition-all flex items-center justify-center gap-1"
+                              className="flex-1 min-w-0 bg-[#2D3094] hover:bg-[#20236e] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider py-1.5 sm:py-2 px-1 sm:px-2.5 rounded-lg sm:rounded-xl shadow-xs transition-all flex items-center justify-center gap-1"
                             >
-                              <span>Personalise</span>
+                              <span className="truncate">Personalise</span>
                             </button>
 
                             <button
                               onClick={(e) => handleQuickAdd(product, e)}
-                              className="p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-[#2D3094] rounded-xl transition-colors shrink-0"
+                              className="p-1.5 sm:p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-[#2D3094] rounded-lg sm:rounded-xl transition-colors shrink-0"
                               title="Quick add to cart"
                             >
-                              <ShoppingCart size={15} />
+                              <ShoppingCart size={14} className="sm:w-[15px] sm:h-[15px]" />
                             </button>
 
                             <button
                               onClick={(e) => handleWhatsAppOrder(product, e)}
-                              className="p-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-xl transition-colors shrink-0"
+                              className="p-1.5 sm:p-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 rounded-lg sm:rounded-xl transition-colors shrink-0"
                               title="Order on WhatsApp with photo"
                             >
-                              <WhatsAppIcon size={15} />
+                              <WhatsAppIcon size={14} className="sm:w-[15px] sm:h-[15px]" />
                             </button>
                           </div>
 
