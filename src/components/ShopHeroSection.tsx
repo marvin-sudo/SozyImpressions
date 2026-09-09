@@ -13,7 +13,6 @@ interface ShopHeroSectionProps {
 const heroSlides = [
   {
     id: 'personal',
-    badge: 'Crafted in Kampala',
     titleLine1: 'MAKE IT PERSONAL.',
     titleLine2: 'Make it Sozy.',
     description: 'Bespoke personalised gifts, corporate branded merchandise, and custom creations crafted with precision laser engraving, vibrant full-colour UV printing, and premium embroidery.',
@@ -24,7 +23,6 @@ const heroSlides = [
   },
   {
     id: 'celebrations',
-    badge: 'Luxury Custom Keepsakes',
     titleLine1: 'MOMENTS THAT LAST.',
     titleLine2: 'Crafted with Love.',
     description: 'Thoughtfully customized gift boxes, engraved drinkware, photo keepsakes, and celebration treasures tailored to make every birthday, anniversary, and milestone unforgettable.',
@@ -35,7 +33,6 @@ const heroSlides = [
   },
   {
     id: 'cakes-celebrations',
-    badge: 'Fresh Celebration Cakes',
     titleLine1: 'SWEET SURPRISES.',
     titleLine2: 'Baked for Celebrations.',
     description: 'Freshly baked gourmet celebration cakes, custom milestone cake toppers, and delightful sweet treat bundles made to complement your personalised gifts across Kampala.',
@@ -46,7 +43,6 @@ const heroSlides = [
   },
   {
     id: 'fresh-flowers',
-    badge: 'Fresh Floral Bouquets',
     titleLine1: 'BLOOMS OF LOVE.',
     titleLine2: 'Freshly Handcrafted.',
     description: 'Handcrafted fresh flower bouquets, radiant roses, and vibrant floral arrangements paired seamlessly with personalised gift boxes for birthdays, romance, and special celebrations.',
@@ -180,12 +176,8 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
               className="relative w-full h-full min-h-[480px] sm:min-h-[520px] rounded-[28px] border border-amber-100/80 bg-gradient-to-br from-[#FFFDF9] via-[#FAF8F5] to-[#FFF5F7] shadow-sm flex flex-col justify-between p-6 sm:p-8 lg:p-10 overflow-hidden group"
             >
               
-              {/* Top Bar with Micro Brand Indicator & Slider Navigation */}
-              <div className="relative z-20 flex items-center justify-between gap-3 mb-2">
-                <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-slate-200/80 text-[10px] sm:text-xs font-heading font-black uppercase tracking-wider text-[#2D3094] shadow-xs">
-                  <span>{activeSlide.badge}</span>
-                </div>
-
+              {/* Top Bar with Slider Navigation */}
+              <div className="relative z-20 flex items-center justify-end gap-3 mb-2">
                 <div className="flex items-center gap-2">
                   {/* Slide Indicators */}
                   <div className="flex items-center gap-1.5 bg-white/90 backdrop-blur-xs px-3 py-1.5 rounded-full border border-slate-200/70 shadow-xs">
