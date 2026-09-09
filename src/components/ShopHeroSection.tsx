@@ -86,7 +86,7 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
       badge: 'Popular',
       bgColor: 'bg-[#FBF1EC]', // soft warm blush/cream
       blobShape: 'rounded-[42%_58%_70%_30%/45%_45%_55%_55%]',
-      image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=500',
+      image: 'https://www.image2url.com/r2/default/images/1788966255392-56781397-72a2-4843-9596-cde8aff134c1.png',
       description: 'Customer favourite mugs, flasks & apparel'
     },
     {
@@ -95,7 +95,7 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
       badge: '2026 Drops',
       bgColor: 'bg-[#F3F4EE]', // soft olive/sand
       blobShape: 'rounded-[55%_45%_35%_65%/60%_50%_50%_40%]',
-      image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=500',
+      image: 'https://www.image2url.com/r2/default/images/1788965911749-6039f84f-7024-4e23-9edc-68d11dc05bb4.png',
       description: 'Latest bamboo sets & desk accessories'
     },
     {
@@ -113,7 +113,7 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
       badge: 'Curated',
       bgColor: 'bg-[#FDF0EE]', // soft peach/coral
       blobShape: 'rounded-[60%_40%_60%_40%/40%_60%_40%_60%]',
-      image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=500',
+      image: 'https://www.image2url.com/r2/default/images/1788967471351-f7e50fea-fd71-438e-bf39-f62db3d1bd7f.png',
       description: 'Explore full personalised collection'
     }
   ];
@@ -132,19 +132,28 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
                 <div
                   key={col.id}
                   onClick={() => onSelectCollection(col.id)}
-                  className="group cursor-pointer bg-white rounded-2xl p-4 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100 hover:border-[#2D3094]/20 select-none relative overflow-hidden"
+                  className="group cursor-pointer bg-white rounded-2xl p-3 sm:p-4 flex flex-col items-center justify-between text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100 hover:border-[#2D3094]/20 select-none relative"
                 >
                   {/* Organic Background Shape behind Cutout Image */}
-                  <div className="relative w-full aspect-square flex items-center justify-center mb-3">
+                  <div className="relative w-full aspect-square flex items-center justify-center mb-2 sm:mb-3">
                     <div 
-                      className={`absolute inset-2 ${col.bgColor} ${col.blobShape} transition-transform duration-500 group-hover:scale-105 group-hover:rotate-2 opacity-90`} 
+                      className={`absolute inset-0 sm:inset-1 ${col.bgColor} ${col.blobShape} transition-transform duration-500 group-hover:scale-105 group-hover:rotate-2 opacity-90`} 
                     />
                     
                     {/* Cutout Image with Hover Transition */}
                     <img 
                       src={col.image} 
                       alt={col.title} 
-                      className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-110"
+                      referrerPolicy="no-referrer"
+                      className={`relative z-10 object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-110 ${
+                        col.id === 'bestsellers'
+                          ? 'w-full h-full max-w-[170px] max-h-[170px] scale-[1.35] sm:scale-[1.4] drop-shadow-xl'
+                          : col.id === 'new-arrivals'
+                          ? 'w-full h-full max-w-[155px] max-h-[155px] scale-[1.25] drop-shadow-lg'
+                          : col.id === 'all-gifts'
+                          ? 'w-full h-full max-w-[165px] max-h-[165px] scale-[1.3] drop-shadow-xl'
+                          : 'w-28 h-28 sm:w-32 sm:h-32'
+                      }`}
                       loading="eager"
                     />
 
