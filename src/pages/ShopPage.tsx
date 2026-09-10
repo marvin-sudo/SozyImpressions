@@ -1,7 +1,10 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { 
   CheckCircle2,
-  LayoutGrid
+  Search,
+  X,
+  Gift,
+  Sparkles
 } from 'lucide-react';
 import { View, Currency, Product, CartItem } from '../types';
 import { PRODUCTS_DATA } from '../data/mockData';
@@ -15,6 +18,7 @@ import { GiftsByRecipientSection } from '../components/GiftsByRecipientSection';
 import { CustomerReviewsSection } from '../components/CustomerReviewsSection';
 import { CategoryProductsModal } from '../components/CategoryProductsModal';
 import { DedicatedCategoryView } from '../components/DedicatedCategoryView';
+import { GiftFinderModal } from '../components/GiftFinderModal';
 
 interface ShopPageProps {
   navigate?: (view: View, param?: string) => void;
@@ -26,6 +30,7 @@ interface ShopPageProps {
 }
 
 export const ShopPage: React.FC<ShopPageProps> = ({
+  navigate,
   currency,
   products = PRODUCTS_DATA,
   onOpenCustomizer,
@@ -37,8 +42,18 @@ export const ShopPage: React.FC<ShopPageProps> = ({
   const [selectedOccasion, setSelectedOccasion] = useState<string | null>(null);
   const [selectedRecipient, setSelectedRecipient] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Auto-focus and activate search field
+  useEffect(() => {
+    if (searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, []);
+
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating'>('featured');
   const [isProductsModalOpen, setIsProductsModalOpen] = useState<boolean>(false);
+  const [isGiftFinderOpen, setIsGiftFinderOpen] = useState<boolean>(false);
   const [showAllCatalog, setShowAllCatalog] = useState<boolean>(false);
   
   // Wishlist persisted in localStorage
@@ -164,6 +179,21 @@ export const ShopPage: React.FC<ShopPageProps> = ({
     if (selectedCategory !== 'All' && selectedCategory !== 'All Products') return `High-definition custom ${selectedCategory.toLowerCase()} with precision laser engraving & UV printing.`;
     return 'Browse our catalog of custom printable gifts, apparel, and awards in Uganda.';
   }, [selectedRecipient, selectedOccasion, selectedCategory]);
+
+  // Shop-wide search results across the entire catalog
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    const q = searchQuery.toLowerCase().trim();
+    return products.filter((p) => {
+      return (
+        p.name.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q) ||
+        (p.tags && p.tags.some(t => t.toLowerCase().includes(q))) ||
+        (p.badge && p.badge.toLowerCase().includes(q))
+      );
+    });
+  }, [products, searchQuery]);
 
   // Filtered & Sorted Products
   const filteredProducts = useMemo(() => {
@@ -420,10 +450,14 @@ export const ShopPage: React.FC<ShopPageProps> = ({
       return matchesCat && matchesSubcat && matchesSearch && matchesOccasion && matchesRecipient;
     }).sort((a, b) => {
       if (sortBy === 'price-asc') {
-        return (currency === 'UGX' ? a.priceUGX - b.priceUGX : a.priceUSD - b.priceUSD);
+        const pA = currency === 'UGX' ? (a.priceUGX || (a as any).price || 0) : (a.priceUSD || ((a.priceUGX || (a as any).price || 0) / 3800));
+        const pB = currency === 'UGX' ? (b.priceUGX || (b as any).price || 0) : (b.priceUSD || ((b.priceUGX || (b as any).price || 0) / 3800));
+        return pA - pB;
       }
       if (sortBy === 'price-desc') {
-        return (currency === 'UGX' ? b.priceUGX - a.priceUGX : b.priceUSD - a.priceUSD);
+        const pA = currency === 'UGX' ? (a.priceUGX || (a as any).price || 0) : (a.priceUSD || ((a.priceUGX || (a as any).price || 0) / 3800));
+        const pB = currency === 'UGX' ? (b.priceUGX || (b as any).price || 0) : (b.priceUSD || ((b.priceUGX || (b as any).price || 0) / 3800));
+        return pB - pA;
       }
       if (sortBy === 'rating') {
         return b.rating - a.rating;
@@ -476,8 +510,212 @@ export const ShopPage: React.FC<ShopPageProps> = ({
         onSelectCategory={handleCategorySelect}
       />
 
-      {/* DEDICATED CATEGORY VIEW (If specific category is selected or showAllCatalog is active) */}
-      {(selectedCategory.toLowerCase() !== 'all' || showAllCatalog) ? (
+      {/* Active Global Shop Product Search Bar - Always active & visible across entire shop */}
+      <div className="bg-gradient-to-r from-[#2D3094]/10 via-white to-[#ED008C]/10 border-b border-slate-200 py-3 sm:py-4 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (searchInputRef.current) {
+                searchInputRef.current.focus();
+              }
+            }}
+            className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3"
+          >
+            {/* Search Input Box with Active Styling & Button */}
+            <div className="relative flex-1 max-w-3xl flex items-center gap-2">
+              <div className="relative flex-1 flex items-center">
+                <Search className="absolute left-3.5 text-[#2D3094] pointer-events-none" size={18} />
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  autoFocus
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search any product across the shop (e.g. mugs, photo frames, corporate gifts, bottles, hoodies)..."
+                  className="w-full pl-10 pr-10 py-2.5 bg-white rounded-xl border-2 border-[#2D3094] ring-2 ring-[#2D3094]/20 focus:ring-4 focus:ring-[#2D3094]/30 outline-none text-xs sm:text-sm font-medium text-slate-900 placeholder:text-slate-400 transition-all shadow-xs"
+                />
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSearchQuery('');
+                      searchInputRef.current?.focus();
+                    }}
+                    className="absolute right-3 p-1 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+                    title="Clear search"
+                    aria-label="Clear search query"
+                  >
+                    <X size={16} />
+                  </button>
+                )}
+              </div>
+
+              {/* Active Search Button */}
+              <button
+                type="submit"
+                onClick={() => searchInputRef.current?.focus()}
+                className="px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-[#2D3094] hover:bg-[#20236e] active:scale-95 shadow-xs transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
+              >
+                <Search size={14} />
+                <span className="hidden sm:inline">Search</span>
+              </button>
+
+              {/* ✨ Finder Button in the same field */}
+              <button
+                type="button"
+                onClick={() => setIsGiftFinderOpen(true)}
+                className="group relative p-[1.5px] rounded-2xl bg-gradient-to-r from-[#ED008C] via-pink-400 to-[#2D3094] hover:shadow-md hover:shadow-[#ED008C]/20 active:scale-95 transition-all shrink-0 cursor-pointer"
+                title="Open Joy Gift Finder"
+                id="shop-gift-finder-btn"
+              >
+                <div className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 bg-white rounded-[14px] transition-colors group-hover:bg-pink-50/50">
+                  <div className="relative flex items-center">
+                    <Gift size={16} className="text-[#ED008C]" />
+                    <Sparkles size={10} className="text-[#ED008C] fill-[#ED008C] absolute -bottom-1 -right-1" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#ED008C] transition-colors">Finder</span>
+                </div>
+              </button>
+            </div>
+
+            {/* Popular Search Quick Filters */}
+            <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar scrollbar-none text-xs">
+              <span className="text-[11px] font-semibold text-slate-600 shrink-0 hidden lg:inline">Popular:</span>
+              {['Mugs', 'LED Lamps', 'Water Bottles', 'Executive Sets', 'Hoodies', 'Trophies'].map((tag) => (
+                <button
+                  type="button"
+                  key={tag}
+                  onClick={() => {
+                    setSearchQuery(tag);
+                    searchInputRef.current?.focus();
+                  }}
+                  className={`px-2.5 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors border cursor-pointer ${
+                    searchQuery.toLowerCase() === tag.toLowerCase()
+                      ? 'bg-[#2D3094] text-white border-[#2D3094] shadow-xs'
+                      : 'bg-white text-slate-700 border-slate-300 hover:border-[#2D3094] hover:text-[#2D3094]'
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSearchQuery('');
+                    searchInputRef.current?.focus();
+                  }}
+                  className="px-2 py-1 rounded-lg text-xs text-rose-600 hover:bg-rose-50 border border-rose-200 whitespace-nowrap font-medium transition-colors cursor-pointer"
+                >
+                  Reset
+                </button>
+              )}
+            </div>
+          </form>
+        </div>
+      </div>
+
+      {/* Conditional Display: Search Results View OR Dedicated Category View OR Default Shop Sections */}
+      {searchQuery.trim() ? (
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-200">
+            <div>
+              <h2 className="text-xl font-heading font-black text-[#2D3094]">
+                Search Results for "{searchQuery}"
+              </h2>
+              <p className="text-xs text-slate-500 mt-0.5">
+                Found {searchResults.length} product{searchResults.length === 1 ? '' : 's'} across the shop
+              </p>
+            </div>
+            <button
+              onClick={() => {
+                setSearchQuery('');
+                searchInputRef.current?.focus();
+              }}
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
+            >
+              <X size={14} />
+              <span>Clear Search</span>
+            </button>
+          </div>
+
+          {searchResults.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+              {searchResults.map((product) => (
+                <div
+                  key={product.id}
+                  onClick={() => {
+                    if (navigate) {
+                      navigate('product', product.id);
+                    } else {
+                      onOpenCustomizer(product);
+                    }
+                  }}
+                  className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg hover:border-[#2D3094]/30 transition-all duration-300 flex flex-col cursor-pointer"
+                >
+                  <div className="relative aspect-square overflow-hidden bg-slate-50">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    {product.badge && (
+                      <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#ED008C] text-white shadow-xs">
+                        {product.badge}
+                      </span>
+                    )}
+                  </div>
+                  <div className="p-3 sm:p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span className="text-[10px] uppercase font-bold text-[#2D3094] tracking-wider">
+                        {product.category}
+                      </span>
+                      <h3 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#2D3094] transition-colors line-clamp-2 mt-0.5">
+                        {product.name}
+                      </h3>
+                    </div>
+                    <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between">
+                      <span className="text-xs sm:text-sm font-extrabold text-[#2D3094]">
+                        {(() => {
+                          const pUGX = product.priceUGX || (product as any).price || 0;
+                          const pUSD = product.priceUSD || (pUGX ? pUGX / 3800 : 0);
+                          return currency === 'USD' ? `$${pUSD.toFixed(2)}` : `UGX ${pUGX.toLocaleString()}`;
+                        })()}
+                      </span>
+                      <span className="text-[11px] font-bold text-[#ED008C] group-hover:underline">
+                        View & Buy →
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16 px-4 bg-slate-50 rounded-2xl border border-dashed border-slate-200">
+              <div className="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+                <Search size={24} />
+              </div>
+              <h3 className="text-base font-bold text-slate-800">
+                No products found matching "{searchQuery}"
+              </h3>
+              <p className="text-xs text-slate-500 max-w-md mx-auto mt-1 mb-4">
+                Try searching for different keywords like "mug", "lamp", "bottle", "hoodie", or "gift set".
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  searchInputRef.current?.focus();
+                }}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#2D3094] hover:bg-[#20236e] transition-all cursor-pointer"
+              >
+                View All Products
+              </button>
+            </div>
+          )}
+        </div>
+      ) : (selectedCategory.toLowerCase() !== 'all' || showAllCatalog) ? (
         <DedicatedCategoryView
           categoryName={showAllCatalog ? 'All Products' : selectedCategory}
           subcategoryName={selectedSubcategory}
@@ -494,42 +732,6 @@ export const ShopPage: React.FC<ShopPageProps> = ({
         />
       ) : (
         <>
-          {/* Quick Direct Catalog Switcher Banner */}
-          <div className="bg-gradient-to-r from-[#2D3094]/5 via-white to-[#ED008C]/5 border-b border-slate-200/80 py-3">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#ED008C] shrink-0" />
-                <p className="text-xs sm:text-sm font-semibold text-slate-800">
-                  Prefer a dedicated grid view? Browse all categories with interactive price & subcategory filters.
-                </p>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => {
-                    setSelectedCategory('Best Sellers');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-[#2D3094] bg-white border border-[#2D3094]/30 hover:bg-[#2D3094] hover:text-white shadow-xs transition-all"
-                >
-                  <span>Bestselling Gifts</span>
-                </button>
-
-                <button
-                  onClick={() => {
-                    setShowAllCatalog(true);
-                    setSelectedCategory('All Products');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold text-white bg-[#2D3094] hover:bg-[#20236e] shadow-xs transition-all"
-                >
-                  <LayoutGrid size={13} />
-                  <span>View All 280+ Gifts Catalog</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
           {/* 2. & 3. HERO SECTION — FOLLOW THE REFERENCE STRUCTURE (LEFT 2x2 COLLECTIONS + RIGHT PROMO BANNER) */}
           <ShopHeroSection
             onSelectCollection={handleCollectionSelect}
@@ -587,6 +789,22 @@ export const ShopPage: React.FC<ShopPageProps> = ({
         onToggleWishlist={(productId) => {
           const prod = products.find(p => p.id === productId);
           toggleWishlist(productId, prod?.name || "Product");
+        }}
+      />
+
+      {/* JOY GIFT FINDER MODAL */}
+      <GiftFinderModal
+        isOpen={isGiftFinderOpen}
+        onClose={() => setIsGiftFinderOpen(false)}
+        products={products}
+        currency={currency}
+        onOpenCustomizer={onOpenCustomizer}
+        onAddToCart={handleQuickAdd}
+        navigate={navigate}
+        onApplyToShop={(cat, query) => {
+          if (cat) setSelectedCategory(cat);
+          if (query) setSearchQuery(query);
+          window.scrollTo({ top: 380, behavior: 'smooth' });
         }}
       />
 

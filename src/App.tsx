@@ -492,7 +492,7 @@ export const App: React.FC = () => {
       />
 
       {/* Page Content Viewport */}
-      <main className="flex-1 w-full pt-[72px] sm:pt-[96px]">
+      <main className="flex-1 w-full pt-[72px] sm:pt-[118px] md:pt-[124px]">
         <Suspense fallback={<PageLoadingFallback />}>
           {renderCurrentView()}
         </Suspense>

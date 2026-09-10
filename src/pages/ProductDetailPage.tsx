@@ -227,10 +227,10 @@ Please confirm turnaround time and share digital proof!`;
               type="button"
               onClick={handleWhatsAppOrder}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] shadow-xs transition-colors cursor-pointer"
-              title="Order on WhatsApp: 0787662183"
+              title="Order Via WhatsApp"
             >
               <WhatsAppIcon size={14} />
-              <span>WhatsApp 0787662183</span>
+              <span>Order Via WhatsApp</span>
             </button>
 
             <button
@@ -775,7 +775,7 @@ Please confirm turnaround time and share digital proof!`;
                       onClick={handleBuyNow}
                       className="flex-1 bg-[#2D3094] hover:bg-[#20236e] text-white py-4 px-6 rounded-2xl font-heading font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#2D3094]/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer"
                     >
-                      <span>Buy Now — Proceed to Checkout</span>
+                      <span>BUY NOW</span>
                       <ArrowRight size={16} />
                     </button>
 
@@ -798,7 +798,7 @@ Please confirm turnaround time and share digital proof!`;
                     className="w-full bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] text-white py-3.5 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-md shadow-[#25D366]/25 cursor-pointer"
                   >
                     <WhatsAppIcon size={18} />
-                    <span>Order / Consult via WhatsApp (0787662183)</span>
+                    <span>Order Via WhatsApp</span>
                   </button>
 
                   {/* Payment Icons Acceptance */}
@@ -957,7 +957,7 @@ Please confirm turnaround time and share digital proof!`;
                     className="bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] text-white text-xs font-bold px-4 py-2 rounded-xl shadow-xs flex items-center gap-1.5 transition-all shrink-0 cursor-pointer"
                   >
                     <WhatsAppIcon size={14} />
-                    <span>Chat on WhatsApp: 0787662183</span>
+                    <span>Order Via WhatsApp</span>
                   </button>
                 </div>
               </div>
@@ -1044,14 +1044,14 @@ Please confirm turnaround time and share digital proof!`;
           className="flex-1 bg-[#25D366] active:bg-[#1da851] text-white py-3 px-3 rounded-xl font-heading font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-[#25D366]/25 cursor-pointer"
         >
           <WhatsAppIcon size={16} />
-          <span>WhatsApp 0787662183</span>
+          <span>Order Via WhatsApp</span>
         </button>
         <button
           type="button"
           onClick={handleBuyNow}
           className="flex-1 bg-[#2D3094] active:bg-[#20236e] text-white py-3 px-3 rounded-xl font-heading font-bold text-xs uppercase tracking-wider shadow-md shadow-[#2D3094]/20 flex items-center justify-center gap-1.5 cursor-pointer"
         >
-          <span>Buy Now</span>
+          <span>BUY NOW</span>
           <ArrowRight size={14} />
         </button>
       </div>

@@ -82,9 +82,14 @@ export const CategoryProductsModal: React.FC<CategoryProductsModalProps> = ({
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6">
               {products.map((product) => {
                 const isWishlisted = wishlist.includes(product.id);
+                const pUGX = product.priceUGX || (product as any).price || 0;
+                const pUSD = product.priceUSD || (pUGX ? pUGX / 3800 : 0);
                 const displayPrice = currency === 'UGX'
-                  ? `UGX ${product.priceUGX.toLocaleString()}`
-                  : `$${product.priceUSD.toFixed(2)}`;
+                  ? `UGX ${pUGX.toLocaleString()}`
+                  : `$${pUSD.toFixed(2)}`;
+
+                const origUGX = product.originalPriceUGX || (product as any).originalPrice;
+                const origUSD = product.originalPriceUSD || (origUGX ? origUGX / 3800 : undefined);
 
                 return (
                   <div
@@ -132,11 +137,11 @@ export const CategoryProductsModal: React.FC<CategoryProductsModalProps> = ({
                           <span className="font-heading font-black text-xs sm:text-base text-slate-950">
                             {displayPrice}
                           </span>
-                          {product.originalPriceUGX && (
+                          {origUGX && (
                             <span className="text-[10px] sm:text-xs text-slate-400 line-through">
                               {currency === 'UGX'
-                                ? `UGX ${product.originalPriceUGX.toLocaleString()}`
-                                : `$${product.originalPriceUSD?.toFixed(2)}`}
+                                ? `UGX ${Number(origUGX).toLocaleString()}`
+                                : `$${Number(origUSD || (origUGX / 3800)).toFixed(2)}`}
                             </span>
                           )}
                         </div>

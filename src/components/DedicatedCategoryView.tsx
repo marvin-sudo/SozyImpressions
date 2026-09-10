@@ -398,11 +398,13 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
     return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
 
-  const formatPrice = (ugx: number, usd: number) => {
+  const formatPrice = (ugx?: number, usd?: number) => {
+    const safeUGX = ugx ?? 0;
+    const safeUSD = usd ?? (safeUGX ? Number((safeUGX / 3800).toFixed(0)) : 0);
     if (currency === 'UGX') {
-      return `UGX ${ugx.toLocaleString()}`;
+      return `UGX ${safeUGX.toLocaleString()}`;
     }
-    return `$${usd.toFixed(0)}`;
+    return `$${safeUSD.toFixed(0)}`;
   };
 
   const sortLabels: Record<SortOption, string> = {
@@ -672,8 +674,8 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                     {/* Dual Range Track / Sliders with olive-gold track matching screenshot */}
                     <div className="space-y-1.5">
                       <div className="flex justify-between text-[11px] font-bold text-slate-400">
-                        <span>UGX {absoluteMinPrice.toLocaleString()}</span>
-                        <span>UGX {absoluteMaxPrice.toLocaleString()}+</span>
+                        <span>UGX {(absoluteMinPrice || 0).toLocaleString()}</span>
+                        <span>UGX {(absoluteMaxPrice || 0).toLocaleString()}+</span>
                       </div>
 
                       <div className="relative pt-1">
@@ -1369,8 +1371,8 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                   className="w-full accent-[#7F8766]"
                 />
                 <div className="flex justify-between text-xs font-bold text-slate-700">
-                  <span>UGX {minPrice.toLocaleString()}</span>
-                  <span>UGX {maxPrice.toLocaleString()}</span>
+                  <span>UGX {(minPrice || 0).toLocaleString()}</span>
+                  <span>UGX {(maxPrice || 0).toLocaleString()}</span>
                 </div>
               </div>
 

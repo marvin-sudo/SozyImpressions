@@ -127,6 +127,17 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
           
           {/* LEFT SIDE — FEATURED SHOP COLLECTIONS (2x2 Grid) */}
           <div className="lg:col-span-4 xl:col-span-4 flex flex-col justify-between">
+            <div className="flex items-center justify-between mb-3 px-1">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ED008C] shrink-0" />
+                <h3 className="font-heading font-black text-xs uppercase tracking-wider text-[#2D3094]">
+                  Top Categories
+                </h3>
+              </div>
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider hidden sm:inline">
+                4 Key Collections
+              </span>
+            </div>
             <div className="grid grid-cols-2 gap-4 h-full">
               {collections.map((col) => (
                 <div
