@@ -14,9 +14,10 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { WhatsAppIcon } from '../components/WhatsAppIcon';
-import { View, Currency, CartItem, CustomizationOptions } from '../types';
+import { View, Currency, CartItem, CustomizationOptions, Product } from '../types';
 import { getProductById, getRelatedProducts } from '../utils/productUtils';
 import { PAYMENT_LOGOS } from '../data/mockData';
+import { useShopStore } from '../context/ShopStoreContext';
 
 interface ProductDetailPageProps {
   productId?: string;
@@ -24,6 +25,7 @@ interface ProductDetailPageProps {
   currency: Currency;
   onAddToCart: (item: CartItem) => void;
   showToast?: (msg: string) => void;
+  products?: Product[];
 }
 
 export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
@@ -31,10 +33,18 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   navigate,
   currency,
   onAddToCart,
-  showToast
+  showToast,
+  products: passedProducts
 }) => {
-  const product = useMemo(() => getProductById(productId), [productId]);
-  const relatedProducts = useMemo(() => getRelatedProducts(product, 4), [product]);
+  const { shopProducts } = useShopStore();
+  const liveCatalog = useMemo(() => {
+    if (shopProducts && shopProducts.length > 0) return shopProducts;
+    if (passedProducts && passedProducts.length > 0) return passedProducts;
+    return undefined;
+  }, [shopProducts, passedProducts]);
+
+  const product = useMemo(() => getProductById(productId, liveCatalog), [productId, liveCatalog]);
+  const relatedProducts = useMemo(() => getRelatedProducts(product, 4, liveCatalog), [product, liveCatalog]);
 
   // Gallery & Image State
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);

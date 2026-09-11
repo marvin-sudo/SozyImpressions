@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { View, Currency, Product } from '../types';
 import { SERVICES_DATA, PRODUCTS_DATA, PORTFOLIO_PROJECTS, FAQS_DATA } from '../data/mockData';
+import { useShopStore } from '../context/ShopStoreContext';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -25,6 +26,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   currency = 'UGX',
   onOpenCustomizer
 }) => {
+  const { shopProducts } = useShopStore();
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -47,8 +49,10 @@ export const SearchModal: React.FC<SearchModalProps> = ({
       )
     : [];
 
+  const productsCatalog = shopProducts && shopProducts.length > 0 ? shopProducts : PRODUCTS_DATA;
+
   const matchingProducts = cleanQuery
-    ? PRODUCTS_DATA.filter(p => 
+    ? productsCatalog.filter(p => 
         p.name.toLowerCase().includes(cleanQuery) || 
         p.category.toLowerCase().includes(cleanQuery) ||
         p.description.toLowerCase().includes(cleanQuery)

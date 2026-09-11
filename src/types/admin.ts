@@ -106,6 +106,9 @@ export interface AdminProduct {
   isBestseller: boolean;
   isNewArrival: boolean;
   isActive: boolean;
+  status?: 'active' | 'draft' | 'archived';
+  badge?: string;
+  turnaroundTime?: string;
   specifications?: Record<string, string>;
   colors?: string[];
   sizes?: string[];

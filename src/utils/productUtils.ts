@@ -73,7 +73,32 @@ export const getAllProducts = (): Product[] => {
   return Array.from(productsMap.values());
 };
 
-export const getProductById = (id?: string): Product => {
+export const getProductById = (id?: string, liveProducts?: Product[]): Product => {
+  if (liveProducts && liveProducts.length > 0) {
+    if (!id) return liveProducts[0];
+    const found = liveProducts.find(p => p.id === id || p.id.toLowerCase() === id.toLowerCase());
+    if (found) {
+      return {
+        ...found,
+        gallery: found.gallery && found.gallery.length > 0 ? found.gallery : [found.image],
+        colors: found.colors && found.colors.length > 0 ? found.colors : ['Default', 'Black', 'Blue', 'White'],
+        bulkTiers: found.bulkTiers && found.bulkTiers.length > 0 ? found.bulkTiers : [
+          { minQty: 1, discountPercent: 0 },
+          { minQty: 10, discountPercent: 5 },
+          { minQty: 25, discountPercent: 10 },
+          { minQty: 50, discountPercent: 15 },
+          { minQty: 100, discountPercent: 20 }
+        ],
+        specifications: found.specifications || {
+          'Production Facility': 'Sozy Impressions Workshop, Kampala, Uganda',
+          'Customisation Method': 'Precision Fiber Laser Engraving & High-Res UV Printing',
+          'Standard Turnaround': '24 - 48 Hours in Kampala',
+          'Proofing': 'Free Digital 3D Artwork Proof Provided Before Production'
+        }
+      };
+    }
+  }
+
   if (!id) return PRODUCTS_DATA[0];
 
   // Try direct lookup in PRODUCTS_DATA
@@ -105,12 +130,15 @@ export const getProductById = (id?: string): Product => {
     return mapBestsellerToProduct(foundInBestsellers);
   }
 
-  // Fallback to first available product
+  // Fallback to first available live product or mock product
+  if (liveProducts && liveProducts.length > 0) {
+    return liveProducts[0];
+  }
   return PRODUCTS_DATA[0];
 };
 
-export const getRelatedProducts = (currentProduct: Product, limit: number = 4): Product[] => {
-  const all = getAllProducts();
+export const getRelatedProducts = (currentProduct: Product, limit: number = 4, liveProducts?: Product[]): Product[] => {
+  const all = liveProducts && liveProducts.length > 0 ? liveProducts : getAllProducts();
   const sameCategory = all.filter(p => p.id !== currentProduct.id && p.category === currentProduct.category);
   if (sameCategory.length >= limit) {
     return sameCategory.slice(0, limit);

@@ -9,7 +9,8 @@ import {
   CheckCircle2, 
   XCircle, 
   ExternalLink,
-  Package
+  Package,
+  RefreshCw
 } from 'lucide-react';
 import { AdminProduct } from '../../types/admin';
 import { useShopStore } from '../../context/ShopStoreContext';
@@ -22,15 +23,32 @@ interface ProductsViewProps {
 export const ProductsView: React.FC<ProductsViewProps> = ({
   onNavigateToShopProduct
 }) => {
-  const { products, categories, deleteProduct, addProduct, updateProduct } = useShopStore();
+  const { 
+    products, 
+    categories, 
+    deleteProduct, 
+    addProduct, 
+    updateProduct,
+    isProductsLive,
+    isFirestoreConnected,
+    lastSyncTime,
+    syncWithFirestore 
+  } = useShopStore();
 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [stockFilter, setStockFilter] = useState<'all' | 'in_stock' | 'low_stock' | 'out_of_stock'>('all');
+  const [isSyncing, setIsSyncing] = useState(false);
   
   // Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState<AdminProduct | null>(null);
+
+  const handleManualSync = async () => {
+    setIsSyncing(true);
+    await syncWithFirestore();
+    setTimeout(() => setIsSyncing(false), 500);
+  };
 
   // Filtered Products
   const filteredProducts = useMemo(() => {
@@ -119,6 +137,38 @@ export const ProductsView: React.FC<ProductsViewProps> = ({
           </div>
 
           <div className="flex items-center gap-2">
+            {/* Realtime Live Firestore Status */}
+            <div 
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-[11px] font-semibold transition-all ${
+                isFirestoreConnected || isProductsLive
+                  ? 'bg-emerald-50/80 border-emerald-200 text-emerald-700'
+                  : 'bg-amber-50/80 border-amber-200 text-amber-700'
+              }`}
+              title={lastSyncTime ? `Last Firestore sync: ${lastSyncTime}` : 'Connecting to Firestore...'}
+            >
+              <span className={`w-2 h-2 rounded-full ${
+                isFirestoreConnected || isProductsLive ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'
+              }`} />
+              <span className="hidden sm:inline font-mono">
+                {isFirestoreConnected || isProductsLive ? 'Live Sync' : 'Local Cache'}
+              </span>
+              {lastSyncTime && (
+                <span className="text-[10px] text-emerald-600/80 hidden md:inline font-normal">
+                  ({lastSyncTime})
+                </span>
+              )}
+            </div>
+
+            {/* Manual Sync Trigger */}
+            <button
+              onClick={handleManualSync}
+              disabled={isSyncing}
+              title="Refresh and sync catalog with Firestore"
+              className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-all active:scale-95 disabled:opacity-50"
+            >
+              <RefreshCw size={14} className={isSyncing ? 'animate-spin text-[#2D3094]' : ''} />
+            </button>
+
             <button
               onClick={handleOpenAddModal}
               className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-[#2D3094] to-[#2E3192] hover:from-[#232573] hover:to-[#22256e] text-white text-xs font-bold shadow-md shadow-[#2D3094]/20 transition-all hover:scale-102 active:scale-98"

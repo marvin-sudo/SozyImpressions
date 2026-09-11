@@ -18,14 +18,76 @@ import {
   createAdminSession, 
   clearAdminSession 
 } from '../utils/adminAuth';
-import { db } from '../../firebase';
+import { db } from '../firebase';
 import { 
   setDoc, 
   doc, 
   updateDoc, 
   deleteDoc, 
+  collection,
+  onSnapshot,
+  writeBatch,
+  getDocs,
   Timestamp 
 } from 'firebase/firestore';
+import { 
+  handleFirestoreError, 
+  OperationType, 
+  testFirestoreConnection 
+} from '../utils/firestoreErrorHandler';
+import { Product } from '../types';
+
+// Helper to sanitize data for Firestore by removing undefined values
+export function sanitizeForFirestore<T extends Record<string, any>>(obj: T): any {
+  const clean: any = {};
+  for (const [key, val] of Object.entries(obj)) {
+    if (val !== undefined) {
+      if (val !== null && typeof val === 'object' && !Array.isArray(val) && !(val instanceof Date)) {
+        clean[key] = sanitizeForFirestore(val);
+      } else {
+        clean[key] = val;
+      }
+    }
+  }
+  return clean;
+}
+
+// Convert an AdminProduct to storefront Product
+export const mapAdminProductToShopProduct = (p: AdminProduct): Product => {
+  const priceUGX = typeof p.priceUGX === 'number' && !isNaN(p.priceUGX) ? p.priceUGX : 50000;
+  const priceUSD = typeof p.priceUSD === 'number' && !isNaN(p.priceUSD) ? p.priceUSD : Number((priceUGX / 3800).toFixed(2));
+  
+  return {
+    id: p.id,
+    name: p.name,
+    category: p.category,
+    priceUGX,
+    priceUSD,
+    originalPriceUGX: p.originalPriceUGX || p.salePriceUGX,
+    originalPriceUSD: p.originalPriceUSD || p.salePriceUSD,
+    image: p.image || 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=800',
+    gallery: p.gallery && p.gallery.length > 0 ? p.gallery : [p.image || 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=800'],
+    description: p.description || p.name,
+    specifications: p.specifications || {
+      'Category': p.subcategory || p.category,
+      'SKU': p.sku || 'SI-ITEM',
+      'Production Facility': 'Sozy Impressions Workshop, Kampala, Uganda',
+      'Customisation Method': 'Precision Fiber Laser Engraving & High-Res UV Printing',
+      'Turnaround': p.turnaroundTime || '24 - 48 Hours in Kampala'
+    },
+    isCustomizable: p.isCustomizable !== false,
+    colors: p.colors && p.colors.length > 0 ? p.colors : ['Default Classic', 'Matte Black', 'Silver Lustre', 'Royal Blue', 'Champagne Gold'],
+    sizes: p.sizes,
+    materials: p.materials && p.materials.length > 0 ? p.materials : ['Standard Anodised Alloy', 'Premium Brushed Metal', 'Clear Cast Acrylic'],
+    finishings: p.finishings && p.finishings.length > 0 ? p.finishings : ['Laser Deep Engraved', 'Precision UV Color Print', 'Foil Stamped'],
+    rating: p.rating || 4.9,
+    reviewCount: p.reviewCount || 24,
+    reviewsCount: p.reviewCount || 24,
+    inStock: p.inStock !== false && (p.stockQuantity === undefined || p.stockQuantity > 0),
+    isFeatured: Boolean(p.isFeatured),
+    badge: p.badge || (p.isBestseller ? 'Best Seller' : p.isNewArrival ? 'New Arrival' : undefined)
+  };
+};
 
 // Default Shop Categories as specified in Section 9
 export const INITIAL_SHOP_CATEGORIES: AdminCategory[] = [
@@ -330,6 +392,13 @@ export interface ShopStoreContextType {
   updateStock: (id: string, newQty: number) => Promise<boolean>;
   updateProductStock: (id: string, newQty: number, reason?: string) => Promise<boolean>;
 
+  // Real-time synchronization
+  shopProducts: Product[];
+  isProductsLive: boolean;
+  isFirestoreConnected: boolean;
+  lastSyncTime: string | null;
+  syncWithFirestore: () => Promise<void>;
+
   // Categories
   categories: AdminCategory[];
   addCategory: (category: Omit<AdminCategory, 'id'>) => Promise<AdminCategory>;
@@ -446,12 +515,121 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
 
   const [isDashboardLocked, setIsDashboardLocked] = useState<boolean>(false);
 
+  // Real-time Firestore sync status
+  const [isProductsLive, setIsProductsLive] = useState<boolean>(false);
+  const [isFirestoreConnected, setIsFirestoreConnected] = useState<boolean>(false);
+  const [lastSyncTime, setLastSyncTime] = useState<string | null>(null);
+
   const adminUser = {
     name: 'Marvin Ssozi',
     email: 'ssozimarvin5@gmail.com',
     role: 'Shop Director & Admin',
     avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
   };
+
+  // Test Firestore connectivity on mount
+  useEffect(() => {
+    testFirestoreConnection().then(connected => {
+      setIsFirestoreConnected(connected);
+    });
+  }, []);
+
+  // Real-time Firestore synchronization for Products
+  useEffect(() => {
+    const productsCol = collection(db, 'products');
+
+    const unsubscribe = onSnapshot(productsCol, async (snapshot) => {
+      try {
+        if (snapshot.empty) {
+          console.log('[Firestore] Products collection empty. Seeding catalog in Firestore...');
+          const batch = writeBatch(db);
+          INITIAL_ADMIN_PRODUCTS.forEach(prod => {
+            batch.set(doc(db, 'products', prod.id), sanitizeForFirestore(prod));
+          });
+          await batch.commit();
+          setIsProductsLive(true);
+          setIsFirestoreConnected(true);
+          setLastSyncTime(new Date().toLocaleTimeString());
+        } else {
+          const loaded: AdminProduct[] = [];
+          snapshot.forEach(docSnap => {
+            loaded.push(docSnap.data() as AdminProduct);
+          });
+          loaded.sort((a, b) => {
+            if (a.createdAt && b.createdAt) {
+              return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+            }
+            return a.name.localeCompare(b.name);
+          });
+          setProducts(loaded);
+          setIsProductsLive(true);
+          setIsFirestoreConnected(true);
+          setLastSyncTime(new Date().toLocaleTimeString());
+        }
+      } catch (err) {
+        console.error('[Firestore] Products onSnapshot error:', err);
+      }
+    }, (error) => {
+      console.warn('[Firestore] Products onSnapshot listener warning:', error);
+      setIsProductsLive(false);
+      try {
+        handleFirestoreError(error, OperationType.LIST, 'products');
+      } catch { /* logged */ }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  // Real-time Firestore synchronization for Orders
+  useEffect(() => {
+    const ordersCol = collection(db, 'orders');
+
+    const unsubscribe = onSnapshot(ordersCol, (snapshot) => {
+      if (!snapshot.empty) {
+        const loaded: AdminOrder[] = [];
+        snapshot.forEach(docSnap => {
+          loaded.push(docSnap.data() as AdminOrder);
+        });
+        loaded.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+        setOrders(loaded);
+      }
+    }, (error) => {
+      console.warn('[Firestore] Orders onSnapshot listener warning:', error);
+      try {
+        handleFirestoreError(error, OperationType.LIST, 'orders');
+      } catch { /* logged */ }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  // Derived live storefront products (excluding inactive ones)
+  const shopProducts = React.useMemo<Product[]>(() => {
+    return products
+      .filter(p => p.isActive !== false)
+      .map(mapAdminProductToShopProduct);
+  }, [products]);
+
+  const syncWithFirestore = useCallback(async () => {
+    try {
+      const snap = await getDocs(collection(db, 'products'));
+      if (!snap.empty) {
+        const loaded: AdminProduct[] = [];
+        snap.forEach(d => loaded.push(d.data() as AdminProduct));
+        loaded.sort((a, b) => {
+          if (a.createdAt && b.createdAt) {
+            return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+          }
+          return a.name.localeCompare(b.name);
+        });
+        setProducts(loaded);
+        setIsProductsLive(true);
+        setLastSyncTime(new Date().toLocaleTimeString());
+      }
+    } catch (err) {
+      console.error('[Firestore] Manual sync error:', err);
+    }
+  }, []);
 
   // Save to localStorage whenever state changes
   useEffect(() => {
@@ -795,41 +973,69 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     return true;
   }, [logAction]);
 
-  // --- Product Management (Real-time connected to live shop frontend) ---
+  // --- Product Management (Real-time connected to live shop frontend & Firestore) ---
   const addProduct = useCallback(async (newProdData: Omit<AdminProduct, 'id'>): Promise<AdminProduct> => {
     const id = `prod-${Date.now()}`;
     const product: AdminProduct = {
       ...newProdData,
       id,
       sku: newProdData.sku || `SOZ-PRD-${Math.floor(1000 + Math.random() * 9000)}`,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      isActive: newProdData.status ? newProdData.status === 'active' : (newProdData.isActive !== false)
     };
 
     setProducts(prev => [product, ...prev]);
     logAction('Product Added', 'product', id, `Added new product "${product.name}" in category "${product.category}" (UGX ${product.priceUGX.toLocaleString()})`);
     
     try {
-      await setDoc(doc(db, 'products', id), product);
-    } catch { /* ignore */ }
+      await setDoc(doc(db, 'products', id), sanitizeForFirestore(product));
+      setLastSyncTime(new Date().toLocaleTimeString());
+    } catch (err) {
+      console.error('[Firestore] Failed to persist product to Firestore:', err);
+      try {
+        handleFirestoreError(err, OperationType.CREATE, `products/${id}`);
+      } catch { /* caught and logged */ }
+    }
 
     return product;
   }, [logAction]);
 
   const updateProduct = useCallback(async (id: string, updates: Partial<AdminProduct>): Promise<boolean> => {
-    setProducts(prev => prev.map(p => p.id === id ? { ...p, ...updates, updatedAt: new Date().toISOString() } : p));
+    const cleanUpdates = {
+      ...updates,
+      updatedAt: new Date().toISOString(),
+      ...(updates.status ? { isActive: updates.status === 'active' } : {})
+    };
+
+    setProducts(prev => prev.map(p => p.id === id ? { ...p, ...cleanUpdates } : p));
     logAction('Product Updated', 'product', id, `Updated product details for ID ${id}`);
+
     try {
-      await updateDoc(doc(db, 'products', id), updates);
-    } catch { /* ignore */ }
+      await updateDoc(doc(db, 'products', id), sanitizeForFirestore(cleanUpdates));
+      setLastSyncTime(new Date().toLocaleTimeString());
+    } catch (err) {
+      console.error('[Firestore] Failed to update product in Firestore:', err);
+      try {
+        handleFirestoreError(err, OperationType.UPDATE, `products/${id}`);
+      } catch { /* caught and logged */ }
+    }
     return true;
   }, [logAction]);
 
   const deleteProduct = useCallback(async (id: string): Promise<boolean> => {
     setProducts(prev => prev.filter(p => p.id !== id));
     logAction('Product Deleted', 'product', id, `Removed product ID ${id} from catalog`);
+
     try {
       await deleteDoc(doc(db, 'products', id));
-    } catch { /* ignore */ }
+      setLastSyncTime(new Date().toLocaleTimeString());
+    } catch (err) {
+      console.error('[Firestore] Failed to delete product in Firestore:', err);
+      try {
+        handleFirestoreError(err, OperationType.DELETE, `products/${id}`);
+      } catch { /* caught and logged */ }
+    }
     return true;
   }, [logAction]);
 
@@ -842,12 +1048,24 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
       ...found,
       id: copyId,
       name: `${found.name} (Copy)`,
-      sku: `${found.sku}-CPY`,
-      createdAt: new Date().toISOString()
+      sku: `${found.sku || 'SI'}-CPY-${Math.floor(100 + Math.random() * 900)}`,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
     };
 
     setProducts(prev => [copy, ...prev]);
     logAction('Product Duplicated', 'product', copyId, `Duplicated product "${found.name}"`);
+
+    try {
+      await setDoc(doc(db, 'products', copyId), sanitizeForFirestore(copy));
+      setLastSyncTime(new Date().toLocaleTimeString());
+    } catch (err) {
+      console.error('[Firestore] Failed to write duplicated product to Firestore:', err);
+      try {
+        handleFirestoreError(err, OperationType.CREATE, `products/${copyId}`);
+      } catch { /* caught and logged */ }
+    }
+
     return copy;
   }, [products, logAction]);
 
@@ -856,11 +1074,30 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     setProducts(prev => prev.map(p => {
       if (p.id === id) {
         nowActive = !p.isActive;
-        return { ...p, isActive: nowActive };
+        return { 
+          ...p, 
+          isActive: nowActive,
+          status: nowActive ? 'active' : 'draft',
+          updatedAt: new Date().toISOString()
+        };
       }
       return p;
     }));
     logAction('Product Visibility', 'product', id, `Toggled product active state to ${nowActive}`);
+
+    try {
+      await updateDoc(doc(db, 'products', id), {
+        isActive: nowActive,
+        status: nowActive ? 'active' : 'draft',
+        updatedAt: new Date().toISOString()
+      });
+      setLastSyncTime(new Date().toLocaleTimeString());
+    } catch (err) {
+      console.error('[Firestore] Failed to toggle product visibility in Firestore:', err);
+      try {
+        handleFirestoreError(err, OperationType.UPDATE, `products/${id}`);
+      } catch { /* caught and logged */ }
+    }
     return true;
   }, [logAction]);
 
@@ -870,12 +1107,27 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
         return {
           ...p,
           stockQuantity: newQty,
-          inStock: newQty > 0
+          inStock: newQty > 0,
+          updatedAt: new Date().toISOString()
         };
       }
       return p;
     }));
     logAction('Stock Updated', 'product', id, `Updated inventory for product ID ${id} to ${newQty} units`);
+
+    try {
+      await updateDoc(doc(db, 'products', id), {
+        stockQuantity: newQty,
+        inStock: newQty > 0,
+        updatedAt: new Date().toISOString()
+      });
+      setLastSyncTime(new Date().toLocaleTimeString());
+    } catch (err) {
+      console.error('[Firestore] Failed to update stock in Firestore:', err);
+      try {
+        handleFirestoreError(err, OperationType.UPDATE, `products/${id}`);
+      } catch { /* caught and logged */ }
+    }
     return true;
   }, [logAction]);
 
@@ -1030,6 +1282,11 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
         toggleProductActive,
         updateStock,
         updateProductStock,
+        shopProducts,
+        isProductsLive,
+        isFirestoreConnected,
+        lastSyncTime,
+        syncWithFirestore,
         categories,
         addCategory,
         updateCategory,

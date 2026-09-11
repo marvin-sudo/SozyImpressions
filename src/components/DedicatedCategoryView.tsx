@@ -17,6 +17,7 @@ import { Currency, Product, CartItem } from '../types';
 import { BESTSELLERS_DATA } from '../data/bestsellersData';
 import { PRODUCTS_DATA } from '../data/mockData';
 import { SHOP_CATEGORIES } from '../data/shopCategories';
+import { useShopStore } from '../context/ShopStoreContext';
 
 interface DedicatedCategoryViewProps {
   categoryName: string;
@@ -61,6 +62,9 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
       return next;
     });
   };
+
+  const { shopProducts } = useShopStore();
+  const catalogPool = useMemo(() => (shopProducts && shopProducts.length > 0 ? shopProducts : PRODUCTS_DATA), [shopProducts]);
 
   // Filter States
   const [selectedSubcat, setSelectedSubcat] = useState<string | null>(subcategoryName || null);
@@ -126,8 +130,8 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
     // Otherwise, find products in BESTSELLERS_DATA and PRODUCTS_DATA matching category
     const catLower = categoryName.toLowerCase();
     
-    // 1. From PRODUCTS_DATA
-    const fromProducts = PRODUCTS_DATA.filter(p => {
+    // 1. From catalogPool (realtime products)
+    const fromProducts = catalogPool.filter(p => {
       const pCat = p.category.toLowerCase();
       const pName = p.name.toLowerCase();
       if (catLower === 'all' || catLower === 'all products') return true;
@@ -220,7 +224,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
       seen.add(item.id);
       return true;
     });
-  }, [categoryName]);
+  }, [categoryName, catalogPool]);
 
   // Subcategories available for this category
   const subcategoriesList = useMemo(() => {

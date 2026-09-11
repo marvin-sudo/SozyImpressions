@@ -145,7 +145,16 @@ export const App: React.FC = () => {
     }
   });
 
+  const { createOrder, shopProducts } = useShopStore();
+
   const [products, setProducts] = useState<Product[]>(PRODUCTS_DATA);
+
+  // Sync products state whenever Firestore/ShopStoreContext updates in realtime
+  useEffect(() => {
+    if (shopProducts && shopProducts.length > 0) {
+      setProducts(shopProducts);
+    }
+  }, [shopProducts]);
   const [quotes, setQuotes] = useState<QuoteRequest[]>([]);
   const [orders, setOrders] = useState<Order[]>([]);
 
@@ -321,8 +330,6 @@ export const App: React.FC = () => {
     showToast('Item removed from cart');
   };
 
-  const { createOrder } = useShopStore();
-
   const handleOrderCompleted = (order: Order) => {
     setOrders(prev => [order, ...prev]);
     setCart([]);
@@ -411,6 +418,7 @@ export const App: React.FC = () => {
             currency={currency}
             onAddToCart={handleAddToCart}
             showToast={showToast}
+            products={products}
           />
         );
 

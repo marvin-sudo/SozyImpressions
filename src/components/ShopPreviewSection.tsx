@@ -7,6 +7,7 @@ import {
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { View, Currency, Product, CartItem } from '../types';
 import { PRODUCTS_DATA } from '../data/mockData';
+import { useShopStore } from '../context/ShopStoreContext';
 
 interface ShopPreviewSectionProps {
   navigate: (view: View, param?: string) => void;
@@ -18,6 +19,7 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
   navigate,
   currency
 }) => {
+  const { shopProducts } = useShopStore();
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const categories = [
@@ -37,9 +39,11 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
     'Umbrellas'
   ];
 
+  const catalog = shopProducts && shopProducts.length > 0 ? shopProducts : PRODUCTS_DATA;
+
   const filteredProducts = selectedCategory === 'All'
-    ? PRODUCTS_DATA
-    : PRODUCTS_DATA.filter(p => p.category === selectedCategory);
+    ? catalog
+    : catalog.filter(p => p.category === selectedCategory);
 
   const handleDirectWhatsApp = (product: Product) => {
     const priceText = currency === 'UGX' ? `UGX ${product.priceUGX.toLocaleString()}` : `${product.priceUSD}`;

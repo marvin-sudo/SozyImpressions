@@ -19,6 +19,7 @@ import { CustomerReviewsSection } from '../components/CustomerReviewsSection';
 import { CategoryProductsModal } from '../components/CategoryProductsModal';
 import { DedicatedCategoryView } from '../components/DedicatedCategoryView';
 import { GiftFinderModal } from '../components/GiftFinderModal';
+import { useShopStore } from '../context/ShopStoreContext';
 
 interface ShopPageProps {
   navigate?: (view: View, param?: string) => void;
@@ -32,11 +33,18 @@ interface ShopPageProps {
 export const ShopPage: React.FC<ShopPageProps> = ({
   navigate,
   currency,
-  products = PRODUCTS_DATA,
+  products: initialProducts = PRODUCTS_DATA,
   onOpenCustomizer,
   onAddToCart,
   selectedCategory: initialCategory
 }) => {
+  const { shopProducts } = useShopStore();
+  const products = useMemo(() => {
+    if (shopProducts && shopProducts.length > 0) return shopProducts;
+    if (initialProducts && initialProducts.length > 0) return initialProducts;
+    return PRODUCTS_DATA;
+  }, [shopProducts, initialProducts]);
+
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory || 'All');
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
   const [selectedOccasion, setSelectedOccasion] = useState<string | null>(null);
