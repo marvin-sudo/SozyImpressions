@@ -15,6 +15,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,400;1,600;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/pogonia" rel="stylesheet" />
+    <script>
+      (function() {
+        var nativeStringify = JSON.stringify;
+        JSON.stringify = function(value, replacer, space) {
+          var seen = new WeakSet();
+          var isArrayReplacer = Array.isArray(replacer);
+          var safeReplacer = function(key, val) {
+            if (typeof val === 'object' && val !== null) {
+              if (seen.has(val)) {
+                return '[Circular]';
+              }
+              seen.add(val);
+            }
+            if (typeof replacer === 'function') {
+              return replacer.call(this, key, val);
+            }
+            if (isArrayReplacer && key !== '' && replacer.indexOf(key) === -1) {
+              return undefined;
+            }
+            return val;
+          };
+          try {
+            return nativeStringify(value, safeReplacer, space);
+          } catch (e) {
+            return '"[Unserializable]"';
+          }
+        };
+      })();
+    </script>
   </head>
   <body class="bg-[#F7F8FA] text-[#121212] antialiased selection:bg-[#2D3094] selection:text-white">
     <div id="root"></div>

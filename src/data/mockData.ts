@@ -628,7 +628,11 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Bamboo Gifts',
     priceUGX: 48000,
     priceUSD: 12.8,
-    image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800',
+    image: 'https://www.image2url.com/r2/default/images/1789219824505-1b0643f4-4059-4ba8-8bc4-046cbf236d76.jpg',
+    gallery: [
+      'https://www.image2url.com/r2/default/images/1789219824505-1b0643f4-4059-4ba8-8bc4-046cbf236d76.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
     description: 'Eco-friendly natural organic bamboo casing over 304 food-grade double-wall stainless steel with removable tea strainer basket. Precision laser-engraved with your recipient name or corporate brand.',
     specifications: {
       'Casing': '100% Genuine Renewable Bamboo',
@@ -649,7 +653,11 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Bamboo Gifts',
     priceUGX: 42000,
     priceUSD: 11,
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800',
+    image: 'https://www.image2url.com/r2/default/images/1789220169290-f0859265-dd50-42c6-b74d-ef97a406e308.jpg',
+    gallery: [
+      'https://www.image2url.com/r2/default/images/1789220169290-f0859265-dd50-42c6-b74d-ef97a406e308.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
     description: 'Sustainable real bamboo wood notebook cover with 140 pages of 100% recycled unbleached paper, paired with a matching bamboo twist-action ballpoint pen. Custom laser-engraved cover artwork.',
     specifications: {
       'Cover': 'Natural Bamboo Timber',
@@ -662,6 +670,87 @@ export const PRODUCTS_DATA: Product[] = [
     rating: 4.8,
     reviewCount: 28,
     inStock: true
+  },
+  {
+    id: 'bs-577',
+    name: 'Personalised Bamboo Notebook N Pen Set',
+    category: 'Bamboo Gifts',
+    priceUGX: 33000,
+    originalPriceUGX: 40000,
+    priceUSD: 8.9,
+    originalPriceUSD: 10.8,
+    image: 'https://www.image2url.com/r2/default/images/1789219589942-7c08cdb1-c6fa-4a2f-80da-38de2a46c5c4.jpg',
+    gallery: [
+      'https://www.image2url.com/r2/default/images/1789219589942-7c08cdb1-c6fa-4a2f-80da-38de2a46c5c4.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Personalised natural bamboo wood notebook with unlined recycled pages and companion bamboo pen. Custom precision laser-engraved with your name, quote, or corporate logo.',
+    specifications: {
+      'Cover': '100% Renewable Natural Bamboo Timber',
+      'Pen': 'Matching Bamboo Twist Ballpoint Pen',
+      'Pages': 'Recycled Eco-Friendly Kraft Paper',
+      'Customization': 'Laser Engraving / Full UV Printing'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-30',
+    name: 'Personalised Bamboo Wireless Charger Clock',
+    category: 'Bamboo Gifts',
+    priceUGX: 120000,
+    originalPriceUGX: 132000,
+    priceUSD: 32.4,
+    originalPriceUSD: 35.7,
+    image: 'https://www.image2url.com/r2/default/images/1789218677037-c3bd8ed5-c250-469d-82c2-7ea0cb04de9a.jpg',
+    gallery: [
+      'https://www.image2url.com/r2/default/images/1789218677037-c3bd8ed5-c250-469d-82c2-7ea0cb04de9a.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Eco-friendly natural bamboo casing with modern LED digital clock display and built-in 15W Qi wireless charging pad for smartphones. Custom laser-engraved with your monogram, message, or company branding.',
+    specifications: {
+      'Casing': '100% Genuine Renewable Natural Bamboo',
+      'Display': 'LED Digital Time, Date & Temperature Display',
+      'Charging': '15W Fast Qi Wireless Charging Pad',
+      'Customization': 'Deep Precision Laser Engraving'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-50',
+    name: 'Personalised Bamboo Special Premium Gift Box',
+    category: 'Bamboo Gifts',
+    priceUGX: 240000,
+    originalPriceUGX: 270000,
+    priceUSD: 64.9,
+    originalPriceUSD: 73,
+    image: 'https://www.image2url.com/r2/default/images/1789219318863-18f08944-c5fb-407c-968d-7cc62ad7075f.jpg',
+    gallery: [
+      'https://www.image2url.com/r2/default/images/1789219318863-18f08944-c5fb-407c-968d-7cc62ad7075f.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Deluxe eco-friendly corporate and personal keepsake hamper. Features a precision laser-engraved natural bamboo thermo flask, hardcover bamboo executive journal with pen, custom keyholder, and card sleeve in a luxury satin-lined presentation gift box.',
+    specifications: {
+      'Hamper Contents': 'Bamboo LED Flask + Bamboo Notebook & Pen + Keychain',
+      'Box': 'Luxury Rigid Keepsake Gift Box with Foam Lining',
+      'Customization': 'Laser Engraved Name / Logo on all elements',
+      'Turnaround': 'Same-day / 24-hr express Kampala delivery available'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
   },
   // Glasses & Drinkware
   {

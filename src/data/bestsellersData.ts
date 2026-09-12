@@ -678,9 +678,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "9% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/desk_clock_1788635262427.jpg",
+    "image": "https://www.image2url.com/r2/default/images/1789218677037-c3bd8ed5-c250-469d-82c2-7ea0cb04de9a.jpg",
     "gallery": [
-      "/src/assets/images/desk_clock_1788635262427.jpg",
+      "https://www.image2url.com/r2/default/images/1789218677037-c3bd8ed5-c250-469d-82c2-7ea0cb04de9a.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -1098,9 +1098,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "11% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/combos_gift_set_1788634366784.jpg",
+    "image": "https://www.image2url.com/r2/default/images/1789219318863-18f08944-c5fb-407c-968d-7cc62ad7075f.jpg",
     "gallery": [
-      "/src/assets/images/combos_gift_set_1788634366784.jpg",
+      "https://www.image2url.com/r2/default/images/1789219318863-18f08944-c5fb-407c-968d-7cc62ad7075f.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -12165,9 +12165,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "18% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/stationery_caddy_1788634352075.jpg",
+    "image": "https://www.image2url.com/r2/default/images/1789219589942-7c08cdb1-c6fa-4a2f-80da-38de2a46c5c4.jpg",
     "gallery": [
-      "/src/assets/images/stationery_caddy_1788634352075.jpg",
+      "https://www.image2url.com/r2/default/images/1789219589942-7c08cdb1-c6fa-4a2f-80da-38de2a46c5c4.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true

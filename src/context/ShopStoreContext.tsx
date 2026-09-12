@@ -566,11 +566,11 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
           setIsFirestoreConnected(true);
           setLastSyncTime(new Date().toLocaleTimeString());
         }
-      } catch (err) {
-        console.error('[Firestore] Products onSnapshot error:', err);
+      } catch (err: any) {
+        console.error('[Firestore] Products onSnapshot error:', err?.message || String(err));
       }
     }, (error) => {
-      console.warn('[Firestore] Products onSnapshot listener warning:', error);
+      console.warn('[Firestore] Products onSnapshot listener warning:', error?.message || String(error));
       setIsProductsLive(false);
       try {
         handleFirestoreError(error, OperationType.LIST, 'products');
@@ -594,7 +594,7 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
         setOrders(loaded);
       }
     }, (error) => {
-      console.warn('[Firestore] Orders onSnapshot listener warning:', error);
+      console.warn('[Firestore] Orders onSnapshot listener warning:', error?.message || String(error));
       try {
         handleFirestoreError(error, OperationType.LIST, 'orders');
       } catch { /* logged */ }
@@ -626,8 +626,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
         setIsProductsLive(true);
         setLastSyncTime(new Date().toLocaleTimeString());
       }
-    } catch (err) {
-      console.error('[Firestore] Manual sync error:', err);
+    } catch (err: any) {
+      console.error('[Firestore] Manual sync error:', err?.message || String(err));
     }
   }, []);
 
@@ -809,8 +809,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
         ...newOrder,
         firestoreCreatedAt: Timestamp.now()
       });
-    } catch (err) {
-      console.warn('Local order saved. Firestore write queued/fallback active.', err);
+    } catch (err: any) {
+      console.warn('Local order saved. Firestore write queued/fallback active.', err?.message || String(err));
     }
 
     return newOrder;
@@ -881,8 +881,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
           orderStatus: status,
           updatedAt: Timestamp.now()
         });
-      } catch (e) {
-        console.warn('Firestore update status fallback active.', e);
+      } catch (e: any) {
+        console.warn('Firestore update status fallback active.', e?.message || String(e));
       }
 
       return true;
@@ -936,8 +936,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
           transactionId: transactionId || null,
           updatedAt: Timestamp.now()
         });
-      } catch (e) {
-        console.warn('Firestore payment status update queued.', e);
+      } catch (e: any) {
+        console.warn('Firestore payment status update queued.', e?.message || String(e));
       }
 
       return true;
@@ -991,8 +991,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     try {
       await setDoc(doc(db, 'products', id), sanitizeForFirestore(product));
       setLastSyncTime(new Date().toLocaleTimeString());
-    } catch (err) {
-      console.error('[Firestore] Failed to persist product to Firestore:', err);
+    } catch (err: any) {
+      console.error('[Firestore] Failed to persist product to Firestore:', err?.message || String(err));
       try {
         handleFirestoreError(err, OperationType.CREATE, `products/${id}`);
       } catch { /* caught and logged */ }
@@ -1014,8 +1014,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     try {
       await updateDoc(doc(db, 'products', id), sanitizeForFirestore(cleanUpdates));
       setLastSyncTime(new Date().toLocaleTimeString());
-    } catch (err) {
-      console.error('[Firestore] Failed to update product in Firestore:', err);
+    } catch (err: any) {
+      console.error('[Firestore] Failed to update product in Firestore:', err?.message || String(err));
       try {
         handleFirestoreError(err, OperationType.UPDATE, `products/${id}`);
       } catch { /* caught and logged */ }
@@ -1030,8 +1030,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     try {
       await deleteDoc(doc(db, 'products', id));
       setLastSyncTime(new Date().toLocaleTimeString());
-    } catch (err) {
-      console.error('[Firestore] Failed to delete product in Firestore:', err);
+    } catch (err: any) {
+      console.error('[Firestore] Failed to delete product in Firestore:', err?.message || String(err));
       try {
         handleFirestoreError(err, OperationType.DELETE, `products/${id}`);
       } catch { /* caught and logged */ }
@@ -1059,8 +1059,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     try {
       await setDoc(doc(db, 'products', copyId), sanitizeForFirestore(copy));
       setLastSyncTime(new Date().toLocaleTimeString());
-    } catch (err) {
-      console.error('[Firestore] Failed to write duplicated product to Firestore:', err);
+    } catch (err: any) {
+      console.error('[Firestore] Failed to write duplicated product to Firestore:', err?.message || String(err));
       try {
         handleFirestoreError(err, OperationType.CREATE, `products/${copyId}`);
       } catch { /* caught and logged */ }
@@ -1092,8 +1092,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
         updatedAt: new Date().toISOString()
       });
       setLastSyncTime(new Date().toLocaleTimeString());
-    } catch (err) {
-      console.error('[Firestore] Failed to toggle product visibility in Firestore:', err);
+    } catch (err: any) {
+      console.error('[Firestore] Failed to toggle product visibility in Firestore:', err?.message || String(err));
       try {
         handleFirestoreError(err, OperationType.UPDATE, `products/${id}`);
       } catch { /* caught and logged */ }
@@ -1122,8 +1122,8 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
         updatedAt: new Date().toISOString()
       });
       setLastSyncTime(new Date().toLocaleTimeString());
-    } catch (err) {
-      console.error('[Firestore] Failed to update stock in Firestore:', err);
+    } catch (err: any) {
+      console.error('[Firestore] Failed to update stock in Firestore:', err?.message || String(err));
       try {
         handleFirestoreError(err, OperationType.UPDATE, `products/${id}`);
       } catch { /* caught and logged */ }
