@@ -1403,6 +1403,33 @@ export const PRODUCTS_DATA: Product[] = [
     badge: 'PERSONALISE IT!'
   },
   {
+    id: 'bs-5',
+    name: 'Love Forever Custom LED Lamp',
+    category: 'Lamps',
+    priceUGX: 51000,
+    originalPriceUGX: 60000,
+    priceUSD: 13.8,
+    originalPriceUSD: 16.2,
+    image: 'https://i.postimg.cc/cLPtYWNF/Infinity-Heart-Photo-Night-Light-Custom-Name-Night-Light-Heart-shaped-Calendar-Lamp-Acrylic-Lamp.jpg',
+    gallery: [
+      'https://i.postimg.cc/cLPtYWNF/Infinity-Heart-Photo-Night-Light-Custom-Name-Night-Light-Heart-shaped-Calendar-Lamp-Acrylic-Lamp.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Bespoke illuminated infinity heart & calendar date acrylic night lamp. Custom engraved with couple names, special date / anniversary calendar, and warm ambient LED glow mounted on a natural timber base.',
+    specifications: {
+      'Material': 'Laser-Engraved Optical Cast Acrylic + Solid Timber Base',
+      'Light Source': 'Warm Ambient LED Glow (USB Powered with Switch)',
+      'Design': 'Infinity Heart, Custom Names & Calendar Date Engraving',
+      'Production': 'Handcrafted in Kampala, Uganda by Sozy Impressions'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
     id: 'prod-tailor-desk-clock',
     name: 'Personalised Geometric Heart Photo Collage Desk Easel Clock',
     category: 'Clocks',

@@ -153,9 +153,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "15% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/moon_lamp_1788635244442.jpg",
+    "image": "https://i.postimg.cc/cLPtYWNF/Infinity-Heart-Photo-Night-Light-Custom-Name-Night-Light-Heart-shaped-Calendar-Lamp-Acrylic-Lamp.jpg",
     "gallery": [
-      "/src/assets/images/moon_lamp_1788635244442.jpg",
+      "https://i.postimg.cc/cLPtYWNF/Infinity-Heart-Photo-Night-Light-Custom-Name-Night-Light-Heart-shaped-Calendar-Lamp-Acrylic-Lamp.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
