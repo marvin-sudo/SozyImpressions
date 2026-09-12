@@ -1028,6 +1028,33 @@ export const PRODUCTS_DATA: Product[] = [
     badge: 'Romantic Pick'
   },
   {
+    id: 'bs-2',
+    name: 'Birthday Special Snuggle Cushion',
+    category: 'Cushions',
+    priceUGX: 27000,
+    originalPriceUGX: 30000,
+    priceUSD: 7.3,
+    originalPriceUSD: 8.1,
+    image: 'https://www.image2url.com/r2/default/images/1789221313711-1511f9a8-9cad-4188-ae09-8d4ce4dbad12.jpg',
+    gallery: [
+      'https://www.image2url.com/r2/default/images/1789221313711-1511f9a8-9cad-4188-ae09-8d4ce4dbad12.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Custom birthday special personalised snuggle cushion with vibrant high-definition photo print, celebration wishes, and plush hypoallergenic insert.',
+    specifications: {
+      'Dimensions': '40 x 40 cm (16 x 16 inches)',
+      'Material': 'Premium Soft Micro-Satin Fabric',
+      'Print': 'High-Definition Thermal Dye Sublimation',
+      'Insert': 'Fluffy Hypoallergenic Polyfill Insert Included'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
     id: 'prod-pers-tumbler-mug',
     name: 'Personalised 40oz Insulated Travel Tumbler Mug with Handle',
     category: 'Mugs',
@@ -1114,6 +1141,33 @@ export const PRODUCTS_DATA: Product[] = [
     reviewCount: 29,
     inStock: true,
     badge: 'Fresh Blooms'
+  },
+  {
+    id: 'bs-4',
+    name: 'Blooming Love Personalised Gift Set',
+    category: 'Flowers',
+    priceUGX: 108000,
+    originalPriceUGX: 123000,
+    priceUSD: 29.2,
+    originalPriceUSD: 33.2,
+    image: 'https://www.image2url.com/r2/default/images/1789222186205-8e1b5bc7-4e54-43cc-bc09-d0f5466b1b49.jpg',
+    gallery: [
+      'https://www.image2url.com/r2/default/images/1789222186205-8e1b5bc7-4e54-43cc-bc09-d0f5466b1b49.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Bespoke romantic gift set featuring a luxury floral arrangement paired with personalised keepsakes, customized ribbon, and celebration presentation packaging.',
+    specifications: {
+      'Arrangement': 'Handcrafted Blooms & Keepsake Accessories',
+      'Personalisation': 'Custom Printed Ribbon with Recipient Names / Anniversary Message',
+      'Presentation': 'Delivered in Premium Sozy Impressions Gift Packaging',
+      'Occasion': 'Anniversary, Romantic Celebrations, Valentine & Special Moments'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
   },
   {
     id: 'prod-pers-3in1-combo',
@@ -1293,6 +1347,60 @@ export const PRODUCTS_DATA: Product[] = [
     reviewCount: 68,
     inStock: true,
     badge: 'Night Glow'
+  },
+  {
+    id: 'bs-1',
+    name: 'Name in Lights Night Lamp',
+    category: 'Lamps',
+    priceUGX: 51000,
+    originalPriceUGX: 60000,
+    priceUSD: 13.8,
+    originalPriceUSD: 16.2,
+    image: 'https://www.image2url.com/r2/default/images/1789220651902-adb717da-ce98-463a-b6c8-3eccb256e9b5.jpg',
+    gallery: [
+      'https://www.image2url.com/r2/default/images/1789220651902-adb717da-ce98-463a-b6c8-3eccb256e9b5.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Custom personalised illuminated Name in Lights night lamp. Features custom precision acrylic laser cut lettering with warm ambient glow mounted on a natural timber LED base.',
+    specifications: {
+      'Material': 'Laser-Engraved Optical Cast Acrylic + Solid Timber Base',
+      'Light Source': 'Warm Ambient LED Glow (USB Powered with On/Off Switch)',
+      'Customization': 'Personalised Name / Monogram / Message Engraved',
+      'Production': 'Handcrafted in Kampala, Uganda by Sozy Impressions'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'Bestseller'
+  },
+  {
+    id: 'bs-3',
+    name: 'Custom Name Music Lover LED Speaker',
+    category: 'Lamps',
+    priceUGX: 48000,
+    originalPriceUGX: 60000,
+    priceUSD: 13,
+    originalPriceUSD: 16.2,
+    image: 'https://www.image2url.com/r2/default/images/1789221645805-2bf94483-3f4e-4759-a55c-d4a5ed1f7cd3.jpg',
+    gallery: [
+      'https://www.image2url.com/r2/default/images/1789221645805-2bf94483-3f4e-4759-a55c-d4a5ed1f7cd3.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Custom personalised acrylic illuminated LED lamp and Bluetooth speaker for music lovers. Features your custom name, favourite playlist track/scannable code styling, and warm ambient LED glow.',
+    specifications: {
+      'Feature': 'Illuminated Acrylic Lamp with Bluetooth Audio Speaker',
+      'Material': 'Laser-Engraved Optical Cast Acrylic + Solid Timber LED Base',
+      'Light Source': 'Warm Ambient LED Glow (USB Powered with Switch)',
+      'Customization': 'Personalised Name, Song Title & Track Art'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
   },
   {
     id: 'prod-tailor-desk-clock',

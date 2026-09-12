@@ -69,9 +69,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "15% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/moon_lamp_1788635244442.jpg",
+    "image": "https://www.image2url.com/r2/default/images/1789220651902-adb717da-ce98-463a-b6c8-3eccb256e9b5.jpg",
     "gallery": [
-      "/src/assets/images/moon_lamp_1788635244442.jpg",
+      "https://www.image2url.com/r2/default/images/1789220651902-adb717da-ce98-463a-b6c8-3eccb256e9b5.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -90,9 +90,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "10% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/personalised_cushion_1788634222492.jpg",
+    "image": "https://www.image2url.com/r2/default/images/1789221313711-1511f9a8-9cad-4188-ae09-8d4ce4dbad12.jpg",
     "gallery": [
-      "/src/assets/images/personalised_cushion_1788634222492.jpg",
+      "https://www.image2url.com/r2/default/images/1789221313711-1511f9a8-9cad-4188-ae09-8d4ce4dbad12.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -111,9 +111,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/moon_lamp_1788635244442.jpg",
+    "image": "https://www.image2url.com/r2/default/images/1789221645805-2bf94483-3f4e-4759-a55c-d4a5ed1f7cd3.jpg",
     "gallery": [
-      "/src/assets/images/moon_lamp_1788635244442.jpg",
+      "https://www.image2url.com/r2/default/images/1789221645805-2bf94483-3f4e-4759-a55c-d4a5ed1f7cd3.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -132,9 +132,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "12% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/roses_bouquet_1788634336414.jpg",
+    "image": "https://www.image2url.com/r2/default/images/1789222186205-8e1b5bc7-4e54-43cc-bc09-d0f5466b1b49.jpg",
     "gallery": [
-      "/src/assets/images/roses_bouquet_1788634336414.jpg",
+      "https://www.image2url.com/r2/default/images/1789222186205-8e1b5bc7-4e54-43cc-bc09-d0f5466b1b49.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
