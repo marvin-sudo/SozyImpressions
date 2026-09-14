@@ -367,6 +367,34 @@ export const PRODUCTS_DATA: Product[] = [
     isFeatured: true,
     badge: 'Popular Corporate Gift'
   },
+  {
+    id: 'bs-11',
+    name: 'Personalised Temperature Hydration Bottle- Blue',
+    category: 'Flasks',
+    priceUGX: 36000,
+    originalPriceUGX: 42000,
+    priceUSD: 9.7,
+    originalPriceUSD: 11.4,
+    image: 'https://i.postimg.cc/yNFfN7Md/Executive-Water-Bottle-Flask-with-2-Lids-(LED-Display-Stainless-Stee.jpg',
+    gallery: [
+      'https://i.postimg.cc/yNFfN7Md/Executive-Water-Bottle-Flask-with-2-Lids-(LED-Display-Stainless-Stee.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Executive double-wall vacuum insulated hydration bottle with 2 interchangeable lids (smart touch LED temperature display lid and stainless steel sports sip lid). Custom laser-engraved with your name or corporate logo in a striking ocean blue finish.',
+    specifications: {
+      'Lids': 'Dual Lid Set: Touch LED Digital Temperature Display Lid + Stainless Steel Cap',
+      'Capacity': '500 ml',
+      'Material': 'Food-Grade 304 Stainless Steel (BPA-Free)',
+      'Insulation': 'Double-Wall Vacuum Insulation (12 hrs hot / 24 hrs cold)',
+      'Customization': 'Precision Laser Engraving with Silver Contrast Finish'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
   // Mugs
   {
     id: 'prod-ceramic-mug',
@@ -984,6 +1012,33 @@ export const PRODUCTS_DATA: Product[] = [
     badge: 'Viral Favourite'
   },
   {
+    id: 'bs-8',
+    name: 'Personalised Mug For Her',
+    category: 'Mugs',
+    priceUGX: 22000,
+    originalPriceUGX: 39000,
+    priceUSD: 5.9,
+    originalPriceUSD: 10.5,
+    image: 'https://i.postimg.cc/qBQLKNZ4/what-is-your-name-tell-me-in-comments.jpg',
+    gallery: [
+      'https://i.postimg.cc/qBQLKNZ4/what-is-your-name-tell-me-in-comments.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Delightful personalised ceramic coffee mug designed specially for her. Features custom typography, her name, heartfelt quotes, and vibrant high-gloss finish.',
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Glossy Ceramic',
+      'Print': 'Permanent Scratch-Proof Dye Sublimation',
+      'Microwave & Dishwasher Safe': 'Yes'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 692,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
     id: 'prod-wooden-award-plaque',
     name: 'Handcrafted Mahogany Plaque with Laser-Cut Metal Inlay',
     category: 'Trophies & Medals',
@@ -1078,6 +1133,34 @@ export const PRODUCTS_DATA: Product[] = [
     badge: 'Trending Gift'
   },
   {
+    id: 'bs-6',
+    name: 'Personalised Stanley Style Black Tumbler',
+    category: 'Bottles & Flasks',
+    priceUGX: 84000,
+    originalPriceUGX: 108000,
+    priceUSD: 22.7,
+    originalPriceUSD: 29.2,
+    image: 'https://i.postimg.cc/1372rWWj/Plot-twist-drinking-enough-water-is-actually-easy-when-your-tumbler-looks-this-good-Show-us-your-d.jpg',
+    gallery: [
+      'https://i.postimg.cc/1372rWWj/Plot-twist-drinking-enough-water-is-actually-easy-when-your-tumbler-looks-this-good-Show-us-your-d.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Personalised Stanley-style matte black insulated tumbler with comfort-grip handle, reusable straw, and spill-resistant lid. Custom laser-engraved with your recipient name, monogram, or corporate logo.',
+    specifications: {
+      'Style': 'Stanley-Inspired Insulated Travel Tumbler with Handle',
+      'Capacity': '40 oz (approx. 1.18 Litres)',
+      'Material': 'Double-Wall Food Grade 304 Stainless Steel',
+      'Finish': 'Sleek Matte Black with Precision Laser Engraving',
+      'Insulation': 'Keeps Cold for 24 Hours, Warm for 12 Hours'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
     id: 'prod-pers-calendar-frame',
     name: 'Custom Wooden Block Calendar Photo Collage Standee',
     category: 'Photo Frames',
@@ -1097,6 +1180,60 @@ export const PRODUCTS_DATA: Product[] = [
     reviewCount: 52,
     inStock: true,
     badge: 'Anniversary Classic'
+  },
+  {
+    id: 'bs-12',
+    name: 'September Birthday Personalised Wall Frame',
+    category: 'Photo Frames',
+    priceUGX: 60000,
+    originalPriceUGX: 75000,
+    priceUSD: 16.2,
+    originalPriceUSD: 20.3,
+    image: 'https://i.postimg.cc/RVBwMcMC/Personalised-Birthday-Photo-Keepsake-Gift-Glass-Plaque-With-Sentiment-13-16-18-21-30-40-50-60.jpg',
+    gallery: [
+      'https://i.postimg.cc/RVBwMcMC/Personalised-Birthday-Photo-Keepsake-Gift-Glass-Plaque-With-Sentiment-13-16-18-21-30-40-50-60.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Personalised birthday photo keepsake plaque and wall frame with emotional celebration sentiment, birthday month highlight, and high-definition photographic print.',
+    specifications: {
+      'Frame Type': 'Tabletop Stand & Wall Mount Keepsake Plaque Frame',
+      'Material': 'Beveled Glass & Acrylic Panel with Solid Mounting Backing',
+      'Print': 'Archival High-Definition Pigment Photo Print',
+      'Customization': 'Milestone Age, Month Sentiment, Photo & Personal Message'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-18',
+    name: 'Personalise Love Story Photo Frame',
+    category: 'Photo Frames',
+    priceUGX: 66000,
+    originalPriceUGX: 82000,
+    priceUSD: 17.8,
+    originalPriceUSD: 22.2,
+    image: 'https://i.postimg.cc/65q46zk9/download-(43).jpg',
+    gallery: [
+      'https://i.postimg.cc/65q46zk9/download-(43).jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Personalised anniversary & relationship milestone photo frame chronicling your special love story moments, date timeline, couple names, and high-clarity photographic print.',
+    specifications: {
+      'Frame Type': 'Tabletop Stand & Wall Mount Multi-Photo Frame',
+      'Material': 'Engineered Timber Moulding with Crystal Clear Glass Front',
+      'Print': 'Archival Laminated Pigment Photo Print',
+      'Customization': 'Couple Names, Relationship Milestones / Timeline & Special Dates'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
   },
   {
     id: 'prod-pers-neon-light',
@@ -1168,6 +1305,33 @@ export const PRODUCTS_DATA: Product[] = [
     reviewCount: 45,
     inStock: true,
     badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-10',
+    name: 'Elegant Orchid Charm Birthday Vase',
+    category: 'Flowers',
+    priceUGX: 102000,
+    originalPriceUGX: 114000,
+    priceUSD: 27.6,
+    originalPriceUSD: 30.8,
+    image: 'https://i.postimg.cc/TPYmf0fv/Mixed-bloom-Orchid-bud-vase-arrangement.jpg',
+    gallery: [
+      'https://i.postimg.cc/TPYmf0fv/Mixed-bloom-Orchid-bud-vase-arrangement.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Refined mixed bloom orchid bud vase tabletop floral arrangement with custom engraved birthday charm tag, fresh botanical stems, and sleek presentation.',
+    specifications: {
+      'Flowers': 'Exotic Mixed Orchids & Complementary Seasonal Blooms',
+      'Vase': 'Fluted Clear Minimalist Glass Bud Vase',
+      'Charm': 'Engraved Wooden Birthday Wishes Charm Tag with Satin Ribbon',
+      'Care': 'Includes Floral Nutrient Solution for Extended Freshness'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'Bestseller'
   },
   {
     id: 'prod-pers-3in1-combo',
@@ -1430,6 +1594,33 @@ export const PRODUCTS_DATA: Product[] = [
     badge: 'PERSONALISE IT!'
   },
   {
+    id: 'bs-14',
+    name: 'Polaroid For Him LED Lamp',
+    category: 'Lamps',
+    priceUGX: 51000,
+    originalPriceUGX: 60000,
+    priceUSD: 13.8,
+    originalPriceUSD: 16.2,
+    image: 'https://i.postimg.cc/j5Sk3G1f/Custom-Picture-Frame-Customized-Photo-Frames-Personalized-Picture-Frames-Personalized-Anniversary.jpg',
+    gallery: [
+      'https://i.postimg.cc/j5Sk3G1f/Custom-Picture-Frame-Customized-Photo-Frames-Personalized-Picture-Frames-Personalized-Anniversary.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Custom personalised Polaroid-style optical acrylic night light lamp designed for him. Features high-definition photo print, personalized names/dates, and warm golden LED lighting in a solid timber base.',
+    specifications: {
+      'Style': 'Polaroid Frame Optical Acrylic LED Lamp',
+      'Material': 'Laser-Cut Optical Cast Acrylic + Natural Wood LED Base',
+      'Light Source': 'Warm Ambient LED (USB Powered with Switch)',
+      'Customization': 'Couple/Him Portrait Photo, Custom Names, Date & Caption'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
     id: 'prod-tailor-desk-clock',
     name: 'Personalised Geometric Heart Photo Collage Desk Easel Clock',
     category: 'Clocks',
@@ -1544,6 +1735,34 @@ export const PRODUCTS_DATA: Product[] = [
     reviewCount: 64,
     inStock: true,
     badge: 'Fresh Florals'
+  },
+  {
+    id: 'bs-9',
+    name: 'Personalised Happy Birthday Bobo Balloon Setup',
+    category: 'Birthday Hampers',
+    priceUGX: 129000,
+    originalPriceUGX: 168000,
+    priceUSD: 34.9,
+    originalPriceUSD: 45.4,
+    image: 'https://i.postimg.cc/JnzyCz3y/Bouquet-Happy-Birthday-se-compose-de-11-roses-naturelles-et-15-ferrero-et-tu-peux-mettre-un-message.jpg',
+    gallery: [
+      'https://i.postimg.cc/JnzyCz3y/Bouquet-Happy-Birthday-se-compose-de-11-roses-naturelles-et-15-ferrero-et-tu-peux-mettre-un-message.jpg',
+      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+    ],
+    description: 'Spectacular luxury celebration setup featuring crystal-clear Bobo balloon with custom birthday message lettering, fresh natural roses, Ferrero Rocher golden chocolates, and designer gift wrapping.',
+    specifications: {
+      'Balloon': 'Crystal Clear Transparent Bobo Balloon with Custom Vinyl Lettering',
+      'Florals': '11 Fresh Handpicked Natural Roses',
+      'Chocolates': '15 Imported Ferrero Rocher Hazelnut Chocolates',
+      'Personalisation': 'Custom Birthday Name / Age / Personal Message on Balloon & Ribbon',
+      'Packaging': 'Deluxe Cylindrical Hat Box with Satin Ribbons'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
   },
   {
     id: 'prod-cel-cake',

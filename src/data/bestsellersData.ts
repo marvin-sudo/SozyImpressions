@@ -174,9 +174,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "22% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/bar_flask_1788635290861.jpg",
+    "image": "https://i.postimg.cc/1372rWWj/Plot-twist-drinking-enough-water-is-actually-easy-when-your-tumbler-looks-this-good-Show-us-your-d.jpg",
     "gallery": [
-      "/src/assets/images/bar_flask_1788635290861.jpg",
+      "https://i.postimg.cc/1372rWWj/Plot-twist-drinking-enough-water-is-actually-easy-when-your-tumbler-looks-this-good-Show-us-your-d.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -216,9 +216,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "43% OFF",
     "rating": 4.9,
     "reviewCount": 692,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/qBQLKNZ4/what-is-your-name-tell-me-in-comments.jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
+      "https://i.postimg.cc/qBQLKNZ4/what-is-your-name-tell-me-in-comments.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -237,9 +237,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "23% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/birthday_gifts_1788634707174.jpg",
+    "image": "https://i.postimg.cc/JnzyCz3y/Bouquet-Happy-Birthday-se-compose-de-11-roses-naturelles-et-15-ferrero-et-tu-peux-mettre-un-message.jpg",
     "gallery": [
-      "/src/assets/images/birthday_gifts_1788634707174.jpg",
+      "https://i.postimg.cc/JnzyCz3y/Bouquet-Happy-Birthday-se-compose-de-11-roses-naturelles-et-15-ferrero-et-tu-peux-mettre-un-message.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -258,9 +258,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "11% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/roses_bouquet_1788634336414.jpg",
+    "image": "https://i.postimg.cc/TPYmf0fv/Mixed-bloom-Orchid-bud-vase-arrangement.jpg",
     "gallery": [
-      "/src/assets/images/roses_bouquet_1788634336414.jpg",
+      "https://i.postimg.cc/TPYmf0fv/Mixed-bloom-Orchid-bud-vase-arrangement.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -279,9 +279,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "14% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/bar_flask_1788635290861.jpg",
+    "image": "https://i.postimg.cc/yNFfN7Md/Executive-Water-Bottle-Flask-with-2-Lids-(LED-Display-Stainless-Stee.jpg",
     "gallery": [
-      "/src/assets/images/bar_flask_1788635290861.jpg",
+      "https://i.postimg.cc/yNFfN7Md/Executive-Water-Bottle-Flask-with-2-Lids-(LED-Display-Stainless-Stee.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -300,9 +300,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tabletop_frame_1788635214871.jpg",
+    "image": "https://i.postimg.cc/RVBwMcMC/Personalised-Birthday-Photo-Keepsake-Gift-Glass-Plaque-With-Sentiment-13-16-18-21-30-40-50-60.jpg",
     "gallery": [
-      "/src/assets/images/tabletop_frame_1788635214871.jpg",
+      "https://i.postimg.cc/RVBwMcMC/Personalised-Birthday-Photo-Keepsake-Gift-Glass-Plaque-With-Sentiment-13-16-18-21-30-40-50-60.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -342,9 +342,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "15% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/moon_lamp_1788635244442.jpg",
+    "image": "https://i.postimg.cc/j5Sk3G1f/Custom-Picture-Frame-Customized-Photo-Frames-Personalized-Picture-Frames-Personalized-Anniversary.jpg",
     "gallery": [
-      "/src/assets/images/moon_lamp_1788635244442.jpg",
+      "https://i.postimg.cc/j5Sk3G1f/Custom-Picture-Frame-Customized-Photo-Frames-Personalized-Picture-Frames-Personalized-Anniversary.jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
@@ -426,9 +426,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tabletop_frame_1788635214871.jpg",
+    "image": "https://i.postimg.cc/65q46zk9/download-(43).jpg",
     "gallery": [
-      "/src/assets/images/tabletop_frame_1788635214871.jpg",
+      "https://i.postimg.cc/65q46zk9/download-(43).jpg",
       "/src/assets/images/sozy_hero_workspace_1777014868067.png"
     ],
     "isCustomizable": true
