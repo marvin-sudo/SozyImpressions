@@ -10,6 +10,7 @@ import {
 import { View, Currency, Product } from '../types';
 import { SERVICES_DATA, PRODUCTS_DATA, PORTFOLIO_PROJECTS, FAQS_DATA } from '../data/mockData';
 import { useShopStore } from '../context/ShopStoreContext';
+import { OptimizedImage } from './OptimizedImage';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -196,7 +197,12 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                         }}
                         className="p-3 rounded-2xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-left flex items-center gap-3 group transition-colors"
                       >
-                        <img src={prod.image} alt={prod.name} className="w-12 h-12 rounded-xl object-cover" />
+                        <OptimizedImage 
+                          src={prod.image} 
+                          alt={prod.name} 
+                          wrapperClassName="w-12 h-12 rounded-xl shrink-0 overflow-hidden" 
+                          className="w-full h-full object-cover" 
+                        />
                         <div className="min-w-0">
                           <div className="text-xs font-bold text-slate-900 truncate group-hover:text-[#2D3094]">{prod.name}</div>
                           <div className="text-[10px] text-slate-500">{prod.category}</div>

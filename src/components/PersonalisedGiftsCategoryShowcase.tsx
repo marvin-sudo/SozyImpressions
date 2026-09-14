@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { OptimizedImage } from './OptimizedImage';
 
 // Import custom generated studio product assets matching i5j.png exactly
 import tumblerMugImg from '../assets/images/tumbler_mug_1788634322323.jpg';
@@ -212,11 +213,11 @@ export const PersonalisedGiftsCategoryShowcase: React.FC<PersonalisedGiftsCatego
                       />
                       
                       {/* Product Photography */}
-                      <img
+                      <OptimizedImage
                         src={category.image}
                         alt={category.name}
-                        referrerPolicy="no-referrer"
-                        className="relative z-10 w-full h-full object-contain p-1 transition-transform duration-300 ease-out group-hover:scale-105"
+                        wrapperClassName="relative z-10 w-full h-full flex items-center justify-center"
+                        className="w-full h-full object-contain p-1 transition-transform duration-300 ease-out group-hover:scale-105"
                       />
                     </div>
 
@@ -262,11 +263,11 @@ export const PersonalisedGiftsCategoryShowcase: React.FC<PersonalisedGiftsCatego
                       />
                       
                       {/* Product Photography */}
-                      <img
+                      <OptimizedImage
                         src={category.image}
                         alt={category.name}
-                        referrerPolicy="no-referrer"
-                        className="relative z-10 w-full h-full object-contain p-1 transition-transform duration-300 ease-out group-hover:scale-105"
+                        wrapperClassName="relative z-10 w-full h-full flex items-center justify-center"
+                        className="w-full h-full object-contain p-1 transition-transform duration-300 ease-out group-hover:scale-105"
                       />
                     </div>
 
@@ -309,11 +310,11 @@ export const PersonalisedGiftsCategoryShowcase: React.FC<PersonalisedGiftsCatego
                     <div 
                       className={`absolute bottom-1.5 inset-x-2.5 h-12 rounded-full ${category.pillBg} opacity-90 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100`} 
                     />
-                    <img
+                    <OptimizedImage
                       src={category.image}
                       alt={category.name}
-                      referrerPolicy="no-referrer"
-                      className="relative z-10 w-full h-full object-contain p-1 transition-transform duration-300 ease-out group-hover:scale-105"
+                      wrapperClassName="relative z-10 w-full h-full flex items-center justify-center"
+                      className="w-full h-full object-contain p-1 transition-transform duration-300 ease-out group-hover:scale-105"
                     />
                   </div>
                   <div className="mt-2.5 w-full flex flex-col items-center">
@@ -383,11 +384,11 @@ export const PersonalisedGiftsCategoryShowcase: React.FC<PersonalisedGiftsCatego
                     <div 
                       className={`absolute bottom-1 inset-x-2 h-10 rounded-full ${category.pillBg} opacity-90`} 
                     />
-                    <img
+                    <OptimizedImage
                       src={category.image}
                       alt={category.name}
-                      referrerPolicy="no-referrer"
-                      className="relative z-10 w-full h-full object-contain p-1 transition-transform duration-300 group-hover:scale-105"
+                      wrapperClassName="relative z-10 w-full h-full flex items-center justify-center"
+                      className="w-full h-full object-contain p-1 transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                   <div className="mt-2 w-full flex flex-col items-center">

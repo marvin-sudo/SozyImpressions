@@ -7,6 +7,7 @@ import deskClockImg from '../assets/images/desk_clock_1788635262427.jpg';
 import coupleKeychainsImg from '../assets/images/couple_keychains_1788635276974.jpg';
 import barFlaskImg from '../assets/images/bar_flask_1788635290861.jpg';
 import customEarbudsImg from '../assets/images/custom_earbuds_1788635304232.jpg';
+import { OptimizedImage } from './OptimizedImage';
 
 interface TailorMadeItem {
   id: string;
@@ -171,11 +172,10 @@ export const TailorMadeTreasuresSection: React.FC<TailorMadeTreasuresSectionProp
 
                 {/* Floating Product Photography (isolated packshot standing on podium) */}
                 <div className="relative z-10 w-[88%] h-[88%] flex items-center justify-center transform transition-transform duration-400 ease-out group-hover:-translate-y-2 group-hover:scale-105">
-                  <img
+                  <OptimizedImage
                     src={item.image}
                     alt={item.alt}
-                    referrerPolicy="no-referrer"
-                    loading="lazy"
+                    wrapperClassName="max-h-full max-w-full flex items-center justify-center"
                     className="max-h-full max-w-full object-contain drop-shadow-md group-hover:drop-shadow-xl transition-all duration-300"
                   />
                 </div>

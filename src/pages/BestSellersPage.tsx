@@ -23,6 +23,7 @@ import {
   BESTSELLER_OCCASIONS,
   BestsellerProduct 
 } from '../data/bestsellersData';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 interface BestSellersPageProps {
   navigate: (view: View, param?: string) => void;
@@ -889,118 +890,120 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                       onClick={() => handleOpenCustomizer(product)}
                       className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative min-w-0"
                     >
-                      {/* Image Frame with Overlay Controls */}
-                      <div className="relative w-full pt-[100%] bg-slate-100 overflow-hidden">
-                        <img
+                      {/* Image Frame with Overlay Controls - optimized height */}
+                      <div className="relative w-full aspect-[4/3.5] bg-slate-100 overflow-hidden">
+                        <OptimizedImage
                           src={displayImg}
                           alt={product.name}
-                          referrerPolicy="no-referrer"
-                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          loading="lazy"
+                          wrapperClassName="absolute inset-0 w-full h-full"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
 
                         {/* Top Right Wishlist Heart Button */}
                         <button
                           onClick={(e) => toggleWishlist(product.id, e)}
-                          className="absolute top-2 right-2 sm:top-2.5 sm:right-2.5 z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-600 hover:text-red-500 shadow-sm transition-transform active:scale-90"
+                          className="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 z-10 w-7 h-7 rounded-full bg-white/90 backdrop-blur-xs flex items-center justify-center text-slate-600 hover:text-red-500 shadow-sm transition-transform active:scale-90 cursor-pointer"
                           title={isFav ? 'Remove from wishlist' : 'Save to wishlist'}
                         >
                           <Heart 
                             size={14} 
-                            className={`sm:w-4 sm:h-4 ${isFav ? 'fill-red-500 text-red-500' : ''}`} 
+                            className={`sm:w-3.5 sm:h-3.5 ${isFav ? 'fill-red-500 text-red-500' : ''}`} 
                           />
                         </button>
 
-                        {/* Carousel dots indicator at bottom of image as seen in screenshot */}
-                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-1.5 z-10 bg-black/20 backdrop-blur-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
-                          {[0, 1, 2].map((dotIdx) => (
-                            <button
-                              key={dotIdx}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setActiveImageIndex(prev => ({ ...prev, [product.id]: dotIdx % 2 }));
-                              }}
-                              className={`w-1.5 h-1.5 rounded-full transition-all ${
-                                currentImgIdx === (dotIdx % 2) 
-                                  ? 'bg-white w-2.5' 
-                                  : 'bg-white/60 hover:bg-white'
-                              }`}
-                            />
-                          ))}
-                        </div>
+                        {/* Carousel dots indicator at bottom of image */}
+                        {product.gallery && product.gallery.length > 1 && (
+                          <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 flex items-center gap-1 sm:gap-1.5 z-10 bg-black/20 backdrop-blur-xs px-2 py-0.5 rounded-full">
+                            {product.gallery.slice(0, 5).map((_, dotIdx) => (
+                              <button
+                                key={dotIdx}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setActiveImageIndex(prev => ({ ...prev, [product.id]: dotIdx }));
+                                }}
+                                className={`w-1.5 h-1.5 rounded-full transition-all ${
+                                  currentImgIdx === dotIdx 
+                                    ? 'bg-white w-2.5' 
+                                    : 'bg-white/60 hover:bg-white'
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        )}
                       </div>
 
-                      {/* Card Body Matching Exact Screenshot Layout */}
-                      <div className="p-2.5 sm:p-4 flex flex-col flex-1 justify-between gap-2 sm:gap-2.5 min-w-0">
+                      {/* Card Body - Compact and Intact */}
+                      <div className="p-2 sm:p-3 flex flex-col flex-1 justify-between gap-1.5 sm:gap-2 min-w-0">
                         
                         <div className="min-w-0">
-                          {/* Product Title (e.g. "Silver Personalised Initial...") */}
+                          {/* Product Title */}
                           <h3 
-                            className="font-bold text-slate-900 text-xs sm:text-sm leading-snug line-clamp-1 group-hover:text-[#2D3094] transition-colors truncate"
+                            className="font-bold text-slate-900 text-xs sm:text-[13px] leading-tight line-clamp-1 group-hover:text-[#2D3094] transition-colors truncate"
                             title={product.name}
                           >
                             {product.name}
                           </h3>
 
-                          {/* PERSONALISE IT! Blue Pill Badge underneath title */}
-                          <div className="mt-1 sm:mt-1.5">
-                            <span className="inline-block bg-[#1877F2] text-white text-[9px] sm:text-[10px] font-bold px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-wider truncate max-w-full">
+                          {/* PERSONALISE IT! Blue Pill Badge */}
+                          <div className="mt-1">
+                            <span className="inline-block bg-[#1877F2] text-white text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider truncate max-w-full">
                               {product.badge || 'PERSONALISE IT!'}
                             </span>
                           </div>
                         </div>
 
-                        {/* Pricing Row matching screenshot & UGX currency */}
-                        <div className="pt-0.5 sm:pt-1 min-w-0">
-                          <div className="flex items-baseline flex-wrap gap-1 sm:gap-2">
+                        {/* Pricing Row */}
+                        <div className="pt-0.5 min-w-0">
+                          <div className="flex items-baseline flex-wrap gap-1 sm:gap-1.5">
                             {/* Current Price */}
-                            <span className="text-xs sm:text-base font-black text-slate-900 tracking-tight">
+                            <span className="text-xs sm:text-sm font-black text-slate-900 tracking-tight">
                               {formatPrice(product.priceUGX, product.priceUSD)}
                             </span>
 
                             {/* Original Price Strikethrough */}
                             {product.originalPriceUGX > product.priceUGX && (
-                              <span className="text-[10px] sm:text-xs text-slate-400 line-through">
+                              <span className="text-[10px] text-slate-400 line-through">
                                 {formatPrice(product.originalPriceUGX, product.originalPriceUSD)}
                               </span>
                             )}
 
                             {/* Discount Percent */}
                             {product.discountPercent && (
-                              <span className="text-[10px] sm:text-xs font-bold text-emerald-600">
+                              <span className="text-[10px] font-bold text-emerald-600">
                                 {product.discountPercent}
                               </span>
                             )}
                           </div>
 
                           {/* Quick Actions Row */}
-                          <div className="mt-2.5 sm:mt-3 pt-2 sm:pt-2.5 border-t border-slate-100 flex items-center gap-1 sm:gap-2">
+                          <div className="mt-2 pt-1.5 sm:pt-2 border-t border-slate-100 flex items-center gap-1 sm:gap-1.5">
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
                                 handleOpenCustomizer(product);
                               }}
-                              className="flex-1 min-w-0 bg-[#2D3094] hover:bg-[#20236e] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider py-1.5 sm:py-2 px-1 sm:px-2.5 rounded-lg sm:rounded-xl shadow-xs transition-all flex items-center justify-center gap-1"
+                              className="flex-1 min-w-0 bg-[#2D3094] hover:bg-[#20236e] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider py-1.5 px-1 sm:px-2 rounded-lg shadow-xs transition-all flex items-center justify-center gap-1 cursor-pointer"
                             >
                               <span className="truncate">Personalise</span>
                             </button>
 
                             <button
                               onClick={(e) => handleQuickAdd(product, e)}
-                              className="p-1.5 sm:p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-[#2D3094] rounded-lg sm:rounded-xl transition-colors shrink-0"
+                              className="p-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-[#2D3094] rounded-lg transition-colors shrink-0 cursor-pointer"
                               title="Quick add to cart"
                             >
-                              <ShoppingCart size={14} className="sm:w-[15px] sm:h-[15px]" />
+                              <ShoppingCart size={13} className="sm:w-3.5 sm:h-3.5" />
                             </button>
 
                             <button
                               onClick={(e) => handleWhatsAppOrder(product, e)}
-                              className="p-1.5 sm:p-2 bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] text-white rounded-lg sm:rounded-xl shadow-xs transition-colors shrink-0 flex items-center justify-center cursor-pointer"
+                              className="p-1.5 bg-[#25D366] hover:bg-[#20ba5a] active:bg-[#1da851] text-white rounded-lg shadow-xs transition-colors shrink-0 flex items-center justify-center cursor-pointer"
                               title="Order on WhatsApp: 0787662183"
                             >
-                              <WhatsAppIcon size={14} className="sm:w-[15px] sm:h-[15px]" />
+                              <WhatsAppIcon size={13} className="sm:w-3.5 sm:h-3.5" />
                             </button>
                           </div>
+                        </div>
 
                         </div>
 

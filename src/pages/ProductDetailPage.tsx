@@ -18,6 +18,7 @@ import { View, Currency, CartItem, CustomizationOptions, Product } from '../type
 import { getProductById, getRelatedProducts } from '../utils/productUtils';
 import { PAYMENT_LOGOS } from '../data/mockData';
 import { useShopStore } from '../context/ShopStoreContext';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 interface ProductDetailPageProps {
   productId?: string;
@@ -72,6 +73,63 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   const [selectedMaterial, setSelectedMaterial] = useState<string>(defaultMaterials[0] || 'Standard');
   const [selectedFinishing, setSelectedFinishing] = useState<string>(defaultFinishings[0] || 'Standard');
   const [selectedSize, setSelectedSize] = useState<string>(defaultSizes[0] || '');
+
+  // Auto-switch image on color selection when color-specific gallery image exists
+  const handleColorSelect = (color: string) => {
+    setSelectedColor(color);
+    const colorLower = color.toLowerCase().trim();
+    const matchedIdx = galleryImages.findIndex((img) => {
+      const imgLower = img.toLowerCase();
+      if (colorLower.includes('lemon') || colorLower.includes('green')) {
+        return imgLower.includes('mockup') || imgLower.includes('lemon') || imgLower.includes('green');
+      }
+      if (colorLower.includes('grey') || colorLower.includes('gray')) {
+        return imgLower.includes('download-(45)') || imgLower.includes('grey') || imgLower.includes('gray');
+      }
+      if (colorLower.includes('black')) {
+        return imgLower.includes('black');
+      }
+      if (colorLower.includes('white')) {
+        return imgLower.includes('white');
+      }
+      return false;
+    });
+    if (matchedIdx !== -1) {
+      setSelectedImageIndex(matchedIdx);
+    }
+  };
+
+  const handleThumbnailClick = (idx: number) => {
+    setSelectedImageIndex(idx);
+    const imgUrl = (galleryImages[idx] || '').toLowerCase();
+    if (imgUrl.includes('mockup') || imgUrl.includes('lemon')) {
+      const match = defaultColors.find(c => c.toLowerCase().includes('lemon') || c.toLowerCase().includes('green'));
+      if (match) setSelectedColor(match);
+    } else if (imgUrl.includes('black')) {
+      const match = defaultColors.find(c => c.toLowerCase().includes('black'));
+      if (match) setSelectedColor(match);
+    } else if (imgUrl.includes('white')) {
+      const match = defaultColors.find(c => c.toLowerCase().includes('white'));
+      if (match) setSelectedColor(match);
+    } else if (imgUrl.includes('download-(45)') || imgUrl.includes('grey') || imgUrl.includes('gray')) {
+      const match = defaultColors.find(c => c.toLowerCase().includes('grey') || c.toLowerCase().includes('gray'));
+      if (match) setSelectedColor(match);
+    }
+  };
+
+  const getColorDotClass = (color: string) => {
+    const c = color.toLowerCase();
+    if (c.includes('lemon')) return 'bg-[#a3e635] border-[#84cc16]'; // vivid lemon-green
+    if (c.includes('black')) return 'bg-slate-950 border-slate-700';
+    if (c.includes('white')) return 'bg-white border-slate-300';
+    if (c.includes('grey') || c.includes('gray')) return 'bg-slate-400 border-slate-500';
+    if (c.includes('navy') || c.includes('blue')) return 'bg-blue-900 border-blue-950';
+    if (c.includes('green') || c.includes('olive')) return 'bg-emerald-800 border-emerald-900';
+    if (c.includes('gold')) return 'bg-amber-400 border-amber-500';
+    if (c.includes('silver')) return 'bg-slate-300 border-slate-400';
+    if (c.includes('red')) return 'bg-rose-600 border-rose-700';
+    return 'bg-slate-200 border-slate-300';
+  };
   
   // Customization input
   const [customText, setCustomText] = useState<string>('');
@@ -272,10 +330,11 @@ Please confirm turnaround time and share digital proof!`;
             
             {/* Main Image Viewport */}
             <div className="relative w-full aspect-square bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 group">
-              <img 
+              <OptimizedImage 
                 src={galleryImages[selectedImageIndex] || product.image} 
                 alt={product.name}
-                referrerPolicy="no-referrer"
+                priority={true}
+                wrapperClassName="w-full h-full"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
@@ -318,17 +377,17 @@ Please confirm turnaround time and share digital proof!`;
                 {galleryImages.map((img, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setSelectedImageIndex(idx)}
+                    onClick={() => handleThumbnailClick(idx)}
                     className={`relative w-18 h-18 sm:w-20 sm:h-20 rounded-xl overflow-hidden border-2 transition-all shrink-0 cursor-pointer ${
                       selectedImageIndex === idx
-                        ? 'border-[#2D3094]'
+                        ? 'border-[#2D3094] ring-2 ring-[#2D3094]/20'
                         : 'border-slate-200 hover:border-slate-300 opacity-70 hover:opacity-100'
                     }`}
                   >
-                    <img 
+                    <OptimizedImage 
                       src={img} 
                       alt={`${product.name} - view ${idx + 1}`} 
-                      referrerPolicy="no-referrer"
+                      wrapperClassName="w-full h-full"
                       className="w-full h-full object-cover" 
                     />
                   </button>
@@ -479,14 +538,15 @@ Please confirm turnaround time and share digital proof!`;
                         <button
                           key={color}
                           type="button"
-                          onClick={() => setSelectedColor(color)}
-                          className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all border cursor-pointer ${
+                          onClick={() => handleColorSelect(color)}
+                          className={`px-3.5 py-2 rounded-lg text-xs font-bold transition-all border cursor-pointer flex items-center gap-2 ${
                             isSelected
-                              ? 'bg-[#2D3094] text-white border-[#2D3094]'
-                              : 'bg-transparent text-slate-700 border-slate-200 hover:border-slate-300'
+                              ? 'bg-[#2D3094] text-white border-[#2D3094] shadow-xs'
+                              : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
                           }`}
                         >
-                          {color}
+                          <span className={`w-3 h-3 rounded-full border shrink-0 ${getColorDotClass(color)}`} />
+                          <span>{color}</span>
                         </button>
                       );
                     })}
@@ -959,12 +1019,11 @@ Please confirm turnaround time and share digital proof!`;
                 className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer"
               >
                 <div className="relative w-full pt-[100%] bg-slate-100 overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={rel.image}
                     alt={rel.name}
-                    referrerPolicy="no-referrer"
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    wrapperClassName="absolute inset-0 w-full h-full"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {rel.badge && (
                     <div className="absolute top-2.5 left-2.5 bg-[#2D3094] text-white text-[9px] font-bold px-2 py-0.5 rounded">

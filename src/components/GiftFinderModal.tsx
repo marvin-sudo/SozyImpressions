@@ -13,6 +13,7 @@ import {
 import { Product, Currency, CartItem, View } from '../types';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { COMPANY_INFO } from '../data/mockData';
+import { OptimizedImage } from './OptimizedImage';
 
 export interface GiftFinderModalProps {
   isOpen: boolean;
@@ -834,11 +835,11 @@ export const GiftFinderModal: React.FC<GiftFinderModalProps> = ({
                       <div>
                         {/* Image & Match Badge */}
                         <div className="relative aspect-4/3 bg-slate-100 overflow-hidden">
-                          <img 
+                          <OptimizedImage 
                             src={product.image} 
                             alt={product.name} 
+                            wrapperClassName="w-full h-full"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                            loading="lazy"
                           />
                           <div className="absolute top-2 left-2 flex flex-col gap-1 items-start">
                             <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-[#ED008C] text-white shadow-xs">

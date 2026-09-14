@@ -76,7 +76,33 @@ export const getAllProducts = (): Product[] => {
 export const getProductById = (id?: string, liveProducts?: Product[]): Product => {
   if (liveProducts && liveProducts.length > 0) {
     if (!id) return liveProducts[0];
-    const found = liveProducts.find(p => p.id === id || p.id.toLowerCase() === id.toLowerCase());
+    const cleanId = id.toLowerCase().trim();
+    const cleanSlug = cleanId.replace(/[^a-z0-9]+/g, '-');
+    
+    // 1. Direct ID match
+    let found = liveProducts.find(p => p.id === id || p.id.toLowerCase() === cleanId);
+    
+    // 2. Slug match on name
+    if (!found) {
+      found = liveProducts.find(p => {
+        const pSlug = (p.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        return pSlug === cleanSlug || pSlug.includes(cleanSlug) || cleanSlug.includes(pSlug);
+      });
+    }
+
+    // 3. Keyword-specific resolution
+    if (!found) {
+      if (cleanId.includes('success') || cleanId.includes('inspiration') || cleanId.includes('dream-big')) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('success') || p.name.toLowerCase().includes('inspiration'));
+      } else if (cleanId.includes('faith')) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('faith'));
+      } else if (cleanId.includes('fitness')) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('fitness'));
+      } else if (cleanId.includes('hoodie') || cleanId.includes('hoddie')) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('hoodie'));
+      }
+    }
+
     if (found) {
       return {
         ...found,
@@ -102,7 +128,29 @@ export const getProductById = (id?: string, liveProducts?: Product[]): Product =
   if (!id) return PRODUCTS_DATA[0];
 
   // Try direct lookup in PRODUCTS_DATA
-  const foundInProducts = PRODUCTS_DATA.find(p => p.id === id || p.id.toLowerCase() === id.toLowerCase());
+  const cleanId = id.toLowerCase().trim();
+  const cleanSlug = cleanId.replace(/[^a-z0-9]+/g, '-');
+
+  let foundInProducts = PRODUCTS_DATA.find(p => p.id === id || p.id.toLowerCase() === cleanId);
+  if (!foundInProducts) {
+    foundInProducts = PRODUCTS_DATA.find(p => {
+      const pSlug = (p.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      return pSlug === cleanSlug || pSlug.includes(cleanSlug) || cleanSlug.includes(pSlug);
+    });
+  }
+  if (!foundInProducts) {
+    if (cleanId.includes('birthday') || cleanId.includes('bday') || cleanId.includes('happy-birthday')) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('birthday'));
+    } else if (cleanId.includes('success') || cleanId.includes('inspiration') || cleanId.includes('dream-big')) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('success') || p.name.toLowerCase().includes('inspiration'));
+    } else if (cleanId.includes('faith')) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('faith'));
+    } else if (cleanId.includes('fitness')) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('fitness'));
+    } else if (cleanId.includes('hoodie') || cleanId.includes('hoddie')) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('hoodie'));
+    }
+  }
   if (foundInProducts) {
     return {
       ...foundInProducts,

@@ -6,6 +6,7 @@ import celebrationExplosionBoxImg from '../assets/images/celebration_explosion_b
 import celebrationChocolatesImg from '../assets/images/celebration_chocolates_1788635680950.jpg';
 import celebrationGreetingCardImg from '../assets/images/celebration_greeting_card_1788635694483.jpg';
 import celebrationJewelleryImg from '../assets/images/celebration_jewellery_1788635705456.jpg';
+import { OptimizedImage } from './OptimizedImage';
 
 interface CelebrationCard {
   id: string;
@@ -150,11 +151,10 @@ export const MakeCelebrationsSpecialSection: React.FC<MakeCelebrationsSpecialSec
 
                   {/* Right Side 3D Image popping out over the top boundary */}
                   <div className={`absolute right-1.5 sm:right-2.5 -top-6 sm:-top-7 lg:-top-8 ${card.imageWidthClass || 'w-[110px] sm:w-[130px]'} aspect-square z-20 pointer-events-none transition-transform duration-400 ease-out group-hover:-translate-y-2 group-hover:scale-105`}>
-                    <img
+                    <OptimizedImage
                       src={card.image}
                       alt={card.alt}
-                      referrerPolicy="no-referrer"
-                      loading="lazy"
+                      wrapperClassName="w-full h-full flex items-center justify-center"
                       className="w-full h-full object-contain drop-shadow-md group-hover:drop-shadow-xl transition-all duration-300"
                     />
                   </div>

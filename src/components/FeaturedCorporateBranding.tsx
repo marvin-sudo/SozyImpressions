@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { View } from '../types';
 import { EASE_PREMIUM, VIEWPORT_CONFIG } from '../utils/animations';
+import { OptimizedImage } from './OptimizedImage';
 
 interface FeaturedCorporateBrandingProps {
   navigate: (view: View, param?: string) => void;
@@ -227,9 +228,10 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
               {/* Right Visual Column (lg:col-span-6) */}
               <div className="lg:col-span-6">
                 <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-white/20 shadow-2xl group bg-slate-900">
-                  <img 
+                  <OptimizedImage 
                     src={current.image} 
                     alt={current.title}
+                    wrapperClassName="w-full h-full"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">

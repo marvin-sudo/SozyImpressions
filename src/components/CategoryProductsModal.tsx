@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, ShoppingBag, ArrowRight, Heart } from 'lucide-react';
 import { Product, Currency, CartItem } from '../types';
+import { OptimizedImage } from './OptimizedImage';
 
 interface CategoryProductsModalProps {
   isOpen: boolean;
@@ -99,11 +100,11 @@ export const CategoryProductsModal: React.FC<CategoryProductsModalProps> = ({
                     <div className="min-w-0">
                       {/* Product Image */}
                       <div className="relative aspect-square bg-[#F8F9FB] p-2 sm:p-4 flex items-center justify-center overflow-hidden">
-                        <img
+                        <OptimizedImage
                           src={product.image}
                           alt={product.name}
+                          wrapperClassName="w-full h-full flex items-center justify-center"
                           className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
                         />
                         
                         {/* Wishlist Button */}

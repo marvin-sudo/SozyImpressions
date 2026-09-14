@@ -2,6 +2,7 @@ import React from 'react';
 import africanManImg from '../assets/images/african_man_him_1788636032439.jpg';
 import africanWomanImg from '../assets/images/african_woman_her_1788636045505.jpg';
 import africanKidImg from '../assets/images/african_kid_kids_1788636058555.jpg';
+import { OptimizedImage } from './OptimizedImage';
 
 interface RecipientCard {
   id: 'him' | 'her' | 'kids';
@@ -102,11 +103,10 @@ export const GiftsByRecipientSection: React.FC<GiftsByRecipientSectionProps> = (
 
                 {/* RIGHT: PORTRAIT IMAGE BREAKING OUT OVER TOP BORDER */}
                 <div className="absolute right-2 sm:right-4 bottom-0 w-[140px] sm:w-[165px] lg:w-[185px] h-[160px] sm:h-[185px] lg:h-[205px] z-20 pointer-events-none flex items-end justify-center transition-transform duration-400 ease-out group-hover:scale-105 group-hover:-translate-y-1">
-                  <img
+                  <OptimizedImage
                     src={card.image}
                     alt={card.alt}
-                    referrerPolicy="no-referrer"
-                    loading="lazy"
+                    wrapperClassName="max-h-full max-w-full flex items-end justify-center"
                     className="max-h-full max-w-full object-contain drop-shadow-lg"
                   />
                 </div>

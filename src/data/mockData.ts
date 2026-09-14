@@ -284,6 +284,172 @@ export const SERVICES_DATA: ServiceItem[] = [
 export const PRODUCTS_DATA: Product[] = [
   // Apparel
   {
+    id: 'prod-birthday-hoodie',
+    name: 'Birthday Hoodie',
+    category: 'Apparel',
+    priceUGX: 85000,
+    priceUSD: 23,
+    originalPriceUGX: 100000,
+    originalPriceUSD: 27,
+    image: 'https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png',
+    gallery: [
+      'https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png',
+      'https://i.postimg.cc/XqwqZ3GZ/happy-birthday-hoodie-white.png',
+      'https://i.postimg.cc/BZcJ1m7q/happy-birthday-hoodie-grey.png'
+    ],
+    description: 'Customised Happy Birthday celebration hoodie crafted from 320 GSM heavyweight fleece-lined combed cotton. Designed to make milestone celebrations, birthday parties, and gift surprises unforgettable with bespoke typography, celebrant names, birth year, and custom graphics. Available in Black, White, and Grey with high-density 3D embroidery or full-color DTF printing.',
+    specifications: {
+      'Category': 'Corporate Hoodies',
+      'Colors': 'Black, White, Grey',
+      'Fabric': '320 GSM Heavyweight Fleece-Lined Cotton',
+      'Customization': 'High-Density 3D Embroidery / DTF Screen Print',
+      'Fit': 'Unisex Comfort Athletic Fit',
+      'Hood': 'Double-Layered Warm Hood with Tonal Drawstrings',
+      'Pockets': 'Reinforced Kangaroo Front Pouch',
+      'Sizes': 'S, M, L, XL, 2XL, 3XL'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    bulkTiers: [
+      { minQty: 1, discountPercent: 0 },
+      { minQty: 10, discountPercent: 6 },
+      { minQty: 25, discountPercent: 12 },
+      { minQty: 50, discountPercent: 18 },
+      { minQty: 100, discountPercent: 25 }
+    ],
+    colors: ['Black', 'White', 'Grey'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+    rating: 5.0,
+    reviewCount: 38,
+    inStock: true,
+    isFeatured: true,
+    badge: 'Birthday Celebration'
+  },
+  {
+    id: 'prod-success-inspiration-hoodie',
+    name: 'Success and Inspiration Hoodie',
+    category: 'Apparel',
+    priceUGX: 85000,
+    priceUSD: 23,
+    originalPriceUGX: 100000,
+    originalPriceUSD: 27,
+    image: 'https://i.postimg.cc/xTtLfyK8/dream-big-hoodie-white.png',
+    gallery: [
+      'https://i.postimg.cc/xTtLfyK8/dream-big-hoodie-white.png',
+      'https://i.postimg.cc/4y4nqq2h/dream-big-hoodie-grey.png',
+      'https://i.postimg.cc/BbFwW78L/dream-big-hoodie-black.png',
+      'https://i.postimg.cc/Zn04rSDf/dream-big-hoodie-mockup.png'
+    ],
+    description: 'Success and Inspiration "Dream Big" customised hoodie crafted from 320 GSM heavyweight fleece-lined combed cotton. Designed to empower teams, entrepreneurs, and dreamers with bold motivational typography and premium branding. Available in White, Grey, Black, and Lemon Green with high-density 3D embroidery or full-color DTF printing.',
+    specifications: {
+      'Category': 'Corporate Hoodies',
+      'Colors': 'White, Grey, Black, Lemon Green',
+      'Fabric': '320 GSM Heavyweight Fleece-Lined Cotton',
+      'Customization': 'High-Density 3D Embroidery / DTF Screen Print',
+      'Fit': 'Unisex Comfort Athletic Fit',
+      'Hood': 'Double-Layered Warm Hood with Tonal Drawstrings',
+      'Pockets': 'Reinforced Kangaroo Front Pouch',
+      'Sizes': 'S, M, L, XL, 2XL, 3XL'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    bulkTiers: [
+      { minQty: 1, discountPercent: 0 },
+      { minQty: 10, discountPercent: 6 },
+      { minQty: 25, discountPercent: 12 },
+      { minQty: 50, discountPercent: 18 },
+      { minQty: 100, discountPercent: 25 }
+    ],
+    colors: ['White', 'Grey', 'Black', 'Lemon Green'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+    rating: 5.0,
+    reviewCount: 44,
+    inStock: true,
+    isFeatured: true,
+    badge: 'Success & Inspiration'
+  },
+  {
+    id: 'prod-faith-based-customised-hoodie',
+    name: 'Faith Based Customised Hoodie',
+    category: 'Apparel',
+    priceUGX: 85000,
+    priceUSD: 23,
+    originalPriceUGX: 100000,
+    originalPriceUSD: 27,
+    image: 'https://i.postimg.cc/8z4PvtZ9/download-(45).jpg',
+    gallery: [
+      'https://i.postimg.cc/8z4PvtZ9/download-(45).jpg',
+      'https://i.postimg.cc/Y2D66zsb/black-faith-hoodie.png',
+      'https://i.postimg.cc/yN734DGk/white-faith-hoodie.png'
+    ],
+    description: 'Faith Based Customised Hoodie crafted from 320 GSM heavyweight fleece-lined combed cotton. Tailored for comfort and spiritual expression with custom scripture typography, Christian community logos, or bespoke faith artwork. Available in Grey, Black, and White with high-density 3D embroidery or precision full-color screen print.',
+    specifications: {
+      'Category': 'Corporate Hoodies',
+      'Colors': 'Grey, Black, White',
+      'Fabric': '320 GSM Heavyweight Fleece-Lined Cotton',
+      'Customization': 'High-Density 3D Embroidery / DTF Screen Print',
+      'Fit': 'Unisex Comfort Athletic Fit',
+      'Hood': 'Double-Layered Warm Hood with Tonal Drawstrings',
+      'Pockets': 'Reinforced Kangaroo Front Pouch',
+      'Sizes': 'S, M, L, XL, 2XL, 3XL'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    bulkTiers: [
+      { minQty: 1, discountPercent: 0 },
+      { minQty: 10, discountPercent: 6 },
+      { minQty: 25, discountPercent: 12 },
+      { minQty: 50, discountPercent: 18 },
+      { minQty: 100, discountPercent: 25 }
+    ],
+    colors: ['Grey', 'Black', 'White'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+    rating: 5.0,
+    reviewCount: 52,
+    inStock: true,
+    isFeatured: true,
+    badge: 'Faith & Inspiration'
+  },
+  {
+    id: 'prod-corporate-hoodie-fitness',
+    name: 'Custom Fitness Apparel',
+    category: 'Apparel',
+    priceUGX: 80000,
+    priceUSD: 22,
+    originalPriceUGX: 95000,
+    originalPriceUSD: 26,
+    image: 'https://i.postimg.cc/XY7sjYmk/Custom-Fitness-Apparel-Design-Gym-Hoodie-Branding-Mockup-Fit-Nest.jpg',
+    gallery: [
+      'https://i.postimg.cc/XY7sjYmk/Custom-Fitness-Apparel-Design-Gym-Hoodie-Branding-Mockup-Fit-Nest.jpg'
+    ],
+    description: 'Custom Fitness Apparel premium corporate gym hoodie. Engineered from 320 GSM combed fleece cotton, featuring high-density embroidery or custom DTF chest/sleeve branding, double-layered hood, and kangaroo pouch. Ideal for corporate gym wear, athletic team merchandise, and fitness branding.',
+    specifications: {
+      'Category': 'Corporate Hoodies',
+      'Fabric': '320 GSM Premium Fleece-Lined Combed Cotton',
+      'Customization': 'High-Density 3D Embroidery or DTF Full-Color Print',
+      'Fit': 'Athletic Unisex Comfort Fit',
+      'Hood': 'Double-layered hood with color-matched drawstrings',
+      'Pockets': 'Reinforced kangaroo pouch pocket',
+      'Colors': 'Charcoal Grey, Jet Black, Navy Blue, Olive Green',
+      'Sizes': 'S, M, L, XL, 2XL, 3XL'
+    },
+    isCustomizable: true,
+    minOrderQty: 5,
+    bulkTiers: [
+      { minQty: 5, discountPercent: 0 },
+      { minQty: 20, discountPercent: 8 },
+      { minQty: 50, discountPercent: 15 },
+      { minQty: 100, discountPercent: 22 }
+    ],
+    colors: ['Charcoal Grey', 'Jet Black', 'Navy Blue', 'Olive Green'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
+    rating: 4.9,
+    reviewCount: 48,
+    inStock: true,
+    isFeatured: true,
+    badge: 'Popular Corporate'
+  },
+  {
     id: 'prod-tshirt-polo',
     name: 'Executive Pique Cotton Branded Polo',
     category: 'Apparel',

@@ -4,6 +4,7 @@ import anniversaryImg from '../assets/images/anniversary_gifts_1788634691472.jpg
 import birthdayImg from '../assets/images/birthday_gifts_1788634707174.jpg';
 import weddingImg from '../assets/images/wedding_gifts_1788634722972.jpg';
 import romanceImg from '../assets/images/romance_gifts_1788634737203.jpg';
+import { OptimizedImage } from './OptimizedImage';
 
 interface OccasionCardData {
   id: string;
@@ -112,11 +113,10 @@ export const ShopOccasionsSection: React.FC<ShopOccasionsSectionProps> = ({
               }`}
             >
               {/* Cinematic Lifestyle Photography Background */}
-              <img
+              <OptimizedImage
                 src={occasion.image}
                 alt={occasion.title}
-                referrerPolicy="no-referrer"
-                loading="lazy"
+                wrapperClassName="absolute inset-0 w-full h-full"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               />
 

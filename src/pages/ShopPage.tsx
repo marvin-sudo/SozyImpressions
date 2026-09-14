@@ -20,6 +20,7 @@ import { CategoryProductsModal } from '../components/CategoryProductsModal';
 import { DedicatedCategoryView } from '../components/DedicatedCategoryView';
 import { GiftFinderModal } from '../components/GiftFinderModal';
 import { useShopStore } from '../context/ShopStoreContext';
+import { OptimizedImage } from '../components/OptimizedImage';
 
 interface ShopPageProps {
   navigate?: (view: View, param?: string) => void;
@@ -270,6 +271,8 @@ export const ShopPage: React.FC<ShopPageProps> = ({
           matchesCat = pCatClean.includes('card') || p.name.toLowerCase().includes('card');
         } else if (catClean === 'jewellery' || catClean === 'jewelry') {
           matchesCat = pCatClean.includes('jewel') || pCatClean.includes('bangle') || p.name.toLowerCase().includes('bangle') || p.name.toLowerCase().includes('bracelet') || p.name.toLowerCase().includes('pendant');
+        } else if (catClean.includes('apparel') || catClean.includes('hoodie')) {
+          matchesCat = pCatClean.includes('apparel') || pCatClean.includes('shirt') || pCatClean.includes('hoodie') || p.name.toLowerCase().includes('hoodie') || p.name.toLowerCase().includes('fitness');
         } else {
           matchesCat = pCatClean.includes(catClean) || catClean.includes(pCatClean);
         }
@@ -282,7 +285,9 @@ export const ShopPage: React.FC<ShopPageProps> = ({
         matchesSubcat = 
           p.name.toLowerCase().includes(subClean) || 
           p.description.toLowerCase().includes(subClean) ||
-          (p.specifications && Object.values(p.specifications).some(val => val.toLowerCase().includes(subClean)));
+          (p.tags && p.tags.some(t => t.toLowerCase().includes(subClean))) ||
+          (subClean.includes('hoodie') && (p.name.toLowerCase().includes('hoodie') || p.description.toLowerCase().includes('hoodie') || p.name.toLowerCase().includes('fitness'))) ||
+          (p.specifications && Object.values(p.specifications).some(val => typeof val === 'string' && val.toLowerCase().includes(subClean)));
       }
 
       // Search query matching
@@ -663,11 +668,11 @@ export const ShopPage: React.FC<ShopPageProps> = ({
                   className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg hover:border-[#2D3094]/30 transition-all duration-300 flex flex-col cursor-pointer"
                 >
                   <div className="relative aspect-square overflow-hidden bg-slate-50">
-                    <img
+                    <OptimizedImage
                       src={product.image}
                       alt={product.name}
+                      wrapperClassName="w-full h-full"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
                     />
                     {product.badge && (
                       <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#ED008C] text-white shadow-xs">

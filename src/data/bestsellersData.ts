@@ -56,6 +56,28 @@ export const BESTSELLER_OCCASIONS = [
 
 export const BESTSELLERS_DATA: BestsellerProduct[] = [
   {
+    "id": "prod-birthday-hoodie",
+    "name": "Birthday Hoodie",
+    "badge": "PERSONALISE IT!",
+    "category": "Corporate Hoodies",
+    "recipient": "All",
+    "occasion": "Birthday",
+    "priceUGX": 85000,
+    "originalPriceUGX": 100000,
+    "priceUSD": 23,
+    "originalPriceUSD": 27,
+    "discountPercent": "15% OFF",
+    "rating": 5.0,
+    "reviewCount": 38,
+    "image": "https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png",
+    "gallery": [
+      "https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png",
+      "https://i.postimg.cc/XqwqZ3GZ/happy-birthday-hoodie-white.png",
+      "https://i.postimg.cc/BZcJ1m7q/happy-birthday-hoodie-grey.png"
+    ],
+    "isCustomizable": true
+  },
+  {
     "id": "bs-1",
     "name": "Name in Lights Night Lamp",
     "badge": "Bestseller",

@@ -109,6 +109,38 @@ export const TESTIMONIALS = [
 
 export const PRODUCTS = [
   {
+    id: 'prod-birthday-hoodie',
+    name: 'Birthday Hoodie',
+    price: 85000,
+    category: 'Apparel',
+    image: 'https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png',
+    description: 'Customised Happy Birthday celebration hoodie available in Black, White, and Grey with custom typography and milestone embroidery.'
+  },
+  {
+    id: 'prod-success-inspiration-hoodie',
+    name: 'Success and Inspiration Hoodie',
+    price: 85000,
+    category: 'Apparel',
+    image: 'https://i.postimg.cc/xTtLfyK8/dream-big-hoodie-white.png',
+    description: 'Success and Inspiration "Dream Big" customised hoodie available in White, Grey, Black, and Lemon Green.'
+  },
+  {
+    id: 'prod-faith-based-customised-hoodie',
+    name: 'Faith Based Customised Hoodie',
+    price: 85000,
+    category: 'Apparel',
+    image: 'https://i.postimg.cc/8z4PvtZ9/download-(45).jpg',
+    description: 'Faith Based Customised Hoodie available in Grey, Black, and White with inspirational typography and embroidery.'
+  },
+  {
+    id: 'prod-corporate-hoodie-fitness',
+    name: 'Custom Fitness Apparel',
+    price: 80000,
+    category: 'Apparel',
+    image: 'https://i.postimg.cc/XY7sjYmk/Custom-Fitness-Apparel-Design-Gym-Hoodie-Branding-Mockup-Fit-Nest.jpg',
+    description: 'Custom Fitness Apparel premium corporate gym hoodie with high-quality embroidery & branding.'
+  },
+  {
     id: 'prod1',
     name: 'Sozy Classic Hoodie',
     price: 45.00,

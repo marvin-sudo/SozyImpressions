@@ -8,6 +8,7 @@ import { WhatsAppIcon } from './WhatsAppIcon';
 import { View, Currency, Product, CartItem } from '../types';
 import { PRODUCTS_DATA } from '../data/mockData';
 import { useShopStore } from '../context/ShopStoreContext';
+import { OptimizedImage } from './OptimizedImage';
 
 interface ShopPreviewSectionProps {
   navigate: (view: View, param?: string) => void;
@@ -108,9 +109,10 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
             >
               {/* Product Visual Top */}
               <div className="relative aspect-square overflow-hidden bg-slate-100">
-                <img 
+                <OptimizedImage 
                   src={product.image} 
                   alt={product.name}
+                  wrapperClassName="w-full h-full"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 />
 

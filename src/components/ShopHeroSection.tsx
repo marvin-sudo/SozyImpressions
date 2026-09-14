@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { ArrowRight, Wand2, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, Currency } from '../types';
+import { OptimizedImage } from './OptimizedImage';
 
 interface ShopHeroSectionProps {
   onSelectCollection: (collectionKey: string) => void;
@@ -78,6 +79,14 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
     return () => clearInterval(timer);
   }, [isHovered, nextSlide]);
 
+  // Eagerly preload all hero slide images into browser cache so slide transitions are instant
+  useEffect(() => {
+    heroSlides.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.image;
+    });
+  }, []);
+
   const activeSlide = heroSlides[currentSlide];
   const collections = [
     {
@@ -152,11 +161,12 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
                     />
                     
                     {/* Cutout Image with Hover Transition */}
-                    <img 
+                    <OptimizedImage 
                       src={col.image} 
                       alt={col.title} 
-                      referrerPolicy="no-referrer"
-                      className={`relative z-10 object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-110 ${
+                      priority={true}
+                      wrapperClassName="relative z-10 flex items-center justify-center"
+                      className={`object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-110 ${
                         col.id === 'bestsellers'
                           ? 'w-full h-full max-w-[170px] max-h-[170px] scale-[1.35] sm:scale-[1.4] drop-shadow-xl'
                           : col.id === 'new-arrivals'
@@ -165,7 +175,6 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
                           ? 'w-full h-full max-w-[165px] max-h-[165px] scale-[1.3] drop-shadow-xl'
                           : 'w-28 h-28 sm:w-32 sm:h-32'
                       }`}
-                      loading="eager"
                     />
 
                     {/* Small Badge */}
@@ -257,11 +266,12 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
                   </div>
 
                   <div className="w-full md:w-auto md:flex-1 flex items-center justify-center">
-                    <img 
+                    <OptimizedImage 
                       src={activeSlide.image} 
                       alt={activeSlide.alt}
-                      referrerPolicy="no-referrer"
-                      className="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[540px] h-auto max-h-[340px] sm:max-h-[400px] lg:max-h-[440px] object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                      priority={true}
+                      wrapperClassName="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[540px] h-auto max-h-[340px] sm:max-h-[400px] lg:max-h-[440px] flex items-center justify-center"
+                      className="w-full h-full object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </motion.div>
