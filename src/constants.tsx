@@ -110,11 +110,11 @@ export const TESTIMONIALS = [
 export const PRODUCTS = [
   {
     id: 'prod-birthday-hoodie',
-    name: 'Birthday Hoodie',
-    price: 85000,
+    name: 'Birthday Hoodies',
+    price: 82000,
     category: 'Apparel',
-    image: 'https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png',
-    description: 'Customised Happy Birthday celebration hoodie available in Black, White, and Grey with custom typography and milestone embroidery.'
+    image: 'https://i.postimg.cc/MpWDRnvC/happy-birthday-hoodie-white-(1).png',
+    description: 'Customised Happy Birthday celebration hoodie available in White, Black, and Grey with custom typography and milestone embroidery.'
   },
   {
     id: 'prod-success-inspiration-hoodie',

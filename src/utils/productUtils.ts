@@ -92,7 +92,9 @@ export const getProductById = (id?: string, liveProducts?: Product[]): Product =
 
     // 3. Keyword-specific resolution
     if (!found) {
-      if (cleanId.includes('success') || cleanId.includes('inspiration') || cleanId.includes('dream-big')) {
+      if (cleanId.includes('birthday') || cleanId.includes('bday')) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('birthday'));
+      } else if (cleanId.includes('success') || cleanId.includes('inspiration') || cleanId.includes('dream-big')) {
         found = liveProducts.find(p => p.name.toLowerCase().includes('success') || p.name.toLowerCase().includes('inspiration'));
       } else if (cleanId.includes('faith')) {
         found = liveProducts.find(p => p.name.toLowerCase().includes('faith'));

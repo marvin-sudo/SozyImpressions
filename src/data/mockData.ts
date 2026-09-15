@@ -285,22 +285,22 @@ export const PRODUCTS_DATA: Product[] = [
   // Apparel
   {
     id: 'prod-birthday-hoodie',
-    name: 'Birthday Hoodie',
+    name: 'Birthday Hoodies',
     category: 'Apparel',
-    priceUGX: 85000,
-    priceUSD: 23,
-    originalPriceUGX: 100000,
-    originalPriceUSD: 27,
-    image: 'https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png',
+    priceUGX: 82000,
+    priceUSD: 22,
+    originalPriceUGX: 98000,
+    originalPriceUSD: 26,
+    image: 'https://i.postimg.cc/MpWDRnvC/happy-birthday-hoodie-white-(1).png',
     gallery: [
-      'https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png',
-      'https://i.postimg.cc/XqwqZ3GZ/happy-birthday-hoodie-white.png',
-      'https://i.postimg.cc/BZcJ1m7q/happy-birthday-hoodie-grey.png'
+      'https://i.postimg.cc/MpWDRnvC/happy-birthday-hoodie-white-(1).png',
+      'https://i.postimg.cc/htqYY4h8/happy-birthday-hoodie-black-(1).png',
+      'https://i.postimg.cc/x1Tv8B4W/happy-birthday-hoodie-grey-(1).png'
     ],
-    description: 'Customised Happy Birthday celebration hoodie crafted from 320 GSM heavyweight fleece-lined combed cotton. Designed to make milestone celebrations, birthday parties, and gift surprises unforgettable with bespoke typography, celebrant names, birth year, and custom graphics. Available in Black, White, and Grey with high-density 3D embroidery or full-color DTF printing.',
+    description: 'Customised Happy Birthday celebration hoodie crafted from 320 GSM heavyweight fleece-lined combed cotton. Designed to make milestone celebrations, birthday parties, and gift surprises unforgettable with bespoke typography, celebrant names, birth year, and custom graphics. Available in White, Black, and Grey with high-density 3D embroidery or full-color DTF printing.',
     specifications: {
       'Category': 'Corporate Hoodies',
-      'Colors': 'Black, White, Grey',
+      'Colors': 'White, Black, Grey',
       'Fabric': '320 GSM Heavyweight Fleece-Lined Cotton',
       'Customization': 'High-Density 3D Embroidery / DTF Screen Print',
       'Fit': 'Unisex Comfort Athletic Fit',
@@ -317,7 +317,7 @@ export const PRODUCTS_DATA: Product[] = [
       { minQty: 50, discountPercent: 18 },
       { minQty: 100, discountPercent: 25 }
     ],
-    colors: ['Black', 'White', 'Grey'],
+    colors: ['White', 'Black', 'Grey'],
     sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
     rating: 5.0,
     reviewCount: 38,

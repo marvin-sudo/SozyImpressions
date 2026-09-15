@@ -57,23 +57,23 @@ export const BESTSELLER_OCCASIONS = [
 export const BESTSELLERS_DATA: BestsellerProduct[] = [
   {
     "id": "prod-birthday-hoodie",
-    "name": "Birthday Hoodie",
+    "name": "Birthday Hoodies",
     "badge": "PERSONALISE IT!",
     "category": "Corporate Hoodies",
     "recipient": "All",
     "occasion": "Birthday",
-    "priceUGX": 85000,
-    "originalPriceUGX": 100000,
-    "priceUSD": 23,
-    "originalPriceUSD": 27,
-    "discountPercent": "15% OFF",
+    "priceUGX": 82000,
+    "originalPriceUGX": 98000,
+    "priceUSD": 22,
+    "originalPriceUSD": 26,
+    "discountPercent": "16% OFF",
     "rating": 5.0,
     "reviewCount": 38,
-    "image": "https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png",
+    "image": "https://i.postimg.cc/MpWDRnvC/happy-birthday-hoodie-white-(1).png",
     "gallery": [
-      "https://i.postimg.cc/0NWwx8D5/happy-birthday-hoodie-black.png",
-      "https://i.postimg.cc/XqwqZ3GZ/happy-birthday-hoodie-white.png",
-      "https://i.postimg.cc/BZcJ1m7q/happy-birthday-hoodie-grey.png"
+      "https://i.postimg.cc/MpWDRnvC/happy-birthday-hoodie-white-(1).png",
+      "https://i.postimg.cc/htqYY4h8/happy-birthday-hoodie-black-(1).png",
+      "https://i.postimg.cc/x1Tv8B4W/happy-birthday-hoodie-grey-(1).png"
     ],
     "isCustomizable": true
   },

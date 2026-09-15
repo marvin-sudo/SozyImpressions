@@ -108,7 +108,7 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
               className="bg-white rounded-3xl overflow-hidden border border-slate-200/80 hover:border-[#2D3094]/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group text-left"
             >
               {/* Product Visual Top */}
-              <div className="relative aspect-square overflow-hidden bg-slate-100">
+              <div className="relative aspect-[4/3.5] overflow-hidden bg-slate-100">
                 <OptimizedImage 
                   src={product.image} 
                   alt={product.name}
@@ -148,10 +148,10 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
               {/* Product Meta */}
               <div 
                 onClick={() => navigate('product', product.id)}
-                className="p-5 flex-1 flex flex-col justify-between cursor-pointer"
+                className="p-3.5 sm:p-4 flex-1 flex flex-col justify-between cursor-pointer"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-1.5">
+                  <div className="flex items-center justify-between gap-2 mb-1">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                       {product.category}
                     </span>
@@ -163,17 +163,17 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
                     )}
                   </div>
 
-                  <h3 className="font-heading font-black text-sm text-slate-900 leading-snug line-clamp-2 mb-2 group-hover:text-[#2D3094] transition-colors">
+                  <h3 className="font-heading font-black text-xs sm:text-sm text-slate-900 leading-snug line-clamp-1 mb-1 group-hover:text-[#2D3094] transition-colors">
                     {product.name}
                   </h3>
 
-                  <p className="text-[11px] text-slate-500 line-clamp-2 leading-relaxed mb-4">
+                  <p className="text-[11px] text-slate-500 line-clamp-1 leading-relaxed mb-2.5">
                     {product.description}
                   </p>
                 </div>
 
                 {/* Pricing and Action Strip */}
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between gap-2">
                   <div>
                     <div className="text-[9px] text-slate-400 font-bold uppercase tracking-wider">
                       Unit Price:

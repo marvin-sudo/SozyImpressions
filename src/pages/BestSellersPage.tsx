@@ -1005,8 +1005,6 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                           </div>
                         </div>
 
-                        </div>
-
                       </div>
 
                     </div>
