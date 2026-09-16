@@ -23,7 +23,7 @@ import {
   BESTSELLER_OCCASIONS,
   BestsellerProduct 
 } from '../data/bestsellersData';
-import { OptimizedImage } from '../components/OptimizedImage';
+import { OptimizedImage, preloadImages } from '../components/OptimizedImage';
 
 interface BestSellersPageProps {
   navigate: (view: View, param?: string) => void;
@@ -274,6 +274,14 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
     return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
+
+  // Preload all color variants and gallery images for currently visible products for zero-lag switching
+  useEffect(() => {
+    const visibleGalleries = paginatedProducts.flatMap(p => p.gallery || []);
+    if (visibleGalleries.length > 0) {
+      preloadImages(visibleGalleries);
+    }
+  }, [paginatedProducts]);
 
   // Format currency helpers
   const formatPrice = (ugx: number, usd: number) => {
@@ -888,6 +896,11 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                     <div
                       key={product.id}
                       onClick={() => handleOpenCustomizer(product)}
+                      onMouseEnter={() => {
+                        if (product.gallery && product.gallery.length > 1) {
+                          preloadImages(product.gallery);
+                        }
+                      }}
                       className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative min-w-0"
                     >
                       {/* Image Frame with Overlay Controls - optimized height */}

@@ -92,7 +92,40 @@ export const getProductById = (id?: string, liveProducts?: Product[]): Product =
 
     // 3. Keyword-specific resolution
     if (!found) {
-      if (cleanId.includes('birthday') || cleanId.includes('bday')) {
+      if (cleanId.includes('children') && (cleanId.includes('mug') || cleanId.includes('chocolate'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('children') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.id === 'bs-113');
+      } else if (cleanId.includes('love-heart') || (cleanId.includes('heart') && cleanId.includes('mug'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('love heart') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.id === 'bs-102');
+      } else if (cleanId.includes('sibling') && (cleanId.includes('mug') || cleanId.includes('cup') || cleanId.includes('initial'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('sibling') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.id === 'bs-96');
+      } else if (cleanId.includes('best-bro') || cleanId.includes('desi-mug') || (cleanId.includes('bro') && cleanId.includes('mug'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('bro') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.id === 'bs-84');
+      } else if (cleanId.includes('heartfelt') && (cleanId.includes('mug') || cleanId.includes('cup') || cleanId.includes('photo'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('heartfelt') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.id === 'bs-80');
+      } else if (cleanId.includes('main-character') || (cleanId.includes('polaroid') && (cleanId.includes('mug') || cleanId.includes('cup')))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('polaroid') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.id === 'bs-75');
+      } else if (cleanId.includes('magic') || cleanId.includes('reveal')) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('magic') && (p.name.toLowerCase().includes('mug') || p.name.toLowerCase().includes('reveal'))) ||
+                liveProducts.find(p => p.id === 'bs-53' || p.id === 'prod-magic-photo-mug');
+      } else if (cleanId.includes('ghibli')) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('ghibli') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.name.toLowerCase().includes('ghibli'));
+      } else if (cleanId.includes('cork') || (cleanId.includes('monogram') && cleanId.includes('mug'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('cork') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.name.toLowerCase().includes('cork'));
+      } else if (cleanId.includes('balloon') && (cleanId.includes('mug') || cleanId.includes('cup'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('balloon') && p.name.toLowerCase().includes('mug'));
+      } else if (cleanId.includes('birthday') && (cleanId.includes('mug') || cleanId.includes('cup'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('birthday') && p.name.toLowerCase().includes('mug'));
+      } else if (cleanId.includes('balloon')) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('balloon'));
+      } else if (cleanId.includes('birthday') || cleanId.includes('bday')) {
         found = liveProducts.find(p => p.name.toLowerCase().includes('birthday'));
       } else if (cleanId.includes('success') || cleanId.includes('inspiration') || cleanId.includes('dream-big')) {
         found = liveProducts.find(p => p.name.toLowerCase().includes('success') || p.name.toLowerCase().includes('inspiration'));
@@ -141,7 +174,40 @@ export const getProductById = (id?: string, liveProducts?: Product[]): Product =
     });
   }
   if (!foundInProducts) {
-    if (cleanId.includes('birthday') || cleanId.includes('bday') || cleanId.includes('happy-birthday')) {
+    if (cleanId.includes('children') && (cleanId.includes('mug') || cleanId.includes('chocolate'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('children') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.id === 'bs-113');
+    } else if (cleanId.includes('love-heart') || (cleanId.includes('heart') && cleanId.includes('mug'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('love heart') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.id === 'bs-102');
+    } else if (cleanId.includes('sibling') && (cleanId.includes('mug') || cleanId.includes('cup') || cleanId.includes('initial'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('sibling') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.id === 'bs-96');
+    } else if (cleanId.includes('best-bro') || cleanId.includes('desi-mug') || (cleanId.includes('bro') && cleanId.includes('mug'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('bro') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.id === 'bs-84');
+    } else if (cleanId.includes('heartfelt') && (cleanId.includes('mug') || cleanId.includes('cup') || cleanId.includes('photo'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('heartfelt') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.id === 'bs-80');
+    } else if (cleanId.includes('main-character') || (cleanId.includes('polaroid') && (cleanId.includes('mug') || cleanId.includes('cup')))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('polaroid') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.id === 'bs-75');
+    } else if (cleanId.includes('magic') || cleanId.includes('reveal')) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('magic') && (p.name.toLowerCase().includes('mug') || p.name.toLowerCase().includes('reveal'))) ||
+                        PRODUCTS_DATA.find(p => p.id === 'bs-53' || p.id === 'prod-magic-photo-mug');
+    } else if (cleanId.includes('ghibli')) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('ghibli') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('ghibli'));
+    } else if (cleanId.includes('cork') || (cleanId.includes('monogram') && cleanId.includes('mug'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('cork') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('cork'));
+    } else if (cleanId.includes('balloon') && (cleanId.includes('mug') || cleanId.includes('cup'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('balloon') && p.name.toLowerCase().includes('mug'));
+    } else if (cleanId.includes('birthday') && (cleanId.includes('mug') || cleanId.includes('cup'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('birthday') && p.name.toLowerCase().includes('mug'));
+    } else if (cleanId.includes('balloon')) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('balloon'));
+    } else if (cleanId.includes('birthday') || cleanId.includes('bday') || cleanId.includes('happy-birthday')) {
       foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('birthday'));
     } else if (cleanId.includes('success') || cleanId.includes('inspiration') || cleanId.includes('dream-big')) {
       foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('success') || p.name.toLowerCase().includes('inspiration'));

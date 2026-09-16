@@ -18,7 +18,7 @@ import { View, Currency, CartItem, CustomizationOptions, Product } from '../type
 import { getProductById, getRelatedProducts } from '../utils/productUtils';
 import { PAYMENT_LOGOS } from '../data/mockData';
 import { useShopStore } from '../context/ShopStoreContext';
-import { OptimizedImage } from '../components/OptimizedImage';
+import { OptimizedImage, preloadImages } from '../components/OptimizedImage';
 
 interface ProductDetailPageProps {
   productId?: string;
@@ -56,11 +56,18 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     return [product.image];
   }, [product]);
 
-  // Reset image index when product changes
+  // Reset image index when product changes and preload all images for instant zero-lag switching
   useEffect(() => {
     setSelectedImageIndex(0);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [product.id]);
+
+  // Preload all color variants and gallery images for instant zero-lag switching
+  useEffect(() => {
+    if (galleryImages && galleryImages.length > 0) {
+      preloadImages(galleryImages);
+    }
+  }, [galleryImages]);
 
   // Customization Options State
   const defaultColors = product.colors || ['Matte Black', 'Silver Lustre', 'Royal Blue', 'Champagne Gold'];
@@ -78,6 +85,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
   const handleColorSelect = (color: string) => {
     setSelectedColor(color);
     const colorLower = color.toLowerCase().trim();
+    
+    // 1. Direct keyword match against gallery image filenames
     const matchedIdx = galleryImages.findIndex((img) => {
       const imgLower = img.toLowerCase();
       if (colorLower.includes('lemon') || colorLower.includes('green')) {
@@ -92,28 +101,57 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       if (colorLower.includes('white')) {
         return imgLower.includes('white');
       }
-      return false;
+      if (colorLower.includes('navy') || colorLower.includes('blue')) {
+        return imgLower.includes('navy') || imgLower.includes('blue');
+      }
+      if (colorLower.includes('red') || colorLower.includes('maroon') || colorLower.includes('ruby')) {
+        return imgLower.includes('red') || imgLower.includes('maroon') || imgLower.includes('ruby');
+      }
+      if (colorLower.includes('gold') || colorLower.includes('champagne')) {
+        return imgLower.includes('gold') || imgLower.includes('champagne');
+      }
+      if (colorLower.includes('silver') || colorLower.includes('chrome')) {
+        return imgLower.includes('silver') || imgLower.includes('chrome');
+      }
+      if (colorLower.includes('pink') || colorLower.includes('rose')) {
+        return imgLower.includes('pink') || imgLower.includes('rose');
+      }
+      const words = colorLower.split(/\s+/).filter(w => w.length > 2);
+      return words.some(w => imgLower.includes(w));
     });
+
     if (matchedIdx !== -1) {
       setSelectedImageIndex(matchedIdx);
+    } else {
+      // 2. Index alignment fallback if colors array length matches gallery length
+      const colorIdx = defaultColors.indexOf(color);
+      if (colorIdx !== -1 && colorIdx < galleryImages.length && galleryImages.length === defaultColors.length) {
+        setSelectedImageIndex(colorIdx);
+      }
     }
   };
 
   const handleThumbnailClick = (idx: number) => {
     setSelectedImageIndex(idx);
     const imgUrl = (galleryImages[idx] || '').toLowerCase();
-    if (imgUrl.includes('mockup') || imgUrl.includes('lemon')) {
-      const match = defaultColors.find(c => c.toLowerCase().includes('lemon') || c.toLowerCase().includes('green'));
-      if (match) setSelectedColor(match);
-    } else if (imgUrl.includes('black')) {
-      const match = defaultColors.find(c => c.toLowerCase().includes('black'));
-      if (match) setSelectedColor(match);
-    } else if (imgUrl.includes('white')) {
-      const match = defaultColors.find(c => c.toLowerCase().includes('white'));
-      if (match) setSelectedColor(match);
-    } else if (imgUrl.includes('download-(45)') || imgUrl.includes('grey') || imgUrl.includes('gray')) {
-      const match = defaultColors.find(c => c.toLowerCase().includes('grey') || c.toLowerCase().includes('gray'));
-      if (match) setSelectedColor(match);
+    
+    let matchedColor = defaultColors.find(c => {
+      const cLower = c.toLowerCase();
+      if ((cLower.includes('lemon') || cLower.includes('green')) && (imgUrl.includes('mockup') || imgUrl.includes('lemon') || imgUrl.includes('green'))) return true;
+      if ((cLower.includes('grey') || cLower.includes('gray')) && (imgUrl.includes('download-(45)') || imgUrl.includes('grey') || imgUrl.includes('gray'))) return true;
+      if (cLower.includes('black') && imgUrl.includes('black')) return true;
+      if (cLower.includes('white') && imgUrl.includes('white')) return true;
+      if ((cLower.includes('navy') || cLower.includes('blue')) && (imgUrl.includes('navy') || imgUrl.includes('blue'))) return true;
+      if ((cLower.includes('red') || cLower.includes('maroon')) && (imgUrl.includes('red') || imgUrl.includes('maroon'))) return true;
+      const words = cLower.split(/\s+/).filter(w => w.length > 2);
+      return words.some(w => imgUrl.includes(w));
+    });
+
+    if (!matchedColor && galleryImages.length === defaultColors.length && defaultColors[idx]) {
+      matchedColor = defaultColors[idx];
+    }
+    if (matchedColor) {
+      setSelectedColor(matchedColor);
     }
   };
 
@@ -123,12 +161,16 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
     if (c.includes('black')) return 'bg-slate-950 border-slate-700';
     if (c.includes('white')) return 'bg-white border-slate-300';
     if (c.includes('grey') || c.includes('gray')) return 'bg-slate-400 border-slate-500';
-    if (c.includes('navy') || c.includes('blue')) return 'bg-blue-900 border-blue-950';
+    if (c.includes('navy')) return 'bg-blue-950 border-blue-900';
+    if (c.includes('royal blue') || c.includes('blue')) return 'bg-blue-600 border-blue-700';
+    if (c.includes('red') || c.includes('ruby')) return 'bg-red-600 border-red-700';
+    if (c.includes('maroon')) return 'bg-red-900 border-red-950';
+    if (c.includes('gold') || c.includes('champagne')) return 'bg-amber-400 border-amber-500';
+    if (c.includes('silver') || c.includes('chrome')) return 'bg-slate-300 border-slate-400';
+    if (c.includes('pink') || c.includes('rose')) return 'bg-rose-400 border-rose-500';
+    if (c.includes('tan') || c.includes('brown') || c.includes('chestnut')) return 'bg-amber-800 border-amber-900';
     if (c.includes('green') || c.includes('olive')) return 'bg-emerald-800 border-emerald-900';
-    if (c.includes('gold')) return 'bg-amber-400 border-amber-500';
-    if (c.includes('silver')) return 'bg-slate-300 border-slate-400';
-    if (c.includes('red')) return 'bg-rose-600 border-rose-700';
-    return 'bg-slate-200 border-slate-300';
+    return 'bg-slate-300 border-slate-400';
   };
   
   // Customization input

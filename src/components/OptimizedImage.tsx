@@ -1,7 +1,36 @@
 import React, { useState, useEffect } from 'react';
 
 // Global cache of successfully loaded image URLs to prevent re-shimmering on navigation or re-render
-const loadedImageCache = new Set<string>();
+export const loadedImageCache = new Set<string>();
+
+/**
+ * Preload a single image URL into browser cache and memory set
+ */
+export const preloadImage = (url?: string): Promise<void> => {
+  if (!url || typeof window === 'undefined') return Promise.resolve();
+  if (loadedImageCache.has(url)) return Promise.resolve();
+
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.referrerPolicy = 'no-referrer';
+    img.onload = () => {
+      loadedImageCache.add(url);
+      resolve();
+    };
+    img.onerror = () => {
+      resolve(); // Graceful resolve so Promise.all doesn't break
+    };
+    img.src = url;
+  });
+};
+
+/**
+ * Preload multiple image URLs in parallel
+ */
+export const preloadImages = (urls: (string | undefined)[]): Promise<void[]> => {
+  const validUrls = urls.filter((u): u is string => Boolean(u));
+  return Promise.all(validUrls.map(preloadImage));
+};
 
 export interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src?: string;

@@ -20,7 +20,7 @@ import { CategoryProductsModal } from '../components/CategoryProductsModal';
 import { DedicatedCategoryView } from '../components/DedicatedCategoryView';
 import { GiftFinderModal } from '../components/GiftFinderModal';
 import { useShopStore } from '../context/ShopStoreContext';
-import { OptimizedImage } from '../components/OptimizedImage';
+import { OptimizedImage, preloadImages } from '../components/OptimizedImage';
 
 interface ShopPageProps {
   navigate?: (view: View, param?: string) => void;
@@ -665,9 +665,14 @@ export const ShopPage: React.FC<ShopPageProps> = ({
                       onOpenCustomizer(product);
                     }
                   }}
+                  onMouseEnter={() => {
+                    if (product.gallery && product.gallery.length > 1) {
+                      preloadImages(product.gallery);
+                    }
+                  }}
                   className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg hover:border-[#2D3094]/30 transition-all duration-300 flex flex-col cursor-pointer"
                 >
-                  <div className="relative aspect-square overflow-hidden bg-slate-50">
+                  <div className="relative aspect-[4/3.5] overflow-hidden bg-slate-50">
                     <OptimizedImage
                       src={product.image}
                       alt={product.name}

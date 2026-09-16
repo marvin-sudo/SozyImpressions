@@ -18,7 +18,7 @@ import { BESTSELLERS_DATA } from '../data/bestsellersData';
 import { PRODUCTS_DATA } from '../data/mockData';
 import { SHOP_CATEGORIES } from '../data/shopCategories';
 import { useShopStore } from '../context/ShopStoreContext';
-import { OptimizedImage } from './OptimizedImage';
+import { OptimizedImage, preloadImages } from './OptimizedImage';
 
 interface DedicatedCategoryViewProps {
   categoryName: string;
@@ -411,6 +411,14 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
     return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
+
+  // Preload all color variants and gallery images for currently visible products for zero-lag switching
+  useEffect(() => {
+    const visibleGalleries = paginatedProducts.flatMap(p => p.gallery || []);
+    if (visibleGalleries.length > 0) {
+      preloadImages(visibleGalleries);
+    }
+  }, [paginatedProducts]);
 
   const formatPrice = (ugx?: number, usd?: number) => {
     const safeUGX = ugx ?? 0;
@@ -1114,6 +1122,11 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                     <div
                       key={product.id}
                       onClick={() => onOpenCustomizer(toStandardProduct(product))}
+                      onMouseEnter={() => {
+                        if (product.gallery && product.gallery.length > 1) {
+                          preloadImages(product.gallery);
+                        }
+                      }}
                       className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative min-w-0"
                     >
                       {/* Image Frame with Pagination Dots - compact height */}

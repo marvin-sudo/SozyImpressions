@@ -1158,24 +1158,246 @@ export const PRODUCTS_DATA: Product[] = [
   },
   {
     id: 'prod-magic-photo-mug',
-    name: 'Color-Changing Magic Heat-Sensitive Ceramic Photo Mug',
+    name: 'Magic Reveal Photo Mug',
     category: 'Mugs',
-    priceUGX: 22000,
-    priceUSD: 5.8,
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800',
-    description: 'Appears as an all-black matte mug at room temperature; pour hot coffee or tea to reveal your custom photo, heartfelt message, or vibrant brand graphic in full photographic color!',
+    priceUGX: 24000,
+    originalPriceUGX: 36000,
+    priceUSD: 6.5,
+    originalPriceUSD: 9.7,
+    image: 'https://i.postimg.cc/7ZTHMPcW/Customized-Magic-Mug-Watch-your-memories-appear-like-magic-Our-heat-sensitive-magic-mug-re.jpg',
+    gallery: [
+      'https://i.postimg.cc/7ZTHMPcW/Customized-Magic-Mug-Watch-your-memories-appear-like-magic-Our-heat-sensitive-magic-mug-re.jpg',
+      'https://i.postimg.cc/qRQ4MNtS/Magic-Mug.jpg',
+      'https://i.postimg.cc/kg8CR16x/Magic-Cup-Cuztomize.jpg'
+    ],
+    description: 'Watch your cherished memories appear like magic! Appears as an elegant matte black mug at room temperature; pour hot coffee, tea, or cocoa to reveal your custom photo, heartfelt message, or vibrant design in crystal-clear full color.',
     specifications: {
       'Capacity': '330 ml / 11 oz',
-      'Mechanism': 'Thermodynamic Sublimation Pigment',
-      'Care': 'Gentle Hand Wash Recommended',
-      'Packaging': 'Gift Box with Bubble Protection'
+      'Material': 'High-Grade AAA Ceramic with Heat-Activated Thermodynamic Coating',
+      'Reveal Mechanism': 'Temperature-Sensitive Color Transition (reveals at 45°C+)',
+      'Print Quality': 'High-Definition Photographic Dye Sublimation',
+      'Care': 'Gentle Hand Wash Recommended (Preserves Thermodynamic Layer)',
+      'Packaging': 'Delivered in Protective Gift Box'
     },
     isCustomizable: true,
     minOrderQty: 1,
+    colors: ['Heat-Activated Magic Black', 'Glossy Reveal Finish'],
     rating: 4.9,
     reviewCount: 89,
     inStock: true,
-    badge: 'Viral Favourite'
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-53',
+    name: 'Magic Reveal Photo Mug',
+    category: 'Mugs',
+    priceUGX: 24000,
+    originalPriceUGX: 36000,
+    priceUSD: 6.5,
+    originalPriceUSD: 9.7,
+    image: 'https://i.postimg.cc/7ZTHMPcW/Customized-Magic-Mug-Watch-your-memories-appear-like-magic-Our-heat-sensitive-magic-mug-re.jpg',
+    gallery: [
+      'https://i.postimg.cc/7ZTHMPcW/Customized-Magic-Mug-Watch-your-memories-appear-like-magic-Our-heat-sensitive-magic-mug-re.jpg',
+      'https://i.postimg.cc/qRQ4MNtS/Magic-Mug.jpg',
+      'https://i.postimg.cc/kg8CR16x/Magic-Cup-Cuztomize.jpg'
+    ],
+    description: 'Watch your cherished memories appear like magic! Appears as an elegant matte black mug at room temperature; pour hot coffee, tea, or cocoa to reveal your custom photo, heartfelt message, or vibrant design in crystal-clear full color.',
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Ceramic with Heat-Activated Thermodynamic Coating',
+      'Reveal Mechanism': 'Temperature-Sensitive Color Transition (reveals at 45°C+)',
+      'Print Quality': 'High-Definition Photographic Dye Sublimation',
+      'Care': 'Gentle Hand Wash Recommended (Preserves Thermodynamic Layer)',
+      'Packaging': 'Delivered in Protective Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Heat-Activated Magic Black', 'Glossy Reveal Finish'],
+    rating: 4.9,
+    reviewCount: 89,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-75',
+    name: "Main Character's Polaroid Birthday Mug",
+    category: 'Mugs',
+    priceUGX: 15000,
+    originalPriceUGX: 19000,
+    priceUSD: 4.1,
+    originalPriceUSD: 5.1,
+    image: 'https://i.postimg.cc/ThMkz9dx/Custom-Photo-Mug-Personalized-Picture-Coffee-Cup-Anniversary-Birthday-Gift-Etsy.jpg',
+    gallery: [
+      'https://i.postimg.cc/ThMkz9dx/Custom-Photo-Mug-Personalized-Picture-Coffee-Cup-Anniversary-Birthday-Gift-Etsy.jpg',
+      'https://i.postimg.cc/8k6g0Xwk/Mugs-personality.jpg',
+      'https://i.postimg.cc/HnHz3LB5/Best-freinds-photo-cup-Cups-with-your-best-friend-photo.jpg'
+    ],
+    description: "Celebrate their special milestone in vintage style! The Main Character's Polaroid Birthday Mug features authentic retro Polaroid photo frames with your custom snapshots, date, and bespoke birthday headline across high-gloss ceramic.",
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Glossy Ceramic',
+      'Design': 'Retro Polaroid Photo Frames with Custom Caption & Date',
+      'Print Technique': 'High-Definition Permanent Sublimation Wrap',
+      'Care': '100% Microwave and Dishwasher Safe',
+      'Packaging': 'Delivered in Protective Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Vintage Polaroid White', 'Pastel Pink Frame', 'Retro Blue Frame'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-80',
+    name: 'Personalised Heartfelt Photo Mug',
+    category: 'Mugs',
+    priceUGX: 17000,
+    originalPriceUGX: 27000,
+    priceUSD: 4.6,
+    originalPriceUSD: 7.3,
+    image: 'https://i.postimg.cc/NF5M36JY/Personalized-Photo-Coffee-Mug-Custom-Picture-Mug-Gift-for-Mom-Dad-Mug-with-Photo-Birthday-Anniver.jpg',
+    gallery: [
+      'https://i.postimg.cc/NF5M36JY/Personalized-Photo-Coffee-Mug-Custom-Picture-Mug-Gift-for-Mom-Dad-Mug-with-Photo-Birthday-Anniver.jpg',
+      'https://i.postimg.cc/HstY6Ps5/Mug-customization-is-available-Dm-for-order-this-product.jpg'
+    ],
+    description: 'Cherish heartfelt family and couple memories with every warm sip! Features high-resolution custom photo collage printing, tailored typography, and a glossy, durable ceramic finish that makes a touching gift for mom, dad, or your significant other.',
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Glossy Ceramic',
+      'Personalisation': 'Custom Photographs, Heartfelt Names & Dedication Messages',
+      'Print Technique': 'Permanent Scratch-Proof Dye Sublimation Wrap',
+      'Care': '100% Microwave and Dishwasher Safe',
+      'Packaging': 'Delivered in Protective Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Classic Glossy White Ceramic', 'Black Interior Accent'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-84',
+    name: 'Best Bro Ever Desi Mug',
+    category: 'Mugs',
+    priceUGX: 30000,
+    originalPriceUGX: 38000,
+    priceUSD: 8.1,
+    originalPriceUSD: 10.3,
+    image: 'https://i.postimg.cc/Hs3z45R7/Personalized-Coffee-Mug-Customizable-Coffee-Mug-Best-Brother-Ever-Customisable-Coffee-Mug-Gift-fo.jpg',
+    gallery: [
+      'https://i.postimg.cc/Hs3z45R7/Personalized-Coffee-Mug-Customizable-Coffee-Mug-Best-Brother-Ever-Customisable-Coffee-Mug-Gift-fo.jpg'
+    ],
+    description: 'Celebrate the greatest brother with the Best Bro Ever Desi Mug! High-gloss AAA ceramic mug featuring bold, vibrant typography and custom brother name personalization with a permanent scratch-proof finish.',
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Glossy White Ceramic',
+      'Design': 'Best Bro Ever Celebratory Typography & Custom Name',
+      'Print Technique': 'Permanent High-Definition Sublimation Wrap',
+      'Care': '100% Microwave and Dishwasher Safe',
+      'Packaging': 'Delivered in Protective Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Classic Glossy White Ceramic', 'Bold Blue Accent', 'Matte Black Accent'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-96',
+    name: 'Best Sibling Ever Custom Initial Mug',
+    category: 'Mugs',
+    priceUGX: 15000,
+    originalPriceUGX: 19000,
+    priceUSD: 4.1,
+    originalPriceUSD: 5.1,
+    image: 'https://i.postimg.cc/3x8KzML5/Deal-The-Purple-Tree-Rakshabandhan-Rakhi-Gift-Mug-for-Sister-and-Brother-Mug-(330-ml-Pack-of-1)-R.jpg',
+    gallery: [
+      'https://i.postimg.cc/3x8KzML5/Deal-The-Purple-Tree-Rakshabandhan-Rakhi-Gift-Mug-for-Sister-and-Brother-Mug-(330-ml-Pack-of-1)-R.jpg',
+      'https://i.postimg.cc/fRDxFLnL/Best-Sister-Ever-Personalized-Mug-Custom-Message-Custom-Coffee-Cup-Aunt-Gift-Mug-Ceramic-Mug.jpg',
+      'https://i.postimg.cc/LX2KgLGc/Sibling-goals-unlocked-Whether-you-re-team-Best-Brother-Ever-or-team-Best-Sister-Ever-show-your.jpg'
+    ],
+    description: "Sibling goals unlocked! Celebrate your extraordinary bond whether you're team Best Brother Ever or team Best Sister Ever. Features personalized custom initials, bold vibrant typography, and your sibling's name across glossy AAA ceramic.",
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Glossy Ceramic',
+      'Design': 'Custom Initial Monogram with Best Sibling Ever Typography',
+      'Print Technique': 'High-Definition Scratch-Proof Dye Sublimation',
+      'Care': '100% Microwave and Dishwasher Safe',
+      'Packaging': 'Delivered in Protective Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Glossy Ceramic White', 'Lavender Purple Accent', 'Classic Navy Blue Accent'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-102',
+    name: 'Personalised Love Heart Mug',
+    category: 'Mugs',
+    priceUGX: 30000,
+    originalPriceUGX: 42000,
+    priceUSD: 8.1,
+    originalPriceUSD: 11.4,
+    image: 'https://i.postimg.cc/jSbGFzSC/Personalized-11-oz-Two-Tone-Color-Mugs-with-Heart-Handle-by-Vivo-Print-Black-Ceramic-Custom-Whole.jpg',
+    gallery: [
+      'https://i.postimg.cc/jSbGFzSC/Personalized-11-oz-Two-Tone-Color-Mugs-with-Heart-Handle-by-Vivo-Print-Black-Ceramic-Custom-Whole.jpg',
+      'https://i.postimg.cc/y8Lvy9g1/download-(100).jpg'
+    ],
+    description: 'Fall in love with every warm sip! Features a charming sculpted heart-shaped handle and two-tone color interior with your custom photo, romantic monogram, and personalized love message printed in brilliant high definition.',
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Ceramic with Sculpted Heart Handle',
+      'Design': 'Romantic Heart-Shaped Handle & Custom Photo / Monogram Wrap',
+      'Print Technique': 'High-Definition Scratch-Proof Sublimation',
+      'Care': '100% Microwave and Dishwasher Safe',
+      'Packaging': 'Delivered in Protective Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Romantic Red Heart Handle', 'Matte Black Two-Tone', 'Classic Ceramic White'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-113',
+    name: 'Children’s Day Personalised Chocolate Mug Set',
+    category: 'Mugs',
+    priceUGX: 24000,
+    originalPriceUGX: 63000,
+    priceUSD: 6.5,
+    originalPriceUSD: 17,
+    image: 'https://i.postimg.cc/25wmw0dj/download-2026-09-16T134834-963.jpg',
+    gallery: [
+      'https://i.postimg.cc/25wmw0dj/download-2026-09-16T134834-963.jpg',
+      'https://i.postimg.cc/LX5dV26n/download-2026-09-16T134820-138.jpg'
+    ],
+    description: "Make Children's Day unforgettable! A playful personalised ceramic mug paired with delightful chocolates and joyful custom artwork featuring their photo, name, and fun motivational quotes.",
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Food-Safe Glossy Ceramic',
+      'Design': "Playful Children's Day Artwork with Custom Child Photo & Name",
+      'Print Technique': 'High-Definition Non-Toxic Dye Sublimation',
+      'Care': '100% Microwave and Dishwasher Safe',
+      'Packaging': 'Delivered in Festive Celebration Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Vibrant Yellow Joy', 'Sky Blue Fun', 'Pastel Pink Smile'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
   },
   {
     id: 'bs-8',
@@ -1202,6 +1424,100 @@ export const PRODUCTS_DATA: Product[] = [
     rating: 4.9,
     reviewCount: 692,
     inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-16',
+    name: 'Birthday Balloon Personalised Mug',
+    category: 'Mugs',
+    priceUGX: 30000,
+    originalPriceUGX: 37000,
+    priceUSD: 8.1,
+    originalPriceUSD: 10,
+    image: 'https://i.postimg.cc/4dYhzRz2/il-1588x-N-8502365131-4ls5.jpg',
+    gallery: [
+      'https://i.postimg.cc/4dYhzRz2/il-1588x-N-8502365131-4ls5.jpg',
+      'https://i.postimg.cc/pV8mxZkJ/il-1588x-N-8502364755-lis1.avif',
+      'https://i.postimg.cc/FRSHrrbm/il-1588x-N-8454515040-d06w.avif'
+    ],
+    description: 'Charming Birthday Balloon Personalised Mug featuring festive pastel watercolor balloons, celebratory typography, and custom name/age personalization. Crafted from premium high-gloss AAA ceramic with vibrant 360° permanent wrap print.',
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Glossy Ceramic',
+      'Print Technique': 'Permanent Scratch-Proof Dye Sublimation',
+      'Design': 'Festive Birthday Balloons with Custom Name & Age',
+      'Care': '100% Microwave and Dishwasher Safe',
+      'Packaging': 'Delivered in Elegant Protective Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Classic White Ceramic', 'Pink Balloon Accent', 'Blue Balloon Accent'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    isFeatured: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-28',
+    name: 'Personalised Monogram Cork Mug',
+    category: 'Mugs',
+    priceUGX: 30000,
+    originalPriceUGX: 37000,
+    priceUSD: 8.1,
+    originalPriceUSD: 10,
+    image: 'https://i.postimg.cc/j289BNWc/Personalised-Insulated-Cork-Base-Coffee-Mug-350ml-White-Both-Side-(1).jpg',
+    gallery: [
+      'https://i.postimg.cc/j289BNWc/Personalised-Insulated-Cork-Base-Coffee-Mug-350ml-White-Both-Side-(1).jpg'
+    ],
+    description: 'Personalised Insulated Cork Base Ceramic Coffee Mug (350ml). Combines crisp white ceramic with a natural non-scratch insulating cork base and splash-proof slide lid. Precision custom monogram, initial, and name printed on both sides with permanent scratch-proof finish.',
+    specifications: {
+      'Capacity': '350 ml (12 oz)',
+      'Material': 'High-Grade Ceramic with Natural Insulating Cork Base',
+      'Base': 'Scratch-Proof Natural Cork (Protects Desks & Tables)',
+      'Lid': 'Splash-Resistant Sliding Drinking Lid',
+      'Personalisation': 'Custom Monogram & Name Printed on Both Sides',
+      'Care': 'Hand wash recommended to preserve natural cork base'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Classic White with Natural Cork'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    isFeatured: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-45',
+    name: 'Ghibli Glow Personalised Mug',
+    category: 'Mugs',
+    priceUGX: 18000,
+    originalPriceUGX: 24000,
+    priceUSD: 4.9,
+    originalPriceUSD: 6.5,
+    image: 'https://i.postimg.cc/tTJF2xHN/download-(73).jpg',
+    gallery: [
+      'https://i.postimg.cc/tTJF2xHN/download-(73).jpg',
+      'https://i.postimg.cc/j2Nc47zM/download-(74).jpg'
+    ],
+    description: 'Enchanting Ghibli Glow Personalised Mug featuring beloved Studio Ghibli-inspired whimsical night glow illustration and custom name typography. Crafted from premium AAA glossy ceramic with permanent vibrant 360° sublimation print.',
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Glossy White Ceramic',
+      'Print Technique': 'Permanent High-Definition Sublimation Wrap',
+      'Theme': 'Studio Ghibli-Inspired Whimsical Night Glow Artwork',
+      'Personalisation': 'Custom Name / Heartfelt Message',
+      'Care': 'Microwave & Dishwasher Safe',
+      'Packaging': 'Delivered in Protective Gift Packaging'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Whimsical Night Glow White', 'Ghibli Starlight Edition'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    isFeatured: true,
     badge: 'PERSONALISE IT!'
   },
   {

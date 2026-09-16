@@ -406,10 +406,11 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "19% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/4dYhzRz2/il-1588x-N-8502365131-4ls5.jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/4dYhzRz2/il-1588x-N-8502365131-4ls5.jpg",
+      "https://i.postimg.cc/pV8mxZkJ/il-1588x-N-8502364755-lis1.avif",
+      "https://i.postimg.cc/FRSHrrbm/il-1588x-N-8454515040-d06w.avif"
     ],
     "isCustomizable": true
   },
@@ -658,10 +659,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "19% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/j289BNWc/Personalised-Insulated-Cork-Base-Coffee-Mug-350ml-White-Both-Side-(1).jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/j289BNWc/Personalised-Insulated-Cork-Base-Coffee-Mug-350ml-White-Both-Side-(1).jpg"
     ],
     "isCustomizable": true
   },
@@ -1015,10 +1015,10 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "25% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/tTJF2xHN/download-(73).jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/tTJF2xHN/download-(73).jpg",
+      "https://i.postimg.cc/j2Nc47zM/download-(74).jpg"
     ],
     "isCustomizable": true
   },
@@ -1183,10 +1183,11 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "33% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/7ZTHMPcW/Customized-Magic-Mug-Watch-your-memories-appear-like-magic-Our-heat-sensitive-magic-mug-re.jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/7ZTHMPcW/Customized-Magic-Mug-Watch-your-memories-appear-like-magic-Our-heat-sensitive-magic-mug-re.jpg",
+      "https://i.postimg.cc/qRQ4MNtS/Magic-Mug.jpg",
+      "https://i.postimg.cc/kg8CR16x/Magic-Cup-Cuztomize.jpg"
     ],
     "isCustomizable": true
   },
@@ -1645,10 +1646,11 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "21% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/ThMkz9dx/Custom-Photo-Mug-Personalized-Picture-Coffee-Cup-Anniversary-Birthday-Gift-Etsy.jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/ThMkz9dx/Custom-Photo-Mug-Personalized-Picture-Coffee-Cup-Anniversary-Birthday-Gift-Etsy.jpg",
+      "https://i.postimg.cc/8k6g0Xwk/Mugs-personality.jpg",
+      "https://i.postimg.cc/HnHz3LB5/Best-freinds-photo-cup-Cups-with-your-best-friend-photo.jpg"
     ],
     "isCustomizable": true
   },
@@ -1750,10 +1752,10 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "38% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/NF5M36JY/Personalized-Photo-Coffee-Mug-Custom-Picture-Mug-Gift-for-Mom-Dad-Mug-with-Photo-Birthday-Anniver.jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/NF5M36JY/Personalized-Photo-Coffee-Mug-Custom-Picture-Mug-Gift-for-Mom-Dad-Mug-with-Photo-Birthday-Anniver.jpg",
+      "https://i.postimg.cc/HstY6Ps5/Mug-customization-is-available-Dm-for-order-this-product.jpg"
     ],
     "isCustomizable": true
   },
@@ -1800,44 +1802,22 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "isCustomizable": true
   },
   {
-    "id": "bs-83",
-    "name": "Roses & Orchids Harmony Bouquet with Motivational Mug",
-    "badge": "PERSONALISE IT!",
-    "category": "Mugs",
-    "recipient": "All",
-    "occasion": "General",
-    "priceUGX": 75000,
-    "originalPriceUGX": 84000,
-    "priceUSD": 20.3,
-    "originalPriceUSD": 22.7,
-    "discountPercent": "11% OFF",
-    "rating": 4.9,
-    "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
-    "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
-    ],
-    "isCustomizable": true
-  },
-  {
     "id": "bs-84",
     "name": "Best Bro Ever Desi Mug",
     "badge": "PERSONALISE IT!",
     "category": "Mugs",
     "recipient": "Him",
     "occasion": "General",
-    "priceUGX": 15000,
-    "originalPriceUGX": 19000,
-    "priceUSD": 4.1,
-    "originalPriceUSD": 5.1,
+    "priceUGX": 30000,
+    "originalPriceUGX": 38000,
+    "priceUSD": 8.1,
+    "originalPriceUSD": 10.3,
     "discountPercent": "21% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/Hs3z45R7/Personalized-Coffee-Mug-Customizable-Coffee-Mug-Best-Brother-Ever-Customisable-Coffee-Mug-Gift-fo.jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/Hs3z45R7/Personalized-Coffee-Mug-Customizable-Coffee-Mug-Best-Brother-Ever-Customisable-Coffee-Mug-Gift-fo.jpg"
     ],
     "isCustomizable": true
   },
@@ -1968,27 +1948,6 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "isCustomizable": true
   },
   {
-    "id": "bs-91",
-    "name": "Gerbera Daisy Bouquet with Birthday Mug",
-    "badge": "PERSONALISE IT!",
-    "category": "Mugs",
-    "recipient": "All",
-    "occasion": "Birthday",
-    "priceUGX": 57000,
-    "originalPriceUGX": 66000,
-    "priceUSD": 15.4,
-    "originalPriceUSD": 17.8,
-    "discountPercent": "14% OFF",
-    "rating": 4.9,
-    "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
-    "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
-    ],
-    "isCustomizable": true
-  },
-  {
     "id": "bs-92",
     "name": "Birthday Cheers Photo Frame",
     "badge": "PERSONALISE IT!",
@@ -2086,10 +2045,11 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "21% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/3x8KzML5/Deal-The-Purple-Tree-Rakshabandhan-Rakhi-Gift-Mug-for-Sister-and-Brother-Mug-(330-ml-Pack-of-1)-R.jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/3x8KzML5/Deal-The-Purple-Tree-Rakshabandhan-Rakhi-Gift-Mug-for-Sister-and-Brother-Mug-(330-ml-Pack-of-1)-R.jpg",
+      "https://i.postimg.cc/fRDxFLnL/Best-Sister-Ever-Personalized-Mug-Custom-Message-Custom-Coffee-Cup-Aunt-Gift-Mug-Ceramic-Mug.jpg",
+      "https://i.postimg.cc/LX2KgLGc/Sibling-goals-unlocked-Whether-you-re-team-Best-Brother-Ever-or-team-Best-Sister-Ever-show-your.jpg"
     ],
     "isCustomizable": true
   },
@@ -2157,27 +2117,6 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "isCustomizable": true
   },
   {
-    "id": "bs-100",
-    "name": "Cute Custom Name Gym Mug",
-    "badge": "Hatke",
-    "category": "Mugs",
-    "recipient": "All",
-    "occasion": "General",
-    "priceUGX": 15000,
-    "originalPriceUGX": 19000,
-    "priceUSD": 4.1,
-    "originalPriceUSD": 5.1,
-    "discountPercent": "21% OFF",
-    "rating": 4.9,
-    "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
-    "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
-    ],
-    "isCustomizable": true
-  },
-  {
     "id": "bs-101",
     "name": "Pastel Floral Birthday Ensemble",
     "badge": "PERSONALISE IT!",
@@ -2212,10 +2151,10 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "29% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/jSbGFzSC/Personalized-11-oz-Two-Tone-Color-Mugs-with-Heart-Handle-by-Vivo-Print-Black-Ceramic-Custom-Whole.jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/jSbGFzSC/Personalized-11-oz-Two-Tone-Color-Mugs-with-Heart-Handle-by-Vivo-Print-Black-Ceramic-Custom-Whole.jpg",
+      "https://i.postimg.cc/y8Lvy9g1/download-(100).jpg"
     ],
     "isCustomizable": true
   },
@@ -2409,27 +2348,6 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "isCustomizable": true
   },
   {
-    "id": "bs-112",
-    "name": "Custom Warm Moments Mug",
-    "badge": "PERSONALISE IT!",
-    "category": "Mugs",
-    "recipient": "Him",
-    "occasion": "Mother's Day",
-    "priceUGX": 15000,
-    "originalPriceUGX": 24000,
-    "priceUSD": 4.1,
-    "originalPriceUSD": 6.5,
-    "discountPercent": "38% OFF",
-    "rating": 4.9,
-    "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
-    "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
-    ],
-    "isCustomizable": true
-  },
-  {
     "id": "bs-113",
     "name": "Children’s Day Personalised Chocolate Mug Set",
     "badge": "PERSONALISE IT!",
@@ -2443,10 +2361,10 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "62% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/src/assets/images/tumbler_mug_1788634322323.jpg",
+    "image": "https://i.postimg.cc/25wmw0dj/download-2026-09-16T134834-963.jpg",
     "gallery": [
-      "/src/assets/images/tumbler_mug_1788634322323.jpg",
-      "/src/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/25wmw0dj/download-2026-09-16T134834-963.jpg",
+      "https://i.postimg.cc/LX5dV26n/download-2026-09-16T134820-138.jpg"
     ],
     "isCustomizable": true
   },
