@@ -25,10 +25,12 @@ import { DashboardLockScreen } from '../../components/admin/DashboardLockScreen'
 
 interface ShopAdminDashboardProps {
   onNavigateToShop: () => void;
+  onNavigateToProduct?: (productId: string) => void;
 }
 
 export const ShopAdminDashboard: React.FC<ShopAdminDashboardProps> = ({
-  onNavigateToShop
+  onNavigateToShop,
+  onNavigateToProduct
 }) => {
   const { isLocked } = useShopStore();
 
@@ -98,7 +100,15 @@ export const ShopAdminDashboard: React.FC<ShopAdminDashboardProps> = ({
           )}
 
           {activeTab === 'products' && (
-            <ProductsView />
+            <ProductsView 
+              onNavigateToShopProduct={(productId) => {
+                if (onNavigateToProduct) {
+                  onNavigateToProduct(productId);
+                } else {
+                  onNavigateToShop();
+                }
+              }} 
+            />
           )}
 
           {activeTab === 'categories' && (

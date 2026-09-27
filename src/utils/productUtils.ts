@@ -38,11 +38,54 @@ export const mapBestsellerToProduct = (bp: BestsellerProduct): Product => ({
   }
 });
 
-export const getAllProducts = (): Product[] => {
+let cachedBaseProducts: Product[] | null = null;
+
+const getBaseProducts = (): Product[] => {
+  if (!cachedBaseProducts) {
+    const productsMap = new Map<string, Product>();
+
+    for (const prod of PRODUCTS_DATA) {
+      productsMap.set(prod.id, {
+        ...prod,
+        gallery: prod.gallery && prod.gallery.length > 0 ? prod.gallery : [prod.image],
+        colors: prod.colors && prod.colors.length > 0 ? prod.colors : ['Default', 'Black', 'Blue', 'White'],
+        bulkTiers: prod.bulkTiers && prod.bulkTiers.length > 0 ? prod.bulkTiers : [
+          { minQty: 1, discountPercent: 0 },
+          { minQty: 10, discountPercent: 5 },
+          { minQty: 25, discountPercent: 10 },
+          { minQty: 50, discountPercent: 15 },
+          { minQty: 100, discountPercent: 20 }
+        ],
+        specifications: prod.specifications || {
+          'Production Facility': 'Sozy Impressions Workshop, Kampala, Uganda',
+          'Customisation Method': 'Precision Fiber Laser Engraving & High-Res UV Printing',
+          'Standard Turnaround': '24 - 48 Hours in Kampala',
+          'Proofing': 'Free Digital 3D Artwork Proof Provided Before Production'
+        }
+      });
+    }
+
+    for (const bp of BESTSELLERS_DATA) {
+      if (!productsMap.has(bp.id)) {
+        productsMap.set(bp.id, mapBestsellerToProduct(bp));
+      }
+    }
+
+    cachedBaseProducts = Array.from(productsMap.values());
+  }
+  return cachedBaseProducts;
+};
+
+export const getAllProducts = (liveProducts?: Product[]): Product[] => {
+  const base = getBaseProducts();
+  if (!liveProducts || liveProducts.length === 0) {
+    return base;
+  }
+
   const productsMap = new Map<string, Product>();
 
-  // 1. Add standard catalog products
-  for (const prod of PRODUCTS_DATA) {
+  // 1. If liveProducts are passed, insert them first (live from Firestore/admin)
+  for (const prod of liveProducts) {
     productsMap.set(prod.id, {
       ...prod,
       gallery: prod.gallery && prod.gallery.length > 0 ? prod.gallery : [prod.image],
@@ -63,10 +106,10 @@ export const getAllProducts = (): Product[] => {
     });
   }
 
-  // 2. Add bestseller products
-  for (const bp of BESTSELLERS_DATA) {
-    if (!productsMap.has(bp.id)) {
-      productsMap.set(bp.id, mapBestsellerToProduct(bp));
+  // 2. Add base products that are not yet in liveProducts
+  for (const prod of base) {
+    if (!productsMap.has(prod.id)) {
+      productsMap.set(prod.id, prod);
     }
   }
 
@@ -92,7 +135,13 @@ export const getProductById = (id?: string, liveProducts?: Product[]): Product =
 
     // 3. Keyword-specific resolution
     if (!found) {
-      if (cleanId.includes('children') && (cleanId.includes('mug') || cleanId.includes('chocolate'))) {
+      if (cleanId.includes('blooming') && (cleanId.includes('monogram') || cleanId.includes('mug') || cleanId.includes('floral'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('blooming') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.id === 'bs-120');
+      } else if (cleanId.includes('doctor') && (cleanId.includes('coat') || cleanId.includes('mug') || cleanId.includes('name'))) {
+        found = liveProducts.find(p => p.name.toLowerCase().includes('doctor') && p.name.toLowerCase().includes('mug')) ||
+                liveProducts.find(p => p.id === 'bs-118');
+      } else if (cleanId.includes('children') && (cleanId.includes('mug') || cleanId.includes('chocolate'))) {
         found = liveProducts.find(p => p.name.toLowerCase().includes('children') && p.name.toLowerCase().includes('mug')) ||
                 liveProducts.find(p => p.id === 'bs-113');
       } else if (cleanId.includes('love-heart') || (cleanId.includes('heart') && cleanId.includes('mug'))) {
@@ -174,7 +223,13 @@ export const getProductById = (id?: string, liveProducts?: Product[]): Product =
     });
   }
   if (!foundInProducts) {
-    if (cleanId.includes('children') && (cleanId.includes('mug') || cleanId.includes('chocolate'))) {
+    if (cleanId.includes('blooming') && (cleanId.includes('monogram') || cleanId.includes('mug') || cleanId.includes('floral'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('blooming') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.id === 'bs-120');
+    } else if (cleanId.includes('doctor') && (cleanId.includes('coat') || cleanId.includes('mug') || cleanId.includes('name'))) {
+      foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('doctor') && p.name.toLowerCase().includes('mug')) ||
+                        PRODUCTS_DATA.find(p => p.id === 'bs-118');
+    } else if (cleanId.includes('children') && (cleanId.includes('mug') || cleanId.includes('chocolate'))) {
       foundInProducts = PRODUCTS_DATA.find(p => p.name.toLowerCase().includes('children') && p.name.toLowerCase().includes('mug')) ||
                         PRODUCTS_DATA.find(p => p.id === 'bs-113');
     } else if (cleanId.includes('love-heart') || (cleanId.includes('heart') && cleanId.includes('mug'))) {

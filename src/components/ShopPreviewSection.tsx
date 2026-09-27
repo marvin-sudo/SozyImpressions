@@ -102,7 +102,7 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredProducts.map((product) => (
+          {filteredProducts.map((product, pIdx) => (
             <div
               key={product.id}
               className="bg-white rounded-3xl overflow-hidden border border-slate-200/80 hover:border-[#2D3094]/50 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group text-left"
@@ -112,6 +112,8 @@ export const ShopPreviewSection: React.FC<ShopPreviewSectionProps> = ({
                 <OptimizedImage 
                   src={product.image} 
                   alt={product.name}
+                  priority={pIdx < 4}
+                  sizeVariant="card"
                   wrapperClassName="w-full h-full"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 />

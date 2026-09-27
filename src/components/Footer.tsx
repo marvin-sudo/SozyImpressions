@@ -41,8 +41,8 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
   return (
     <footer className="bg-[#121212] text-white pt-16 pb-12 border-t border-white/10 font-sans relative overflow-hidden">
       {/* Subtle Glow Overlay */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#2E3192]/20 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#ED008C]/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#2E3192]/20 rounded-full blur-[140px] pointer-events-none transform-gpu" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#ED008C]/15 rounded-full blur-[140px] pointer-events-none transform-gpu" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         

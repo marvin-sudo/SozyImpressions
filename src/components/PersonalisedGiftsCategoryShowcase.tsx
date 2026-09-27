@@ -216,6 +216,8 @@ export const PersonalisedGiftsCategoryShowcase: React.FC<PersonalisedGiftsCatego
                       <OptimizedImage
                         src={category.image}
                         alt={category.name}
+                        priority={true}
+                        sizeVariant="thumb"
                         wrapperClassName="relative z-10 w-full h-full flex items-center justify-center"
                         className="w-full h-full object-contain p-1 transition-transform duration-300 ease-out group-hover:scale-105"
                       />
@@ -260,12 +262,14 @@ export const PersonalisedGiftsCategoryShowcase: React.FC<PersonalisedGiftsCatego
                       {/* Soft rounded pill pedestal background */}
                       <div 
                         className={`absolute bottom-1.5 inset-x-2.5 h-12 rounded-full ${category.pillBg} opacity-90 transition-all duration-300 group-hover:scale-105 group-hover:opacity-100`} 
-                      />
+                        />
                       
                       {/* Product Photography */}
                       <OptimizedImage
                         src={category.image}
                         alt={category.name}
+                        priority={true}
+                        sizeVariant="thumb"
                         wrapperClassName="relative z-10 w-full h-full flex items-center justify-center"
                         className="w-full h-full object-contain p-1 transition-transform duration-300 ease-out group-hover:scale-105"
                       />
@@ -313,6 +317,7 @@ export const PersonalisedGiftsCategoryShowcase: React.FC<PersonalisedGiftsCatego
                     <OptimizedImage
                       src={category.image}
                       alt={category.name}
+                      sizeVariant="thumb"
                       wrapperClassName="relative z-10 w-full h-full flex items-center justify-center"
                       className="w-full h-full object-contain p-1 transition-transform duration-300 ease-out group-hover:scale-105"
                     />
@@ -387,6 +392,7 @@ export const PersonalisedGiftsCategoryShowcase: React.FC<PersonalisedGiftsCatego
                     <OptimizedImage
                       src={category.image}
                       alt={category.name}
+                      sizeVariant="thumb"
                       wrapperClassName="relative z-10 w-full h-full flex items-center justify-center"
                       className="w-full h-full object-contain p-1 transition-transform duration-300 group-hover:scale-105"
                     />

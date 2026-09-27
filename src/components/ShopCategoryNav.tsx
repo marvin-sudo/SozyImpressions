@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight, LayoutGrid } from 'lucide-react';
 import { SHOP_CATEGORIES, CategoryItem } from '../data/shopCategories';
+import { useShopStore } from '../context/ShopStoreContext';
 
 interface ShopCategoryNavProps {
   selectedCategory: string;
@@ -16,12 +17,57 @@ export const ShopCategoryNav: React.FC<ShopCategoryNavProps> = ({
   selectedCategory,
   onSelectCategory
 }) => {
+  const { categories } = useShopStore();
   const [activeDropdown, setActiveDropdown] = useState<ActiveDropdownData | null>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const navContainerRef = useRef<HTMLDivElement>(null);
   const barWrapperRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+
+  // Dynamically merge static base categories with any new/updated categories from admin dashboard
+  const displayCategories = useMemo<CategoryItem[]>(() => {
+    const list: CategoryItem[] = [];
+    const seenNames = new Set<string>();
+
+    // 1. Static base categories first
+    SHOP_CATEGORIES.forEach(sc => {
+      list.push({ ...sc });
+      seenNames.add(sc.name.toLowerCase().trim());
+    });
+
+    // 2. Add dynamic categories created or updated via Admin Dashboard
+    if (categories && categories.length > 0) {
+      categories.forEach(cat => {
+        if (cat.isActive === false) return;
+        const normName = (cat.name || '').toLowerCase().trim();
+        if (!normName || normName === 'all' || normName === 'all products') return;
+
+        const existingIndex = list.findIndex(item => item.name.toLowerCase().trim() === normName);
+        if (existingIndex >= 0) {
+          // Update subcategories if admin modified them
+          if (cat.subcategories && cat.subcategories.length > 0) {
+            list[existingIndex] = {
+              ...list[existingIndex],
+              subcategories: cat.subcategories,
+              hasDropdown: true
+            };
+          }
+        } else {
+          // Append new category added via Admin
+          list.push({
+            id: cat.slug || cat.id,
+            name: cat.name,
+            hasDropdown: Boolean(cat.subcategories && cat.subcategories.length > 0),
+            subcategories: cat.subcategories || []
+          });
+          seenNames.add(normName);
+        }
+      });
+    }
+
+    return list;
+  }, [categories]);
 
   const checkScroll = () => {
     if (navContainerRef.current) {
@@ -111,7 +157,7 @@ export const ShopCategoryNav: React.FC<ShopCategoryNavProps> = ({
           ref={navContainerRef}
           className="flex-1 flex items-center gap-3 sm:gap-5 md:gap-6 overflow-x-auto py-2.5 sm:py-3.5 scrollbar-none no-scrollbar text-xs font-normal select-none scroll-smooth"
         >
-          {SHOP_CATEGORIES.map((cat) => {
+          {displayCategories.map((cat) => {
             const isSelected = 
               (cat.name === 'All Products' && (selectedCategory === 'All' || selectedCategory === 'All Products')) ||
               selectedCategory.toLowerCase() === cat.name.toLowerCase() ||

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, Suspense, lazy } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, Suspense, lazy } from 'react';
 import { 
   ArrowUp, 
   CheckCircle2,
@@ -10,7 +10,6 @@ import {
   View, 
   Currency, 
   CartItem, 
-  Product, 
   QuoteRequest, 
   Order, 
   PortfolioProject, 
@@ -26,19 +25,40 @@ import {
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 
-// Multi-Page Views (HomePage eager, secondary pages dynamically lazy-loaded)
+// Resilient lazy module loader with auto-retry
+function lazyWithRetry<T extends React.ComponentType<any>>(
+  componentImport: () => Promise<{ default: T }>,
+  retriesLeft = 2,
+  interval = 800
+): Promise<{ default: T }> {
+  return new Promise((resolve, reject) => {
+    componentImport()
+      .then(resolve)
+      .catch((error) => {
+        if (retriesLeft <= 0) {
+          reject(error);
+          return;
+        }
+        setTimeout(() => {
+          lazyWithRetry(componentImport, retriesLeft - 1, interval).then(resolve, reject);
+        }, interval);
+      });
+  });
+}
+
+// Multi-Page Views (HomePage eager, secondary pages dynamically lazy-loaded with auto-retry)
 import { HomePage } from './pages/HomePage';
-const ServicesPage = lazy(() => import('./pages/ServicesPage').then(m => ({ default: m.ServicesPage })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
-const PortfolioPage = lazy(() => import('./pages/PortfolioPage').then(m => ({ default: m.PortfolioPage })));
-const QuotePage = lazy(() => import('./pages/QuotePage').then(m => ({ default: m.QuotePage })));
-const BlogPage = lazy(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
-const AccountPage = lazy(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage })));
-const ShopPage = lazy(() => import('./pages/ShopPage').then(m => ({ default: m.ShopPage })));
-const BestSellersPage = lazy(() => import('./pages/BestSellersPage').then(m => ({ default: m.BestSellersPage })));
-const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage').then(m => ({ default: m.ProductDetailPage })));
-const CheckoutPage = lazy(() => import('./pages/CheckoutPage').then(m => ({ default: m.CheckoutPage })));
+const ServicesPage = lazy(() => lazyWithRetry(() => import('./pages/ServicesPage').then(m => ({ default: m.ServicesPage }))));
+const AboutPage = lazy(() => lazyWithRetry(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage }))));
+const PortfolioPage = lazy(() => lazyWithRetry(() => import('./pages/PortfolioPage').then(m => ({ default: m.PortfolioPage }))));
+const QuotePage = lazy(() => lazyWithRetry(() => import('./pages/QuotePage').then(m => ({ default: m.QuotePage }))));
+const BlogPage = lazy(() => lazyWithRetry(() => import('./pages/BlogPage').then(m => ({ default: m.BlogPage }))));
+const ContactPage = lazy(() => lazyWithRetry(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage }))));
+const AccountPage = lazy(() => lazyWithRetry(() => import('./pages/AccountPage').then(m => ({ default: m.AccountPage }))));
+const ShopPage = lazy(() => lazyWithRetry(() => import('./pages/ShopPage').then(m => ({ default: m.ShopPage }))));
+const BestSellersPage = lazy(() => lazyWithRetry(() => import('./pages/BestSellersPage').then(m => ({ default: m.BestSellersPage }))));
+const ProductDetailPage = lazy(() => lazyWithRetry(() => import('./pages/ProductDetailPage').then(m => ({ default: m.ProductDetailPage }))));
+const CheckoutPage = lazy(() => lazyWithRetry(() => import('./pages/CheckoutPage').then(m => ({ default: m.CheckoutPage }))));
 
 // Modals & Shared Views
 import { CaseStudyModal } from './components/CaseStudyModal';
@@ -46,21 +66,26 @@ import { BlogArticleModal } from './components/BlogArticleModal';
 import { CartDrawer } from './components/CartDrawer';
 import { AnimatePresence } from 'motion/react';
 
-// Modals & Drawers (Dynamically lazy-loaded on demand)
-const ClientPortalModal = lazy(() => import('./components/ClientPortalModal').then(m => ({ default: m.ClientPortalModal })));
-const AdminModal = lazy(() => import('./components/AdminModal').then(m => ({ default: m.AdminModal })));
-const SearchModal = lazy(() => import('./components/SearchModal').then(m => ({ default: m.SearchModal })));
-const ShopAdminDashboard = lazy(() => import('./pages/admin/ShopAdminDashboard').then(m => ({ default: m.ShopAdminDashboard })));
+// Modals & Drawers (Dynamically lazy-loaded on demand with auto-retry)
+const ClientPortalModal = lazy(() => lazyWithRetry(() => import('./components/ClientPortalModal').then(m => ({ default: m.ClientPortalModal }))));
+const AdminModal = lazy(() => lazyWithRetry(() => import('./components/AdminModal').then(m => ({ default: m.AdminModal }))));
+const SearchModal = lazy(() => lazyWithRetry(() => import('./components/SearchModal').then(m => ({ default: m.SearchModal }))));
+const ShopAdminDashboard = lazy(() => lazyWithRetry(() => import('./pages/admin/ShopAdminDashboard').then(m => ({ default: m.ShopAdminDashboard }))));
 import { AdminProtectedRoute } from './components/admin/AdminProtectedRoute';
 import { useShopStore } from './context/ShopStoreContext';
 
-// Page Loading Spinner Fallback
+// Atmospheric Page Loading Spinner Fallback
 const PageLoadingFallback = () => (
   <div className="w-full min-h-[60vh] flex flex-col items-center justify-center gap-4 py-20">
-    <div className="w-12 h-12 rounded-full border-4 border-[#2D3094]/20 border-t-[#2D3094] animate-spin flex items-center justify-center">
+    <div className="relative flex items-center justify-center">
+      <div className="w-14 h-14 rounded-full border-4 border-[#2D3094]/15 border-t-[#2D3094] border-r-[#ED008C] animate-spin" />
+      <div className="absolute w-6 h-6 rounded-full bg-gradient-to-tr from-[#2D3094] to-[#ED008C] opacity-20 animate-ping" />
       <Loader2 className="w-5 h-5 text-[#2D3094] animate-pulse" />
     </div>
-    <span className="text-xs font-semibold tracking-wider text-slate-400 uppercase">Loading Experience...</span>
+    <div className="flex flex-col items-center gap-1 text-center">
+      <span className="text-xs font-bold tracking-wider text-slate-700 uppercase">Loading Atmosphere...</span>
+      <span className="text-[11px] text-slate-400">Connecting to Sozy Impressions Kampala Studio</span>
+    </div>
   </div>
 );
 
@@ -147,13 +172,11 @@ export const App: React.FC = () => {
 
   const { createOrder, shopProducts } = useShopStore();
 
-  const [products, setProducts] = useState<Product[]>(PRODUCTS_DATA);
-
-  // Sync products state whenever Firestore/ShopStoreContext updates in realtime
-  useEffect(() => {
+  const products = useMemo(() => {
     if (shopProducts && shopProducts.length > 0) {
-      setProducts(shopProducts);
+      return shopProducts;
     }
+    return PRODUCTS_DATA;
   }, [shopProducts]);
   const [quotes, setQuotes] = useState<QuoteRequest[]>([]);
   const [orders, setOrders] = useState<Order[]>([]);
@@ -453,6 +476,7 @@ export const App: React.FC = () => {
           <AdminProtectedRoute onNavigateToShop={() => navigate('shop')}>
             <ShopAdminDashboard
               onNavigateToShop={() => navigate('shop')}
+              onNavigateToProduct={(productId) => navigate('product', productId)}
             />
           </AdminProtectedRoute>
         );
@@ -469,6 +493,7 @@ export const App: React.FC = () => {
         <AdminProtectedRoute onNavigateToShop={() => navigate('shop')}>
           <ShopAdminDashboard
             onNavigateToShop={() => navigate('shop')}
+            onNavigateToProduct={(productId) => navigate('product', productId)}
           />
         </AdminProtectedRoute>
       </Suspense>

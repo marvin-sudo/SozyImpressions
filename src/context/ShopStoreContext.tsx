@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, useRef, ReactNode } from 'react';
 import { 
   AdminOrder, 
   AdminProduct, 
@@ -93,7 +93,8 @@ export const mapAdminProductToShopProduct = (p: AdminProduct): Product => {
 export const INITIAL_SHOP_CATEGORIES: AdminCategory[] = [
   { id: 'cat-mugs', name: 'Mugs', slug: 'mugs', description: 'Two-tone ceramic mugs, magic color changing & travel tumblers', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600', isActive: true, order: 1, subcategories: ['Two-Tone Ceramic Mugs', 'Magic Color-Changing Photo Mugs', 'Stainless Travel Mugs', 'Enamel Camp Mugs'] },
   { id: 'cat-cushions', name: 'Cushions', slug: 'cushions', description: 'Plush velvet, satin & sequin personalised photo cushions', image: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&q=80&w=600', isActive: true, order: 2, subcategories: ['Satin Photo Cushions', 'Magic Sequin Pillows', 'Embroidered Name Cushions'] },
-  { id: 'cat-sippers', name: 'Sippers', slug: 'sippers', description: 'Custom sports sippers, gym bottles & straw tumblers', image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=600', isActive: true, order: 3, subcategories: ['Aluminium Sports Sippers', 'Kids Cartoon Tumblers', 'Gym Shakers'] },
+  { id: 'cat-success-gifts', name: 'Success Gifts', slug: 'success-gifts', description: 'Achievement plaques, graduation hampers, congratulatory sets & crystal victory awards', image: '/assets/images/tabletop_frame_1788635214871.jpg', isActive: true, order: 3, subcategories: ['Achievement & Milestone Plaques', 'Graduation & Promotion Hampers', 'Executive Congratulatory Sets', 'Custom Motivational Desk Frames', 'Success & Inspiration Apparel', 'Crystal Victory Awards'] },
+  { id: 'cat-sippers', name: 'Sippers', slug: 'sippers', description: 'Custom sports sippers, gym bottles & straw tumblers', image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=600', isActive: true, order: 4, subcategories: ['Aluminium Sports Sippers', 'Kids Cartoon Tumblers', 'Gym Shakers'] },
   { id: 'cat-photo-frames', name: 'Photo Frames', slug: 'photo-frames', description: 'Wooden Polaroid, rotating 3D, acrylic & desk photo frames', image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600', isActive: true, order: 4, subcategories: ['LED Acrylic Photo Lamps', 'Wooden Polaroid Frames', 'Rotating 3D Frames', 'Spotify Song Frames'] },
   { id: 'cat-neon-lights', name: 'Neon Lights', slug: 'neon-lights', description: 'Custom acrylic LED neon signboards and ambient desk signs', image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=600', isActive: true, order: 5, subcategories: ['Custom Name Neon', 'Wedding & Event Neon', 'Bar & Cafe Glow Signs'] },
   { id: 'cat-flowers', name: 'Flowers', slug: 'flowers', description: 'Fresh roses, celebratory bouquets and keepsake floral hampers', image: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&q=80&w=600', isActive: true, order: 6, subcategories: ['Red Rose Bouquets', 'Celebration Mixed Flowers', 'Preserved Rose Glass Domes'] },
@@ -465,7 +466,16 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
   const [categories, setCategories] = useState<AdminCategory[]>(() => {
     try {
       const saved = localStorage.getItem(`${STORAGE_KEY}_categories`);
-      return saved ? JSON.parse(saved) : INITIAL_SHOP_CATEGORIES;
+      if (saved) {
+        const parsed: AdminCategory[] = JSON.parse(saved);
+        const map = new Map<string, AdminCategory>();
+        INITIAL_SHOP_CATEGORIES.forEach(c => map.set(c.id, c));
+        parsed.forEach(c => map.set(c.id, c));
+        const list = Array.from(map.values());
+        list.sort((a, b) => (a.order || 99) - (b.order || 99));
+        return list;
+      }
+      return INITIAL_SHOP_CATEGORIES;
     } catch {
       return INITIAL_SHOP_CATEGORIES;
     }
@@ -519,6 +529,7 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
   const [isProductsLive, setIsProductsLive] = useState<boolean>(false);
   const [isFirestoreConnected, setIsFirestoreConnected] = useState<boolean>(false);
   const [lastSyncTime, setLastSyncTime] = useState<string | null>(null);
+  const hasSeededBaselineRef = useRef<boolean>(false);
 
   const adminUser = {
     name: 'Marvin Ssozi',
@@ -540,21 +551,60 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
 
     const unsubscribe = onSnapshot(productsCol, async (snapshot) => {
       try {
+        let deletedSet = new Set<string>();
+        try {
+          const savedDeleted = localStorage.getItem('sozy_deleted_product_ids');
+          if (savedDeleted) {
+            deletedSet = new Set(JSON.parse(savedDeleted));
+          }
+        } catch { /* ignore */ }
+
         if (snapshot.empty) {
-          console.log('[Firestore] Products collection empty. Seeding catalog in Firestore...');
-          const batch = writeBatch(db);
-          INITIAL_ADMIN_PRODUCTS.forEach(prod => {
-            batch.set(doc(db, 'products', prod.id), sanitizeForFirestore(prod));
-          });
-          await batch.commit();
+          if (!hasSeededBaselineRef.current) {
+            hasSeededBaselineRef.current = true;
+            console.log('[Firestore] Products collection empty. Seeding catalog in Firestore...');
+            const batch = writeBatch(db);
+            INITIAL_ADMIN_PRODUCTS.filter(p => !deletedSet.has(p.id)).forEach(prod => {
+              batch.set(doc(db, 'products', prod.id), sanitizeForFirestore(prod));
+            });
+            await batch.commit();
+          }
           setIsProductsLive(true);
           setIsFirestoreConnected(true);
           setLastSyncTime(new Date().toLocaleTimeString());
         } else {
-          const loaded: AdminProduct[] = [];
+          const loadedMap = new Map<string, AdminProduct>();
           snapshot.forEach(docSnap => {
-            loaded.push(docSnap.data() as AdminProduct);
+            const data = docSnap.data() as AdminProduct;
+            if (data && data.id) {
+              loadedMap.set(data.id, data);
+            }
           });
+
+          // Check if any baseline products from INITIAL_ADMIN_PRODUCTS are missing from Firestore and not deleted
+          const missingBaseline: AdminProduct[] = [];
+          for (const initProd of INITIAL_ADMIN_PRODUCTS) {
+            if (!loadedMap.has(initProd.id) && !deletedSet.has(initProd.id)) {
+              loadedMap.set(initProd.id, initProd);
+              missingBaseline.push(initProd);
+            }
+          }
+
+          // Auto-seed any missing baseline products to Firestore in background (once per session)
+          if (!hasSeededBaselineRef.current && missingBaseline.length > 0) {
+            hasSeededBaselineRef.current = true;
+            try {
+              const batch = writeBatch(db);
+              missingBaseline.slice(0, 450).forEach(prod => {
+                batch.set(doc(db, 'products', prod.id), sanitizeForFirestore(prod));
+              });
+              batch.commit().catch(e => console.warn('[Firestore] Syncing baseline products:', e));
+            } catch (e) {
+              console.warn('[Firestore] Baseline batch setup notice:', e);
+            }
+          }
+
+          const loaded = Array.from(loadedMap.values());
           loaded.sort((a, b) => {
             if (a.createdAt && b.createdAt) {
               return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
@@ -575,6 +625,38 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
       try {
         handleFirestoreError(error, OperationType.LIST, 'products');
       } catch { /* logged */ }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  // Real-time Firestore synchronization for Categories
+  useEffect(() => {
+    const categoriesCol = collection(db, 'categories');
+
+    const unsubscribe = onSnapshot(categoriesCol, async (snapshot) => {
+      try {
+        if (!snapshot.empty) {
+          const loaded: AdminCategory[] = [];
+          snapshot.forEach(docSnap => {
+            loaded.push(docSnap.data() as AdminCategory);
+          });
+          setCategories(prev => {
+            const map = new Map<string, AdminCategory>();
+            // Keep base default categories
+            INITIAL_SHOP_CATEGORIES.forEach(c => map.set(c.id, c));
+            // Keep existing state (including locally added categories)
+            prev.forEach(c => map.set(c.id, c));
+            // Overlay Firestore categories
+            loaded.forEach(c => map.set(c.id, c));
+            const merged = Array.from(map.values());
+            merged.sort((a, b) => (a.order || 99) - (b.order || 99));
+            return merged;
+          });
+        }
+      } catch (err: any) {
+        console.warn('[Firestore] Categories listener error:', err?.message || String(err));
+      }
     });
 
     return () => unsubscribe();
@@ -1028,6 +1110,15 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     logAction('Product Deleted', 'product', id, `Removed product ID ${id} from catalog`);
 
     try {
+      const savedDeleted = localStorage.getItem('sozy_deleted_product_ids');
+      const deletedList: string[] = savedDeleted ? JSON.parse(savedDeleted) : [];
+      if (!deletedList.includes(id)) {
+        deletedList.push(id);
+        localStorage.setItem('sozy_deleted_product_ids', JSON.stringify(deletedList));
+      }
+    } catch { /* ignore */ }
+
+    try {
       await deleteDoc(doc(db, 'products', id));
       setLastSyncTime(new Date().toLocaleTimeString());
     } catch (err: any) {
@@ -1138,20 +1229,60 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
       ...catData,
       id
     };
-    setCategories(prev => [...prev, newCat]);
+    setCategories(prev => {
+      const filtered = prev.filter(c => c.id !== id && c.name.toLowerCase().trim() !== newCat.name.toLowerCase().trim());
+      const next = [...filtered, newCat];
+      try {
+        localStorage.setItem(`${STORAGE_KEY}_categories`, JSON.stringify(next));
+      } catch { /* ignore */ }
+      return next;
+    });
     logAction('Category Added', 'category', id, `Added category "${newCat.name}"`);
+
+    try {
+      await setDoc(doc(db, 'categories', id), sanitizeForFirestore(newCat));
+    } catch (err: any) {
+      console.warn('[Firestore] Error saving category to Firestore:', err?.message || String(err));
+    }
+
     return newCat;
   }, [logAction]);
 
   const updateCategory = useCallback(async (id: string, updates: Partial<AdminCategory>): Promise<boolean> => {
-    setCategories(prev => prev.map(c => c.id === id ? { ...c, ...updates } : c));
+    setCategories(prev => {
+      const next = prev.map(c => c.id === id ? { ...c, ...updates } : c);
+      try {
+        localStorage.setItem(`${STORAGE_KEY}_categories`, JSON.stringify(next));
+      } catch { /* ignore */ }
+      return next;
+    });
     logAction('Category Updated', 'category', id, `Updated category details for ID ${id}`);
+
+    try {
+      await updateDoc(doc(db, 'categories', id), sanitizeForFirestore(updates));
+    } catch (err: any) {
+      console.warn('[Firestore] Error updating category in Firestore:', err?.message || String(err));
+    }
+
     return true;
   }, [logAction]);
 
   const deleteCategory = useCallback(async (id: string): Promise<boolean> => {
-    setCategories(prev => prev.filter(c => c.id !== id));
+    setCategories(prev => {
+      const next = prev.filter(c => c.id !== id);
+      try {
+        localStorage.setItem(`${STORAGE_KEY}_categories`, JSON.stringify(next));
+      } catch { /* ignore */ }
+      return next;
+    });
     logAction('Category Deleted', 'category', id, `Deleted category ID ${id}`);
+
+    try {
+      await deleteDoc(doc(db, 'categories', id));
+    } catch (err: any) {
+      console.warn('[Firestore] Error deleting category in Firestore:', err?.message || String(err));
+    }
+
     return true;
   }, [logAction]);
 

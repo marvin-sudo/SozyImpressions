@@ -23,8 +23,8 @@ export const FinalCtaSection: React.FC<FinalCtaSectionProps> = ({ navigate }) =>
     <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-[#0F1224] via-[#121528] to-[#1E1128] text-white relative overflow-hidden font-sans">
       
       {/* Background Lighting Blooms */}
-      <div className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-[#2E3192]/25 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#ED008C]/20 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 w-[600px] h-[600px] bg-[#2E3192]/25 rounded-full blur-[160px] pointer-events-none transform-gpu" />
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#ED008C]/20 rounded-full blur-[160px] pointer-events-none transform-gpu" />
 
       <div className="max-w-5xl mx-auto relative z-10 text-center">
         

@@ -14,6 +14,19 @@ export const SHOP_CATEGORIES: CategoryItem[] = [
     subcategories: ['Cufflinks & Accessories', 'Photo Frames', 'LED Lamps', 'Mugs & Drinkware', 'Personalised Cushions', 'Gift Sets & Hampers']
   },
   { 
+    id: 'success-gifts', 
+    name: 'Success Gifts', 
+    hasDropdown: true,
+    subcategories: [
+      'Achievement & Milestone Plaques', 
+      'Graduation & Promotion Hampers', 
+      'Executive Congratulatory Sets', 
+      'Custom Motivational Desk Frames', 
+      'Success & Inspiration Apparel',
+      'Crystal Victory Awards'
+    ]
+  },
+  { 
     id: 'photo-frames-lamps', 
     name: 'Photo Frames & Lamps', 
     hasDropdown: true,

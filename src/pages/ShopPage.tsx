@@ -20,7 +20,8 @@ import { CategoryProductsModal } from '../components/CategoryProductsModal';
 import { DedicatedCategoryView } from '../components/DedicatedCategoryView';
 import { GiftFinderModal } from '../components/GiftFinderModal';
 import { useShopStore } from '../context/ShopStoreContext';
-import { OptimizedImage, preloadImages } from '../components/OptimizedImage';
+import { OptimizedImage } from '../components/OptimizedImage';
+import { preloadImages, preloadCatalogImages } from '../utils/imageUtils';
 
 interface ShopPageProps {
   navigate?: (view: View, param?: string) => void;
@@ -51,14 +52,8 @@ export const ShopPage: React.FC<ShopPageProps> = ({
   const [selectedOccasion, setSelectedOccasion] = useState<string | null>(null);
   const [selectedRecipient, setSelectedRecipient] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
+  // Reference to search field
   const searchInputRef = useRef<HTMLInputElement>(null);
-
-  // Auto-focus and activate search field
-  useEffect(() => {
-    if (searchInputRef.current) {
-      searchInputRef.current.focus();
-    }
-  }, []);
 
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc' | 'rating'>('featured');
   const [isProductsModalOpen, setIsProductsModalOpen] = useState<boolean>(false);
@@ -85,6 +80,13 @@ export const ShopPage: React.FC<ShopPageProps> = ({
       // ignore
     }
   }, [wishlist]);
+
+  // Warm up product catalog images in the background for zero-delay display
+  useEffect(() => {
+    if (products && products.length > 0) {
+      preloadCatalogImages(products, 24, 'card');
+    }
+  }, [products]);
 
   const toggleWishlist = (productId: string, productName: string) => {
     setWishlist((prev) => {
@@ -204,8 +206,9 @@ export const ShopPage: React.FC<ShopPageProps> = ({
     });
   }, [products, searchQuery]);
 
-  // Filtered & Sorted Products
+  // Filtered & Sorted Products for Curated Products Modal (only computed when modal is open)
   const filteredProducts = useMemo(() => {
+    if (!isProductsModalOpen) return [];
     return products.filter((p) => {
       // Category matching
       let matchesCat = true;
@@ -477,7 +480,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({
       }
       return (b.isFeatured ? 1 : 0) - (a.isFeatured ? 1 : 0);
     });
-  }, [products, selectedCategory, selectedSubcategory, selectedOccasion, selectedRecipient, searchQuery, sortBy, currency]);
+  }, [isProductsModalOpen, products, selectedCategory, selectedSubcategory, selectedOccasion, selectedRecipient, searchQuery, sortBy, currency]);
 
   // Quick Add handler
   const handleQuickAdd = (product: Product) => {
@@ -542,7 +545,6 @@ export const ShopPage: React.FC<ShopPageProps> = ({
                 <input
                   ref={searchInputRef}
                   type="text"
-                  autoFocus
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search any product across the shop (e.g. mugs, photo frames, corporate gifts, bottles, hoodies)..."
@@ -655,7 +657,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({
 
           {searchResults.length > 0 ? (
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-              {searchResults.map((product) => (
+              {searchResults.map((product, pIdx) => (
                 <div
                   key={product.id}
                   onClick={() => {
@@ -667,7 +669,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({
                   }}
                   onMouseEnter={() => {
                     if (product.gallery && product.gallery.length > 1) {
-                      preloadImages(product.gallery);
+                      preloadImages(product.gallery, 'card');
                     }
                   }}
                   className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg hover:border-[#2D3094]/30 transition-all duration-300 flex flex-col cursor-pointer"
@@ -676,6 +678,9 @@ export const ShopPage: React.FC<ShopPageProps> = ({
                     <OptimizedImage
                       src={product.image}
                       alt={product.name}
+                      category={product.category}
+                      priority={pIdx < 8}
+                      sizeVariant="card"
                       wrapperClassName="w-full h-full"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />

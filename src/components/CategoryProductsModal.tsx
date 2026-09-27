@@ -81,7 +81,7 @@ export const CategoryProductsModal: React.FC<CategoryProductsModalProps> = ({
             </div>
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-6">
-              {products.map((product) => {
+              {products.map((product, pIdx) => {
                 const isWishlisted = wishlist.includes(product.id);
                 const pUGX = product.priceUGX || (product as any).price || 0;
                 const pUSD = product.priceUSD || (pUGX ? pUGX / 3800 : 0);
@@ -103,6 +103,8 @@ export const CategoryProductsModal: React.FC<CategoryProductsModalProps> = ({
                         <OptimizedImage
                           src={product.image}
                           alt={product.name}
+                          priority={pIdx < 6}
+                          sizeVariant="card"
                           wrapperClassName="w-full h-full flex items-center justify-center"
                           className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                         />

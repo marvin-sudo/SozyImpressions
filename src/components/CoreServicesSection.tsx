@@ -79,29 +79,28 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
           </div>
         </motion.div>
 
-        {/* Horizontal Services List with Alternating Layout & Fade-in + Upward Animation */}
-        <div className="flex flex-col gap-8">
+        {/* Horizontal Services List - Flat Editorial Layout (Eliminating boxed card styling) */}
+        <div className="flex flex-col divide-y divide-slate-200">
           {SERVICES_DATA.map((service, index) => {
             const isReversed = index % 2 === 1; // 1st is left, 2nd is right, 3rd is left, etc.
 
             return (
               <motion.div
                 key={service.id}
-                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 35 }}
+                initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={VIEWPORT_CONFIG}
                 transition={{ 
-                  duration: 0.8, 
-                  delay: (index % 2) * 0.12, 
+                  duration: 0.7, 
+                  delay: (index % 2) * 0.1, 
                   ease: EASE_PREMIUM 
                 }}
-                whileHover={shouldReduceMotion ? undefined : { y: -4 }}
-                className={`bg-white rounded-3xl overflow-hidden border border-slate-200 hover:border-[#2D3094]/40 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col ${
+                className={`py-12 flex flex-col ${
                   isReversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
-                } group text-left`}
+                } gap-8 lg:gap-12 items-center group text-left`}
               >
-                {/* Separate Image Container */}
-                <div className="lg:w-5/12 relative overflow-hidden bg-slate-900 min-h-[260px] lg:min-h-[340px]">
+                {/* Image Container with clean rounded corners, no outer card box */}
+                <div className="w-full lg:w-5/12 relative overflow-hidden rounded-2xl bg-slate-900 min-h-[260px] lg:min-h-[320px] shadow-sm">
                   <img 
                     src={service.image} 
                     alt={service.title}
@@ -121,12 +120,12 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
                   </div>
                 </div>
 
-                {/* Separate Content & Description Container */}
-                <div className="lg:w-7/12 p-6 sm:p-8 flex flex-col justify-between">
+                {/* Content & Description Container without card border */}
+                <div className="w-full lg:w-7/12 flex flex-col justify-between">
                   <div>
                     {/* Top Bar: Icon + Title + Subtitle */}
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-2xl bg-[#2D3094]/10 border border-[#2D3094]/20 flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#2D3094] transition-colors">
+                      <div className="w-12 h-12 rounded-2xl bg-[#2D3094]/10 border border-[#2D3094]/20 flex items-center justify-center shrink-0 shadow-xs group-hover:bg-[#2D3094] transition-colors">
                         <div className="group-hover:text-white transition-colors [&>svg]:group-hover:text-white">
                           {getServiceIcon(service.iconName)}
                         </div>
@@ -146,13 +145,13 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
                       {service.description}
                     </p>
 
-                    {/* Popular Products & Key Deliverables (2-column layout) */}
-                    <div className="mb-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                      <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                    {/* Key Deliverables & Products without nested card box */}
+                    <div className="mb-6 pt-1 pb-2">
+                      <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                         <CheckCircle2 size={13} className="text-[#ED008C]" />
                         <span>Key Deliverables & Products:</span>
                       </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         {service.popularProducts.slice(0, 6).map((prod, pIdx) => (
                           <div key={pIdx} className="flex items-center gap-2 text-xs text-slate-700">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#2D3094] shrink-0" />
@@ -161,7 +160,7 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
                         ))}
                       </div>
                       {service.popularProducts.length > 6 && (
-                        <div className="text-[11px] font-bold text-[#2D3094] pt-2 mt-2 border-t border-slate-200/60">
+                        <div className="text-[11px] font-bold text-[#2D3094] pt-2 mt-2">
                           + {service.popularProducts.length - 6} more custom products & specs
                         </div>
                       )}
@@ -191,7 +190,7 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
                             navigate('services', service.id);
                           }
                         }}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-[#2D3094] px-4 py-2.5 rounded-full border border-slate-200 hover:border-[#2D3094] transition-all bg-white shadow-sm hover:-translate-y-0.5"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-[#2D3094] px-4 py-2.5 rounded-full border border-slate-200 hover:border-[#2D3094] transition-all bg-white shadow-xs hover:-translate-y-0.5"
                         title="Explore Full Service Details"
                       >
                         <span>Explore Details</span>
@@ -211,30 +210,6 @@ export const CoreServicesSection: React.FC<CoreServicesSectionProps> = ({
             );
           })}
         </div>
-
-        {/* Bottom Comprehensive CTA */}
-        <motion.div 
-          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={VIEWPORT_CONFIG}
-          transition={{ duration: 0.75, ease: EASE_PREMIUM }}
-          className="mt-14 p-8 rounded-3xl bg-gradient-to-r from-[#F0F2FA] to-[#FAF0F6] border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-6 text-left"
-        >
-          <div>
-            <h4 className="font-heading font-black text-xl text-[#121212] mb-1">
-              Need a custom multi-service corporate procurement package?
-            </h4>
-            <p className="text-xs text-slate-600">
-              We construct custom corporate SLAs with dedicated account managers, priority pre-press queues, and 30-day invoice terms.
-            </p>
-          </div>
-          <button 
-            onClick={() => navigate('contact')}
-            className="bg-[#ED008C] hover:bg-[#d4007d] text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 rounded-full transition-all shadow-lg shrink-0 hover:-translate-y-0.5 active:scale-95"
-          >
-            Talk to Corporate Sales
-          </button>
-        </motion.div>
 
       </div>
     </section>

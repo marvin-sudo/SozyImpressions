@@ -12,6 +12,7 @@ import {
 import { motion } from 'motion/react';
 import { CartItem, Currency } from '../types';
 import { PAYMENT_LOGOS } from '../data/mockData';
+import { OptimizedImage } from './OptimizedImage';
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -156,13 +157,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   key={idx}
                   className={`pt-3.5 first:pt-0 flex gap-3 relative group`}
                 >
-                  <img 
+                  <OptimizedImage 
                     src={productImage} 
                     alt={productName} 
-                    className="w-16 h-16 rounded-xl object-cover bg-slate-50 border border-slate-200 shrink-0"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=300&q=80';
-                    }}
+                    sizeVariant="thumb"
+                    wrapperClassName="w-16 h-16 rounded-xl bg-slate-50 border border-slate-200 shrink-0 overflow-hidden"
+                    className="w-full h-full object-cover"
                   />
 
                   <div className="flex-1 min-w-0">

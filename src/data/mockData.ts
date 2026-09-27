@@ -544,7 +544,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://i.postimg.cc/yNFfN7Md/Executive-Water-Bottle-Flask-with-2-Lids-(LED-Display-Stainless-Stee.jpg',
     gallery: [
       'https://i.postimg.cc/yNFfN7Md/Executive-Water-Bottle-Flask-with-2-Lids-(LED-Display-Stainless-Stee.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Executive double-wall vacuum insulated hydration bottle with 2 interchangeable lids (smart touch LED temperature display lid and stainless steel sports sip lid). Custom laser-engraved with your name or corporate logo in a striking ocean blue finish.',
     specifications: {
@@ -825,7 +825,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://www.image2url.com/r2/default/images/1789219824505-1b0643f4-4059-4ba8-8bc4-046cbf236d76.jpg',
     gallery: [
       'https://www.image2url.com/r2/default/images/1789219824505-1b0643f4-4059-4ba8-8bc4-046cbf236d76.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Eco-friendly natural organic bamboo casing over 304 food-grade double-wall stainless steel with removable tea strainer basket. Precision laser-engraved with your recipient name or corporate brand.',
     specifications: {
@@ -850,7 +850,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://www.image2url.com/r2/default/images/1789220169290-f0859265-dd50-42c6-b74d-ef97a406e308.jpg',
     gallery: [
       'https://www.image2url.com/r2/default/images/1789220169290-f0859265-dd50-42c6-b74d-ef97a406e308.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Sustainable real bamboo wood notebook cover with 140 pages of 100% recycled unbleached paper, paired with a matching bamboo twist-action ballpoint pen. Custom laser-engraved cover artwork.',
     specifications: {
@@ -876,7 +876,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://www.image2url.com/r2/default/images/1789219589942-7c08cdb1-c6fa-4a2f-80da-38de2a46c5c4.jpg',
     gallery: [
       'https://www.image2url.com/r2/default/images/1789219589942-7c08cdb1-c6fa-4a2f-80da-38de2a46c5c4.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Personalised natural bamboo wood notebook with unlined recycled pages and companion bamboo pen. Custom precision laser-engraved with your name, quote, or corporate logo.',
     specifications: {
@@ -903,7 +903,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://www.image2url.com/r2/default/images/1789218677037-c3bd8ed5-c250-469d-82c2-7ea0cb04de9a.jpg',
     gallery: [
       'https://www.image2url.com/r2/default/images/1789218677037-c3bd8ed5-c250-469d-82c2-7ea0cb04de9a.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Eco-friendly natural bamboo casing with modern LED digital clock display and built-in 15W Qi wireless charging pad for smartphones. Custom laser-engraved with your monogram, message, or company branding.',
     specifications: {
@@ -930,7 +930,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://www.image2url.com/r2/default/images/1789219318863-18f08944-c5fb-407c-968d-7cc62ad7075f.jpg',
     gallery: [
       'https://www.image2url.com/r2/default/images/1789219318863-18f08944-c5fb-407c-968d-7cc62ad7075f.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Deluxe eco-friendly corporate and personal keepsake hamper. Features a precision laser-engraved natural bamboo thermo flask, hardcover bamboo executive journal with pen, custom keyholder, and card sleeve in a luxury satin-lined presentation gift box.',
     specifications: {
@@ -1400,6 +1400,66 @@ export const PRODUCTS_DATA: Product[] = [
     badge: 'PERSONALISE IT!'
   },
   {
+    id: 'bs-118',
+    name: "Personalised Doctor's Coat Name Mug",
+    category: 'Mugs',
+    priceUGX: 30000,
+    originalPriceUGX: 39000,
+    priceUSD: 8.1,
+    originalPriceUSD: 10.5,
+    image: 'https://i.postimg.cc/fRVB5yx9/Expressive-Ceramic-Mug-Stylish-Coffee-Tea-Mug-Gift-Idea.jpg',
+    gallery: [
+      'https://i.postimg.cc/fRVB5yx9/Expressive-Ceramic-Mug-Stylish-Coffee-Tea-Mug-Gift-Idea.jpg',
+      'https://i.postimg.cc/GhVkLQs6/download-2026-09-16T135527-671.jpg'
+    ],
+    description: "Honor the dedicated healthcare hero in your life! Features an iconic medical lab coat and stethoscope illustration customized with the doctor's name, title, and medical specialty in high-gloss ceramic.",
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Glossy Ceramic',
+      'Design': "Medical Lab Coat Illustration with Custom Stethoscope & Doctor's Name",
+      'Print Technique': 'Permanent Scratch-Proof Dye Sublimation Wrap',
+      'Care': '100% Microwave and Dishwasher Safe',
+      'Packaging': 'Delivered in Protective Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Classic Doctor Coat White', 'Medical Blue Accent'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
+    id: 'bs-120',
+    name: 'Personalised Blooming Monogram Mugs',
+    category: 'Mugs',
+    priceUGX: 15000,
+    originalPriceUGX: 24000,
+    priceUSD: 4.1,
+    originalPriceUSD: 6.5,
+    image: 'https://i.postimg.cc/rsdK3Bg5/Floral-Initial-Mug-Personalized-Monogram-Coffee-Cup-Ceramic-Flower-Letter-(11oz).jpg',
+    gallery: [
+      'https://i.postimg.cc/rsdK3Bg5/Floral-Initial-Mug-Personalized-Monogram-Coffee-Cup-Ceramic-Flower-Letter-(11oz).jpg',
+      'https://i.postimg.cc/DZNzrCFW/Mothers-Day-Gift-Personalised-T-Shirt-This-Mummy-Belongs-To-Sweatshirt.jpg'
+    ],
+    description: "Brighten morning routines with an artistic botanical flair! Features delicate watercolor floral letters intertwined with custom initials, heartfelt names, and elegant typography on premium glossy ceramic.",
+    specifications: {
+      'Capacity': '330 ml / 11 oz',
+      'Material': 'High-Grade AAA Glossy White Ceramic',
+      'Design': 'Watercolor Botanical Monogram & Personalized Floral Letter Initial',
+      'Print Technique': 'High-Definition Scratch-Proof Dye Sublimation',
+      'Care': '100% Microwave and Dishwasher Safe',
+      'Packaging': 'Delivered in Protective Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    colors: ['Botanical Blossom White', 'Pastel Floral Accent'],
+    rating: 4.9,
+    reviewCount: 45,
+    inStock: true,
+    badge: 'PERSONALISE IT!'
+  },
+  {
     id: 'bs-8',
     name: 'Personalised Mug For Her',
     category: 'Mugs',
@@ -1410,7 +1470,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://i.postimg.cc/qBQLKNZ4/what-is-your-name-tell-me-in-comments.jpg',
     gallery: [
       'https://i.postimg.cc/qBQLKNZ4/what-is-your-name-tell-me-in-comments.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Delightful personalised ceramic coffee mug designed specially for her. Features custom typography, her name, heartfelt quotes, and vibrant high-gloss finish.',
     specifications: {
@@ -1575,7 +1635,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://www.image2url.com/r2/default/images/1789221313711-1511f9a8-9cad-4188-ae09-8d4ce4dbad12.jpg',
     gallery: [
       'https://www.image2url.com/r2/default/images/1789221313711-1511f9a8-9cad-4188-ae09-8d4ce4dbad12.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Custom birthday special personalised snuggle cushion with vibrant high-definition photo print, celebration wishes, and plush hypoallergenic insert.',
     specifications: {
@@ -1625,7 +1685,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://i.postimg.cc/1372rWWj/Plot-twist-drinking-enough-water-is-actually-easy-when-your-tumbler-looks-this-good-Show-us-your-d.jpg',
     gallery: [
       'https://i.postimg.cc/1372rWWj/Plot-twist-drinking-enough-water-is-actually-easy-when-your-tumbler-looks-this-good-Show-us-your-d.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Personalised Stanley-style matte black insulated tumbler with comfort-grip handle, reusable straw, and spill-resistant lid. Custom laser-engraved with your recipient name, monogram, or corporate logo.',
     specifications: {
@@ -1674,7 +1734,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://i.postimg.cc/RVBwMcMC/Personalised-Birthday-Photo-Keepsake-Gift-Glass-Plaque-With-Sentiment-13-16-18-21-30-40-50-60.jpg',
     gallery: [
       'https://i.postimg.cc/RVBwMcMC/Personalised-Birthday-Photo-Keepsake-Gift-Glass-Plaque-With-Sentiment-13-16-18-21-30-40-50-60.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Personalised birthday photo keepsake plaque and wall frame with emotional celebration sentiment, birthday month highlight, and high-definition photographic print.',
     specifications: {
@@ -1701,7 +1761,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://i.postimg.cc/65q46zk9/download-(43).jpg',
     gallery: [
       'https://i.postimg.cc/65q46zk9/download-(43).jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Personalised anniversary & relationship milestone photo frame chronicling your special love story moments, date timeline, couple names, and high-clarity photographic print.',
     specifications: {
@@ -1772,7 +1832,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://www.image2url.com/r2/default/images/1789222186205-8e1b5bc7-4e54-43cc-bc09-d0f5466b1b49.jpg',
     gallery: [
       'https://www.image2url.com/r2/default/images/1789222186205-8e1b5bc7-4e54-43cc-bc09-d0f5466b1b49.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Bespoke romantic gift set featuring a luxury floral arrangement paired with personalised keepsakes, customized ribbon, and celebration presentation packaging.',
     specifications: {
@@ -1799,7 +1859,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://i.postimg.cc/TPYmf0fv/Mixed-bloom-Orchid-bud-vase-arrangement.jpg',
     gallery: [
       'https://i.postimg.cc/TPYmf0fv/Mixed-bloom-Orchid-bud-vase-arrangement.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Refined mixed bloom orchid bud vase tabletop floral arrangement with custom engraved birthday charm tag, fresh botanical stems, and sleek presentation.',
     specifications: {
@@ -2005,7 +2065,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://www.image2url.com/r2/default/images/1789220651902-adb717da-ce98-463a-b6c8-3eccb256e9b5.jpg',
     gallery: [
       'https://www.image2url.com/r2/default/images/1789220651902-adb717da-ce98-463a-b6c8-3eccb256e9b5.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Custom personalised illuminated Name in Lights night lamp. Features custom precision acrylic laser cut lettering with warm ambient glow mounted on a natural timber LED base.',
     specifications: {
@@ -2032,7 +2092,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://www.image2url.com/r2/default/images/1789221645805-2bf94483-3f4e-4759-a55c-d4a5ed1f7cd3.jpg',
     gallery: [
       'https://www.image2url.com/r2/default/images/1789221645805-2bf94483-3f4e-4759-a55c-d4a5ed1f7cd3.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Custom personalised acrylic illuminated LED lamp and Bluetooth speaker for music lovers. Features your custom name, favourite playlist track/scannable code styling, and warm ambient LED glow.',
     specifications: {
@@ -2059,7 +2119,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://i.postimg.cc/cLPtYWNF/Infinity-Heart-Photo-Night-Light-Custom-Name-Night-Light-Heart-shaped-Calendar-Lamp-Acrylic-Lamp.jpg',
     gallery: [
       'https://i.postimg.cc/cLPtYWNF/Infinity-Heart-Photo-Night-Light-Custom-Name-Night-Light-Heart-shaped-Calendar-Lamp-Acrylic-Lamp.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Bespoke illuminated infinity heart & calendar date acrylic night lamp. Custom engraved with couple names, special date / anniversary calendar, and warm ambient LED glow mounted on a natural timber base.',
     specifications: {
@@ -2086,7 +2146,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://i.postimg.cc/j5Sk3G1f/Custom-Picture-Frame-Customized-Photo-Frames-Personalized-Picture-Frames-Personalized-Anniversary.jpg',
     gallery: [
       'https://i.postimg.cc/j5Sk3G1f/Custom-Picture-Frame-Customized-Photo-Frames-Personalized-Picture-Frames-Personalized-Anniversary.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Custom personalised Polaroid-style optical acrylic night light lamp designed for him. Features high-definition photo print, personalized names/dates, and warm golden LED lighting in a solid timber base.',
     specifications: {
@@ -2229,7 +2289,7 @@ export const PRODUCTS_DATA: Product[] = [
     image: 'https://i.postimg.cc/JnzyCz3y/Bouquet-Happy-Birthday-se-compose-de-11-roses-naturelles-et-15-ferrero-et-tu-peux-mettre-un-message.jpg',
     gallery: [
       'https://i.postimg.cc/JnzyCz3y/Bouquet-Happy-Birthday-se-compose-de-11-roses-naturelles-et-15-ferrero-et-tu-peux-mettre-un-message.jpg',
-      '/src/assets/images/sozy_hero_workspace_1777014868067.png'
+      '/assets/images/sozy_hero_workspace_1777014868067.png'
     ],
     description: 'Spectacular luxury celebration setup featuring crystal-clear Bobo balloon with custom birthday message lettering, fresh natural roses, Ferrero Rocher golden chocolates, and designer gift wrapping.',
     specifications: {
@@ -2360,6 +2420,164 @@ export const PRODUCTS_DATA: Product[] = [
     reviewCount: 71,
     inStock: true,
     badge: 'Luxury Accent'
+  },
+  {
+    id: 'sg-101',
+    name: 'Executive Victory Crystal Milestone Award',
+    category: 'Success Gifts',
+    priceUGX: 180000,
+    originalPriceUGX: 220000,
+    priceUSD: 47,
+    originalPriceUSD: 58,
+    image: 'https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&q=80&w=800',
+    gallery: [
+      'https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'Celebrate career milestones, outstanding performance, and corporate breakthroughs with this heavy, optical K9 crystal trophy featuring 3D internal laser engraving and gold foil personalized citation.',
+    specifications: {
+      'Category': 'Crystal Victory Awards',
+      'Material': 'Optical K9 Beveled Flawless Crystal with Piano-Black Base',
+      'Engraving': 'Sub-Surface 3D Laser & High-Definition UV Full Color Print',
+      'Dimensions': '24cm Height x 12cm Width',
+      'Packaging': 'Satin-Lined Royal Blue Presentation Gift Box'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 38,
+    inStock: true,
+    badge: 'Success Milestone'
+  },
+  {
+    id: 'sg-102',
+    name: 'Handcrafted Mahogany Achievement & Promotion Plaque',
+    category: 'Success Gifts',
+    priceUGX: 140000,
+    originalPriceUGX: 175000,
+    priceUSD: 37,
+    originalPriceUSD: 46,
+    image: '/assets/images/tabletop_frame_1788635214871.jpg',
+    gallery: [
+      '/assets/images/tabletop_frame_1788635214871.jpg',
+      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'Commemorate graduations, executive promotions, and long service honors with a rich mahogany wooden plaque mounted with a brushed gold brass plate, diamond-drag engraved with recipient details.',
+    specifications: {
+      'Category': 'Achievement & Milestone Plaques',
+      'Material': 'Kiln-Dried Solid African Mahogany & Brushed Anodized Metal Plate',
+      'Finish': 'Satin Gloss Polyurethane Lacquer',
+      'Turnaround': '24 - 48 Hours in Kampala',
+      'Packaging': 'Custom Padded Presentation Sleeve'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 42,
+    inStock: true,
+    badge: 'Best Seller'
+  },
+  {
+    id: 'sg-103',
+    name: 'Graduation & Promotion Executive Gift Hamper',
+    category: 'Success Gifts',
+    priceUGX: 250000,
+    originalPriceUGX: 310000,
+    priceUSD: 66,
+    originalPriceUSD: 82,
+    image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=800',
+    gallery: [
+      'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=800',
+      'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'The definitive celebratory gift crate! Includes an engraved thermal smart flask, leatherette executive notebook with metal pen, ceramic victory mug, and personalized congratulatory card nestled in shredded wood filling.',
+    specifications: {
+      'Category': 'Graduation & Promotion Hampers',
+      'Contents': 'Smart LED Flask, Hardcover Journal, Metal Rollerball Pen, Two-Tone Mug, Congratulatory Card',
+      'Box Style': 'Luxury Matte Black Rigid Gift Crate with Satin Bow',
+      'Customisation': 'Full Matching Monogram and Name on all 4 items'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 5.0,
+    reviewCount: 56,
+    inStock: true,
+    badge: 'VIP Celebration'
+  },
+  {
+    id: 'sg-104',
+    name: 'Executive Congratulatory Desk Pen & Clock Set',
+    category: 'Success Gifts',
+    priceUGX: 120000,
+    originalPriceUGX: 150000,
+    priceUSD: 32,
+    originalPriceUSD: 40,
+    image: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800',
+    gallery: [
+      'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'A stately desk companion for newly promoted executives or top achievers. Features a heavy chrome quartz clock paired with a precision swivel ballpoint pen mounted on walnut wood.',
+    specifications: {
+      'Category': 'Executive Congratulatory Sets',
+      'Material': 'Solid Walnut Base with Polished Chrome Fixtures',
+      'Engraving': 'Laser Etched Metal Plaque with Congratulations Message'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.8,
+    reviewCount: 29,
+    inStock: true,
+    badge: 'Popular'
+  },
+  {
+    id: 'sg-105',
+    name: 'Custom Motivational Desk Frame & Citation',
+    category: 'Success Gifts',
+    priceUGX: 65000,
+    originalPriceUGX: 85000,
+    priceUSD: 17,
+    originalPriceUSD: 22,
+    image: '/assets/images/tabletop_frame_1788635214871.jpg',
+    gallery: [
+      '/assets/images/tabletop_frame_1788635214871.jpg'
+    ],
+    description: 'Turn words of wisdom, career goals, or graduation vows into permanent desk art with high-definition acrylic floating frames illuminated by warm LED light.',
+    specifications: {
+      'Category': 'Custom Motivational Desk Frames',
+      'Dimensions': 'A5 (15cm x 21cm) Acrylic Panel with Solid Wood Base',
+      'Print': 'Permanent Scratch-Proof High-Gloss UV Print'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 33,
+    inStock: true,
+    badge: 'Inspirational'
+  },
+  {
+    id: 'sg-106',
+    name: 'Champion Success & Inspiration Embroidered Polo',
+    category: 'Success Gifts',
+    priceUGX: 55000,
+    originalPriceUGX: 70000,
+    priceUSD: 14.5,
+    originalPriceUSD: 18.5,
+    image: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800',
+    gallery: [
+      'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800'
+    ],
+    description: 'Celebrate team victories or personal triumphs with a 100% combed cotton piqué polo shirt, custom embroidered with achievement insignia, dates, and personalized names.',
+    specifications: {
+      'Category': 'Success & Inspiration Apparel',
+      'Fabric': '220 GSM 100% Combed Heavy Cotton Piqué',
+      'Customisation': 'High-Density Tajima Embroidery on Chest and Sleeve'
+    },
+    isCustomizable: true,
+    minOrderQty: 1,
+    rating: 4.9,
+    reviewCount: 47,
+    inStock: true,
+    badge: 'Milestone Gear'
   }
 ];
 

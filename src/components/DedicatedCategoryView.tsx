@@ -18,7 +18,8 @@ import { BESTSELLERS_DATA } from '../data/bestsellersData';
 import { PRODUCTS_DATA } from '../data/mockData';
 import { SHOP_CATEGORIES } from '../data/shopCategories';
 import { useShopStore } from '../context/ShopStoreContext';
-import { OptimizedImage, preloadImages } from './OptimizedImage';
+import { OptimizedImage } from './OptimizedImage';
+import { preloadImages, preloadCatalogImages } from '../utils/imageUtils';
 
 interface DedicatedCategoryViewProps {
   categoryName: string;
@@ -64,7 +65,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
     });
   };
 
-  const { shopProducts } = useShopStore();
+  const { shopProducts, categories } = useShopStore();
   const catalogPool = useMemo(() => (shopProducts && shopProducts.length > 0 ? shopProducts : PRODUCTS_DATA), [shopProducts]);
 
   // Filter States
@@ -105,59 +106,61 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
   const categoryRawProducts = useMemo(() => {
     const isBestsellers = categoryName.toLowerCase().includes('bestseller') || categoryName.toLowerCase() === 'best sellers';
 
-    if (isBestsellers) {
-      return BESTSELLERS_DATA.map(bp => ({
-        id: bp.id,
-        name: bp.name,
-        badge: bp.badge || 'PERSONALISE IT!',
-        category: bp.category,
-        subcategories: [bp.category],
-        recipient: bp.recipient,
-        occasion: bp.occasion,
-        priceUGX: bp.priceUGX,
-        originalPriceUGX: bp.originalPriceUGX,
-        priceUSD: bp.priceUSD,
-        originalPriceUSD: bp.originalPriceUSD,
-        discountPercent: bp.discountPercent,
-        rating: bp.rating,
-        reviewCount: bp.reviewCount,
-        image: bp.image,
-        gallery: bp.gallery,
-        isCustomizable: bp.isCustomizable,
-        description: `${bp.name} - Handcrafted personalised keepsake with high-definition laser engraving & UV colour printing.`
-      }));
-    }
-
-    // Otherwise, find products in BESTSELLERS_DATA and PRODUCTS_DATA matching category
+    // 1. From catalogPool (realtime products from Firestore / Admin Dashboard)
     const catLower = categoryName.toLowerCase();
     
-    // 1. From catalogPool (realtime products)
     const fromProducts = catalogPool.filter(p => {
-      const pCat = p.category.toLowerCase();
-      const pName = p.name.toLowerCase();
-      if (catLower === 'all' || catLower === 'all products') return true;
-      if (catLower.includes('mug')) return pCat.includes('mug') || pName.includes('mug') || pName.includes('tumbler');
-      if (catLower.includes('flask') || catLower.includes('bottle')) return pCat.includes('flask') || pCat.includes('bottle') || pName.includes('flask') || pName.includes('bottle');
-      if (catLower.includes('apparel') || catLower.includes('hoodie')) return pCat.includes('apparel') || pCat.includes('shirt') || pCat.includes('hoodie') || pName.includes('hoodie') || pName.includes('fitness');
+      if (isBestsellers) {
+        return (p as any).isBestseller === true || 
+               p.badge?.toLowerCase().includes('best') || 
+               p.isFeatured === true || 
+               (p.rating && p.rating >= 4.8) ||
+               (p as any).isNewArrival === true ||
+               p.name.toLowerCase().includes('mug');
+      }
+
+      const pCat = (p.category || '').toLowerCase();
+      const pName = (p.name || '').toLowerCase();
+      const pSub = ((p as any).subcategory || (p as any).specifications?.['Category'] || '').toLowerCase();
+      const pTags = ((p as any).tags || []).map((t: string) => (t || '').toLowerCase());
+
+      if (catLower === 'all' || catLower === 'all products' || catLower === 'all gifts') return true;
+      if (catLower.includes('mug') || catLower === 'mugs') return pCat.includes('mug') || pName.includes('mug') || pName.includes('tumbler');
+      if (catLower.includes('flask') || catLower.includes('bottle') || catLower === 'bottles & flasks' || catLower === 'bottles-flasks') {
+        return pCat.includes('flask') || pCat.includes('bottle') || pName.includes('flask') || pName.includes('bottle') || pName.includes('tumbler');
+      }
+      if (catLower.includes('cushion')) return pCat.includes('cushion') || pName.includes('cushion') || pSub.includes('cushion');
+      if (catLower.includes('sipper')) return pCat.includes('sipper') || pCat.includes('bottle') || pName.includes('sipper') || pName.includes('tumbler');
+      if (catLower.includes('apparel') || catLower.includes('hoodie') || catLower.includes('shirt')) {
+        return pCat.includes('apparel') || pCat.includes('shirt') || pCat.includes('hoodie') || pName.includes('hoodie') || pName.includes('fitness') || pName.includes('shirt');
+      }
       if (catLower.includes('bamboo')) return pCat.includes('bamboo') || pName.includes('bamboo');
-      if (catLower.includes('corporate')) return pCat.includes('corporate') || pCat.includes('gift');
+      if (catLower.includes('corporate')) return pCat.includes('corporate') || pCat.includes('gift') || pName.includes('executive') || pName.includes('corporate');
       if (catLower.includes('gift set')) return pCat.includes('set') || pCat.includes('combo') || pName.includes('set');
       if (catLower.includes('glass')) return pCat.includes('glass') || pName.includes('glass');
-      if (catLower.includes('keyholder')) return pCat.includes('key') || pName.includes('key');
+      if (catLower.includes('keyholder') || catLower.includes('keychain')) return pCat.includes('key') || pName.includes('key');
       if (catLower.includes('troph') || catLower.includes('medal')) return pCat.includes('troph') || pCat.includes('medal') || pCat.includes('award');
       if (catLower.includes('clock')) return pCat.includes('clock') || pName.includes('clock');
       if (catLower.includes('watch')) return pCat.includes('watch') || pName.includes('watch');
       if (catLower.includes('umbrella')) return pCat.includes('umbrella') || pName.includes('umbrella');
       if (catLower.includes('tech')) return pCat.includes('tech') || pName.includes('bank') || pName.includes('wireless') || pName.includes('speaker');
-      if (catLower.includes('frame') || catLower.includes('lamp')) return pCat.includes('frame') || pName.includes('frame') || pName.includes('lamp');
-      return pCat.includes(catLower) || catLower.includes(pCat);
+      if (catLower.includes('frame') || catLower.includes('lamp')) return pCat.includes('frame') || pCat.includes('lamp') || pName.includes('frame') || pName.includes('lamp');
+      if (catLower.includes('neon')) return pCat.includes('neon') || pName.includes('neon');
+      if (catLower.includes('flower')) return pCat.includes('flower') || pName.includes('rose') || pName.includes('bouquet');
+      if (catLower.includes('combo') || catLower.includes('hamper')) return pCat.includes('combo') || pCat.includes('hamper') || pCat.includes('set') || pName.includes('combo') || pName.includes('set');
+      if (catLower.includes('stationery')) return pCat.includes('stationery') || pCat.includes('journal') || pCat.includes('pen') || pName.includes('journal') || pName.includes('pen');
+      if (catLower.includes('success') || catLower.includes('sucess')) {
+        return pCat.includes('success') || pCat.includes('sucess') || pName.includes('success') || pName.includes('inspiration') || pTags.some(t => t.includes('success') || t.includes('sucess'));
+      }
+
+      return pCat === catLower || pCat.includes(catLower) || catLower.includes(pCat) || pSub.includes(catLower) || pTags.some(t => t.includes(catLower));
     }).map(p => {
       const origUGX = p.originalPriceUGX || Math.round(p.priceUGX * 1.2 / 1000) * 1000;
       const discount = Math.round(((origUGX - p.priceUGX) / origUGX) * 100);
       return {
         id: p.id,
         name: p.name,
-        badge: p.badge || 'PERSONALISE IT!',
+        badge: p.badge || (isBestsellers ? 'BEST SELLER' : 'PERSONALISE IT!'),
         category: p.category,
         subcategories: [
           p.category,
@@ -184,6 +187,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
 
     // 2. From BESTSELLERS_DATA matching this category
     const fromBestsellers = BESTSELLERS_DATA.filter(bp => {
+      if (isBestsellers) return true;
       const bCat = bp.category.toLowerCase();
       const bName = bp.name.toLowerCase();
       if (catLower === 'all' || catLower === 'all products' || catLower === 'all gifts') return true;
@@ -201,6 +205,9 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
       if (catLower.includes('clock')) return bCat.includes('clock') || bName.includes('clock');
       if (catLower.includes('tech')) return bCat.includes('tech') || bName.includes('wireless') || bName.includes('lamp') || bName.includes('speaker');
       if (catLower.includes('frame') || catLower.includes('lamp')) return bCat.includes('frame') || bCat.includes('lamp') || bName.includes('frame') || bName.includes('lamp');
+      if (catLower.includes('success') || catLower.includes('sucess')) {
+        return bCat.includes('success') || bCat.includes('sucess') || bName.includes('success') || bName.includes('inspiration');
+      }
       return bCat.includes(catLower) || catLower.includes(bCat);
     }).map(bp => ({
       id: bp.id,
@@ -223,8 +230,8 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
       description: `${bp.name} - Customised gift.`
     }));
 
-    // Deduplicate by ID
-    const combined = [...fromBestsellers, ...fromProducts];
+    // Deduplicate by ID with live fromProducts taking precedence!
+    const combined = [...fromProducts, ...fromBestsellers];
     const seen = new Set<string>();
     return combined.filter(item => {
       if (seen.has(item.id)) return false;
@@ -235,6 +242,17 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
 
   // Subcategories available for this category
   const subcategoriesList = useMemo(() => {
+    // 1. Check dynamic categories from store first
+    const dynamicCat = (categories || []).find(
+      c => c.name.toLowerCase() === categoryName.toLowerCase() || 
+           c.slug?.toLowerCase() === categoryName.toLowerCase() || 
+           c.id.toLowerCase() === categoryName.toLowerCase()
+    );
+    if (dynamicCat?.subcategories && dynamicCat.subcategories.length > 0) {
+      return dynamicCat.subcategories;
+    }
+
+    // 2. Check static categories configuration
     const matchedCategoryConfig = SHOP_CATEGORIES.find(
       c => c.name.toLowerCase() === categoryName.toLowerCase() || c.id.toLowerCase() === categoryName.toLowerCase()
     );
@@ -247,7 +265,25 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
       if (p.category) set.add(p.category);
     });
     return Array.from(set);
-  }, [categoryName, categoryRawProducts]);
+  }, [categoryName, categoryRawProducts, categories]);
+
+  // Dynamic category list for the sidebar filter
+  const allCategorySidebarList = useMemo(() => {
+    const list: { id: string; name: string }[] = [];
+    const seen = new Set<string>();
+    SHOP_CATEGORIES.forEach(c => {
+      list.push({ id: c.id, name: c.name });
+      seen.add(c.name.toLowerCase().trim());
+    });
+    (categories || []).forEach(c => {
+      if (c.isActive === false) return;
+      const norm = (c.name || '').toLowerCase().trim();
+      if (!norm || seen.has(norm) || norm === 'all' || norm === 'all products') return;
+      seen.add(norm);
+      list.push({ id: c.slug || c.id, name: c.name });
+    });
+    return list;
+  }, [categories]);
 
   // Absolute min & max in this category
   const { absoluteMinPrice, absoluteMaxPrice } = useMemo(() => {
@@ -412,11 +448,10 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
     return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
 
-  // Preload all color variants and gallery images for currently visible products for zero-lag switching
+  // Preload visible and upcoming catalog images with smart chunking for instant visual display
   useEffect(() => {
-    const visibleGalleries = paginatedProducts.flatMap(p => p.gallery || []);
-    if (visibleGalleries.length > 0) {
-      preloadImages(visibleGalleries);
+    if (paginatedProducts.length > 0) {
+      preloadCatalogImages(paginatedProducts, 16, 'card');
     }
   }, [paginatedProducts]);
 
@@ -890,7 +925,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                   <span>Categories</span>
                 </div>
                 <div className="space-y-1 max-h-48 overflow-y-auto pr-1">
-                  {SHOP_CATEGORIES.map((cat) => {
+                  {allCategorySidebarList.map((cat) => {
                     const isCurrent = categoryName.toLowerCase() === cat.name.toLowerCase();
                     return (
                       <button
@@ -1113,7 +1148,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
             ) : (
               /* Product Grid Exact match to Screenshot 2026-09-05 225344.png */
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-5">
-                {paginatedProducts.map((product) => {
+                {paginatedProducts.map((product, pIndex) => {
                   const isFav = !!wishlist[product.id];
                   const currentImgIdx = activeImageIndex[product.id] || 0;
                   const displayImg = product.gallery && product.gallery[currentImgIdx] ? product.gallery[currentImgIdx] : product.image;
@@ -1124,7 +1159,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                       onClick={() => onOpenCustomizer(toStandardProduct(product))}
                       onMouseEnter={() => {
                         if (product.gallery && product.gallery.length > 1) {
-                          preloadImages(product.gallery);
+                          preloadImages(product.gallery, 'card');
                         }
                       }}
                       className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative min-w-0"
@@ -1134,6 +1169,9 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                         <OptimizedImage
                           src={displayImg}
                           alt={product.name}
+                          category={product.category}
+                          priority={pIndex < 8}
+                          sizeVariant="card"
                           wrapperClassName="absolute inset-0 w-full h-full"
                           className="w-full h-full object-cover group-hover:scale-104 transition-transform duration-500"
                         />

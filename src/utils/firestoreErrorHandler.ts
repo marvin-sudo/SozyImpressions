@@ -59,3 +59,5 @@ export async function testFirestoreConnection(): Promise<boolean> {
     return false;
   }
 }
+
+export const testConnection = testFirestoreConnection;

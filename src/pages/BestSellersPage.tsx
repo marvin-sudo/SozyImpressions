@@ -23,7 +23,9 @@ import {
   BESTSELLER_OCCASIONS,
   BestsellerProduct 
 } from '../data/bestsellersData';
-import { OptimizedImage, preloadImages } from '../components/OptimizedImage';
+import { OptimizedImage } from '../components/OptimizedImage';
+import { preloadImages, preloadCatalogImages } from '../utils/imageUtils';
+import { useShopStore } from '../context/ShopStoreContext';
 
 interface BestSellersPageProps {
   navigate: (view: View, param?: string) => void;
@@ -124,13 +126,49 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
   const absoluteMinPrice = 10000;
   const absoluteMaxPrice = 240000;
 
+  const { shopProducts } = useShopStore();
+
+  // Combine real-time live products from Admin/Firestore with the baseline bestsellers
+  const allBestsellerPool = useMemo(() => {
+    const liveItems: BestsellerProduct[] = (shopProducts || []).map(sp => {
+      const origUGX = sp.originalPriceUGX || Math.round(sp.priceUGX * 1.25 / 1000) * 1000;
+      const discount = Math.round(((origUGX - sp.priceUGX) / origUGX) * 100);
+      return {
+        id: sp.id,
+        name: sp.name,
+        badge: sp.badge || 'PERSONALISE IT!',
+        category: sp.category,
+        recipient: 'Him / Her',
+        occasion: 'Birthday / Celebration',
+        priceUGX: sp.priceUGX,
+        originalPriceUGX: origUGX,
+        priceUSD: sp.priceUSD,
+        originalPriceUSD: sp.originalPriceUSD || Math.round(sp.priceUSD * 1.25),
+        discountPercent: discount > 0 ? `${discount}% OFF` : '',
+        rating: sp.rating || 4.9,
+        reviewCount: sp.reviewCount || 45,
+        image: sp.image,
+        gallery: sp.gallery && sp.gallery.length > 0 ? sp.gallery : [sp.image],
+        isCustomizable: sp.isCustomizable !== false
+      };
+    });
+
+    const combined = [...liveItems, ...BESTSELLERS_DATA];
+    const seen = new Set<string>();
+    return combined.filter(item => {
+      if (seen.has(item.id)) return false;
+      seen.add(item.id);
+      return true;
+    });
+  }, [shopProducts]);
+
   // Histogram calculation (10 buckets across price range)
   const histogramBuckets = useMemo(() => {
     const bucketCount = 12;
     const step = (absoluteMaxPrice - absoluteMinPrice) / bucketCount;
     const buckets = Array(bucketCount).fill(0);
 
-    BESTSELLERS_DATA.forEach(item => {
+    allBestsellerPool.forEach(item => {
       const p = item.priceUGX;
       const idx = Math.min(bucketCount - 1, Math.max(0, Math.floor((p - absoluteMinPrice) / step)));
       buckets[idx]++;
@@ -144,7 +182,7 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
       rangeMax: Math.round(absoluteMinPrice + (i + 1) * step),
       isActive: (absoluteMinPrice + (i + 1) * step >= minPrice) && (absoluteMinPrice + i * step <= maxPrice)
     }));
-  }, [minPrice, maxPrice]);
+  }, [minPrice, maxPrice, allBestsellerPool]);
 
   // Reset all filters
   const resetFilters = () => {
@@ -172,7 +210,7 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
 
   // Filtered and Sorted Products
   const filteredProducts = useMemo(() => {
-    return BESTSELLERS_DATA.filter(item => {
+    return allBestsellerPool.filter(item => {
       // Search
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
@@ -260,7 +298,8 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
     selectedDiscount,
     onlyPhotoGifts,
     searchQuery,
-    sortBy
+    sortBy,
+    allBestsellerPool
   ]);
 
   // Reset page on filter changes
@@ -275,11 +314,10 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
     return filteredProducts.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
 
-  // Preload all color variants and gallery images for currently visible products for zero-lag switching
+  // Preload visible and upcoming catalog images with smart chunking for instant visual display
   useEffect(() => {
-    const visibleGalleries = paginatedProducts.flatMap(p => p.gallery || []);
-    if (visibleGalleries.length > 0) {
-      preloadImages(visibleGalleries);
+    if (paginatedProducts.length > 0) {
+      preloadCatalogImages(paginatedProducts, 8, 'card');
     }
   }, [paginatedProducts]);
 
@@ -887,7 +925,7 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
             ) : (
               /* Product Grid Matching Exact User Prompt & Screenshot */
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-5">
-                {paginatedProducts.map((product) => {
+                {paginatedProducts.map((product, pIndex) => {
                   const isFav = !!wishlist[product.id];
                   const currentImgIdx = activeImageIndex[product.id] || 0;
                   const displayImg = product.gallery && product.gallery[currentImgIdx] ? product.gallery[currentImgIdx] : product.image;
@@ -898,7 +936,7 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                       onClick={() => handleOpenCustomizer(product)}
                       onMouseEnter={() => {
                         if (product.gallery && product.gallery.length > 1) {
-                          preloadImages(product.gallery);
+                          preloadImages(product.gallery, 'card');
                         }
                       }}
                       className="group bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer relative min-w-0"
@@ -908,6 +946,9 @@ export const BestSellersPage: React.FC<BestSellersPageProps> = ({
                         <OptimizedImage
                           src={displayImg}
                           alt={product.name}
+                          category={product.category}
+                          priority={pIndex < 6}
+                          sizeVariant="card"
                           wrapperClassName="absolute inset-0 w-full h-full"
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />

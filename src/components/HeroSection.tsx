@@ -44,9 +44,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ navigate }) => {
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none bg-[radial-gradient(#2E3192_1px,transparent_1px)] [background-size:24px_24px]" />
 
       {/* Atmospheric Soft Light Blooms */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-24 left-1/4 w-[600px] h-[600px] bg-[#2E3192]/5 rounded-full filter blur-[140px]" />
-        <div className="absolute top-1/3 right-10 w-[550px] h-[550px] bg-[#ED008C]/5 rounded-full filter blur-[150px]" />
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none transform-gpu will-change-transform">
+        <div className="absolute -top-24 left-1/4 w-[600px] h-[600px] bg-[#2E3192]/8 rounded-full blur-[140px] transform-gpu" />
+        <div className="absolute top-1/3 right-10 w-[550px] h-[550px] bg-[#ED008C]/8 rounded-full blur-[150px] transform-gpu" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10 my-auto py-6">

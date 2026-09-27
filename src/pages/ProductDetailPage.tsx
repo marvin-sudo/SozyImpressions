@@ -18,7 +18,8 @@ import { View, Currency, CartItem, CustomizationOptions, Product } from '../type
 import { getProductById, getRelatedProducts } from '../utils/productUtils';
 import { PAYMENT_LOGOS } from '../data/mockData';
 import { useShopStore } from '../context/ShopStoreContext';
-import { OptimizedImage, preloadImages } from '../components/OptimizedImage';
+import { OptimizedImage } from '../components/OptimizedImage';
+import { preloadImages } from '../utils/imageUtils';
 
 interface ProductDetailPageProps {
   productId?: string;
@@ -376,6 +377,7 @@ Please confirm turnaround time and share digital proof!`;
                 src={galleryImages[selectedImageIndex] || product.image} 
                 alt={product.name}
                 priority={true}
+                sizeVariant="detail"
                 wrapperClassName="w-full h-full"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -429,6 +431,8 @@ Please confirm turnaround time and share digital proof!`;
                     <OptimizedImage 
                       src={img} 
                       alt={`${product.name} - view ${idx + 1}`} 
+                      sizeVariant="thumb"
+                      priority={idx < 4}
                       wrapperClassName="w-full h-full"
                       className="w-full h-full object-cover" 
                     />
@@ -1064,6 +1068,7 @@ Please confirm turnaround time and share digital proof!`;
                   <OptimizedImage
                     src={rel.image}
                     alt={rel.name}
+                    sizeVariant="card"
                     wrapperClassName="absolute inset-0 w-full h-full"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
