@@ -18,6 +18,7 @@ export interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageEl
   priority?: boolean; // high priority (LCP, Hero, above-the-fold)
   blurPlaceholder?: boolean;
   sizeVariant?: ImageSizeVariant; // 'thumb' (180px) | 'card' (400px) | 'detail' (750px) | 'hero' (1100px)
+  transparent?: boolean;
 }
 
 /**
@@ -39,8 +40,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   blurPlaceholder = true,
   sizeVariant = 'card',
+  transparent = false,
   loading,
-  decoding = 'async',
+  decoding,
   referrerPolicy = 'no-referrer',
   ...rest
 }) => {
@@ -135,11 +137,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   // Only use srcSet if no error occurred and not showing fallback
   const activeSrcSet = !hasError && src && currentSrc === targetSrc ? getOptimizedSrcSet(src) : undefined;
+  const isTransparent = transparent || wrapperClassName.includes('bg-transparent');
 
   return (
-    <div className={`relative overflow-hidden bg-slate-100 ${aspectRatio ? aspectRatio : ''} ${wrapperClassName}`}>
+    <div className={`relative overflow-hidden ${isTransparent ? 'bg-transparent' : 'bg-slate-100'} ${aspectRatio ? aspectRatio : ''} ${wrapperClassName}`}>
       {/* Subtle skeleton shimmer behind image while loading */}
-      {!isLoaded && blurPlaceholder && (
+      {!isLoaded && blurPlaceholder && !isTransparent && (
         <div 
           className="absolute inset-0 bg-gradient-to-r from-slate-100 via-slate-200/50 to-slate-100 animate-pulse z-0 pointer-events-none" 
           aria-hidden="true"
@@ -150,13 +153,13 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         ref={handleRef}
         src={currentSrc}
         srcSet={activeSrcSet}
-        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        sizes={rest.sizes || "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"}
         alt={alt || 'Product image'}
         loading={priority ? 'eager' : (loading || 'eager')}
-        decoding={priority ? 'sync' : decoding}
+        decoding={decoding || (priority ? 'async' : 'async')}
         referrerPolicy={referrerPolicy}
         // @ts-expect-error - fetchPriority is supported in modern browsers
-        fetchpriority={priority ? 'high' : 'auto'}
+        fetchPriority={priority ? 'high' : (rest.fetchPriority || 'auto')}
         onLoad={handleLoad}
         onError={handleError}
         className={`${className} ${

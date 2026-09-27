@@ -3,6 +3,7 @@ import { ArrowRight, Wand2, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, Currency } from '../types';
 import { OptimizedImage } from './OptimizedImage';
+import { loadedImageCache } from '../utils/imageUtils';
 
 interface ShopHeroSectionProps {
   onSelectCollection: (collectionKey: string) => void;
@@ -17,7 +18,8 @@ const heroSlides = [
     titleLine1: 'MAKE IT PERSONAL.',
     titleLine2: 'Make it Sozy.',
     description: 'Bespoke personalised gifts, corporate branded merchandise, and custom creations crafted with precision laser engraving, vibrant full-colour UV printing, and premium embroidery.',
-    image: 'https://www.image2url.com/r2/default/images/1788960062454-65f7424d-a425-45a6-9c91-c8dc0cf0dd9e.png',
+    image: '/assets/images/hero/slide_personal.webp',
+    fallbackImage: 'https://www.image2url.com/r2/default/images/1788960062454-65f7424d-a425-45a6-9c91-c8dc0cf0dd9e.png',
     alt: 'Make it Personal. Make it Sozy.',
     accentColor: '#ED008C',
     tagline: 'Ready to craft a memorable keepsake or branded corporate order?'
@@ -27,7 +29,8 @@ const heroSlides = [
     titleLine1: 'MOMENTS THAT LAST.',
     titleLine2: 'Crafted with Love.',
     description: 'Thoughtfully customized gift boxes, engraved drinkware, photo keepsakes, and celebration treasures tailored to make every birthday, anniversary, and milestone unforgettable.',
-    image: 'https://www.image2url.com/r2/default/images/1788961670133-fd354901-222d-441d-9815-a4b9b20ea9dd.png',
+    image: '/assets/images/hero/slide_celebrations.webp',
+    fallbackImage: 'https://www.image2url.com/r2/default/images/1788961670133-fd354901-222d-441d-9815-a4b9b20ea9dd.png',
     alt: 'Moments That Last. Crafted with Love.',
     accentColor: '#2D3094',
     tagline: 'Celebrate birthdays, anniversaries, and milestones with personal gifts.'
@@ -37,7 +40,8 @@ const heroSlides = [
     titleLine1: 'SWEET SURPRISES.',
     titleLine2: 'Baked for Celebrations.',
     description: 'Freshly baked gourmet celebration cakes, custom milestone cake toppers, and delightful sweet treat bundles made to complement your personalised gifts across Kampala.',
-    image: 'https://www.image2url.com/r2/default/images/1788962855779-7aa562c8-5437-4b13-bab8-227e2866ddfc.png',
+    image: '/assets/images/hero/slide_cakes.webp',
+    fallbackImage: 'https://www.image2url.com/r2/default/images/1788962855779-7aa562c8-5437-4b13-bab8-227e2866ddfc.png',
     alt: 'Celebration Cakes and Sweet Surprises',
     accentColor: '#ED008C',
     tagline: 'Pair your custom gift with fresh celebration cakes delivered right on time.'
@@ -47,12 +51,74 @@ const heroSlides = [
     titleLine1: 'BLOOMS OF LOVE.',
     titleLine2: 'Freshly Handcrafted.',
     description: 'Handcrafted fresh flower bouquets, radiant roses, and vibrant floral arrangements paired seamlessly with personalised gift boxes for birthdays, romance, and special celebrations.',
-    image: 'https://www.image2url.com/r2/default/images/1788963284870-0c5d0abc-b705-4b10-93ab-f41a77f117da.png',
+    image: '/assets/images/hero/slide_flowers.webp',
+    fallbackImage: 'https://www.image2url.com/r2/default/images/1788963284870-0c5d0abc-b705-4b10-93ab-f41a77f117da.png',
     alt: 'Fresh Flower Bouquets and Floral Gifts',
     accentColor: '#ED008C',
     tagline: 'Pair your custom gift with stunning fresh floral arrangements delivered in Kampala.'
   }
 ];
+
+const collections = [
+  {
+    id: 'bestsellers',
+    title: 'Bestsellers',
+    badge: 'Popular',
+    bgColor: 'bg-[#FBF1EC]', // soft warm blush/cream
+    blobShape: 'rounded-[42%_58%_70%_30%/45%_45%_55%_55%]',
+    image: '/assets/images/hero/col_bestsellers.webp',
+    fallbackImage: 'https://www.image2url.com/r2/default/images/1788966255392-56781397-72a2-4843-9596-cde8aff134c1.png',
+    description: 'Customer favourite mugs, flasks & apparel'
+  },
+  {
+    id: 'new-arrivals',
+    title: 'New Arrivals',
+    badge: '2026 Drops',
+    bgColor: 'bg-[#F3F4EE]', // soft olive/sand
+    blobShape: 'rounded-[55%_45%_35%_65%/60%_50%_50%_40%]',
+    image: '/assets/images/hero/col_new_arrivals.webp',
+    fallbackImage: 'https://www.image2url.com/r2/default/images/1788965911749-6039f84f-7024-4e23-9edc-68d11dc05bb4.png',
+    description: 'Latest bamboo sets & desk accessories'
+  },
+  {
+    id: 'corporate-gifts',
+    title: 'Corporate Gifts',
+    badge: 'VIP Quality',
+    bgColor: 'bg-[#EDF2F7]', // soft corporate blue/gray
+    blobShape: 'rounded-[40%_60%_50%_50%/55%_35%_65%_45%]',
+    image: '/assets/images/hero/col_corporate.webp',
+    fallbackImage: 'https://www.image2url.com/r2/default/images/1788969007990-c83257b8-1421-427c-9fbd-717e5df9c776.png',
+    description: 'Luxury executive kits & partner awards'
+  },
+  {
+    id: 'all-gifts',
+    title: 'All Gifts',
+    badge: 'Curated',
+    bgColor: 'bg-[#FDF0EE]', // soft peach/coral
+    blobShape: 'rounded-[60%_40%_60%_40%/40%_60%_40%_60%]',
+    image: '/assets/images/hero/col_all_gifts.webp',
+    fallbackImage: 'https://www.image2url.com/r2/default/images/1788967471351-f7e50fea-fd71-438e-bf39-f62db3d1bd7f.png',
+    description: 'Explore full personalised collection'
+  }
+];
+
+// All Hero Asset URLs for immediate parallel warm-up
+const ALL_HERO_ASSETS = [
+  ...heroSlides.map(s => s.image),
+  ...collections.map(c => c.image)
+];
+
+// Eager global module pre-warm to prime the browser network & GPU decoder
+if (typeof window !== 'undefined') {
+  ALL_HERO_ASSETS.forEach((src) => {
+    loadedImageCache.add(src);
+    const img = new Image();
+    img.src = src;
+    if ('decode' in img) {
+      img.decode().catch(() => {});
+    }
+  });
+}
 
 export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
   onSelectCollection,
@@ -79,53 +145,19 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
     return () => clearInterval(timer);
   }, [isHovered, nextSlide]);
 
-  // Eagerly preload all hero slide images into browser cache so slide transitions are instant
+  // Eagerly pre-warm and decode all hero slide and collection images into cache
   useEffect(() => {
-    heroSlides.forEach((slide) => {
+    ALL_HERO_ASSETS.forEach((src) => {
+      loadedImageCache.add(src);
       const img = new Image();
-      img.src = slide.image;
+      img.src = src;
+      if ('decode' in img) {
+        img.decode().catch(() => {});
+      }
     });
   }, []);
 
   const activeSlide = heroSlides[currentSlide];
-  const collections = [
-    {
-      id: 'bestsellers',
-      title: 'Bestsellers',
-      badge: 'Popular',
-      bgColor: 'bg-[#FBF1EC]', // soft warm blush/cream
-      blobShape: 'rounded-[42%_58%_70%_30%/45%_45%_55%_55%]',
-      image: 'https://www.image2url.com/r2/default/images/1788966255392-56781397-72a2-4843-9596-cde8aff134c1.png',
-      description: 'Customer favourite mugs, flasks & apparel'
-    },
-    {
-      id: 'new-arrivals',
-      title: 'New Arrivals',
-      badge: '2026 Drops',
-      bgColor: 'bg-[#F3F4EE]', // soft olive/sand
-      blobShape: 'rounded-[55%_45%_35%_65%/60%_50%_50%_40%]',
-      image: 'https://www.image2url.com/r2/default/images/1788965911749-6039f84f-7024-4e23-9edc-68d11dc05bb4.png',
-      description: 'Latest bamboo sets & desk accessories'
-    },
-    {
-      id: 'corporate-gifts',
-      title: 'Corporate Gifts',
-      badge: 'VIP Quality',
-      bgColor: 'bg-[#EDF2F7]', // soft corporate blue/gray
-      blobShape: 'rounded-[40%_60%_50%_50%/55%_35%_65%_45%]',
-      image: 'https://www.image2url.com/r2/default/images/1788969007990-c83257b8-1421-427c-9fbd-717e5df9c776.png',
-      description: 'Luxury executive kits & partner awards'
-    },
-    {
-      id: 'all-gifts',
-      title: 'All Gifts',
-      badge: 'Curated',
-      bgColor: 'bg-[#FDF0EE]', // soft peach/coral
-      blobShape: 'rounded-[60%_40%_60%_40%/40%_60%_40%_60%]',
-      image: 'https://www.image2url.com/r2/default/images/1788967471351-f7e50fea-fd71-438e-bf39-f62db3d1bd7f.png',
-      description: 'Explore full personalised collection'
-    }
-  ];
 
   return (
     <section className="w-full bg-white pt-6 pb-12 px-4 md:px-8 border-b border-slate-200/80 font-sans">
@@ -162,10 +194,15 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
                     
                     {/* Cutout Image with Hover Transition */}
                     <OptimizedImage 
-                      src={col.image} 
+                      src={col.image}
+                      fallbackSrc={col.fallbackImage}
                       alt={col.title} 
                       priority={true}
-                      wrapperClassName="relative z-10 flex items-center justify-center"
+                      transparent={true}
+                      width={180}
+                      height={180}
+                      sizes="(max-width: 640px) 150px, 180px"
+                      wrapperClassName="relative z-10 flex items-center justify-center bg-transparent"
                       className={`object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-110 ${
                         col.id === 'bestsellers'
                           ? 'w-full h-full max-w-[170px] max-h-[170px] scale-[1.35] sm:scale-[1.4] drop-shadow-xl'
@@ -268,9 +305,14 @@ export const ShopHeroSection: React.FC<ShopHeroSectionProps> = ({
                   <div className="w-full md:w-auto md:flex-1 flex items-center justify-center">
                     <OptimizedImage 
                       src={activeSlide.image} 
+                      fallbackSrc={activeSlide.fallbackImage}
                       alt={activeSlide.alt}
                       priority={true}
-                      wrapperClassName="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[540px] h-auto max-h-[340px] sm:max-h-[400px] lg:max-h-[440px] flex items-center justify-center"
+                      transparent={true}
+                      width={540}
+                      height={440}
+                      sizes="(max-width: 640px) 340px, (max-width: 1024px) 480px, 540px"
+                      wrapperClassName="w-full max-w-[340px] sm:max-w-[420px] md:max-w-[480px] lg:max-w-[540px] h-auto max-h-[340px] sm:max-h-[400px] lg:max-h-[440px] flex items-center justify-center bg-transparent"
                       className="w-full h-full object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
                     />
                   </div>
