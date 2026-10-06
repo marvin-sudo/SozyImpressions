@@ -80,7 +80,15 @@ export const CustomersView: React.FC<CustomersViewProps> = ({ onSelectOrder }) =
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              {filteredCustomers.map((cust) => {
+              {filteredCustomers.length === 0 ? (
+                <tr>
+                  <td colSpan={7} className="py-12 text-center text-slate-400">
+                    <p className="text-sm font-semibold text-slate-600">No customer records found</p>
+                    <p className="text-xs text-slate-400 mt-1">Customers who place orders on your website will automatically appear here.</p>
+                  </td>
+                </tr>
+              ) : (
+                filteredCustomers.map((cust) => {
                 const isVIP = (cust.totalSpentUGX || 0) > 1000000;
 
                 return (
@@ -149,7 +157,7 @@ export const CustomersView: React.FC<CustomersViewProps> = ({ onSelectOrder }) =
                     </td>
                   </tr>
                 );
-              })}
+              }))}
             </tbody>
           </table>
         </div>

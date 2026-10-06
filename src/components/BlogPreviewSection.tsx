@@ -35,14 +35,14 @@ export const BlogPreviewSection: React.FC<BlogPreviewSectionProps> = ({ navigate
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2D3094]/10 text-[#2D3094] text-xs font-black uppercase tracking-wider mb-3">
               <BookOpen size={14} className="text-[#ED008C]" />
-              <span>Industry Insights & Strategies</span>
+              <span>Latest News & Industry Insights</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-heading font-black text-[#121212] tracking-tight leading-tight">
-              Insights, Trends & <br />
+              News, Trends & <br />
               <span className="text-[#2D3094]">Print Strategies.</span>
             </h2>
             <p className="text-base text-slate-600 mt-3 font-normal leading-relaxed">
-              Explore strategic guides on brand positioning, offset vs. digital cost modeling, and maximizing executive client retention with high-utility merchandise in Uganda.
+              Explore the latest community news, school mentorship spotlights, strategic guides on brand positioning, and executive gift blueprints in Uganda.
             </p>
           </div>
 
@@ -51,14 +51,14 @@ export const BlogPreviewSection: React.FC<BlogPreviewSectionProps> = ({ navigate
               onClick={() => navigate('blog')}
               className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#2D3094] hover:text-[#ED008C] transition-colors py-2 border-b-2 border-[#2D3094] hover:border-[#ED008C]"
             >
-              <span>View All Articles</span>
+              <span>View All News & Articles</span>
               <ArrowRight size={16} />
             </button>
           </div>
         </motion.div>
 
         {/* Blog Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {BLOG_POSTS.map((post, idx) => (
             <motion.div
               key={post.id}

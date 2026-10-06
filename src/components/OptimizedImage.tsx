@@ -3,7 +3,6 @@ import {
   loadedImageCache, 
   getOptimizedImageUrl, 
   getOptimizedSrcSet, 
-  preloadImage,
   getCategoryFallbackImage,
   ImageSizeVariant 
 } from '../utils/imageUtils';
@@ -19,6 +18,8 @@ export interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageEl
   blurPlaceholder?: boolean;
   sizeVariant?: ImageSizeVariant; // 'thumb' (180px) | 'card' (400px) | 'detail' (750px) | 'hero' (1100px)
   transparent?: boolean;
+  fetchPriority?: 'high' | 'low' | 'auto';
+  fetchpriority?: 'high' | 'low' | 'auto';
 }
 
 /**
@@ -43,15 +44,17 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   transparent = false,
   loading,
   decoding,
-  referrerPolicy = 'no-referrer',
+  referrerPolicy = 'no-referrer-when-downgrade',
+  fetchPriority,
+  fetchpriority,
   ...rest
 }) => {
   const imgRef = useRef<HTMLImageElement | null>(null);
   
-  // Calculate category-specific zero-latency fallback
+  // Calculate category-specific zero-latency fallback only if remote image genuinely fails
   const resolvedFallback = fallbackSrc || getCategoryFallbackImage(category || alt);
 
-  // Calculate the optimized image URL
+  // Compute the primary optimized image URL
   const targetSrc = src && src.trim() ? getOptimizedImageUrl(src.trim(), sizeVariant) : resolvedFallback;
 
   const isAlreadyCached = Boolean(
@@ -59,16 +62,15 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 
   const [isLoaded, setIsLoaded] = useState<boolean>(isAlreadyCached);
-  const [hasError, setHasError] = useState<boolean>(false);
-  const [currentSrc, setCurrentSrc] = useState<string>(targetSrc || resolvedFallback);
+  const [retryAttempt, setRetryAttempt] = useState<number>(0);
+  const [currentSrc, setCurrentSrc] = useState<string>(targetSrc);
 
   // Sync currentSrc when src, sizeVariant, or category changes
   useEffect(() => {
-    const freshFallback = fallbackSrc || getCategoryFallbackImage(category || alt);
-    const newTarget = src && src.trim() ? getOptimizedImageUrl(src.trim(), sizeVariant) : freshFallback;
+    const newTarget = src && src.trim() ? getOptimizedImageUrl(src.trim(), sizeVariant) : resolvedFallback;
     
     setCurrentSrc(newTarget);
-    setHasError(false);
+    setRetryAttempt(0);
 
     if (newTarget && (loadedImageCache.has(newTarget) || loadedImageCache.has(src || ''))) {
       setIsLoaded(true);
@@ -80,28 +82,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         setIsLoaded(false);
       }
     }
+  }, [src, sizeVariant, resolvedFallback]);
 
-    if (newTarget && (priority || sizeVariant === 'card')) {
-      preloadImage(newTarget, sizeVariant);
-    }
-
-    // Safety timeout: if remote image doesn't load within 2.5 seconds, show fallback
-    let timer: NodeJS.Timeout | null = null;
-    if (newTarget && !newTarget.startsWith('/assets/') && !loadedImageCache.has(newTarget)) {
-      timer = setTimeout(() => {
-        if (!imgRef.current?.complete || imgRef.current?.naturalWidth === 0) {
-          setCurrentSrc(freshFallback);
-          setIsLoaded(true);
-        }
-      }, 2500);
-    }
-
-    return () => {
-      if (timer) clearTimeout(timer);
-    };
-  }, [src, sizeVariant, priority, fallbackSrc, category, alt]);
-
-  // Synchronous DOM ref callback
+  // Synchronous DOM ref callback for instant cached image detection
   const handleRef = (node: HTMLImageElement | null) => {
     imgRef.current = node;
     if (node && node.complete && node.naturalWidth > 0) {
@@ -123,21 +106,37 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-    if (!hasError && resolvedFallback && currentSrc !== resolvedFallback) {
-      setHasError(true);
+    // If the image failed on first attempt, retry once after 400ms
+    if (retryAttempt === 0 && src && src.trim() && currentSrc !== src.trim()) {
+      setRetryAttempt(1);
+      setTimeout(() => {
+        // Retry with the raw direct URL without extra query parameters
+        setCurrentSrc(src.trim());
+      }, 400);
+      return;
+    }
+
+    // Only if retry also fails and fallback is different, use the fallback image
+    if (resolvedFallback && currentSrc !== resolvedFallback) {
       setCurrentSrc(resolvedFallback);
-      setIsLoaded(true); // Display fallback immediately, no blank state!
+      setIsLoaded(true);
     } else {
       setIsLoaded(true);
     }
+
     if (rest.onError) {
       rest.onError(e);
     }
   };
 
-  // Only use srcSet if no error occurred and not showing fallback
-  const activeSrcSet = !hasError && src && currentSrc === targetSrc ? getOptimizedSrcSet(src) : undefined;
+  // Only use srcSet for Unsplash images if on the primary target
+  const activeSrcSet = src && currentSrc === targetSrc ? getOptimizedSrcSet(src) : undefined;
   const isTransparent = transparent || wrapperClassName.includes('bg-transparent');
+
+  // Proper loading priority: above-the-fold images get eager + high fetchpriority,
+  // below-the-fold images use native lazy loading and async decoding for maximum bandwidth efficiency
+  const effectiveLoading = priority ? 'eager' : (loading || 'lazy');
+  const effectiveFetchPriority = priority ? 'high' : (fetchpriority || fetchPriority || 'auto');
 
   return (
     <div className={`relative overflow-hidden ${isTransparent ? 'bg-transparent' : 'bg-slate-100'} ${aspectRatio ? aspectRatio : ''} ${wrapperClassName}`}>
@@ -155,16 +154,16 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         srcSet={activeSrcSet}
         sizes={rest.sizes || "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"}
         alt={alt || 'Product image'}
-        loading={priority ? 'eager' : (loading || 'eager')}
-        decoding={decoding || (priority ? 'async' : 'async')}
+        loading={effectiveLoading}
+        decoding={decoding || 'async'}
         referrerPolicy={referrerPolicy}
-        // @ts-expect-error - fetchPriority is supported in modern browsers
-        fetchPriority={priority ? 'high' : (rest.fetchPriority || 'auto')}
+        // @ts-expect-error - lowercase fetchpriority is supported in modern browsers and avoids React 18 DOM prop warnings
+        fetchpriority={effectiveFetchPriority}
         onLoad={handleLoad}
         onError={handleError}
         className={`${className} ${
-          isLoaded ? 'opacity-100' : 'opacity-95'
-        } transition-opacity duration-150 ease-out`}
+          isLoaded ? 'opacity-100' : 'opacity-90'
+        } transition-opacity duration-200 ease-out`}
         {...rest}
       />
     </div>

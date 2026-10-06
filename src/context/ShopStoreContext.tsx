@@ -37,15 +37,25 @@ import {
 } from '../utils/firestoreErrorHandler';
 import { Product } from '../types';
 
-// Helper to sanitize data for Firestore by removing undefined values
-export function sanitizeForFirestore<T extends Record<string, any>>(obj: T): any {
-  const clean: any = {};
-  for (const [key, val] of Object.entries(obj)) {
-    if (val !== undefined) {
-      if (val !== null && typeof val === 'object' && !Array.isArray(val) && !(val instanceof Date)) {
-        clean[key] = sanitizeForFirestore(val);
+// Helper to sanitize data for Firestore by removing undefined values recursively
+export function sanitizeForFirestore<T>(val: T): any {
+  if (val === null || val === undefined) return null;
+  if (typeof val !== 'object') return val;
+  if (val instanceof Date) return val.toISOString();
+
+  if (Array.isArray(val)) {
+    return val
+      .filter(item => item !== undefined)
+      .map(item => (typeof item === 'object' && item !== null ? sanitizeForFirestore(item) : item));
+  }
+
+  const clean: Record<string, any> = {};
+  for (const [key, v] of Object.entries(val as Record<string, any>)) {
+    if (v !== undefined) {
+      if (v !== null && typeof v === 'object' && !(v instanceof Date)) {
+        clean[key] = sanitizeForFirestore(v);
       } else {
-        clean[key] = val;
+        clean[key] = v;
       }
     }
   }
@@ -155,224 +165,8 @@ export const INITIAL_ADMIN_PRODUCTS: AdminProduct[] = PRODUCTS_DATA.map((p, idx)
   createdAt: new Date(Date.now() - (idx * 86400000 * 3)).toISOString()
 }));
 
-// Initial Realistic Orders
-export const INITIAL_ADMIN_ORDERS: AdminOrder[] = [
-  {
-    id: 'SOZ-8842',
-    orderNumber: 'SOZ-8842',
-    customerName: 'Grace Nabatanzi',
-    customerEmail: 'grace.nabatanzi@stanbic.co.ug',
-    customerPhone: '+256 772 458 912',
-    companyName: 'Stanbic Bank Uganda',
-    deliveryAddress: 'Stanbic Towers, 4th Floor, 17 Hannington Road',
-    district: 'Kampala Central',
-    deliveryZoneId: 'kampala-cbd',
-    deliveryInstructions: 'Deliver to 4th floor reception. Ask for Grace in Marketing.',
-    items: [
-      {
-        product: PRODUCTS_DATA[0] || { id: 'prod-1', name: 'Executive Pique Cotton Branded Polo', priceUGX: 38000, priceUSD: 10, category: 'Apparel', image: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800', rating: 4.9, description: 'Branded executive polo' },
-        quantity: 25,
-        selectedColor: 'Navy',
-        selectedSize: 'L',
-        customText: 'Stanbic Innovation 2026',
-        unitPriceUGX: 38000,
-        subtotalUGX: 950000,
-        unitPriceUSD: 10,
-        subtotalUSD: 250
-      },
-      {
-        product: PRODUCTS_DATA[2] || { id: 'prod-3', name: 'Smart LED Temperature Flask', priceUGX: 45000, priceUSD: 12, category: 'Bottles & Flasks', image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=800', rating: 4.9, description: 'Smart LED flask' },
-        quantity: 25,
-        selectedColor: 'Matte Black',
-        customText: 'IT IS CAN DO.',
-        unitPriceUGX: 45000,
-        subtotalUGX: 1125000,
-        unitPriceUSD: 12,
-        subtotalUSD: 300
-      }
-    ],
-    subtotalUGX: 2075000,
-    deliveryFeeUGX: 15000,
-    discountUGX: 100000,
-    totalUGX: 1990000,
-    subtotalUSD: 550,
-    deliveryFeeUSD: 4,
-    totalUSD: 524,
-    paymentMethod: 'Bank Transfer',
-    paymentStatus: 'paid',
-    orderStatus: 'processing',
-    deliveryStatus: 'preparing',
-    transactionId: 'EFT-STB-994821',
-    customerArtwork: {
-      url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800',
-      fileName: 'Stanbic_Innovation_Logo_Vector_CMYK.ai',
-      fileSize: '4.2 MB',
-      previewType: 'vector',
-      uploadedAt: new Date(Date.now() - 3600000 * 5).toISOString()
-    },
-    notes: 'Approved digital proof by email. Priority client batch.',
-    timeline: [
-      { id: 't1', time: 'Yesterday 09:30 AM', title: 'Order Placed by Customer', author: 'System', status: 'pending' },
-      { id: 't2', time: 'Yesterday 10:15 AM', title: 'Payment Confirmed via EFT (UGX 1,990,000)', author: 'Admin (Marvin)', status: 'confirmed' },
-      { id: 't3', time: 'Today 08:00 AM', title: 'Order Production Commenced on Screen Press', note: 'Batch 1/2 in screen print setup', author: 'Production Desk', status: 'processing' }
-    ],
-    createdAt: new Date(Date.now() - 86400000).toISOString()
-  },
-  {
-    id: 'SOZ-8841',
-    orderNumber: 'SOZ-8841',
-    customerName: 'Ronald Kigozi',
-    customerEmail: 'ronald.k@gmail.com',
-    customerPhone: '+256 701 982 341',
-    companyName: 'Apex Law Chambers',
-    deliveryAddress: 'Plot 12, Nakasero Road, Chamber 3B',
-    district: 'Kampala Central',
-    items: [
-      {
-        product: PRODUCTS_DATA[3] || { id: 'prod-4', name: 'Two-Tone Ceramic Custom Mug', priceUGX: 20000, priceUSD: 5.5, category: 'Mugs', image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800', rating: 4.8, description: 'Ceramic mug' },
-        quantity: 12,
-        selectedColor: 'Navy & White',
-        customText: 'Apex Advocates 2026',
-        unitPriceUGX: 20000,
-        subtotalUGX: 240000,
-        unitPriceUSD: 5.5,
-        subtotalUSD: 66
-      }
-    ],
-    subtotalUGX: 240000,
-    deliveryFeeUGX: 10000,
-    totalUGX: 250000,
-    subtotalUSD: 66,
-    deliveryFeeUSD: 3,
-    totalUSD: 69,
-    paymentMethod: 'MTN Mobile Money',
-    paymentStatus: 'paid',
-    orderStatus: 'ready_delivery',
-    deliveryStatus: 'ready',
-    transactionId: 'MM-MTN-884210',
-    notes: 'Packaging in presentation gift boxes complete.',
-    timeline: [
-      { id: 't1', time: '2 days ago', title: 'Order Placed & Paid', author: 'Customer', status: 'confirmed' },
-      { id: 't2', time: 'Yesterday', title: 'Sublimation Printing Completed', author: 'Print Floor', status: 'processing' },
-      { id: 't3', time: 'Today 11:30 AM', title: 'Quality Assurance Passed - Packaged for Delivery', author: 'Admin (Marvin)', status: 'ready_delivery' }
-    ],
-    createdAt: new Date(Date.now() - 172800000).toISOString()
-  },
-  {
-    id: 'SOZ-8840',
-    orderNumber: 'SOZ-8840',
-    customerName: 'Amina Mukasa',
-    customerEmail: 'amina.m@gmail.com',
-    customerPhone: '+256 788 112 455',
-    deliveryAddress: 'Acacia Mall, Kisementi, Shop G-14',
-    district: 'Kololo',
-    items: [
-      {
-        product: PRODUCTS_DATA[1] || { id: 'prod-2', name: 'LED Acrylic Photo Lamp', priceUGX: 65000, priceUSD: 17, category: 'Photo Frames', image: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800', rating: 4.9, description: 'LED Photo Lamp' },
-        quantity: 2,
-        customText: 'Forever & Always - Tariq & Amina',
-        unitPriceUGX: 65000,
-        subtotalUGX: 130000,
-        unitPriceUSD: 17,
-        subtotalUSD: 34
-      }
-    ],
-    subtotalUGX: 130000,
-    deliveryFeeUGX: 10000,
-    totalUGX: 140000,
-    subtotalUSD: 34,
-    deliveryFeeUSD: 3,
-    totalUSD: 37,
-    paymentMethod: 'Airtel Money',
-    paymentStatus: 'paid',
-    orderStatus: 'completed',
-    deliveryStatus: 'delivered',
-    transactionId: 'AM-7729104',
-    notes: 'Customer signed delivery dispatch note. Loved the warm LED engraving.',
-    timeline: [
-      { id: 't1', time: '3 days ago', title: 'Order Placed', author: 'Customer', status: 'confirmed' },
-      { id: 't2', time: '2 days ago', title: 'Laser Engraved & Tested', author: 'Tech Shop', status: 'processing' },
-      { id: 't3', time: 'Yesterday', title: 'Delivered to Kisementi and Signed', author: 'Courier (Juma)', status: 'completed' }
-    ],
-    createdAt: new Date(Date.now() - 259200000).toISOString()
-  },
-  {
-    id: 'SOZ-8839',
-    orderNumber: 'SOZ-8839',
-    customerName: 'David Ssemwogerere',
-    customerEmail: 'david.s@nextmedia.co.ug',
-    customerPhone: '+256 752 900 120',
-    companyName: 'Next Media Services',
-    deliveryAddress: 'Next Media Park, Naguru Hill',
-    district: 'Naguru',
-    items: [
-      {
-        product: PRODUCTS_DATA[0],
-        quantity: 50,
-        selectedColor: 'Black',
-        customText: 'NBS Live Crew 2026',
-        unitPriceUGX: 38000,
-        subtotalUGX: 1900000,
-        unitPriceUSD: 10,
-        subtotalUSD: 500
-      }
-    ],
-    subtotalUGX: 1900000,
-    deliveryFeeUGX: 15000,
-    totalUGX: 1915000,
-    subtotalUSD: 500,
-    deliveryFeeUSD: 4,
-    totalUSD: 504,
-    paymentMethod: 'Bank Transfer',
-    paymentStatus: 'paid',
-    orderStatus: 'out_for_delivery',
-    deliveryStatus: 'out_for_delivery',
-    transactionId: 'TT-NBS-10293',
-    notes: 'Courier departed studio at 11:15 AM with 2 branded carton packs.',
-    timeline: [
-      { id: 't1', time: '4 days ago', title: 'Order Initiated', author: 'Customer', status: 'confirmed' },
-      { id: 't2', time: '2 days ago', title: 'Embroidery Machine Run Finished', author: 'Print Floor', status: 'processing' },
-      { id: 't3', time: 'Today 11:15 AM', title: 'Dispatched with Courier Driver to Naguru', author: 'Logistics Desk', status: 'out_for_delivery' }
-    ],
-    createdAt: new Date(Date.now() - 345600000).toISOString()
-  },
-  {
-    id: 'SOZ-8838',
-    orderNumber: 'SOZ-8838',
-    customerName: 'Brenda Namaganda',
-    customerEmail: 'b.namaganda@outlook.com',
-    customerPhone: '+256 704 223 889',
-    deliveryAddress: 'Kyanja Ring Road, House 8B',
-    district: 'Kyanja',
-    items: [
-      {
-        product: PRODUCTS_DATA[4] || { id: 'prod-5', name: 'Personalised Satin Cushion', priceUGX: 35000, priceUSD: 9.5, category: 'Cushions', image: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&q=80&w=800', rating: 4.8, description: 'Satin cushion' },
-        quantity: 1,
-        selectedColor: 'Soft Pink',
-        customText: 'Happy 30th Birthday Brenda!',
-        unitPriceUGX: 35000,
-        subtotalUGX: 35000,
-        unitPriceUSD: 9.5,
-        subtotalUSD: 9.5
-      }
-    ],
-    subtotalUGX: 35000,
-    deliveryFeeUGX: 15000,
-    totalUGX: 50000,
-    subtotalUSD: 9.5,
-    deliveryFeeUSD: 4,
-    totalUSD: 13.5,
-    paymentMethod: 'Cash on Delivery',
-    paymentStatus: 'pending',
-    orderStatus: 'pending',
-    deliveryStatus: 'pending',
-    notes: 'Awaiting phone confirmation before starting print.',
-    timeline: [
-      { id: 't1', time: 'Today 09:12 AM', title: 'Order Received via Online Checkout', author: 'Online Store', status: 'pending' }
-    ],
-    createdAt: new Date(Date.now() - 7200000).toISOString()
-  }
-];
+// Initial empty orders collection (live client orders recorded in real time)
+export const INITIAL_ADMIN_ORDERS: AdminOrder[] = [];
 
 export interface ShopStoreContextType {
   // Orders
@@ -444,13 +238,18 @@ const ShopStoreContext = createContext<ShopStoreContextType | null>(null);
 const STORAGE_KEY = 'sozy_shop_admin_store_v2';
 
 export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  // Load saved state or fall back to rich default mock dataset
+  // Load saved state or default to empty list (live orders sync via Firestore)
   const [orders, setOrders] = useState<AdminOrder[]>(() => {
     try {
       const saved = localStorage.getItem(`${STORAGE_KEY}_orders`);
-      return saved ? JSON.parse(saved) : INITIAL_ADMIN_ORDERS;
+      if (saved) {
+        const parsed: AdminOrder[] = JSON.parse(saved);
+        const legacyMockIds = new Set(['SOZ-8842', 'SOZ-8841', 'SOZ-8840', 'SOZ-8839', 'SOZ-8838']);
+        return parsed.filter(o => !legacyMockIds.has(o.id) && !legacyMockIds.has(o.orderNumber));
+      }
+      return [];
     } catch {
-      return INITIAL_ADMIN_ORDERS;
+      return [];
     }
   });
 
@@ -657,6 +456,11 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
       } catch (err: any) {
         console.warn('[Firestore] Categories listener error:', err?.message || String(err));
       }
+    }, (error) => {
+      console.warn('[Firestore] Categories onSnapshot listener warning:', error?.message || String(error));
+      try {
+        handleFirestoreError(error, OperationType.LIST, 'categories');
+      } catch { /* logged */ }
     });
 
     return () => unsubscribe();
@@ -667,14 +471,19 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     const ordersCol = collection(db, 'orders');
 
     const unsubscribe = onSnapshot(ordersCol, (snapshot) => {
-      if (!snapshot.empty) {
-        const loaded: AdminOrder[] = [];
-        snapshot.forEach(docSnap => {
-          loaded.push(docSnap.data() as AdminOrder);
-        });
-        loaded.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-        setOrders(loaded);
-      }
+      const loaded: AdminOrder[] = [];
+      snapshot.forEach(docSnap => {
+        const data = docSnap.data() as AdminOrder;
+        if (data && (data.id || docSnap.id)) {
+          loaded.push({
+            ...data,
+            id: data.id || docSnap.id,
+            orderNumber: data.orderNumber || data.id || docSnap.id
+          });
+        }
+      });
+      loaded.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+      setOrders(loaded);
     }, (error) => {
       console.warn('[Firestore] Orders onSnapshot listener warning:', error?.message || String(error));
       try {
@@ -837,20 +646,20 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
 
   // 1. Create Order (Called from Checkout or Admin)
   const createOrder = useCallback(async (orderData: Partial<AdminOrder>): Promise<AdminOrder> => {
-    const count = orders.length + 8843;
-    const orderNumber = orderData.orderNumber || `SOZ-${count}`;
+    const orderNumber = orderData.orderNumber || orderData.id || `SOZ-${Math.floor(100000 + Math.random() * 900000)}`;
+    const id = orderData.id || orderNumber;
     
     const newOrder: AdminOrder = {
-      id: orderNumber,
+      id,
       orderNumber,
       customerName: orderData.customerName || 'Customer',
       customerEmail: orderData.customerEmail || 'client@example.com',
       customerPhone: orderData.customerPhone || '+256 700 000 000',
-      companyName: orderData.companyName,
+      companyName: orderData.companyName || '',
       deliveryAddress: orderData.deliveryAddress || 'Kampala, Uganda',
-      district: orderData.district || 'Kampala',
-      deliveryZoneId: orderData.deliveryZoneId,
-      deliveryInstructions: orderData.deliveryInstructions,
+      district: orderData.district || 'Kampala Central',
+      deliveryZoneId: orderData.deliveryZoneId || 'standard',
+      deliveryInstructions: orderData.deliveryInstructions || '',
       items: orderData.items || [],
       subtotalUGX: orderData.subtotalUGX || 0,
       deliveryFeeUGX: orderData.deliveryFeeUGX || 0,
@@ -863,10 +672,16 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
       paymentStatus: (orderData.paymentStatus as PaymentStatus) || 'pending',
       orderStatus: (orderData.orderStatus as OrderStatus) || 'pending',
       deliveryStatus: (orderData.deliveryStatus as DeliveryStatus) || 'pending',
-      transactionId: orderData.transactionId,
-      customerArtwork: orderData.customerArtwork,
-      notes: orderData.notes,
-      timeline: [
+      transactionId: orderData.transactionId || '',
+      customerArtwork: orderData.customerArtwork ? {
+        url: orderData.customerArtwork.url || '',
+        fileName: orderData.customerArtwork.fileName || 'artwork.pdf',
+        fileSize: orderData.customerArtwork.fileSize || '1 MB',
+        previewType: orderData.customerArtwork.previewType || 'image',
+        uploadedAt: orderData.customerArtwork.uploadedAt || new Date().toISOString()
+      } : undefined,
+      notes: orderData.notes || '',
+      timeline: orderData.timeline && orderData.timeline.length > 0 ? orderData.timeline : [
         {
           id: `t-${Date.now()}`,
           time: 'Just now',
@@ -876,27 +691,31 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
           status: 'pending'
         }
       ],
-      createdAt: new Date().toISOString()
+      createdAt: orderData.createdAt || new Date().toISOString()
     };
 
-    setOrders(prev => [newOrder, ...prev]);
+    setOrders(prev => [newOrder, ...prev.filter(o => o.id !== newOrder.id)]);
     logAction('Order Created', 'order', newOrder.id, `New order ${newOrder.id} placed by ${newOrder.customerName} for UGX ${newOrder.totalUGX.toLocaleString()}`);
     
     // Automatically trigger Order Confirmed email notification
     triggerNotificationEmail(newOrder, 'order_confirmed');
 
-    // Async save to Firestore if configured
+    // Realtime save to Firestore with recursive sanitization
     try {
-      await setDoc(doc(db, 'orders', newOrder.id), {
+      const sanitized = sanitizeForFirestore({
         ...newOrder,
         firestoreCreatedAt: Timestamp.now()
       });
+      await setDoc(doc(db, 'orders', newOrder.id), sanitized);
     } catch (err: any) {
-      console.warn('Local order saved. Firestore write queued/fallback active.', err?.message || String(err));
+      console.warn('Firestore order write queued/warning:', err?.message || String(err));
+      try {
+        handleFirestoreError(err, OperationType.WRITE, `orders/${newOrder.id}`);
+      } catch { /* logged */ }
     }
 
     return newOrder;
-  }, [orders.length, logAction, triggerNotificationEmail]);
+  }, [logAction, triggerNotificationEmail]);
 
   // 2. Update Order Status
   const updateOrderStatus = useCallback(async (orderId: string, status: OrderStatus, note?: string): Promise<boolean> => {
@@ -1042,6 +861,17 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     }));
 
     logAction('Delivery Updated', 'delivery', orderId, `Delivery status for #${orderId} updated to ${deliveryStatus}`);
+
+    try {
+      await updateDoc(doc(db, 'orders', orderId), {
+        deliveryStatus,
+        deliveryInstructions: instructions || null,
+        updatedAt: Timestamp.now()
+      });
+    } catch (e: any) {
+      console.warn('Firestore update delivery fallback notice:', e?.message || String(e));
+    }
+
     return true;
   }, [logAction]);
 
@@ -1303,7 +1133,28 @@ export const ShopStoreProvider: React.FC<{ children: ReactNode }> = ({ children 
     const template = emailTemplates.find(t => t.key === templateKey) || emailTemplates[0];
     if (!template) return false;
 
-    const sampleOrder = orders[0] || INITIAL_ADMIN_ORDERS[0];
+    const sampleOrder: AdminOrder = orders[0] || {
+      id: 'SOZ-SAMPLE',
+      orderNumber: 'SOZ-SAMPLE',
+      customerName: 'Sample Client',
+      customerEmail: recipientEmail,
+      customerPhone: '+256 700 123 456',
+      deliveryAddress: 'Plot 10, Kampala Road',
+      district: 'Kampala Central',
+      items: [],
+      subtotalUGX: 150000,
+      deliveryFeeUGX: 15000,
+      totalUGX: 165000,
+      subtotalUSD: 40,
+      deliveryFeeUSD: 4,
+      totalUSD: 44,
+      paymentMethod: 'MTN Mobile Money',
+      paymentStatus: 'paid',
+      orderStatus: 'confirmed',
+      deliveryStatus: 'preparing',
+      timeline: [],
+      createdAt: new Date().toISOString()
+    };
     const renderedSubject = `[TEST] ${renderTemplateText(template.subject, sampleOrder)}`;
     const renderedBody = renderTemplateText(template.bodyTemplate, sampleOrder);
 

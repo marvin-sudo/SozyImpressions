@@ -38,7 +38,7 @@ export const FeaturedCorporateBranding: React.FC<FeaturedCorporateBrandingProps>
     fleet: {
       title: 'Commercial Fleet Vehicle Branding & Wrapping',
       subtitle: 'Turn your delivery vans, trucks, and executive SUVs into high-ROI moving billboards across East Africa.',
-      image: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=1200',
+      image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&q=80&w=1200',
       bullets: [
         '5-Year Cast Vinyl with Anti-UV and Anti-Scratch Overlaminate',
         'Full, Half, and Decal Fleet Installations with Zero Paint Damage',

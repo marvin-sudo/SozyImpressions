@@ -153,7 +153,7 @@ export const PRODUCTS = [
     name: 'Brand Identity Blueprint',
     price: 25.00,
     category: 'Digital',
-    image: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=400',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400',
     description: 'A comprehensive guide to building a solid brand from scratch.'
   },
   {

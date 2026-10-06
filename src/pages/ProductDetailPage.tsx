@@ -376,6 +376,8 @@ Please confirm turnaround time and share digital proof!`;
               <OptimizedImage 
                 src={galleryImages[selectedImageIndex] || product.image} 
                 alt={product.name}
+                category={product.category}
+                fallbackSrc={galleryImages.find(img => img && img !== (galleryImages[selectedImageIndex] || product.image) && !img.includes('workspace'))}
                 priority={true}
                 sizeVariant="detail"
                 wrapperClassName="w-full h-full"

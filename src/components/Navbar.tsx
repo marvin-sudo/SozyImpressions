@@ -419,7 +419,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   : 'text-slate-700 hover:text-[#2D3094]'
               }`}
             >
-              Blog
+              News & Blog
             </button>
 
             <button 
@@ -510,7 +510,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   { name: 'Online Shop & Personalised Gifts', view: 'shop' },
                   { name: 'Portfolio & Case Studies', view: 'portfolio' },
                   { name: 'Quote Calculator', view: 'quote' },
-                  { name: 'Blog & Articles', view: 'blog' },
+                  { name: 'News & Articles', view: 'blog' },
                   { name: 'Contact Us', view: 'contact' },
                 ].map((item) => (
                   <button

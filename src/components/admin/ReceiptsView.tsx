@@ -69,7 +69,15 @@ export const ReceiptsView: React.FC<ReceiptsViewProps> = ({ onOpenReceipt }) => 
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              {filteredOrders.map((ord) => (
+              {filteredOrders.length === 0 ? (
+                <tr>
+                  <td colSpan={7} className="py-12 text-center text-slate-400">
+                    <p className="text-sm font-semibold text-slate-600">No receipts generated yet</p>
+                    <p className="text-xs text-slate-400 mt-1">Receipts and invoices are automatically generated when client orders are recorded.</p>
+                  </td>
+                </tr>
+              ) : (
+                filteredOrders.map((ord) => (
                 <tr key={ord.id} className="hover:bg-slate-50">
                   <td className="px-5 py-3.5 whitespace-nowrap font-bold text-slate-800">
                     REC-{ord.orderNumber}
@@ -129,7 +137,7 @@ export const ReceiptsView: React.FC<ReceiptsViewProps> = ({ onOpenReceipt }) => 
                     </div>
                   </td>
                 </tr>
-              ))}
+              )))}
             </tbody>
           </table>
         </div>

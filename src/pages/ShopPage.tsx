@@ -679,6 +679,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({
                       src={product.image}
                       alt={product.name}
                       category={product.category}
+                      fallbackSrc={product.gallery && product.gallery.length > 1 ? product.gallery.find(img => img && img !== product.image && !img.includes('workspace')) : undefined}
                       priority={pIdx < 8}
                       sizeVariant="card"
                       wrapperClassName="w-full h-full"

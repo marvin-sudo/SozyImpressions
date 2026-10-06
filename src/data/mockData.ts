@@ -657,7 +657,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Trophies',
     priceUGX: 120000,
     priceUSD: 31.5,
-    image: 'https://images.unsplash.com/photo-1569517282132-25d22f4573e6?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&q=80&w=800',
     description: 'Premium K9 optical heavy crystal award with faceted bevel edges and solid black crystal base. 3D sub-surface laser engraving or deep sandblast etching with silver/gold fill. Comes in satin-lined gift box.',
     specifications: {
       'Material': 'Grade K9 Optical Pure Crystal',
@@ -1586,7 +1586,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Trophies & Medals',
     priceUGX: 95000,
     priceUSD: 25,
-    image: 'https://images.unsplash.com/photo-1569517282132-25d22f4573e6?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=800',
     description: 'Polished solid African mahogany timber wall or desk plaque featuring a precision etched brushed brass plate and beveled piano-finish edges. Ideal for long service, retirement, and partner awards.',
     specifications: {
       'Wood': 'Solid Sustainably Sourced African Mahogany',
@@ -2591,7 +2591,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200',
     gallery: [
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=1200',
+      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200',
       'https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&q=80&w=1200'
     ],
     description: 'Complete visual identity transformation, retail packaging architecture, and corporate fleet branding for Uganda’s fast-rising organic snack manufacturer.',
@@ -2894,6 +2894,57 @@ export const INDUSTRIES_DATA: IndustrySolution[] = [
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'news-ebenezer-teachers-day-2026',
+    title: 'Happy World Teachers’ Day: Celebrating Our Mentors & Heroes at Ebenezer Christian High School',
+    slug: 'ebenezer-christian-high-school-happy-world-teachers-day-tribute',
+    category: 'News & Community',
+    date: 'October 5, 2026',
+    readTime: '3 min read',
+    author: 'Sozy Impressions Editorial Desk',
+    authorRole: 'Community & Education Desk',
+    authorAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150',
+    image: 'https://i.postimg.cc/mrQMRV1h/i4tn.jpg',
+    excerpt: 'To the amazing teachers at Ebenezer Christian High School: Thank you for drawing the line between where we were and who God created us to be! Happy World Teacher’s Day to our mentors, guides, and heroes!',
+    tags: ['EbenezerHigh', 'HappyTeachersDay', 'WorldTeachersDay5thOctober', 'EducationMatters', 'TeacherAppreciation', 'MentorsAndHeroes'],
+    content: `### ✏️✨ A Special World Teachers’ Day Tribute to Ebenezer Christian High School
+
+"To the amazing teachers at Ebenezer Christian High School: Thank you for drawing the line between where we were and who God created us to be! ✏️✨ Happy World Teacher’s Day to our mentors, guides, and heroes! 🍎📖"
+
+---
+
+### Celebrating the Architects of Purpose and Character
+
+Teaching is more than a noble profession—it is a divine calling, a daily commitment of patience, and a timeless investment in human potential. On this October 5th, as schools, students, and alumni around the globe celebrate World Teachers’ Day, we proudly honor and celebrate the remarkable teaching faculty, leadership, and staff at **Ebenezer Christian High School**.
+
+Every lesson taught, every encouragement whispered in moments of doubt, and every seed of faith planted in young hearts creates a ripple that transforms families, communities, and our nation.
+
+---
+
+### Drawing the Line Between Potential and Purpose
+
+In every student’s journey through school, there is a defining line:
+- The line between uncertainty and confidence.
+- The line between who we used to be and who God uniquely designed us to become.
+- The line that separates raw talent from disciplined, principled excellence.
+
+The dedicated educators at Ebenezer Christian High School stand courageously on that line every day:
+1. **Guiding with Wisdom:** Illuminating truth through academic rigor and Christ-centered values.
+2. **Mentoring with Compassion:** Seeing greatness in every learner before the student even recognizes it in themselves.
+3. **Leading by Example:** Demonstrating integrity, resilience, and unyielding faith under every circumstance.
+
+---
+
+### To Our Mentors, Guides, and Heroes
+
+From all of us at Sozy Impressions Ltd and the entire Ebenezer community, we express our heartfelt gratitude for your sleepless nights, your tireless preparations, and your boundless love for our students.
+
+May God continually bless your hands, refresh your spirit, and crown all your efforts with abundant favor and joy!
+
+Happy World Teachers’ Day 2026! 🍎📖
+
+#EbenezerHigh #HappyTeachersDay #WorldTeachersDay5thOctober`
+  },
   {
     id: 'blog-1',
     title: '10 Essential Branding Strategies for High-Growth Kampala Enterprises in 2026',

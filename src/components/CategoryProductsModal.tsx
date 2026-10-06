@@ -103,6 +103,8 @@ export const CategoryProductsModal: React.FC<CategoryProductsModalProps> = ({
                         <OptimizedImage
                           src={product.image}
                           alt={product.name}
+                          category={product.category}
+                          fallbackSrc={product.gallery && product.gallery.length > 1 ? product.gallery.find(img => img && img !== product.image) : undefined}
                           priority={pIdx < 6}
                           sizeVariant="card"
                           wrapperClassName="w-full h-full flex items-center justify-center"

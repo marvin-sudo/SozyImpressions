@@ -135,7 +135,15 @@ export const PaymentsView: React.FC<PaymentsViewProps> = ({
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              {filteredOrders.map((ord) => (
+              {filteredOrders.length === 0 ? (
+                <tr>
+                  <td colSpan={7} className="py-12 text-center text-slate-400">
+                    <p className="text-sm font-semibold text-slate-600">No payment transactions recorded yet</p>
+                    <p className="text-xs text-slate-400 mt-1">Payment transactions for client orders will appear here in real time.</p>
+                  </td>
+                </tr>
+              ) : (
+                filteredOrders.map((ord) => (
                 <tr key={ord.id} className="hover:bg-slate-50">
                   <td className="px-5 py-3.5 whitespace-nowrap">
                     <span 
@@ -199,7 +207,7 @@ export const PaymentsView: React.FC<PaymentsViewProps> = ({
                     </div>
                   </td>
                 </tr>
-              ))}
+              )))}
             </tbody>
           </table>
         </div>

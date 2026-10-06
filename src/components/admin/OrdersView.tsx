@@ -341,8 +341,28 @@ export const OrdersView: React.FC<OrdersViewProps> = ({
               {filteredOrders.length === 0 ? (
                 <tr>
                   <td colSpan={10} className="py-16 text-center text-slate-400">
-                    <p className="text-sm font-semibold">No orders match your filter criteria.</p>
-                    <p className="text-xs text-slate-400 mt-1">Try clearing search keywords or resetting filters.</p>
+                    {orders.length === 0 ? (
+                      <div className="flex flex-col items-center justify-center max-w-sm mx-auto space-y-2">
+                        <div className="w-12 h-12 rounded-2xl bg-indigo-50 text-[#2D3094] flex items-center justify-center mb-1">
+                          <Eye size={24} />
+                        </div>
+                        <p className="text-sm font-bold text-slate-800">No client orders recorded yet</p>
+                        <p className="text-xs text-slate-500 text-center">
+                          When a customer places an order on your storefront checkout, it will appear here instantly in real time.
+                        </p>
+                        <div className="pt-2">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            Real-time storefront listener active
+                          </span>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <p className="text-sm font-semibold text-slate-700">No orders match your filter criteria.</p>
+                        <p className="text-xs text-slate-400 mt-1">Try clearing search keywords or resetting filters.</p>
+                      </>
+                    )}
                   </td>
                 </tr>
               ) : (

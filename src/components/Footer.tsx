@@ -246,7 +246,7 @@ export const Footer: React.FC<FooterProps> = ({ navigate, openAdminModal }) => {
               </li>
               <li>
                 <button onClick={() => navigate('blog')} className="hover:text-white transition-colors">
-                  Blog & Articles
+                  News & Articles
                 </button>
               </li>
               <li>

@@ -50,8 +50,21 @@ export const CATEGORY_LOCAL_FALLBACKS: Record<string, string> = {
   'explosion': '/assets/images/celebration_explosion_box_1788635668598.jpg',
   'success': '/assets/images/tabletop_frame_1788635214871.jpg',
   'sucess': '/assets/images/tabletop_frame_1788635214871.jpg',
-  'award': '/assets/images/tabletop_frame_1788635214871.jpg',
-  'trophy': '/assets/images/tabletop_frame_1788635214871.jpg'
+  'award': 'https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&q=80&w=800',
+  'trophy': 'https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&q=80&w=800',
+  'plaque': 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=800',
+  'crystal': 'https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&q=80&w=800',
+  'hoodie': 'https://i.postimg.cc/MpWDRnvC/happy-birthday-hoodie-white-(1).png',
+  'apparel': 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800',
+  'shirt': 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800',
+  'tee': 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800',
+  'polo': 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800',
+  'bamboo': 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800',
+  'notebook': 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800',
+  'journal': 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800',
+  'umbrella': 'https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?auto=format&fit=crop&q=80&w=800',
+  'watch': 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&q=80&w=800',
+  'bag': 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800'
 };
 
 export const getCategoryFallbackImage = (categoryOrName?: string): string => {
@@ -176,12 +189,11 @@ export const preloadImages = (
 
 /**
  * Smart Catalog Preloader:
- * 1. Eagerly loads initial batch of images for immediate visibility.
- * 2. Preloads remaining product images during browser idle time.
+ * Gently preloads upcoming images during browser idle time after initial view has rendered.
  */
 export const preloadCatalogImages = (
   items: Array<{ image?: string; gallery?: string[] } | string>,
-  initialCount = 20,
+  initialCount = 6,
   variant: ImageSizeVariant = 'card'
 ): void => {
   if (typeof window === 'undefined' || !items || items.length === 0) return;
@@ -192,43 +204,24 @@ export const preloadCatalogImages = (
       rawUrls.push(item);
     } else if (item) {
       if (item.image) rawUrls.push(item.image);
-      if (item.gallery && item.gallery[0] && item.gallery[0] !== item.image) {
-        rawUrls.push(item.gallery[0]);
-      }
     }
   });
 
-  const uniqueUrls = Array.from(new Set(rawUrls)).filter(Boolean);
+  const uniqueUrls = Array.from(new Set(rawUrls))
+    .filter((u): u is string => Boolean(u && !loadedImageCache.has(u)));
+    
   if (uniqueUrls.length === 0) return;
 
-  // Immediate priority chunk
-  const urgent = uniqueUrls.slice(0, initialCount);
-  preloadImages(urgent, variant);
-
-  // Fast background chunking for remainder
-  const remaining = uniqueUrls.slice(initialCount);
-  if (remaining.length === 0) return;
-
-  const scheduleBatch = (list: string[]) => {
-    if (list.length === 0) return;
-    const batch = list.slice(0, 8);
-    const nextList = list.slice(8);
-
-    const runBatch = () => {
-      preloadImages(batch, variant).then(() => {
-        if (nextList.length > 0) {
-          scheduleBatch(nextList);
-        }
-      });
-    };
-
-    if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(runBatch, { timeout: 800 });
-    } else {
-      setTimeout(runBatch, 100);
-    }
+  // Wait 1.2s after mount before preloading to let the browser prioritize viewport rendering
+  const scheduleIdlePreload = () => {
+    const batch = uniqueUrls.slice(0, initialCount);
+    preloadImages(batch, variant);
   };
 
-  scheduleBatch(remaining);
+  if ('requestIdleCallback' in window) {
+    (window as any).requestIdleCallback(scheduleIdlePreload, { timeout: 2000 });
+  } else {
+    setTimeout(scheduleIdlePreload, 1200);
+  }
 };
 

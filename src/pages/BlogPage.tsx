@@ -19,7 +19,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ navigate }) => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeArticle, setActiveArticle] = useState<BlogPost | null>(null);
 
-  const categories = ['All', 'Strategy', 'Printing', 'Corporate Gifts', 'Branding'];
+  const categories = ['All', 'News & Community', 'Strategy', 'Printing', 'Corporate Gifts', 'Branding'];
 
   const filteredPosts = BLOG_POSTS.filter(post => {
     const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
@@ -41,14 +41,14 @@ export const BlogPage: React.FC<BlogPageProps> = ({ navigate }) => {
             
             <div className="max-w-3xl relative z-10">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-white text-xs font-black uppercase tracking-wider mb-4 backdrop-blur-md">
-                <span>Thought Leadership & Knowledge Base</span>
+                <span>Company News & Industry Insights</span>
               </div>
               <h1 className="text-3xl md:text-5xl font-heading font-black tracking-tight leading-tight mb-4">
-                Insights, Print Guides & <br />
+                News, Print Guides & <br />
                 <span className="text-[#ED008C]">Brand Strategy for Africa.</span>
               </h1>
               <p className="text-sm md:text-base text-slate-300 font-light leading-relaxed">
-                Explore technical printing guides, GSM paper weight recommendations, corporate gift psychology, and case study blueprints written by our senior production engineers.
+                Stay updated with the latest community news, school mentorship highlights, technical printing guides, and corporate gift blueprints from Sozy Impressions.
               </p>
             </div>
           </div>

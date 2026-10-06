@@ -5,7 +5,7 @@ import compression from "compression";
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
   // Enable HTTP response compression (gzip/deflate)
   app.use(compression({
@@ -30,7 +30,10 @@ async function startServer() {
   // Vite middleware for development vs optimized static serving in production
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: { 
+        middlewareMode: true,
+        hmr: false 
+      },
       appType: "spa",
     });
     app.use(vite.middlewares);

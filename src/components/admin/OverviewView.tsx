@@ -455,8 +455,21 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              {recentOrders.map((ord) => (
-                <tr key={ord.id} className="hover:bg-slate-50/80 transition-colors">
+              {recentOrders.length === 0 ? (
+                <tr>
+                  <td colSpan={7} className="py-12 text-center text-slate-400">
+                    <div className="flex flex-col items-center justify-center gap-2 max-w-sm mx-auto">
+                      <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-400">
+                        <ShoppingBag size={20} />
+                      </div>
+                      <p className="text-xs font-bold text-slate-700">No client orders recorded yet</p>
+                      <p className="text-[11px] text-slate-400">Live storefront orders placed by clients will stream here automatically.</p>
+                    </div>
+                  </td>
+                </tr>
+              ) : (
+                recentOrders.map((ord) => (
+                  <tr key={ord.id} className="hover:bg-slate-50/80 transition-colors">
                   <td className="px-5 py-3.5 whitespace-nowrap">
                     <span className="font-extrabold text-[#2D3094]">#{ord.orderNumber}</span>
                     {ord.customerArtwork && (
@@ -513,7 +526,7 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
                     </div>
                   </td>
                 </tr>
-              ))}
+              )))}
             </tbody>
           </table>
         </div>

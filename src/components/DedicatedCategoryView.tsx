@@ -1170,6 +1170,7 @@ export const DedicatedCategoryView: React.FC<DedicatedCategoryViewProps> = ({
                           src={displayImg}
                           alt={product.name}
                           category={product.category}
+                          fallbackSrc={product.gallery && product.gallery.length > 1 ? product.gallery.find(img => img && img !== displayImg && !img.includes('workspace')) : undefined}
                           priority={pIndex < 8}
                           sizeVariant="card"
                           wrapperClassName="absolute inset-0 w-full h-full"

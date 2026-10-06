@@ -93,8 +93,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://www.image2url.com/r2/default/images/1789220651902-adb717da-ce98-463a-b6c8-3eccb256e9b5.jpg",
     "gallery": [
-      "https://www.image2url.com/r2/default/images/1789220651902-adb717da-ce98-463a-b6c8-3eccb256e9b5.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://www.image2url.com/r2/default/images/1789220651902-adb717da-ce98-463a-b6c8-3eccb256e9b5.jpg"
     ],
     "isCustomizable": true
   },
@@ -114,8 +113,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://www.image2url.com/r2/default/images/1789221313711-1511f9a8-9cad-4188-ae09-8d4ce4dbad12.jpg",
     "gallery": [
-      "https://www.image2url.com/r2/default/images/1789221313711-1511f9a8-9cad-4188-ae09-8d4ce4dbad12.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://www.image2url.com/r2/default/images/1789221313711-1511f9a8-9cad-4188-ae09-8d4ce4dbad12.jpg"
     ],
     "isCustomizable": true
   },
@@ -135,8 +133,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://www.image2url.com/r2/default/images/1789221645805-2bf94483-3f4e-4759-a55c-d4a5ed1f7cd3.jpg",
     "gallery": [
-      "https://www.image2url.com/r2/default/images/1789221645805-2bf94483-3f4e-4759-a55c-d4a5ed1f7cd3.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://www.image2url.com/r2/default/images/1789221645805-2bf94483-3f4e-4759-a55c-d4a5ed1f7cd3.jpg"
     ],
     "isCustomizable": true
   },
@@ -156,8 +153,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://www.image2url.com/r2/default/images/1789222186205-8e1b5bc7-4e54-43cc-bc09-d0f5466b1b49.jpg",
     "gallery": [
-      "https://www.image2url.com/r2/default/images/1789222186205-8e1b5bc7-4e54-43cc-bc09-d0f5466b1b49.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://www.image2url.com/r2/default/images/1789222186205-8e1b5bc7-4e54-43cc-bc09-d0f5466b1b49.jpg"
     ],
     "isCustomizable": true
   },
@@ -177,8 +173,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://i.postimg.cc/cLPtYWNF/Infinity-Heart-Photo-Night-Light-Custom-Name-Night-Light-Heart-shaped-Calendar-Lamp-Acrylic-Lamp.jpg",
     "gallery": [
-      "https://i.postimg.cc/cLPtYWNF/Infinity-Heart-Photo-Night-Light-Custom-Name-Night-Light-Heart-shaped-Calendar-Lamp-Acrylic-Lamp.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/cLPtYWNF/Infinity-Heart-Photo-Night-Light-Custom-Name-Night-Light-Heart-shaped-Calendar-Lamp-Acrylic-Lamp.jpg"
     ],
     "isCustomizable": true
   },
@@ -198,8 +193,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://i.postimg.cc/1372rWWj/Plot-twist-drinking-enough-water-is-actually-easy-when-your-tumbler-looks-this-good-Show-us-your-d.jpg",
     "gallery": [
-      "https://i.postimg.cc/1372rWWj/Plot-twist-drinking-enough-water-is-actually-easy-when-your-tumbler-looks-this-good-Show-us-your-d.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/1372rWWj/Plot-twist-drinking-enough-water-is-actually-easy-when-your-tumbler-looks-this-good-Show-us-your-d.jpg"
     ],
     "isCustomizable": true
   },
@@ -219,8 +213,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -240,8 +233,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 692,
     "image": "https://i.postimg.cc/qBQLKNZ4/what-is-your-name-tell-me-in-comments.jpg",
     "gallery": [
-      "https://i.postimg.cc/qBQLKNZ4/what-is-your-name-tell-me-in-comments.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/qBQLKNZ4/what-is-your-name-tell-me-in-comments.jpg"
     ],
     "isCustomizable": true
   },
@@ -261,8 +253,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://i.postimg.cc/JnzyCz3y/Bouquet-Happy-Birthday-se-compose-de-11-roses-naturelles-et-15-ferrero-et-tu-peux-mettre-un-message.jpg",
     "gallery": [
-      "https://i.postimg.cc/JnzyCz3y/Bouquet-Happy-Birthday-se-compose-de-11-roses-naturelles-et-15-ferrero-et-tu-peux-mettre-un-message.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/JnzyCz3y/Bouquet-Happy-Birthday-se-compose-de-11-roses-naturelles-et-15-ferrero-et-tu-peux-mettre-un-message.jpg"
     ],
     "isCustomizable": true
   },
@@ -282,8 +273,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://i.postimg.cc/TPYmf0fv/Mixed-bloom-Orchid-bud-vase-arrangement.jpg",
     "gallery": [
-      "https://i.postimg.cc/TPYmf0fv/Mixed-bloom-Orchid-bud-vase-arrangement.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/TPYmf0fv/Mixed-bloom-Orchid-bud-vase-arrangement.jpg"
     ],
     "isCustomizable": true
   },
@@ -303,8 +293,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://i.postimg.cc/yNFfN7Md/Executive-Water-Bottle-Flask-with-2-Lids-(LED-Display-Stainless-Stee.jpg",
     "gallery": [
-      "https://i.postimg.cc/yNFfN7Md/Executive-Water-Bottle-Flask-with-2-Lids-(LED-Display-Stainless-Stee.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/yNFfN7Md/Executive-Water-Bottle-Flask-with-2-Lids-(LED-Display-Stainless-Stee.jpg"
     ],
     "isCustomizable": true
   },
@@ -324,8 +313,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://i.postimg.cc/RVBwMcMC/Personalised-Birthday-Photo-Keepsake-Gift-Glass-Plaque-With-Sentiment-13-16-18-21-30-40-50-60.jpg",
     "gallery": [
-      "https://i.postimg.cc/RVBwMcMC/Personalised-Birthday-Photo-Keepsake-Gift-Glass-Plaque-With-Sentiment-13-16-18-21-30-40-50-60.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/RVBwMcMC/Personalised-Birthday-Photo-Keepsake-Gift-Glass-Plaque-With-Sentiment-13-16-18-21-30-40-50-60.jpg"
     ],
     "isCustomizable": true
   },
@@ -345,8 +333,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -366,8 +353,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://i.postimg.cc/j5Sk3G1f/Custom-Picture-Frame-Customized-Photo-Frames-Personalized-Picture-Frames-Personalized-Anniversary.jpg",
     "gallery": [
-      "https://i.postimg.cc/j5Sk3G1f/Custom-Picture-Frame-Customized-Photo-Frames-Personalized-Picture-Frames-Personalized-Anniversary.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/j5Sk3G1f/Custom-Picture-Frame-Customized-Photo-Frames-Personalized-Picture-Frames-Personalized-Anniversary.jpg"
     ],
     "isCustomizable": true
   },
@@ -387,8 +373,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -430,8 +415,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&auto=format&fit=crop&q=80",
     "gallery": [
-      "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&auto=format&fit=crop&q=80",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=800&auto=format&fit=crop&q=80"
     ],
     "isCustomizable": true
   },
@@ -451,8 +435,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://i.postimg.cc/65q46zk9/download-(43).jpg",
     "gallery": [
-      "https://i.postimg.cc/65q46zk9/download-(43).jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/65q46zk9/download-(43).jpg"
     ],
     "isCustomizable": true
   },
@@ -472,8 +455,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -493,8 +475,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -514,8 +495,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -535,8 +515,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -556,8 +535,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -577,8 +555,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -598,8 +575,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -619,8 +595,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 870,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -640,8 +615,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -681,8 +655,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -702,8 +675,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://www.image2url.com/r2/default/images/1789218677037-c3bd8ed5-c250-469d-82c2-7ea0cb04de9a.jpg",
     "gallery": [
-      "https://www.image2url.com/r2/default/images/1789218677037-c3bd8ed5-c250-469d-82c2-7ea0cb04de9a.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://www.image2url.com/r2/default/images/1789218677037-c3bd8ed5-c250-469d-82c2-7ea0cb04de9a.jpg"
     ],
     "isCustomizable": true
   },
@@ -723,8 +695,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -744,8 +715,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -765,8 +735,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -784,10 +753,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "10% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "https://i.postimg.cc/MpWDRnvC/happy-birthday-hoodie-white-(1).png",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://i.postimg.cc/MpWDRnvC/happy-birthday-hoodie-white-(1).png"
     ],
     "isCustomizable": true
   },
@@ -807,8 +775,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -828,8 +795,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -849,8 +815,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -870,8 +835,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -891,8 +855,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -912,8 +875,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -933,8 +895,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -954,8 +915,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -975,8 +935,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -996,8 +955,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1038,8 +996,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1059,8 +1016,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -1080,8 +1036,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -1101,8 +1056,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1122,8 +1076,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://www.image2url.com/r2/default/images/1789219318863-18f08944-c5fb-407c-968d-7cc62ad7075f.jpg",
     "gallery": [
-      "https://www.image2url.com/r2/default/images/1789219318863-18f08944-c5fb-407c-968d-7cc62ad7075f.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://www.image2url.com/r2/default/images/1789219318863-18f08944-c5fb-407c-968d-7cc62ad7075f.jpg"
     ],
     "isCustomizable": true
   },
@@ -1143,8 +1096,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1164,8 +1116,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -1207,8 +1158,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -1228,8 +1178,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1249,8 +1198,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -1270,8 +1218,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1291,8 +1238,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1312,8 +1258,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -1333,8 +1278,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -1352,10 +1296,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "22% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -1375,8 +1318,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1396,8 +1338,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1417,8 +1358,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -1436,10 +1376,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1459,8 +1398,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1480,8 +1418,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -1501,8 +1438,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1522,8 +1458,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -1543,8 +1478,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1564,8 +1498,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -1585,8 +1518,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1606,8 +1538,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -1627,8 +1558,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1670,8 +1600,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/couple_keychains_1788635276974.jpg",
     "gallery": [
-      "/assets/images/couple_keychains_1788635276974.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/couple_keychains_1788635276974.jpg"
     ],
     "isCustomizable": true
   },
@@ -1691,8 +1620,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1712,8 +1640,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1733,8 +1660,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1775,8 +1701,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1796,8 +1721,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -1837,8 +1761,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1858,8 +1781,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -1879,8 +1801,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1900,8 +1821,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -1921,8 +1841,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -1942,8 +1861,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -1963,8 +1881,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -1984,8 +1901,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -2005,8 +1921,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -2026,8 +1941,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -2069,8 +1983,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -2090,8 +2003,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -2111,8 +2023,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/wedding_gifts_1788634722972.jpg",
     "gallery": [
-      "/assets/images/wedding_gifts_1788634722972.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/wedding_gifts_1788634722972.jpg"
     ],
     "isCustomizable": true
   },
@@ -2130,10 +2041,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "10% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -2174,8 +2084,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -2195,8 +2104,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -2216,8 +2124,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -2237,8 +2144,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -2258,8 +2164,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -2279,8 +2184,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -2300,8 +2204,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -2321,8 +2224,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -2342,8 +2244,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -2384,8 +2285,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -2405,8 +2305,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -2426,8 +2325,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -2445,10 +2343,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -2489,8 +2386,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -2531,8 +2427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -2552,8 +2447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -2573,8 +2467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -2594,8 +2487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -2615,8 +2507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -2636,8 +2527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -2657,8 +2547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -2678,8 +2567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -2699,8 +2587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -2720,8 +2607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -2741,8 +2627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_flowers_1788635644325.jpg",
     "gallery": [
-      "/assets/images/celebration_flowers_1788635644325.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_flowers_1788635644325.jpg"
     ],
     "isCustomizable": true
   },
@@ -2762,8 +2647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -2783,8 +2667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -2804,8 +2687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -2825,8 +2707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -2846,8 +2727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -2867,8 +2747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -2886,10 +2765,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "37% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -2909,8 +2787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -2930,8 +2807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -2951,8 +2827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -2972,8 +2847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 124,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -2991,10 +2865,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "11% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -3014,8 +2887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -3035,8 +2907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -3056,8 +2927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -3077,8 +2947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -3098,8 +2967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -3119,8 +2987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -3140,8 +3007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -3161,8 +3027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -3182,8 +3047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -3203,8 +3067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -3224,8 +3087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -3243,10 +3105,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -3266,8 +3127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -3287,8 +3147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -3308,8 +3167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -3329,8 +3187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -3350,8 +3207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -3371,8 +3227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -3392,8 +3247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -3413,8 +3267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_flowers_1788635644325.jpg",
     "gallery": [
-      "/assets/images/celebration_flowers_1788635644325.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_flowers_1788635644325.jpg"
     ],
     "isCustomizable": true
   },
@@ -3434,8 +3287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -3455,8 +3307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -3476,8 +3327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -3497,8 +3347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -3518,8 +3367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -3539,8 +3387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -3560,8 +3407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -3581,8 +3427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -3602,8 +3447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -3623,8 +3467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -3644,8 +3487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -3665,8 +3507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -3686,8 +3527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -3707,8 +3547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/custom_earbuds_1788635304232.jpg",
     "gallery": [
-      "/assets/images/custom_earbuds_1788635304232.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/custom_earbuds_1788635304232.jpg"
     ],
     "isCustomizable": true
   },
@@ -3728,8 +3567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -3749,8 +3587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -3770,8 +3607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -3791,8 +3627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -3812,8 +3647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -3833,8 +3667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -3854,8 +3687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -3875,8 +3707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -3896,8 +3727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -3917,8 +3747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -3938,8 +3767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -3959,8 +3787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -3980,8 +3807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -4001,8 +3827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -4022,8 +3847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 123,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -4043,8 +3867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -4064,8 +3887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -4085,8 +3907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -4106,8 +3927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -4127,8 +3947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -4148,8 +3967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -4169,8 +3987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/custom_earbuds_1788635304232.jpg",
     "gallery": [
-      "/assets/images/custom_earbuds_1788635304232.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/custom_earbuds_1788635304232.jpg"
     ],
     "isCustomizable": true
   },
@@ -4190,8 +4007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_flowers_1788635644325.jpg",
     "gallery": [
-      "/assets/images/celebration_flowers_1788635644325.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_flowers_1788635644325.jpg"
     ],
     "isCustomizable": true
   },
@@ -4211,8 +4027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -4232,8 +4047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -4253,8 +4067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -4272,10 +4085,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "23% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -4295,8 +4107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -4316,8 +4127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -4337,8 +4147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -4358,8 +4167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -4379,8 +4187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -4400,8 +4207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -4421,8 +4227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -4442,8 +4247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -4463,8 +4267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -4484,8 +4287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -4503,10 +4305,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "39% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -4526,8 +4327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -4547,8 +4347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -4568,8 +4367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -4589,8 +4387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -4610,8 +4407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -4631,8 +4427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -4652,8 +4447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -4673,8 +4467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -4694,8 +4487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -4715,8 +4507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/custom_earbuds_1788635304232.jpg",
     "gallery": [
-      "/assets/images/custom_earbuds_1788635304232.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/custom_earbuds_1788635304232.jpg"
     ],
     "isCustomizable": true
   },
@@ -4736,8 +4527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -4757,8 +4547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -4778,8 +4567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -4799,8 +4587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -4820,8 +4607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -4841,8 +4627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -4862,8 +4647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -4883,8 +4667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -4904,8 +4687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -4925,8 +4707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -4946,8 +4727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -4967,8 +4747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -4988,8 +4767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -5009,8 +4787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -5030,8 +4807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -5051,8 +4827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -5072,8 +4847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -5093,8 +4867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5114,8 +4887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -5135,8 +4907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -5156,8 +4927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -5177,8 +4947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5198,8 +4967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -5219,8 +4987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -5240,8 +5007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -5261,8 +5027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -5282,8 +5047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -5303,8 +5067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -5324,8 +5087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5345,8 +5107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -5366,8 +5127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -5387,8 +5147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -5408,8 +5167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5429,8 +5187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -5450,8 +5207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5471,8 +5227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -5492,8 +5247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -5513,8 +5267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -5534,8 +5287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -5553,10 +5305,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -5576,8 +5327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -5595,10 +5345,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "13% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -5618,8 +5367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -5639,8 +5387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -5660,8 +5407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -5681,8 +5427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -5702,8 +5447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -5723,8 +5467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -5744,8 +5487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_flowers_1788635644325.jpg",
     "gallery": [
-      "/assets/images/celebration_flowers_1788635644325.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_flowers_1788635644325.jpg"
     ],
     "isCustomizable": true
   },
@@ -5765,8 +5507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5786,8 +5527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -5807,8 +5547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -5828,8 +5567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5849,8 +5587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -5870,8 +5607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5891,8 +5627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -5912,8 +5647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5933,8 +5667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -5952,10 +5685,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -5975,8 +5707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -5996,8 +5727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -6017,8 +5747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6038,8 +5767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -6059,8 +5787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6080,8 +5807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6101,8 +5827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -6122,8 +5847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -6143,8 +5867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6164,8 +5887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -6185,8 +5907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6206,8 +5927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -6227,8 +5947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6248,8 +5967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -6269,8 +5987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6290,8 +6007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6311,8 +6027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -6332,8 +6047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -6353,8 +6067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -6372,10 +6085,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "12% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6393,10 +6105,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "56% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -6416,8 +6127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -6437,8 +6147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6458,8 +6167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -6479,8 +6187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -6500,8 +6207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -6521,8 +6227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -6542,8 +6247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -6563,8 +6267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -6584,8 +6287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -6605,8 +6307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -6626,8 +6327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -6647,8 +6347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -6668,8 +6367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -6689,8 +6387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -6710,8 +6407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -6731,8 +6427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -6752,8 +6447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6773,8 +6467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -6794,8 +6487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -6815,8 +6507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6836,8 +6527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -6857,8 +6547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -6878,8 +6567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -6899,8 +6587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -6920,8 +6607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -6941,8 +6627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -6962,8 +6647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -6983,8 +6667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -7004,8 +6687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7025,8 +6707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7046,8 +6727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/couple_keychains_1788635276974.jpg",
     "gallery": [
-      "/assets/images/couple_keychains_1788635276974.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/couple_keychains_1788635276974.jpg"
     ],
     "isCustomizable": true
   },
@@ -7067,8 +6747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7088,8 +6767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7109,8 +6787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -7130,8 +6807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -7151,8 +6827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7172,8 +6847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -7193,8 +6867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -7214,8 +6887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -7233,10 +6905,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -7256,8 +6927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -7277,8 +6947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -7298,8 +6967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -7319,8 +6987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -7340,8 +7007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -7361,8 +7027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -7382,8 +7047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -7403,8 +7067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -7424,8 +7087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -7443,10 +7105,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -7466,8 +7127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -7487,8 +7147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -7508,8 +7167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7529,8 +7187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7550,8 +7207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -7571,8 +7227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -7592,8 +7247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -7613,8 +7267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -7634,8 +7287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -7655,8 +7307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -7676,8 +7327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -7697,8 +7347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -7718,8 +7367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -7739,8 +7387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -7760,8 +7407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -7781,8 +7427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -7802,8 +7447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7823,8 +7467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -7844,8 +7487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -7865,8 +7507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7886,8 +7527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7907,8 +7547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7928,8 +7567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -7949,8 +7587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -7968,10 +7605,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "33% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -7991,8 +7627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/wedding_gifts_1788634722972.jpg",
     "gallery": [
-      "/assets/images/wedding_gifts_1788634722972.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/wedding_gifts_1788634722972.jpg"
     ],
     "isCustomizable": true
   },
@@ -8010,10 +7645,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "42% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -8031,10 +7665,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -8052,10 +7685,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "14% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -8075,8 +7707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -8096,8 +7727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -8117,8 +7747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -8138,8 +7767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -8159,8 +7787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -8180,8 +7807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -8201,8 +7827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -8222,8 +7847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -8243,8 +7867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -8264,8 +7887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -8285,8 +7907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -8304,10 +7925,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -8327,8 +7947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -8348,8 +7967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -8369,8 +7987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_chocolates_1788635680950.jpg",
     "gallery": [
-      "/assets/images/celebration_chocolates_1788635680950.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_chocolates_1788635680950.jpg"
     ],
     "isCustomizable": true
   },
@@ -8388,10 +8005,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -8409,10 +8025,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -8430,10 +8045,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -8453,8 +8067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -8474,8 +8087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -8495,8 +8107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -8516,8 +8127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -8537,8 +8147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -8558,8 +8167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -8579,8 +8187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -8600,8 +8207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -8621,8 +8227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -8642,8 +8247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/custom_earbuds_1788635304232.jpg",
     "gallery": [
-      "/assets/images/custom_earbuds_1788635304232.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/custom_earbuds_1788635304232.jpg"
     ],
     "isCustomizable": true
   },
@@ -8663,8 +8267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -8682,10 +8285,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "25% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -8705,8 +8307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -8726,8 +8327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -8747,8 +8347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -8768,8 +8367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -8789,8 +8387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -8810,8 +8407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -8831,8 +8427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -8852,8 +8447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -8873,8 +8467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -8894,8 +8487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -8915,8 +8507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -8936,8 +8527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -8957,8 +8547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -8978,8 +8567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -8999,8 +8587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9018,10 +8605,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "53% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9041,8 +8627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -9062,8 +8647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9081,10 +8665,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "24% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -9104,8 +8687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -9125,8 +8707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -9146,8 +8727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -9167,8 +8747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -9188,8 +8767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9209,8 +8787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -9230,8 +8807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -9251,8 +8827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -9272,8 +8847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9293,8 +8867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -9312,10 +8885,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "14% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -9335,8 +8907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -9356,8 +8927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -9377,8 +8947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -9398,8 +8967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -9419,8 +8987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -9440,8 +9007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -9461,8 +9027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -9482,8 +9047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -9503,8 +9067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -9524,8 +9087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9545,8 +9107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -9564,10 +9125,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "12% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -9585,10 +9145,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "15% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -9608,8 +9167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -9629,8 +9187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -9650,8 +9207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9669,10 +9225,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -9692,8 +9247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -9713,8 +9267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -9734,8 +9287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -9755,8 +9307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -9774,10 +9325,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "13% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -9797,8 +9347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9816,10 +9365,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "13% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9839,8 +9387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9860,8 +9407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -9881,8 +9427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -9902,8 +9447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -9923,8 +9467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -9944,8 +9487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -9965,8 +9507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -9986,8 +9527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -10007,8 +9547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -10028,8 +9567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10049,8 +9587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10070,8 +9607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -10091,8 +9627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -10112,8 +9647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -10133,8 +9667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10154,8 +9687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/birthday_gifts_1788634707174.jpg",
     "gallery": [
-      "/assets/images/birthday_gifts_1788634707174.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/birthday_gifts_1788634707174.jpg"
     ],
     "isCustomizable": true
   },
@@ -10175,8 +9707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10196,8 +9727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -10217,8 +9747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10238,8 +9767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10257,10 +9785,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -10278,10 +9805,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -10301,8 +9827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -10320,10 +9845,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "13% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -10343,8 +9867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -10364,8 +9887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -10385,8 +9907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -10406,8 +9927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -10427,8 +9947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_flowers_1788635644325.jpg",
     "gallery": [
-      "/assets/images/celebration_flowers_1788635644325.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_flowers_1788635644325.jpg"
     ],
     "isCustomizable": true
   },
@@ -10448,8 +9967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10469,8 +9987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -10490,8 +10007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -10511,8 +10027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10532,8 +10047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -10553,8 +10067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -10572,10 +10085,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "57% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -10595,8 +10107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -10616,8 +10127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -10637,8 +10147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -10658,8 +10167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10679,8 +10187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10700,8 +10207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -10721,8 +10227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -10740,10 +10245,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "11% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -10763,8 +10267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -10784,8 +10287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -10805,8 +10307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10826,8 +10327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 123,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -10847,8 +10347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -10868,8 +10367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -10889,8 +10387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10910,8 +10407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -10931,8 +10427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10952,8 +10447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -10973,8 +10467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -10994,8 +10487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -11015,8 +10507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -11036,8 +10527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -11057,8 +10547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -11078,8 +10567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -11099,8 +10587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -11120,8 +10607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -11139,10 +10625,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11162,8 +10647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 121,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -11181,10 +10665,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "11% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -11204,8 +10687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11225,8 +10707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 280,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -11246,8 +10727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11267,8 +10747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11288,8 +10767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -11309,8 +10787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11330,8 +10807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -11351,8 +10827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -11372,8 +10847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -11393,8 +10867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11414,8 +10887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -11433,10 +10905,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "10% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11456,8 +10927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11475,10 +10945,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "12% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11498,8 +10967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -11519,8 +10987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -11540,8 +11007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -11559,10 +11025,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "33% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -11582,8 +11047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -11603,8 +11067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -11624,8 +11087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -11645,8 +11107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -11666,8 +11127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -11685,10 +11145,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "19% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -11708,8 +11167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -11727,10 +11185,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "10% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -11750,8 +11207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -11769,10 +11225,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "13% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -11792,8 +11247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -11813,8 +11267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -11832,10 +11285,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "11% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -11855,8 +11307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11874,10 +11325,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "17% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11897,8 +11347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -11918,8 +11367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -11939,8 +11387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -11960,8 +11407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -11981,8 +11427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -12002,8 +11447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_flowers_1788635644325.jpg",
     "gallery": [
-      "/assets/images/celebration_flowers_1788635644325.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_flowers_1788635644325.jpg"
     ],
     "isCustomizable": true
   },
@@ -12023,8 +11467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -12044,8 +11487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -12065,8 +11507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -12086,8 +11527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -12107,8 +11547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "https://www.image2url.com/r2/default/images/1789219589942-7c08cdb1-c6fa-4a2f-80da-38de2a46c5c4.jpg",
     "gallery": [
-      "https://www.image2url.com/r2/default/images/1789219589942-7c08cdb1-c6fa-4a2f-80da-38de2a46c5c4.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "https://www.image2url.com/r2/default/images/1789219589942-7c08cdb1-c6fa-4a2f-80da-38de2a46c5c4.jpg"
     ],
     "isCustomizable": true
   },
@@ -12128,8 +11567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -12149,8 +11587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -12170,8 +11607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -12191,8 +11627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -12212,8 +11647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -12233,8 +11667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -12254,8 +11687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 761,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -12273,10 +11705,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "57% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -12296,8 +11727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -12317,8 +11747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 302,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -12338,8 +11767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -12359,8 +11787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 277,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -12380,8 +11807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -12401,8 +11827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -12422,8 +11847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -12443,8 +11867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -12462,10 +11885,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "38% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -12485,8 +11907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -12506,8 +11927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -12525,10 +11945,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "15% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -12548,8 +11967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 257,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -12569,8 +11987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -12590,8 +12007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 586,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -12611,8 +12027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -12632,8 +12047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -12653,8 +12067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -12674,8 +12087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -12695,8 +12107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -12716,8 +12127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -12737,8 +12147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/couple_keychains_1788635276974.jpg",
     "gallery": [
-      "/assets/images/couple_keychains_1788635276974.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/couple_keychains_1788635276974.jpg"
     ],
     "isCustomizable": true
   },
@@ -12758,8 +12167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -12779,8 +12187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -12798,10 +12205,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "60% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -12821,8 +12227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -12842,8 +12247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -12863,8 +12267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -12884,8 +12287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -12905,8 +12307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -12926,8 +12327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -12945,10 +12345,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "20% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -12968,8 +12367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -12989,8 +12387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13008,10 +12405,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "37% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -13031,8 +12427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -13052,8 +12447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -13071,10 +12465,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "37% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -13092,10 +12485,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "38% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -13115,8 +12507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13136,8 +12527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -13155,10 +12545,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "7% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13176,10 +12565,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "37% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -13199,8 +12587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13220,8 +12607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -13241,8 +12627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -13262,8 +12647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13283,8 +12667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -13302,10 +12685,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "32% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13323,10 +12705,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "32% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -13344,10 +12725,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "37% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -13367,8 +12747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -13388,8 +12767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13409,8 +12787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -13430,8 +12807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -13451,8 +12827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -13472,8 +12847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13493,8 +12867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -13514,8 +12887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -13535,8 +12907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -13556,8 +12927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 497,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13577,8 +12947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -13598,8 +12967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -13619,8 +12987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -13640,8 +13007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13661,8 +13027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -13682,8 +13047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -13703,8 +13067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -13724,8 +13087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -13745,8 +13107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -13766,8 +13127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -13787,8 +13147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13808,8 +13167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -13829,8 +13187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -13850,8 +13207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13871,8 +13227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13892,8 +13247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -13913,8 +13267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -13934,8 +13287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -13955,8 +13307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -13976,8 +13327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -13997,8 +13347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14018,8 +13367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14039,8 +13387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14060,8 +13407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -14081,8 +13427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14102,8 +13447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14123,8 +13467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -14144,8 +13487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14165,8 +13507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -14186,8 +13527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -14207,8 +13547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -14228,8 +13567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 321,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -14249,8 +13587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14270,8 +13607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -14291,8 +13627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14310,10 +13645,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "27% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -14333,8 +13667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14352,10 +13685,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "10% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14375,8 +13707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -14396,8 +13727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14417,8 +13747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -14438,8 +13767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14459,8 +13787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14480,8 +13807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14501,8 +13827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -14520,10 +13845,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "8% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/celebration_chocolates_1788635680950.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_chocolates_1788635680950.jpg"
     ],
     "isCustomizable": true
   },
@@ -14543,8 +13867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/desk_clock_1788635262427.jpg",
     "gallery": [
-      "/assets/images/desk_clock_1788635262427.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/desk_clock_1788635262427.jpg"
     ],
     "isCustomizable": true
   },
@@ -14564,8 +13887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -14585,8 +13907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14606,8 +13927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14627,8 +13947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -14646,10 +13965,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "31% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -14669,8 +13987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -14690,8 +14007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 127,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -14709,10 +14025,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "15% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -14732,8 +14047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14751,10 +14065,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "25% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14774,8 +14087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -14795,8 +14107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -14816,8 +14127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14837,8 +14147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14858,8 +14167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -14879,8 +14187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14900,8 +14207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -14921,8 +14227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -14942,8 +14247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -14963,8 +14267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -14984,8 +14287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15005,8 +14307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -15026,8 +14327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15047,8 +14347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -15068,8 +14367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -15089,8 +14387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -15110,8 +14407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -15131,8 +14427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15152,8 +14447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 151,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15173,8 +14467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15194,8 +14487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -15215,8 +14507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -15234,10 +14525,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "37% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -15257,8 +14547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -15278,8 +14567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15299,8 +14587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -15320,8 +14607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15341,8 +14627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_chocolates_1788635680950.jpg",
     "gallery": [
-      "/assets/images/celebration_chocolates_1788635680950.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_chocolates_1788635680950.jpg"
     ],
     "isCustomizable": true
   },
@@ -15362,8 +14647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15383,8 +14667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -15404,8 +14687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15425,8 +14707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15446,8 +14727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15467,8 +14747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15488,8 +14767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15509,8 +14787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15530,8 +14807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 245,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -15551,8 +14827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -15572,8 +14847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15593,8 +14867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -15614,8 +14887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15635,8 +14907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15656,8 +14927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -15677,8 +14947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -15698,8 +14967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15719,8 +14987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -15740,8 +15007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -15761,8 +15027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -15782,8 +15047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_cake_1788635656003.jpg",
     "gallery": [
-      "/assets/images/celebration_cake_1788635656003.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_cake_1788635656003.jpg"
     ],
     "isCustomizable": true
   },
@@ -15803,8 +15067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_chocolates_1788635680950.jpg",
     "gallery": [
-      "/assets/images/celebration_chocolates_1788635680950.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_chocolates_1788635680950.jpg"
     ],
     "isCustomizable": true
   },
@@ -15824,8 +15087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/couple_keychains_1788635276974.jpg",
     "gallery": [
-      "/assets/images/couple_keychains_1788635276974.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/couple_keychains_1788635276974.jpg"
     ],
     "isCustomizable": true
   },
@@ -15845,8 +15107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -15866,8 +15127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -15887,8 +15147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -15906,10 +15165,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "39% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -15929,8 +15187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -15950,8 +15207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -15971,8 +15227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -15992,8 +15247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -16013,8 +15267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -16034,8 +15287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -16055,8 +15307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -16076,8 +15327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16097,8 +15347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -16118,8 +15367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -16139,8 +15387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -16158,10 +15405,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "26% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16181,8 +15427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -16202,8 +15447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -16223,8 +15467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -16244,8 +15487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -16265,8 +15507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -16286,8 +15527,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -16305,10 +15545,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "32% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -16328,8 +15567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -16349,8 +15587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -16370,8 +15607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -16391,8 +15627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16412,8 +15647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -16433,8 +15667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16454,8 +15687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -16475,8 +15707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -16496,8 +15727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -16517,8 +15747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16538,8 +15767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -16559,8 +15787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -16580,8 +15807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -16601,8 +15827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -16622,8 +15847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16643,8 +15867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -16664,8 +15887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -16685,8 +15907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16706,8 +15927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16727,8 +15947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -16748,8 +15967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16769,8 +15987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16790,8 +16007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -16811,8 +16027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -16832,8 +16047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -16853,8 +16067,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -16874,8 +16087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -16895,8 +16107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -16916,8 +16127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16937,8 +16147,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -16958,8 +16167,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -16979,8 +16187,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17000,8 +16207,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -17021,8 +16227,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17042,8 +16247,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17063,8 +16267,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -17084,8 +16287,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 1100,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -17105,8 +16307,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17126,8 +16327,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17147,8 +16347,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17168,8 +16367,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -17189,8 +16387,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -17210,8 +16407,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17231,8 +16427,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/fridge_photo_magnets_1788634286788.jpg",
     "gallery": [
-      "/assets/images/fridge_photo_magnets_1788634286788.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/fridge_photo_magnets_1788634286788.jpg"
     ],
     "isCustomizable": true
   },
@@ -17252,8 +16447,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/celebration_jewellery_1788635705456.jpg",
     "gallery": [
-      "/assets/images/celebration_jewellery_1788635705456.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_jewellery_1788635705456.jpg"
     ],
     "isCustomizable": true
   },
@@ -17273,8 +16467,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17294,8 +16487,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17315,8 +16507,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -17334,10 +16525,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "33% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -17357,8 +16547,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17378,8 +16567,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17399,8 +16587,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17420,8 +16607,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17441,8 +16627,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -17462,8 +16647,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17483,8 +16667,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/moon_lamp_1788635244442.jpg",
     "gallery": [
-      "/assets/images/moon_lamp_1788635244442.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/moon_lamp_1788635244442.jpg"
     ],
     "isCustomizable": true
   },
@@ -17504,8 +16687,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -17525,8 +16707,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17546,8 +16727,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/roses_bouquet_1788634336414.jpg",
     "gallery": [
-      "/assets/images/roses_bouquet_1788634336414.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/roses_bouquet_1788634336414.jpg"
     ],
     "isCustomizable": true
   },
@@ -17567,8 +16747,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/combos_gift_set_1788634366784.jpg",
     "gallery": [
-      "/assets/images/combos_gift_set_1788634366784.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/combos_gift_set_1788634366784.jpg"
     ],
     "isCustomizable": true
   },
@@ -17588,8 +16767,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/stationery_caddy_1788634352075.jpg",
     "gallery": [
-      "/assets/images/stationery_caddy_1788634352075.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/stationery_caddy_1788634352075.jpg"
     ],
     "isCustomizable": true
   },
@@ -17609,8 +16787,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17630,8 +16807,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17651,8 +16827,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17672,8 +16847,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -17693,8 +16867,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -17714,8 +16887,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -17735,8 +16907,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17756,8 +16927,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   },
@@ -17777,8 +16947,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17798,8 +16967,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17819,8 +16987,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17840,8 +17007,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17861,8 +17027,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tabletop_frame_1788635214871.jpg",
     "gallery": [
-      "/assets/images/tabletop_frame_1788635214871.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tabletop_frame_1788635214871.jpg"
     ],
     "isCustomizable": true
   },
@@ -17882,8 +17047,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/tumbler_mug_1788634322323.jpg",
     "gallery": [
-      "/assets/images/tumbler_mug_1788634322323.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/tumbler_mug_1788634322323.jpg"
     ],
     "isCustomizable": true
   },
@@ -17901,10 +17065,9 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "discountPercent": "12% OFF",
     "rating": 4.9,
     "reviewCount": 45,
-    "image": "/assets/images/sozy_hero_workspace_1777014868067.png",
+    "image": "/assets/images/celebration_chocolates_1788635680950.jpg",
     "gallery": [
-      "/assets/images/sozy_hero_workspace_1777014868067.png",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/celebration_chocolates_1788635680950.jpg"
     ],
     "isCustomizable": true
   },
@@ -17924,8 +17087,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/caricature_standee_1788634238550.jpg",
     "gallery": [
-      "/assets/images/caricature_standee_1788634238550.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/caricature_standee_1788634238550.jpg"
     ],
     "isCustomizable": true
   },
@@ -17945,8 +17107,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/bar_flask_1788635290861.jpg",
     "gallery": [
-      "/assets/images/bar_flask_1788635290861.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/bar_flask_1788635290861.jpg"
     ],
     "isCustomizable": true
   },
@@ -17966,8 +17127,7 @@ export const BESTSELLERS_DATA: BestsellerProduct[] = [
     "reviewCount": 45,
     "image": "/assets/images/personalised_cushion_1788634222492.jpg",
     "gallery": [
-      "/assets/images/personalised_cushion_1788634222492.jpg",
-      "/assets/images/sozy_hero_workspace_1777014868067.png"
+      "/assets/images/personalised_cushion_1788634222492.jpg"
     ],
     "isCustomizable": true
   }
